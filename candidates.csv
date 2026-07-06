@@ -1,0 +1,336 @@
+ingredient,tier,n_regulators_in_window,regulators,most_recent_approval,example_brands,applicants
+isosorbide dinitrate,B: confirm date(s),1,FDA(2022-07-08); HSA(no-date),2022-07-08,APO-ISDN TABLET 5 mg; ISOSORBIDE DINITRATE,APOTEX INC; RUBICON RESEARCH
+oxybutynin,B: confirm date(s),1,FDA(2022-07-14); HSA(no-date),2022-07-14,OBUTIN TABLETS 5 mg; OXYBUTYNIN CHLORIDE,HANLIM PHARMACEUTICAL CO LTD; REGCON HOLDINGS
+ambrisentan,B: confirm date(s),1,FDA(2022-07-21); HSA(no-date),2022-07-21,AMBRISENTAN; VOLIBRIS FILM-COATED TABLET 5MG,"AUROBINDO PHARMA; Patheon, Inc."
+testosterone undecanoate,B: confirm date(s),1,FDA(2022-07-27); HSA(no-date),2022-07-27,KYZATREX; NEBIDO Solution,"Bayer AG (Berlin, Müllerstraße); MARIUS"
+empagliflozin,B: confirm date(s),1,FDA(2022-08-03); HSA(no-date),2022-08-03,EMPAGLIFLOZIN; JARDIANCE FILM-COATED TABLETS 10MG,Boehringer Ingelheim Pharma GmbH & Co. KG&&Rottendorf Pharma GmbH (Ostenfelder)&&Boehringer Ingelheim Seiyaku Co. Ltd.; ZYDUS PHARMS
+acalabrutinib,B: confirm date(s),1,FDA(2022-08-03); HSA(no-date),2022-08-03,CALQUENCE; CALQUENCE HARD CAPSULES 100MG,ASTRAZENECA; AstraZeneca AB
+ibrutinib,B: confirm date(s),1,FDA(2022-08-24); HSA(no-date),2022-08-24,IMBRUVICA; IMBRUVICA FILM-COATED TABLETS 560MG,Cilag AG (Bulk Production and Primary Packager)&&Janssen-Cilag SpA (Primary and Secondary Packager); PHARMACYCLICS LLC
+clobazam,B: confirm date(s),1,FDA(2022-09-06); HSA(no-date),2022-09-06,CLOBAZAM; FRISIUM 10 TABLET 10 mg,ACCORD HLTHCARE; Opella Healthcare International SAS
+deucravacitinib,B: confirm date(s),1,FDA(2022-09-09); HSA(no-date),2022-09-09,SOTYKTU; SOTYKTU FILM-COATED TABLETS 6 MG,BRISTOL; Hovione Farmaciencia S.A.&&Patheon Inc.
+terlipressin,B: confirm date(s),1,FDA(2022-09-14); HSA(no-date),2022-09-14,TERLIPRESSIN-AFT SOLUTION FOR INJECTION 0.85MG/8.5ML; TERLIVAZ,"HAINAN POLY PHARM. CO., LTD.; MALLINCKRODT IRELAND"
+omidenepag isopropyl,B: confirm date(s),1,FDA(2022-09-22); HSA(no-date),2022-09-22,EYBELIS OPHTHALMIC SOLUTION 0.002%; OMLONTI,"OCUVEX THERAP; Santen Pharmaceutical Co., Ltd. Shiga Plant"
+misoprostol,B: confirm date(s),1,FDA(2022-10-17); HSA(no-date),2022-10-17,CYTOTEC TABLET 200 mcg; MISOPROSTOL,MICRO LABS; Piramal Healthcare UK Limited
+promethazine,B: confirm date(s),1,FDA(2022-11-02); HSA(no-date),2022-11-02,PROMETHAZINE HYDROCHLORIDE; PROZINE-10 SYRUP 10 mg/5 ml,ANNORA PHARMA; SUNWARD PHARMACEUTICAL PRIVATE LIMITED
+phenobarbitone,B: confirm date(s),1,FDA(2022-11-17); HSA(no-date),2022-11-17,PHENOBARBITONE TABLET 10 mg; SEZABY,PT ACTAVIS INDONESIA; SUN PHARM INDS INC
+nifedipine,B: confirm date(s),1,FDA(2022-11-18); HSA(no-date),2022-11-18,NIFEDIPINE; NIFELAT TABLET 10 mg,ALEMBIC; REMEDICA LTD
+desonide,B: confirm date(s),1,FDA(2022-12-08); HSA(no-date),2022-12-08,DESONIDE; DESOWEN LOTION 0.05%,ALEMBIC; LABORATOIRES GALDERMA
+pentamidine isethionate,B: confirm date(s),1,FDA(2023-01-20); HSA(no-date),2023-01-20,DBL PENTAMIDINE ISETHIONATE FOR INJECTION BP 300 mg/vial; PENTAMIDINE ISETHIONATE,HOSPIRA AUSTRALIA PTY LTD; X-GEN PHARMS INC
+captopril,B: confirm date(s),1,FDA(2023-01-27); HSA(no-date),2023-01-27,APO-CAPTO TABLET 12.5 mg; CAPTOPRIL,AIPING PHARM INC; APOTEX INC
+fentanyl,B: confirm date(s),1,FDA(2023-02-08); HSA(no-date),2023-02-08,DUROGESIC TRANSDERMAL SYSTEM 50 mcg/hr; FENTANYL CITRATE,EXELA PHARMA; JANSSEN PHARMACEUTICA NV&&ALZA IRELAND LTD
+propafenone,B: confirm date(s),1,FDA(2023-02-21); HSA(no-date),2023-02-21,PROPAFENONE HYDROCHLORIDE; RYTMONORM TABLET 150 mg,AUROBINDO PHARMA LTD; Benta Lyon&&Abbott Laboratories de Mexico S.A. de C.V.
+clomipramine,B: confirm date(s),1,FDA(2023-03-20); HSA(no-date),2023-03-20,APO-CLOMIPRAMINE TABLET 10 mg; CLOMIPRAMINE HYDROCHLORIDE,APOTEX INC; AUROBINDO PHARMA
+repaglinide,B: confirm date(s),1,FDA(2023-03-22); HSA(no-date),2023-03-22,NOVONORM TABLET 1 mg; REPAGLINIDE,Boehringer Ingelheim Pharma GmbH & Co. KG&&Catalent Germany Schorndorf Gmbh(Primary Packaging site); MACLEODS PHARMS LTD
+abiraterone,B: confirm date(s),1,FDA(2023-03-23); HSA(no-date),2023-03-23,ABIRATERONE ACETATE; ONCOPROS - ABIRATERONE ACETATE TABLETS USP 250MG,FLORIDA; Sun Pharmaceutical Industries Limited
+arsenic trioxide,B: confirm date(s),1,FDA(2023-04-20); HSA(no-date),2023-04-20,ARSENIC TRIOXIDE; ARSENIC TRIOXIDE-AFT CONCENTRATED SOLUTION FOR INJECTION FOR INFUSION 10MG/10ML,Kocak Farma Ilac ve Kimya Sanyi A.S. (Sterile Building 2); MSN
+thalidomide,B: confirm date(s),1,FDA(2023-04-27); HSA(no-date),2023-04-27,DOMIDE CAPSULES 50mg; THALIDOMIDE,NATCO; TTY Biopharm Company Limited Chungli Factory
+tirofiban,B: confirm date(s),1,FDA(2023-05-01); HSA(no-date),2023-05-01,AGGRASTAT CONCENTRATE FOR INFUSION 0.25 mg/ml; TIROFIBAN HYDROCHLORIDE,EUGIA PHARMA; Patheon Manufacturing Services LLC
+propylthiouracil,B: confirm date(s),1,FDA(2023-05-10); HSA(no-date),2023-05-10,PROPYL TABLET 50 mg; PROPYLTHIOURACIL,MACLEODS PHARMS LTD; SRIPRASIT PHARMA CO LTD
+fezolinetant,B: confirm date(s),1,FDA(2023-05-12); HSA(no-date),2023-05-12,VEOZAH; VEOZA™ FILM-COATED TABLETS 45 MG,ASTELLAS; Astellas Pharma Inc. (Yaizu Technology Center)&&Bushu Pharmaceuticals Ltd. (Misato Factory)
+eplerenone,B: confirm date(s),1,FDA(2023-06-02); HSA(no-date),2023-06-02,EPLERENONE; EPLERENONE MEVON FILM-COATED TABLETS 25 MG,ANNORA PHARMA; Pharmathen S.A.
+medroxyprogesterone,B: confirm date(s),1,FDA(2023-06-07); HSA(no-date),2023-06-07,DEPO-PROVERA STERILE AQUEOUS SUSPENSION 50 mg/ml; MEDROXYPROGESTERONE ACETATE,AMNEAL; PFIZER MANUFACTURING BELGIUM NV
+fulvestrant,B: confirm date(s),1,FDA(2023-06-30); HSA(no-date),2023-06-30,FULVESTRANT; Faslodex Solution For Injection 250 mg/5ml,EUGIA PHARMA; Vetter Pharma-Fertigung GmbH and Co. KG
+naltrexone,B: confirm date(s),1,FDA(2023-07-06); HSA(no-date),2023-07-06,NALTREXONE; NARPAN TABLET 50 mg,DUOPHARMA (M) SDN BHD; TEVA PHARMS USA INC
+azithromycin,B: confirm date(s),1,FDA(2023-07-27); HSA(no-date),2023-07-27,AZITHROMYCIN; ZITHROMAX POWDER FOR ORAL SUSPENSION 200 mg/5 ml,HAUPT PHARMA LATINA SRL; ZHEJIANG POLY PHARM
+tobramycin,B: confirm date(s),1,FDA(2023-07-27); HSA(no-date),2023-07-27,TOBRAMYCIN; TOBREX STERILE OPHTHALMIC OINTMENT 0.3%,MICRO LABS; Novartis Manufacturing NV
+brinzolamide,B: confirm date(s),1,FDA(2023-07-28); HSA(no-date),2023-07-28,AZOPT OPHTHALMIC SUSPENSION 1%; BRINZOLAMIDE,Novartis Manufacturing NV; PADAGIS US
+fluocinolone acetonide,B: confirm date(s),1,FDA(2023-08-07); HSA(no-date),2023-08-07,FLUOCINOLONE ACETONIDE; SUPRICORT CREAM 0.025% w/w,GLENMARK PHARMACEUTICALS LTD; NOVEL LABS INC
+elranatamab,B: confirm date(s),1,FDA(2023-08-14); HSA(no-date),2023-08-14,ELREXFIO; ELREXFIO SOLUTION FOR INJECTION 44 MG/1.1 ML,PFIZER INC; Pharmacia & Upjohn Company LLC
+nortriptyline,B: confirm date(s),1,FDA(2023-08-15); HSA(no-date),2023-08-15,APO-NORTRIPTYLINE CAPSULE 25 mg; NORTRIPTYLINE HYDROCHLORIDE,APOTEX INC; RUBICON RESEARCH
+aflibercept,B: confirm date(s),1,FDA(2023-08-18); HSA(no-date),2023-08-18,EYLEA HD; EYLEA SOLUTION FOR INJECTION IN VIAL 2MG,"REGENERON PHARMACEUTICALS; Vetter Pharma-Fertigung GmbH & Co. KG (Langenargen)&&Bayer AG (Berlin)&&Regeneron Pharmaceuticals, Inc.&&Vetter Pharma-Fertigung GmbH & Co. KG (Ravensburg)"
+sevoflurane,B: confirm date(s),1,FDA(2023-08-18); HSA(no-date),2023-08-18,SEVOFLURANE; SEVORANE INHALATION,AbbVie S.r.l.; SHANDONG
+morphine,B: confirm date(s),1,FDA(2023-08-21); HSA(no-date),2023-08-21,DBL MORPHINE SULFATE INJECTION 10 mg/ml; MORPHINE SULFATE,SPECGX LLC; Siegfried Hameln GmbH
+guaifenesin,B: confirm date(s),1,FDA(2023-08-21); HSA(no-date),2023-08-21,GUAIFENESIN; MUCINEX EXTENDED RELEASE TABLETS 600MG,MARKSANS PHARMA; Reckitt Benckiser Healthcare International Limited
+candesartan cilexetil,B: confirm date(s),1,FDA(2023-08-21); HSA(no-date),2023-08-21,ATACAND TABLET 16 mg; CANDESARTAN CILEXETIL,Klocke Pharma-Service GmbH; PRINSTON INC
+methylphenidate,B: confirm date(s),1,FDA(2023-08-25); HSA(no-date),2023-08-25,METHYLPHENIDATE HYDROCHLORIDE; RITALIN TABLET 10 mg,SUN PHARM INDS INC; Siegfried Barbera S.L
+crizotinib,B: confirm date(s),1,FDA(2023-09-07); HSA(no-date),2023-09-07,XALKORI; Xalkori Capsules 200mg,PF PRISM CV; Pfizer Manufacturing Deutschland GmbH
+iopamidol,B: confirm date(s),1,FDA(2023-09-27); HSA(no-date),2023-09-27,IOPAMIDOL; IOPAMIRO 300 INJECTION 6.12 g/10 ml,HAINAN POLY; Patheon Italia S.p.A&&Bracco SpA
+lamivudine,B: confirm date(s),1,FDA(2023-10-06); HSA(no-date),2023-10-06,LAMIVUDINE; LAVUDIN STANDARD F.C. TABLET 100 mg,HETERO LABS LTD III; Standard Chem. & Pharm. Co. Ltd
+secukinumab,B: confirm date(s),1,FDA(2023-10-06); HSA(no-date),2023-10-06,COSENTYX; COSENTYX SOLUTION FOR INJECTION IN PREFILLED SENSOREADY PEN 150MG/ML,NOVARTIS PHARMS CORP; Novartis Pharma Stein AG&&Novartis Pharmaceutical Manufacturing GmbH
+testosterone cypionate,B: confirm date(s),1,FDA(2023-10-20); HSA(no-date),2023-10-20,DEPO-TESTOSTERONE STERILE SOLUTION 100 mg/ml; TESTOSTERONE CYPIONATE,EUGIA PHARMA; Pharmacia & Upjohn Company LLC
+carmustine,B: confirm date(s),1,FDA(2023-10-20); HSA(no-date),2023-10-20,BiCNU-100MG (CARMUSTINE FOR INJECTION USP 100MG) & DEHYDRATED ALCOHOL INJECTION USP AS A COMBIPACK; CARMUSTINE,ALEMBIC; Emcure Pharmaceuticals Limited (OSD and Potent Injectables)
+midodrine,B: confirm date(s),1,FDA(2023-11-01); HSA(no-date),2023-11-01,GUTRON TABLET 5 mg; MIDODRINE HYDROCHLORIDE,MANKIND PHARMA; Takeda GmbH (Oranienburg plant)
+fruquintinib,B: confirm date(s),1,FDA(2023-11-08); HSA(no-date),2023-11-08,FRUZAQLA; FRUZAQLA CAPSULE 5MG,STA Pharmaceutical Switzerland SA; TAKEDA PHARMS USA
+tirzepatide,B: confirm date(s),1,FDA(2023-11-08); HSA(no-date),2023-11-08,MOUNJARO INJECTION 7.5MG/0.5ML; ZEPBOUND,ELI LILLY AND CO; Eli Lilly and Company&&Vetter Pharma-Fertigung GmbH & Co. KG (Bulk Production & Primary Packaging)
+capivasertib,B: confirm date(s),1,FDA(2023-11-16); HSA(no-date),2023-11-16,TRUQAP; TRUQAP FILM-COATED TABLETS 200MG,ASTRAZENECA; AstraZeneca AB
+probenecid,B: confirm date(s),1,FDA(2023-11-20); HSA(no-date),2023-11-20,PROBENECID; PROBENECID TABLET 500 mg,RISING; SUNWARD PHARMACEUTICAL PRIVATE LIMITED
+ceftriaxone,B: confirm date(s),1,FDA(2024-01-12); HSA(no-date),2024-01-12,CEFTRIAXONE; CEFTRIPHINE POWDER FOR INJECTION 1 g/vial,DAE HAN NEW PHARM. CO. LTD.; DEVA HOLDING AS
+febuxostat,B: confirm date(s),1,FDA(2024-01-17); HSA(no-date),2024-01-17,FEBURIC® FILM COATED TABLETS 80MG; FEBUXOSTAT,LUPIN; Patheon France&&Interthai Pharmaceutical Manufacturing Ltd.
+levofloxacin,B: confirm date(s),1,FDA(2024-01-29); HSA(no-date),2024-01-29,CRAVIT OPHTHALMIC SOLUTION 0.5% w/v; LEVOFLOXACIN IN DEXTROSE 5% IN PLASTIC CONTAINER,"KNACK; Santen Pharmaceutical Co., Ltd (Noto Plant)"
+budesonide,B: confirm date(s),1,FDA(2024-02-09); HSA(no-date),2024-02-09,EOHILIA; PULMICORT TURBUHALER 100 mcg/dose,ASTRAZENECA AB; TAKEDA PHARMS USA
+isosorbide mononitrate,B: confirm date(s),1,FDA(2024-02-15); HSA(no-date),2024-02-15,IMDEX CR TABLET 60 mg; ISOSORBIDE MONONITRATE,DUOPHARMA MANUFACTURING (BANGI) SDN.BHD.; ZYDUS PHARMS
+ritonavir,B: confirm date(s),1,FDA(2024-02-16); HSA(no-date),2024-02-16,Norvir Tablets 100 mg; RITONAVIR,AbbVie Deutschland GmbH & Co. KG; QUAGEN
+capecitabine,B: confirm date(s),1,FDA(2024-03-05); HSA(no-date),2024-03-05,CAPECITABINE; KAPETRAL FILM-COATED TABLET 150MG,"HETERO LABS LTD V; REMEDICA LTD (BUILDING 5-ANTI-CANCER/HORMONES, BUILDING 10-ANTI-CANCER)"
+cabazitaxel,B: confirm date(s),1,FDA(2024-03-14); HSA(no-date),2024-03-14,CABAZITAXEL; Jevtana® Concentrate and Solvent for Solution for Infusion 60mg/1.5ml,ACTAVIS; Sanofi-Aventis Deutschland GmbH (Drug Product & Solvent)
+ketorolac tromethamine,B: confirm date(s),1,FDA(2024-03-26); HSA(no-date),2024-03-26,KETO FILM COATED TABLET 10 mg; KETOROLAC TROMETHAMINE,CAPLIN; YUNG SHIN PHARMACEUTICAL IND CO LTD
+danicopan,B: confirm date(s),1,FDA(2024-03-29); HSA(no-date),2024-03-29,VOYDEYA; VOYDEYA FILM-COATED TABLET 100 MG + 100 MG,ALEXION PHARMS INC; Catalent CTS LLC&&Hovione Farmaciencia S.A.
+hydroxyurea,B: confirm date(s),1,FDA(2024-04-04); HSA(no-date),2024-04-04,HYDRINE CAPSULES 500 mg; XROMI,KOREA UNITED PHARM. INC.; NOVA LABS LTD
+tafluprost,B: confirm date(s),1,FDA(2024-04-05); HSA(no-date),2024-04-05,TAFLOTAN-S OPHTHALMIC SOLUTION 0.0015%; TAFLUPROST,INGENUS PHARMS LLC; Santen Pharmaceutical Co Ltd (Noto Plant)
+dextrose,B: confirm date(s),1,FDA(2024-04-08); HSA(no-date),2024-04-08,DEXTROSE 5%; DEXTROSE SOLUTION FOR I.V. INJECTION 50%,AM REGENT; EURO-MED LABORATORIES PHIL INC
+selpercatinib,B: confirm date(s),1,FDA(2024-04-10); HSA(no-date),2024-04-10,RETEVMO; TANSTRIVE HARD CAPSULES 40MG,"ELI LILLY AND CO; Lilly del Caribe, Inc.&&Lilly, S.A. (Primary and Secondary Packager)"
+vedolizumab,B: confirm date(s),1,FDA(2024-04-18); HSA(no-date),2024-04-18,ENTYVIO; ENTYVIO SOLUTION FOR INJECTION IN PRE-FILLED PEN 108MG/0.68ML,TAKEDA PHARMS USA; Vetter Pharma Fertigung GmbH & Co. KG
+alpelisib,B: confirm date(s),1,FDA(2024-04-24); HSA(no-date),2024-04-24,PIQRAY 300MG DAILY DOSE PACK (150mg + 150mg); VIJOICE,NOVARTIS; NOVARTIS PHARMA STEIN AG
+ezetimibe,B: confirm date(s),1,FDA(2024-04-29); HSA(no-date),2024-04-29,EZETIMIBE; EZZICAD TABLETS 10MG,Glenmark Pharmaceuticals Limited; MACLEODS PHARMS LTD
+levocetirizine dihydrochloride,B: confirm date(s),1,FDA(2024-05-06); HSA(no-date),2024-05-06,LEVOCETIRIZINE DIHYDROCHLORIDE; Levozine F.C. Tablet 5mg,"IPCA LABS LTD; Standard Chem. & Pharm. Co., Ltd."
+efavirenz,B: confirm date(s),1,FDA(2024-05-10); HSA(no-date),2024-05-10,EFAVIRENZ; EFAVIRENZ SANDOZ FILM COATED TABLET 600MG,MACLEODS PHARMS LTD; Sandoz Private Limited
+cisplatin,B: confirm date(s),1,FDA(2024-05-10); HSA(no-date),2024-05-10,CISPLATIN; CISPLATIN INJECTION 1 mg/ml,Bridgewest Perth Pharma Pty Ltd; QILU
+palbociclib,B: confirm date(s),1,FDA(2024-06-05); HSA(no-date),2024-06-05,IBRANCE FILM COATED TABLET 125MG; PALBOCICLIB,Pfizer Manufacturing Deutschland GmbH; ZYDUS LIFESCIENCES
+avanafil,B: confirm date(s),1,FDA(2024-06-14); HSA(no-date),2024-06-14,AVANAFIL; SPEDRA TABLET 50MG,HETERO LABS LTD V; MENARINI VON HEYDEN GmbH
+vigabatrin,B: confirm date(s),1,FDA(2024-06-17); HSA(no-date),2024-06-17,SABRIL TABLET 500 mg; VIGAFYDE,PYROS PHARMS; Patheon France
+trospium,B: confirm date(s),1,FDA(2024-06-18); HSA(no-date),2024-06-18,Spasmolyt Tablet 20mg; TROSPIUM CHLORIDE,MACLEODS PHARMS LTD; Madaus GmbH
+midostaurin,B: confirm date(s),1,FDA(2024-06-28); HSA(no-date),2024-06-28,MIDOSTAURIN; RYDAPT SOFT CAPSULE 25MG,Catalent Germany Eberbach GmbH&&Catalent Germany Schorndorf GmbH (Primary and Secondary packager); DR REDDYS
+acitretin,B: confirm date(s),1,FDA(2024-08-05); HSA(no-date),2024-08-05,ACITRETIN; NEOTIGASON CAPSULE 10 mg,ALEMBIC; DSM Nutritional Products France (Intermediate DP manufacturer)&&CENEXI (OSNY site)
+thiotepa,B: confirm date(s),1,FDA(2024-08-20); HSA(no-date),2024-08-20,THIOTEPA; THIOTEPA RIEMSER POWDER FOR CONCENTRATE FOR SOLUTION FOR INFUSION 15MG/VIAL,REGCON HOLDINGS; Thymoorgan Pharmazie GmbH
+riluzole,B: confirm date(s),1,FDA(2024-08-22); HSA(no-date),2024-08-22,RILUTEK TABLET 50 mg; RILUZOLE,ALKEM LABS LTD; Opella Healthcare International SAS
+temozolomide,B: confirm date(s),1,FDA(2024-08-23); HSA(no-date),2024-08-23,TEMOZOLOMIDE; TemoRel HARD CAPSULE 100MG,HETERO LABS LTD V; Reliance Life Sciences Pvt Ltd.
+tolterodine,B: confirm date(s),1,FDA(2024-08-27); HSA(no-date),2024-08-27,TOLCORD 2 FILM COATED TABLET 2 MG; TOLTERODINE TARTRATE,INTAS PHARMACEUTICALS LIMITED&&Intas Pharmaceuticals Limited; UNICHEM
+letermovir,B: confirm date(s),1,FDA(2024-08-30); HSA(no-date),2024-08-30,PREVYMIS; PREVYMIS FILM COATED TABLET 240MG,MSD; MSD International GmbH T/A MSD Ireland (Ballydine)&&Organon Heist bv (Primary Packager and Secondary packager)
+albendazole,B: confirm date(s),1,FDA(2024-09-04); HSA(no-date),2024-09-04,ALBENDAZOLE; ALBENDOL-400 TABLET 400 mg,ALEMBIC; MICRO LABS LTD
+amiodarone,B: confirm date(s),1,FDA(2024-09-11); HSA(no-date),2024-09-11,AMIODARONE HYDROCHLORIDE; CORDARONE TABLET 200 mg,SANOFI WINTHROP INDUSTRIE; ZHEJIANG POLY PHARM
+busulfan,B: confirm date(s),1,FDA(2024-09-11); HSA(no-date),2024-09-11,BUSULFAN; MYRAN TABLETS 2 mg,KOREA UNITED PHARMACEUTICAL INC; PRINSTON INC
+fluoxetine,B: confirm date(s),1,FDA(2024-09-13); HSA(no-date),2024-09-13,FLUOXETINE HYDROCHLORIDE; FLUOXETINE-TEVA 20 MG CAPSULES,STRIDES PHARMA; TEVA PHARMACEUTICAL INDUSTRIES LTD
+dexamethasone,B: confirm date(s),1,FDA(2024-09-17); HSA(no-date),2024-09-17,DEXAMETHASONE; DEXASONE TABLET 0.5 mg,ATLANTIC LABORATORIES CORPN LTD; COREPHARMA
+enalapril,B: confirm date(s),1,FDA(2024-09-19); HSA(no-date),2024-09-19,ENALAPRIL MALEATE; KORANDIL 10 TABLET 10 mg,REMEDICA LTD; UNIQUE PHARM
+amantadine,B: confirm date(s),1,FDA(2024-09-26); HSA(no-date),2024-09-26,AMANTADINE HYDROCHLORIDE; SYMMETREL 100 CAPSULE 100 mg,Catalent Germany Eberbach GmbH; ZHEJIANG JUTAI PHARM
+pomalidomide,B: confirm date(s),1,FDA(2024-09-26); HSA(no-date),2024-09-26,POMAGEN CAPSULES 4MG; POMALIDOMIDE,"HETERO LABS LTD V; Lotus Pharmaceutical Co., Ltd. Nantou Plant"
+pyridostigmine,B: confirm date(s),1,FDA(2024-10-04); HSA(no-date),2024-10-04,MESTINON TABLET 60 mg; PYRIDOSTIGMINE BROMIDE,AMNEAL; LABIANA PHARMACEUTICALS S.L.U
+timolol,B: confirm date(s),1,FDA(2024-10-10); HSA(no-date),2024-10-10,TIMABAK EYEDROPS 0.5%; TIMOLOL,EXCELVISION; SOMERSET
+melphalan,B: confirm date(s),1,FDA(2024-10-29); HSA(no-date),2024-10-29,ALKERAN TABLET 2 mg (Revised formula); MELPHALAN HYDROCHLORIDE,AVET LIFESCIENCES; Excella GmbH & Co. KG
+ertapenem,B: confirm date(s),1,FDA(2024-10-31); HSA(no-date),2024-10-31,ERTAPENEM SODIUM; INVANZ FOR INJECTION 1 g/vial,FAREVA Mirabel; QILU ANTIBIOTICS
+minocycline,B: confirm date(s),1,FDA(2024-11-01); HSA(no-date),2024-11-01,BORYMYCIN CAPSULE 100 mg; EMROSI,JOURNEY; Y. S. P. INDUSTRIES (M) SDN BHD
+ciprofloxacin,B: confirm date(s),1,FDA(2024-11-05); HSA(no-date),2024-11-05,CIPROBAY 250 TABLET 250 mg; CIPROFLOXACIN HYDROCHLORIDE,ALEMBIC THERAP; Bayer AG&&BAYER HEALTHCARE MANUFACTURING S.R.L.
+olmesartan medoxomil,B: confirm date(s),1,FDA(2024-11-08); HSA(no-date),2024-11-08,OLMESARTAN MEDOXOMIL; OLMEZEN FILM-COATED TABLET 20MG,CADILA PHARMS LTD; Medreich Limited
+cimetidine,B: confirm date(s),1,FDA(2024-11-12); HSA(no-date),2024-11-12,CIMETIDINE; CIMETIDINE TABLET 200 mg,AUROBINDO PHARMA LTD; MICRO LABS LTD
+cyanocobalamin,B: confirm date(s),1,FDA(2024-11-15); HSA(no-date),2024-11-15,CYANOCOBALAMIN; VITAMIN B12 INJECTION 1000 mcg/ml,ATLANTIC LABORATORIES CORPN LTD; MEITHEAL
+daptomycin,B: confirm date(s),1,FDA(2024-11-21); HSA(no-date),2024-11-21,Cubicin (daptomycin for injection) 500mg; DAPTOMYCIN,"MAIA PHARMS INC; OSO BIOPHARMACEUTICALS MANUFACTURING LLC (manufacture, primary packaging)&&Patheon Italia S.p.A (manufacture, primary packaging, QC testing)"
+trazodone,B: confirm date(s),1,FDA(2024-11-26); HSA(no-date),2024-11-26,RALDESY; TRITTICO TABLETS 50 mg,AZIENDE CHIMICHE RIUNITE ANGELINI FRANCESCO ACRAF SPA; KAMAT
+simvastatin,B: confirm date(s),1,FDA(2024-11-27); HSA(no-date),2024-11-27,Apo-Simvastatin 5mg Tablet; SIMVASTATIN,Apotex Inc; YILING
+lurasidone,B: confirm date(s),1,FDA(2024-12-06); HSA(no-date),2024-12-06,LATUDA TABLET 80MG; LURASIDONE HYDROCHLORIDE,Bushu Pharmaceuticals Ltd (Kawagoe Factory)&&OLIC (Thailand) Ltd (Primary and Secondary Packager); JUBILANT GENERICS
+baclofen,B: confirm date(s),1,FDA(2024-12-06); HSA(no-date),2024-12-06,BACLOFEN; PMS-BACLOFEN TABLET 10 mg,Pharmascience Inc.; RUBICON RESEARCH
+clozapine,B: confirm date(s),1,FDA(2024-12-12); HSA(no-date),2024-12-12,CLOZAPINE; CLOZARIL TABLET 25 mg,AUROBINDO PHARMA; MADAUS GmbH
+fondaparinux,B: confirm date(s),1,FDA(2024-12-18); HSA(no-date),2024-12-18,ARIXTRA SOLUTION FOR INJECTION 2.5 mg/0.5 ml; FONDAPARINUX SODIUM,ASPEN NOTRE DAME DE BONDEVILLE; BRIGHTGENE
+tetracaine,B: confirm date(s),1,FDA(2024-12-20); HSA(no-date),2024-12-20,MINIMS TETRACAINE HYDROCHLORIDE EYE DROPS 1% w/v; TETRACAINE HYDROCHLORIDE,LABORATOIRE CHAUVIN SA; SOMERSET THERAPS LLC
+entecavir,B: confirm date(s),1,FDA(2024-12-23); HSA(no-date),2024-12-23,ENTECAVIR; PMS-ENTECAVIR FILM COATED TABLET 0.5mg,CONBA USA; Pharmascience Inc
+cyclophosphamide,B: confirm date(s),1,FDA(2024-12-26); HSA(no-date),2024-12-26,CYCLOPHOSPHAMIDE; CYCRAM FOR INJECTION 1 g/vial,HAINAN POLY; KOREA UNITED PHARMACEUTICAL INC
+clofarabine,B: confirm date(s),1,FDA(2025-01-03); HSA(no-date),2025-01-03,CLOFARABINE; Evoltra Concentrate Solution for Infusion 1mg/ml,SCINOPHARM TAIWAN; Teva-Pharmachemie B.V. (PCH)
+dimethyl,B: confirm date(s),1,FDA(2025-01-06); HSA(no-date),2025-01-06,DIMETHYL FUMARATE; TECFIDERA GASTRO-RESISTANT HARD CAPSULES 120 MG,Corden Pharma Fribourg SA&&JANSSEN CILAG S.P.A. (Primary and Secondary Packaging); TORRENT
+theophylline,B: confirm date(s),1,FDA(2025-01-13); HSA(no-date),2025-01-13,APO-THEO LA TABLET 100 mg; THEOPHYLLINE,AJANTA PHARMA LTD; APOTEX INC
+telmisartan,B: confirm date(s),1,FDA(2025-01-15); HSA(no-date),2025-01-15,TELFOCUS 80 TABLETS 80MG; TELMISARTAN,AUROBINDO PHARMA LIMITED - UNIT VII; MACLEODS PHARMS LTD
+treosulfan,B: confirm date(s),1,FDA(2025-01-21); HSA(no-date),2025-01-21,GRAFAPEX; TRECONDI POWDER FOR SOLUTION FOR INFUSION 5 G PER VIAL,MEDEXUS; Oncotec Pharma Produktion GmbH
+nimodipine,B: confirm date(s),1,FDA(2025-01-22); HSA(no-date),2025-01-22,NIMODIPINE; NIMOTOP FOR INFUSION 0.02%,ALKEM LABS LTD; Bayer AG&&Solupharm Pharmazeutische Erzeugnisse GmbH
+hydrochlorothiazide,B: confirm date(s),1,FDA(2025-01-28); HSA(no-date),2025-01-28,APO-HYDROCHLOROTHIAZIDE TABLET 50 mg; INZIRQO,APOTEX INC; NOVITIUM PHARMA
+tramadol,B: confirm date(s),1,FDA(2025-01-31); HSA(no-date),2025-01-31,TRACIDOL INJECTION 100mg/2ml; TRAMADOL HYDROCHLORIDE,MACLEODS PHARMS LTD; Y.S.P. Industries (M) Sdn. Bhd.
+formoterol,B: confirm date(s),1,FDA(2025-02-11); HSA(no-date),2025-02-11,Atimos Pressurised Inhalation Solution 12mcg/ inhalation; FORMOTEROL FUMARATE,Chiesi Farmaceutici S.p.A.; DEVA HOLDING AS
+benztropine,B: confirm date(s),1,FDA(2025-02-11); HSA(no-date),2025-02-11,APO-BENZTROPINE TABLET 2 mg; BENZTROPINE MESYLATE,APOTEX INC; QUAGEN
+risdiplam,B: confirm date(s),1,FDA(2025-02-11); HSA(no-date),2025-02-11,EVRYSDI; EVRYSDI POWDER FOR ORAL SOLUTION 0.75 MG/ML,F. Hoffmann-La Roche Ltd&&F. Hoffmann-La Roche Ltd.; GENENTECH INC
+tacrolimus,B: confirm date(s),1,FDA(2025-02-12); HSA(no-date),2025-02-12,TACROCIN 5- TACROLIMUS CAPSULE USP 5 MG; TACROLIMUS,Intas Pharmaceuticals Limited&&Concord Biotech Limited (DP Intermediate); NEXUS
+sunitinib,B: confirm date(s),1,FDA(2025-02-14); HSA(no-date),2025-02-14,INSUNITINIB CAPSULE 37.5MG; SUNITINIB MALATE,MSN; REMEDICA LTD&&PHARMACARE PREMIUM LTD
+brexpiprazole,B: confirm date(s),1,FDA(2025-02-24); HSA(no-date),2025-02-24,BREXPIPRAZOLE; REXULTI FILM-COATED TABLETS 2MG,"APOTEX; OTSUKA PHARMACEUTICAL CO., LTD. (TOKUSHIMA FACTORY)&&ELAIAPHARM (PRIMARY AND SECONDARY PACKAGER)&&OTSUKA PHARMACEUTICAL CO., LTD. (SECOND TOKUSHIMA FACTORY) (Finished Product Manufacturer)"
+mercaptopurine,B: confirm date(s),1,FDA(2025-02-26); HSA(no-date),2025-02-26,MERCAPTOPURINE; PURINETONE TABLETS 50 mg,HIKMA; KOREA UNITED PHARMACEUTICAL INC
+loratadine,B: confirm date(s),1,FDA(2025-02-28); HSA(no-date),2025-02-28,HALODIN TABLETS 10 mg; LORATADINE,CATALENT PHARMA; T O CHEMICALS (1979) LTD
+fexofenadine,B: confirm date(s),1,FDA(2025-02-28); HSA(no-date),2025-02-28,FEXOFEN FILM-COATED TABLET 180MG; FEXOFENADINE HYDROCHLORIDE,CONTRACT PHARMACAL; Ind-Swift Limited
+solifenacin,B: confirm date(s),1,FDA(2025-03-04); HSA(no-date),2025-03-04,SOLIFENACIN SUCCINATE; SYNERRV SOLIFENACIN SUCCINATE FILM-COATED TABLETS 10MG,TORRENT; Umedica Laboratories Pvt. Ltd.
+acetylcysteine,B: confirm date(s),1,FDA(2025-03-14); HSA(no-date),2025-03-14,ACETYLCYSTEINE; SPATAM CAPSULE 200 mg,CONBA USA; MYUNG IN PHARM CO LTD
+lactulose,B: confirm date(s),1,FDA(2025-03-14); HSA(no-date),2025-03-14,DUPHALAC SYRUP; LACTULOSE,ABBOTT BIOLOGICALS B V; PAI HOLDINGS
+apalutamide,B: confirm date(s),1,FDA(2025-03-17); HSA(no-date),2025-03-17,APALUTAMIDE; ERLEADA FILM-COATED TABLET 60MG,"Janssen Pharmaceutica NV (intermediate)&&Janssen Ortho LLC&&Catalent Pharma Solutions, LLC; ZYDUS LIFESCIENCES"
+perphenazine,B: confirm date(s),1,FDA(2025-03-18); HSA(no-date),2025-03-18,APO-PERPHENAZINE TABLET 8 mg; PERPHENAZINE,APOTEX INC; JUBILANT GENERICS
+ropivacaine,B: confirm date(s),1,FDA(2025-03-21); HSA(no-date),2025-03-21,NAROPIN INFUSION 0.2%; ROPIVACAINE HYDROCHLORIDE,ANTHEA PHARMA; ASTRAZENECA PTY LTD
+teriflunomide,B: confirm date(s),1,FDA(2025-04-07); HSA(no-date),2025-04-07,AUBAGIO FILM-COATED TABLETS 14mg; TERIFLUNOMIDE,CONCORD BIOTECH LTD; Opella Healthcare International SAS
+metformin,B: confirm date(s),1,FDA(2025-04-14); HSA(no-date),2025-04-14,GLYCOMET TABLET 500 mg; METFORMIN HYDROCHLORIDE,BIONPHARMA; USV PRIVATE LIMITED
+allopurinol,B: confirm date(s),1,FDA(2025-04-14); HSA(no-date),2025-04-14,ALLOPURINOL; APO-ALLOPURINOL TABLET 100 mg,APOTEX INC; AUROBINDO PHARMA LTD
+esomeprazole,B: confirm date(s),1,FDA(2025-04-15); HSA(no-date),2025-04-15,ESOMEPRAZOLE MAGNESIUM; NEXIUM POWDER FOR SOLUTION FOR INJECTION AND INFUSION 40 mg,"ASTRAZENECA AB&&AstraZeneca Pharmaceutical Co., Ltd.; AUROBINDO PHARMA LTD"
+ranolazine,B: confirm date(s),1,FDA(2025-04-15); HSA(no-date),2025-04-15,RANEXA PROLONGED-RELEASE TABLET 375 MG; RANOLAZINE,JUBILANT GENERICS; MENARINI - VON HEYDEN GmbH
+apixaban,B: confirm date(s),1,FDA(2025-04-17); HSA(no-date),2025-04-17,ELIQUIS; Eliquis Tablet 2.5mg,BRISTOL; Bristol-Myers Squibb Manufacturing Company Unlimited Company&&Pfizer Ireland Pharmaceuticals
+posaconazole,B: confirm date(s),1,FDA(2025-04-23); HSA(no-date),2025-04-23,POSACONAZOLE; SINOTRX POSACONAZOLE DELAYED RELEASE TABLET 100MG,HAIMEN PHARMA INC; QILU PHARM HAINAN
+latanoprostene bunod,B: confirm date(s),1,FDA(2025-04-29); HSA(no-date),2025-04-29,LATANOPROSTENE BUNOD; VYZULTA (LATANOPROSTENE BUNOD OPHTHALMIC SOLUTION) 0.024%,"Bausch & Lomb, Incorporated.; GLAND"
+midazolam,B: confirm date(s),1,FDA(2025-05-01); HSA(no-date),2025-05-01,DORMICUM INJECTION 15 mg/3 ml; MIDAZOLAM IN 0.8% SODIUM CHLORIDE,B BRAUN MEDICAL; CENEXI
+tamsulosin,B: confirm date(s),1,FDA(2025-05-01); HSA(no-date),2025-05-01,Harnal OCAS Prolonged Release Film-coated Tablet 400mcg; TAMSULOSIN HYDROCHLORIDE,Delpharm Meppel B.V.; RISING
+acyclovir,B: confirm date(s),1,FDA(2025-05-02); HSA(no-date),2025-05-02,ACYCLOVIR; ACYCLOVIR CREAM 5%,CIPLA; PT INDOFARMA
+terazosin,B: confirm date(s),1,FDA(2025-05-12); HSA(no-date),2025-05-12,APO-TERAZOSIN TABLET 2 mg; TERAZOSIN HYDROCHLORIDE,AJANTA PHARMA LTD; APOTEX INC (SIGNET DRIVE)
+docetaxel,B: confirm date(s),1,FDA(2025-05-13); HSA(no-date),2025-05-13,DOCETAXEL; TEXTAS 80 CONCENTRATE FOR SOLUTION FOR INFUSION 80 MG/ 4 ML VIAL,GUANGDONG SUNHO; INTAS PHARMACEUTICALS LIMITED
+mupirocin,B: confirm date(s),1,FDA(2025-05-13); HSA(no-date),2025-05-13,MUPIROCIN; SUPIROCIN OINTMENT 2% w/w,ENCUBE; GLENMARK PHARMACEUTICALS LTD
+mometasone,B: confirm date(s),1,FDA(2025-05-15); HSA(no-date),2025-05-15,MOMETASONE FUROATE; VIZOMET CREAM 0.1% W/W,NASPRESS; XEPA-SOUL PATTINSON (MALAYSIA) SDN BHD
+gefitinib,B: confirm date(s),1,FDA(2025-05-16); HSA(no-date),2025-05-16,GEFITINIB; HOVID GEFITINIB TABLETS 250 MG,CIPLA; Qilu Pharmaceutical (Hainan) Co. Ltd.
+azacitidine,B: confirm date(s),1,FDA(2025-05-20); HSA(no-date),2025-05-20,AZACITIDINE; AZACITIDINE ADVAGEN POWDER FOR SUSPENSION FOR INJECTION 100MG/VIAL,"RELIANCE LIFE; Sichuan Huiyu Pharmaceutical Co., Ltd."
+methylnaltrexone,B: confirm date(s),1,FDA(2025-05-28); HSA(no-date),2025-05-28,METHYLNALTREXONE BROMIDE; Relistor Solution For Injection 12mg/0.6mL,"DSM Pharmaceuticals, Inc; MYLAN LABS LTD"
+meloxicam,B: confirm date(s),1,FDA(2025-06-05); HSA(no-date),2025-06-05,Arrox Tablet 7.5mg; XIFYRM,AZURITY; Xepa-Soul Pattinson (Malaysia) Sdn Bhd
+zanubrutinib,B: confirm date(s),1,FDA(2025-06-10); HSA(no-date),2025-06-10,BRUKINSA; BRUKINSA™ CAPSULE 80MG,"BEONE MEDICINES USA; Catalent CTS (Kansas City), LLC (Primary packager)"
+polystyrene sulfonate,B: confirm date(s),1,FDA(2025-06-10); HSA(no-date),2025-06-10,JAMP SODIUM POLYSTYRENE SULFONATE POWDER FOR SUSPENSION 1G/G; SODIUM POLYSTYRENE SULFONATE,LYNE; Sava Healthcare Ltd
+iodide i,B: confirm date(s),1,FDA(2025-06-12); HSA(no-date),2025-06-12,ANSTO - Sodium Iodide [131I] Therapy Capsules (50 to 6000 MBq); SODIUM IODIDE I 131,ANSTO; CARDINAL HLTH 414
+lisdexamfetamine dimesylate,B: confirm date(s),1,FDA(2025-06-16); HSA(no-date),2025-06-16,ARYNTA; VYVANSE CAPSULES 30 mg,AZURITY; Patheon Pharmaceuticals Inc. (Bulk Production)&&Takeda GmbH
+plerixafor,B: confirm date(s),1,FDA(2025-06-16); HSA(no-date),2025-06-16,Mozobil Solution for Injection 20mg/ml; PLERIXAFOR,Genzyme Corporation; HETERO LABS LTD VI
+acetazolamide,B: confirm date(s),1,FDA(2025-06-17); HSA(no-date),2025-06-17,AA PHARMA ACETAZOLAMIDE TABLET 250 mg; ACETAZOLAMIDE SODIUM,APOTEX INC; GLAND
+prednisolone,B: confirm date(s),1,FDA(2025-06-23); HSA(no-date),2025-06-23,PREDNISOLONE; PREDNISOLONE TABLET 5 mg,ATLANTIC LABORATORIES CORPN LTD; TP ANDA HOLDINGS
+amitriptyline,B: confirm date(s),1,FDA(2025-06-23); HSA(no-date),2025-06-23,AMITRIPTYLINE HYDROCHLORIDE; TRIPTA TABLET 10 mg,ATLANTIC LABORATORIES CORPN LTD; UNIQUE PHARM
+ganirelix,B: confirm date(s),1,FDA(2025-06-27); HSA(no-date),2025-06-27,GANIRELIX ACETATE; ORGALUTRAN SOLUTION FOR INJECTION 0.25 mg/0.5 ml,TRIS PHARMA INC; Vetter Pharma-Fertigung GmbH & Co. KG
+minoxidil,B: confirm date(s),1,FDA(2025-06-30); HSA(no-date),2025-06-30,MINOXIDIL EXTRA STRENGTH (FOR MEN); MINOXIDIL LOTION 3% w/v,SUNWARD PHARMACEUTICAL PRIVATE LIMITED; TARO
+amphotericin b,B: confirm date(s),1,FDA(2025-06-30); HSA(no-date),2025-06-30,AMBISOME FOR INJECTION 50 mg/vial; AMPHOTERICIN B,"Gilead Sciences, Inc.&&JUBILANT HOLLISTERSTIER LLC&&Curia New Mexico, LLC&&Gilead Sciences, Inc.&&Nippon Fine Chemical Co., Ltd.; MYLAN LABS LTD"
+loteprednol etabonate,B: confirm date(s),1,FDA(2025-06-30); HSA(no-date),2025-06-30,LOTEMAX STERILE OPHTHALMIC SUSPENSION 0.5%; LOTEPREDNOL ETABONATE,BAUSCH & LOMB INC; LUPIN
+nitrofurantoin,B: confirm date(s),1,FDA(2025-07-02); HSA(no-date),2025-07-02,AA PHARMA NITROFURANTOIN TABLET 100 mg; NITROFURANTOIN,ANNORA PHARMA; APOTEX INC
+ketoconazole,B: confirm date(s),1,FDA(2025-07-03); HSA(no-date),2025-07-03,KETOCONAZOLE; NITOZOL CREAM 2%,KOREA PHARMA CO LTD; NOVITIUM PHARMA
+bendamustine,B: confirm date(s),1,FDA(2025-07-03); HSA(no-date),2025-07-03,BEMUNAT POWDER FOR CONCENTRATE FOR SOLUTION FOR INFUSION 25 MG/VIAL USP; BENDAMUSTINE HYDROCHLORIDE,AVYXA HOLDINGS; Natco Pharma Ltd. - Pharma Division
+indomethacin,B: confirm date(s),1,FDA(2025-07-03); HSA(no-date),2025-07-03,HD-METHACIN CAPSULE 25 mg; INDOMETHACIN,ANNORA PHARMA; HOVID BHD&&HOVID Bhd.
+hydralazine,B: confirm date(s),1,FDA(2025-07-17); HSA(no-date),2025-07-17,APO-HYDRALAZINE TABLET 25 mg; HYDRALAZINE HYDROCHLORIDE,APOTEX INC; BAXTER HLTHCARE CORP
+ramipril,B: confirm date(s),1,FDA(2025-07-23); HSA(no-date),2025-07-23,TRITACE 5 TABLET 5 mg; VOSTALLY,ROSEMONT PHARMS; SANOFI S.r.l.
+lorazepam,B: confirm date(s),1,FDA(2025-07-24); HSA(no-date),2025-07-24,APO-LORAZEPAM TABLET 1 mg; LORAZEPAM,APOTEX INC; GRAVITI PHARMS
+carbamazepine,B: confirm date(s),1,FDA(2025-07-25); HSA(no-date),2025-07-25,CARBAMAZEPINE; STORILAT 200 TABLET 200 mg,ALEMBIC; REMEDICA LTD
+spironolactone,B: confirm date(s),1,FDA(2025-07-25); HSA(no-date),2025-07-25,SPIROLON 25 TABLET 25 mg; SPIRONOLACTONE,ANNORA PHARMA; REMEDICA LTD
+celecoxib,B: confirm date(s),1,FDA(2025-07-29); HSA(no-date),2025-07-29,SYNERRV CELECOXIB HARD CAPSULES 200MG; VYSCOXA,CARWIN PHARM ASSOC; UMEDICA LABORATORIES PRIVATE LIMITED
+omeprazole,B: confirm date(s),1,FDA(2025-08-07); HSA(no-date),2025-08-07,OMEPRAZOLE MAGNESIUM; OMICAP CAPSULE 20 mg,MARKSANS PHARMA; MICRO LABS LTD
+ascorbic acid,B: confirm date(s),1,FDA(2025-08-07); HSA(no-date),2025-08-07,ASCORBIC ACID; ASCORBIC ACID INJECTION USP 500 mg/5 ml,FRESENIUS KABI USA; Hospira Australia Pty Ltd
+baricitinib,B: confirm date(s),1,FDA(2025-08-08); HSA(no-date),2025-08-08,OLUMIANT; OLUMIANT FILM-COATED TABLET 4MG,"Lilly del Caribe, Inc.&&Lilly, S.A. (Primary and Secondary Packager); MSN"
+paclitaxel,B: confirm date(s),1,FDA(2025-08-19); HSA(no-date),2025-08-19,GENEXOL INJECTION 6 mg/ml; PACLITAXEL,MYLAN; SAMSUNG PHARMACEUTICAL IND CO LTD
+naloxone,B: confirm date(s),1,FDA(2025-08-21); HSA(no-date),2025-08-21,NALOXONE HYDROCHLORIDE; NALOXONE HYDROCHLORIDE INJECTION USP 0.4 mg/ml,PANPHARMA GmbH; STERINOVA INC
+metoprolol,B: confirm date(s),1,FDA(2025-08-28); HSA(no-date),2025-08-28,APO-METOPROLOL TABLET 100 mg; LOPRESSOR,APOTEX INC; XTM CONSULTING
+memantine,B: confirm date(s),1,FDA(2025-08-28); HSA(no-date),2025-08-28,MEMANTINE HYDROCHLORIDE; MEMANTINHYDROCHLORID STADA FILM-COATED TABLET 10MG,Abdi Ibrahim Ilaç San. ve Tic. A.Ş.; MACLEODS PHARMS LTD
+apremilast,B: confirm date(s),1,FDA(2025-08-29); HSA(no-date),2025-08-29,OTEZLA; OTEZLA TABLET 30 MG,AMGEN INC; Celgene International Sarl&&Patheon Inc.&&Patheon Inc. (Testing only)
+risperidone,B: confirm date(s),1,FDA(2025-09-02); HSA(no-date),2025-09-02,RISPERDAL TABLET 2 mg; RISPERIDONE,AMNEAL; JANSSEN CILAG SPA
+milrinone,B: confirm date(s),1,FDA(2025-09-02); HSA(no-date),2025-09-02,MILRINONE LACTATE IN DEXTROSE 5%; MILRINONE-BAXTER CONCENTRATED SOLUTION FOR INJECTION 10MG/10ML,Baxter Pharmaceuticals India Private Limited; CAPLIN
+prochlorperazine,B: confirm date(s),1,FDA(2025-09-08); HSA(no-date),2025-09-08,PROCHLORPERAZINE MALEATE; STEMETIL INJECTION 12.5 mg/ml,"AUROBINDO PHARMA LTD; AVENTIS PHARMA, DAGENHAM&&Sanofi S.r.L."
+deferasirox,B: confirm date(s),1,FDA(2025-09-08); HSA(no-date),2025-09-08,DEFERASIROX; JADENU FILM COATED TABLET 90MG,AUROBINDO PHARMA; Novartis Pharma Stein AG&&Novartis Pharma Produktions GmbH (primary and secondary packager)&&SANDOZ S.R.L
+glucagon,B: confirm date(s),1,FDA(2025-09-15); HSA(no-date),2025-09-15,GLUCAGEN FOR INJECTION 1 mg/ml; GLUCAGON,CIPLA; Novo Nordisk A/S&&Novo Nordisk A/ S
+losartan,B: confirm date(s),1,FDA(2025-09-19); HSA(no-date),2025-09-19,Angizaar-50mg Tablet; LOSARTAN POTASSIUM,GRAVITI PHARMS; Micro Labs Ltd
+bimatoprost,B: confirm date(s),1,FDA(2025-09-22); HSA(no-date),2025-09-22,BIMATOPROST; LUMIGAN PF (BIMATOPROST OPHTHALMIC SOLUTION) 0.03%,AMNEAL; Allergan Pharmaceuticals Ireland
+rivastigmine,B: confirm date(s),1,FDA(2025-09-23); HSA(no-date),2025-09-23,Exelon Patch 10 (9.5mg/24hr); RIVASTIGMINE,LTS Lohmann Therapie-Systeme AG; YICHANG HUMANWELL
+erythromycin,B: confirm date(s),1,FDA(2025-09-23); HSA(no-date),2025-09-23,ERYSON TABLETS 250 mg; ERYTHROMYCIN,ABON PHARMS LLC; BEACONS PHARMACEUTICALS PTE. LTD.
+clotrimazole,B: confirm date(s),1,FDA(2025-09-26); HSA(no-date),2025-09-26,CANDID-V3 VAGINAL TABLET 200 mg; CLOTIC,CARWIN PHARM ASSOC; GLENMARK PHARMACEUTICALS LTD
+levonorgestrel,B: confirm date(s),1,FDA(2025-09-30); HSA(no-date),2025-09-30,LEVONORGESTREL; POSTINOR 2 TABLET 0.75 mg,ANNORA PHARMA; CHEMICAL WORKS OF GEDEON RICHTER PLC
+mifepristone,B: confirm date(s),1,FDA(2025-09-30); HSA(no-date),2025-09-30,MIFEGYNE TABLETS 200MG; MIFEPRISTONE,EVITA SOLUTIONS; Laboratoires MACORS
+prednisone,B: confirm date(s),1,FDA(2025-10-01); HSA(no-date),2025-10-01,APO-PREDNISONE TABLET 5 mg; PREDNISONE,APOTEX INC; DR REDDYS
+labetalol,B: confirm date(s),1,FDA(2025-10-02); HSA(no-date),2025-10-02,LABETALOL HYDROCHLORIDE; TRANTALOL TABLET 100 mg,AMNEAL; DUOPHARMA (M) SDN BHD
+pilocarpine,B: confirm date(s),1,FDA(2025-10-02); HSA(no-date),2025-10-02,PILOCARPINE HYDROCHLORIDE; SALAGEN TABLET 5 mg,FDC LTD; PATHEON INC
+etravirine,B: confirm date(s),1,FDA(2025-10-02); HSA(no-date),2025-10-02,ETRAVIRINE; INTELENCE TABLET 200 MG,BIONPHARMA; Janssen Pharmaceutica NV (Spray Dried Powder)&&Janssen Cilag S.p.A
+naproxen,B: confirm date(s),1,FDA(2025-10-03); HSA(no-date),2025-10-03,NAPROXEN; SELADIN TABLET 250 mg,AUROBINDO PHARMA; YUNG SHIN PHARMACEUTICAL IND CO LTD
+isotretinoin,B: confirm date(s),1,FDA(2025-10-07); HSA(no-date),2025-10-07,ACNOTIN 10; ISOTRETINOIN,AMNEAL PHARMS NY; Mega Lifesciences Public Company Limited
+triamcinolone acetonide,B: confirm date(s),1,FDA(2025-10-17); HSA(no-date),2025-10-17,KENO ORAL PASTE 1 mg/g; TRIAMCINOLONE ACETONIDE,ALEMBIC; T O CHEMICALS (1979) LTD
+proparacaine,B: confirm date(s),1,FDA(2025-10-20); HSA(no-date),2025-10-20,ALCAINE STERILE OPHTHALMIC SOLUTION 0.5%; PROPARACAINE HYDROCHLORIDE,ALCON-COUVREUR NV; MICRO LABS
+sevelamer carbonate,B: confirm date(s),1,FDA(2025-10-27); HSA(no-date),2025-10-27,SEVELA FILM COATED TABLET 800MG; SEVELAMER CARBONATE,"Chen Ho Pharmaceutical Co., Ltd. Sinying Plant; NAVINTA LLC"
+axitinib,B: confirm date(s),1,FDA(2025-10-30); HSA(no-date),2025-10-30,AXITINIB; INLYTA TABLETS 1MG,APOTEX; Pfizer Manufacturing Deutschland GmbH
+irbesartan,B: confirm date(s),1,FDA(2025-11-04); HSA(no-date),2025-11-04,IRBESARTAN; IRBIS 300 IRBESARTAN FILM COATED TABLETS 300MG,Hetero Labs Limited; MSN
+isoflurane,B: confirm date(s),1,FDA(2025-11-04); HSA(no-date),2025-11-04,AERRANE INHALATION ANAESTHETIC; ISOFLURANE,Baxter Healthcare Corporation; SHANDONG
+sulfasalazine,B: confirm date(s),1,FDA(2025-11-04); HSA(no-date),2025-11-04,PMS-SULFASALAZINE E.C.TABLET 500 mg; SULFASALAZINE,Dragenopharm Aptheker Pushl Gmbh & Co; RISING
+maraviroc,B: confirm date(s),1,FDA(2025-11-04); HSA(no-date),2025-11-04,Celsentri Film-Coated Tablet 150mg; MARAVIROC,Pfizer Manufacturing Deutschland GmbH; RHODES PHARMS
+diclofenac,B: confirm date(s),1,FDA(2025-11-05); HSA(no-date),2025-11-05,DICLOFENAC SODIUM; VOREN GEL 10 mg/g,UMEDICA; Y S P INDUSTRIES (M) SDN BHD
+dasatinib,B: confirm date(s),1,FDA(2025-11-06); HSA(no-date),2025-11-06,DASATINIB; SPRYCEL TABLETS 50MG,ALEMBIC; AstraZeneca Pharmaceuticals LP&&Patheon Inc.
+dexlansoprazole,B: confirm date(s),1,FDA(2025-11-12); HSA(no-date),2025-11-12,DEXILANT DELAYED RELEASE CAPSULE 60mg; DEXLANSOPRAZOLE,"ALEMBIC; Takeda Ireland Limited (Manufacture of Granules-LS)&&AUPA BIOPHARM CO., LTD (primary and secondary packager)&&Takeda GmbH"
+diazepam,B: confirm date(s),1,FDA(2025-11-14); HSA(no-date),2025-11-14,DIAPINE TABLET 2 mg; DIAZEPAM,ATLANTIC LABORATORIES CORPN LTD; NAVINTA LLC
+clobetasol,B: confirm date(s),1,FDA(2025-11-20); HSA(no-date),2025-11-20,CLOBETASOL PROPIONATE; UNIVATE CREAM 0.05% w/w,XEPA-SOUL PATTINSON (MALAYSIA) SDN BHD; XIROMED
+verapamil,B: confirm date(s),1,FDA(2025-11-24); HSA(no-date),2025-11-24,ISOPTIN SR TABLET 240 mg; VERAPAMIL HYDROCHLORIDE,Famar Anonymous Industrial Single Member Company of Pharmaceuticals and Cosmetics; ZYDUS LIFESCIENCES
+propofol,B: confirm date(s),1,FDA(2025-12-02); HSA(no-date),2025-12-02,PROPOFOL; Propofol-Lipuro 2% (20mg/ml),B. Braun Melsungen AG; EMERGE BIOSCIENCE
+paracetamol,B: confirm date(s),1,FDA(2025-12-05); HSA(no-date),2025-12-05,ACET 325 SUPPOSITORIES 325 mg; ACETAMINOPHEN,"CAPLIN; Pendopharm, Division of /de Pharmascience Inc."
+linezolid,B: confirm date(s),1,FDA(2025-12-08); HSA(no-date),2025-12-08,HETERO-LINEZOLID FILM COATED TABLETS 600 MG; LINEZOLID,CAPLIN; Hetero Labs Limited
+deferiprone,B: confirm date(s),1,FDA(2025-12-11); HSA(no-date),2025-12-11,DEFERIPRONE; FERRIPROX 100MG/ML ORAL SOLUTION,Apotex Inc.- Richmond Hill Site; SENORES PHARMS
+octreotide,B: confirm date(s),1,FDA(2025-12-12); HSA(no-date),2025-12-12,OCTREOTIDE ACETATE; SANDOSTATIN INJECTION 0.1 mg/ml,MYLAN LABS LTD; Novartis Pharma Stein AG&&NOVARTIS PHARMA AG&&Delpharm Dijon
+teriparatide,B: confirm date(s),1,FDA(2025-12-12); HSA(no-date),2025-12-12,SONDELBAY INJECTION 20 MCG/80 MCL; TERIPARATIDE,AMPHASTAR PHARMS INC; Intas Pharmaceuticals Limited Biopharma Division
+beclomethasone,B: confirm date(s),1,FDA(2025-12-16); HSA(no-date),2025-12-16,BECLOMETHASONE DIPROPIONATE; CLENIL 50 mcg PRESSURISED INHALATION SOLUTION,AMNEAL IRELAND LTD; CHIESI FARMACEUTICI SPA
+latanoprost,B: confirm date(s),1,FDA(2025-12-17); HSA(no-date),2025-12-17,LATANDROPS EYE DROPS SOLUTION 50mcg/ml; LATANOPROST,MANKIND PHARMA; VIANEX SA
+travoprost,B: confirm date(s),1,FDA(2025-12-17); HSA(no-date),2025-12-17,TRAVON EYE DROPS SOLUTION 0.004%; TRAVOPROST,ALEMBIC; Indoco Remedies Limited
+semaglutide,B: confirm date(s),1,FDA(2025-12-22); HSA(no-date),2025-12-22,RYBELSUS® TABLET 14MG; WEGOVY,NOVO; Novo Nordisk A/S&&Novo Nordisk A/S (Primary packager and Secondary packager)
+pseudoephedrine,B: confirm date(s),1,FDA(2025-12-29); HSA(no-date),2025-12-29,PSEUDOEPHEDRINE HYDROCHLORIDE; PSEUDORINE TABLETS 60 mg,AUROBINDO PHARMA LTD; SUNWARD PHARMACEUTICAL PRIVATE LIMITED
+loperamide,B: confirm date(s),1,FDA(2025-12-29); HSA(no-date),2025-12-29,LOPERAMIDE HYDROCHLORIDE; LOPERAX CAPSULE 2 mg,AUROBINDO PHARMA; XEPA-SOUL PATTINSON (MALAYSIA) SDN BHD
+epoprostenol,B: confirm date(s),1,FDA(2025-12-29); HSA(no-date),2025-12-29,EPOPROSTENOL SODIUM; FLOLAN FOR INFUSION 0.5 mg/vial,"GLAND; GLAXOSMITHKLINE MANUFACTURING S.P.A. (Powder)&&GLAXO OPERATIONS UK LTD.(TRADING AS GLAXO WELLCOME OPERATIONS)(Diluent-Manufacture,Primary Packager)"
+phenytoin,B: confirm date(s),1,FDA(2026-01-02); HSA(no-date),2026-01-02,DILANTIN CAPSULE 100 mg; EXTENDED PHENYTOIN SODIUM,MANKIND PHARMA; Viatris Pharmaceuticals LLC
+sucralfate,B: confirm date(s),1,FDA(2026-01-05); HSA(no-date),2026-01-05,APO-SUCRALFATE TABLET 1 g; SUCRALFATE,APOTEX INC; GLENMARK PHARMS LTD
+bortezomib,B: confirm date(s),1,FDA(2026-01-06); HSA(no-date),2026-01-06,BORTEBIN POWDER FOR SOLUTION FOR INJECTION 3.5MG/VIAL; BORTEZOMIB,EUGIA PHARMA SPECIALITIES LIMITED; GLAND
+enoxaparin,B: confirm date(s),1,FDA(2026-01-07); HSA(no-date),2026-01-07,ENOXAPARIN SODIUM (PRESERVATIVE FREE); INHIXA Solution for Injection 6000 Anti-Xa IU (60MG)/0.6ML,"HEBEI CHANGSHAN; Shenzhen Techdow Pharmaceutical Co., Ltd."
+fluconazole,B: confirm date(s),1,FDA(2026-01-08); HSA(no-date),2026-01-08,Apo-Fluconazole 150mg Capsule; FLUCONAZOLE,Apotex Inc; FDC LTD
+furosemide,B: confirm date(s),1,FDA(2026-01-08); HSA(no-date),2026-01-08,FUROSEMIDE; RASITOL TABLET 40MG,MICRO LABS; Y.S.P. INDUSTRIES (M) SDN. BHD.
+oxaliplatin,B: confirm date(s),1,FDA(2026-01-15); HSA(no-date),2026-01-15,HOVID OXALIPLATIN POWDER FOR CONCENTRATE FOR SOLUTION FOR INFUSION 100MG/VIAL; OXALIPLATIN,Qilu Pharmaceutical (Hainan) Co. Ltd; SHANDONG
+fenofibrate,B: confirm date(s),1,FDA(2026-01-21); HSA(no-date),2026-01-21,FENOFIBRATE; Fenosup Lidose 160mg Capsule,MACLEODS PHARMS LTD; SMB Technology S.A.
+amlodipine,B: confirm date(s),1,FDA(2026-01-22); HSA(no-date),2026-01-22,AMLODIPINE BESYLATE; NORVASC TABLET 10 mg,TEVA PHARMS INC; Viatris Pharmaceuticals LLC&&Pfizer Manufacturing Deutschland GmbH (primary & secondary packager)
+chlorpromazine,B: confirm date(s),1,FDA(2026-01-26); HSA(no-date),2026-01-26,CHLORPROMAZINE HYDROCHLORIDE; LARGO TABLETS 25 mg,BEACONS PHARMACEUTICALS PTE. LTD.; MSN
+betamethasone,B: confirm date(s),1,FDA(2026-01-26); HSA(no-date),2026-01-26,BESONE CREAM 0.1%; BETAMETHASONE DIPROPIONATE,ATLANTIC LABORATORIES CORPN LTD; AUROBINDO PHARMA LTD
+tranexamic acid,B: confirm date(s),1,FDA(2026-01-26); HSA(no-date),2026-01-26,TRANEXAMIC ACID; XAMILUX INJECTION 100MG/ML,Gland Pharma Limited; I 3 PHARMS
+mesna,B: confirm date(s),1,FDA(2026-01-27); HSA(no-date),2026-01-27,MESNA; UROMITEXAN TABLETS 600 mg,EUGIA PHARMA; TEMMLER PHARMA GMBH
+rilpivirine,B: confirm date(s),1,FDA(2026-01-29); HSA(no-date),2026-01-29,REKAMBYS PROLONGED-RELEASE SUSPENSION FOR INJECTION 300MG/ML; RILPIVIRINE HYDROCHLORIDE,Cilag AG; SOMERSET THERAPS LLC
+lenalidomide,B: confirm date(s),1,FDA(2026-02-02); HSA(no-date),2026-02-02,LENALIDOMIDE; MYOLID CAPSULES 25 MG,BIOCON PHARMA LIMITED; CIPLA
+doxorubicin,B: confirm date(s),1,FDA(2026-02-03); HSA(no-date),2026-02-03,DIOX POWDER FOR INJECTION 10 mg/vial; DOXORUBICIN HYDROCHLORIDE,DAE HAN NEW PHARM. CO. LTD.; QILU PHARM HAINAN
+carboplatin,B: confirm date(s),1,FDA(2026-02-04); HSA(no-date),2026-02-04,CARBOPLATIN; CARBOTINOL INJECTION 50 mg/5 ml,KOREA UNITED PHARMACEUTICAL INC; QILU PHARM HAINAN
+zoledronic acid,B: confirm date(s),1,FDA(2026-02-05); HSA(no-date),2026-02-05,ZOLEDRONIC ACID; Zometa Concentrate for Solution for Infusion 4 mg/5 ml,GLAND; Novartis Pharma Stein AG&&Fresenius Kabi Austria GmbH&&FISIOPHARMA S.R.L.
+nystatin,B: confirm date(s),1,FDA(2026-02-05); HSA(no-date),2026-02-05,"NYSTATIN; NYSTATIN VAGINAL TABLET 100,000 units",STERANCO HLTHCARE; YUNG SHIN PHARMACEUTICAL IND CO LTD
+aztreonam,B: confirm date(s),1,FDA(2026-02-05); HSA(no-date),2026-02-05,AZACTAM FOR INJECTION 1 g/vial; AZTREONAM,CATALENT ANAGNI S.R.L.; HIKMA
+fludrocortisone,B: confirm date(s),1,FDA(2026-02-10); HSA(no-date),2026-02-10,FLORINEF TABLET 0.1 mg; FLUDROCORTISONE ACETATE,HIBROW HLTHCARE; Haupt Pharma Amareg GmbH
+fluorometholone,B: confirm date(s),1,FDA(2026-02-12); HSA(no-date),2026-02-12,FLUOROMETHOLONE; FML LIQUIFILM OPHTHALMIC SUSPENSION 0.1%,ALLERGAN PHARMACEUTICALS IRELAND; SANDOZ
+metronidazole,B: confirm date(s),1,FDA(2026-02-13); HSA(no-date),2026-02-13,METRONIDAZOLE; ROZEX CREAM 0.75%,LABORATOIRES GALDERMA; ZYDUS LIFESCIENCES
+etoposide,B: confirm date(s),1,FDA(2026-02-13); HSA(no-date),2026-02-13,AVOPEF; ETOPOSIDE-TEVA INJECTION 20 mg/ml,AVYXA HOLDINGS; PHARMACHEMIE BV
+colchicine,B: confirm date(s),1,FDA(2026-02-17); HSA(no-date),2026-02-17,COLCHICINE; COLCITEX TABLET 0.6 mg,MICRO LABS; THE UNITED DRUG (1996) CO LTD
+aripiprazole,B: confirm date(s),1,FDA(2026-02-18); HSA(no-date),2026-02-18,ARIPDON Tablets 5mg; ARIPIPRAZOLE,AUROBINDO PHARMA; PHARMATHEN INTERNATIONAL S.A&&Pharmathen S.A. (Primary and Secondary Packager)
+fluorouracil,B: confirm date(s),1,FDA(2026-02-20); HSA(no-date),2026-02-20,DBL Fluorouracil Injection BP 50mg/mL; FAVLYXA,AVYXA HOLDINGS; Hospira Australia Pty Ltd
+ipratropium,B: confirm date(s),1,FDA(2026-02-23); HSA(no-date),2026-02-23,IPRATROPIUM BROMIDE; STERI-NEB IPRATROPIUM NEBULISER SOLUTION 250 mcg/ml,ARMSTRONG PHARMS; IVAX PHARMACEUTICALS UK
+cetirizine,B: confirm date(s),1,FDA(2026-02-25); HSA(no-date),2026-02-25,CETIRIZINE HYDROCHLORIDE; SUNIZINE TABLET 10MG,RUBICON RESEARCH; Sunward Pharmaceutical Sdn Bhd
+lamotrigine,B: confirm date(s),1,FDA(2026-02-25); HSA(no-date),2026-02-25,LAMOTRIGINE; Lamotrix Tablet 100mg,ALEMBIC; MEDOCHEMIE Ltd. (Central Factory)&&MEDOCHEMIE (FAR EAST) LTD. (ORAL FACILITY)
+bumetanide,B: confirm date(s),1,FDA(2026-02-26); HSA(no-date),2026-02-26,BUMETANIDE; BURINEX TABLET 1 mg,ANTHEA PHARMA; allphamed PHARBIL Arzneimittel GmbH
+diltiazem,B: confirm date(s),1,FDA(2026-02-27); HSA(no-date),2026-02-27,DILTIAZEM HYDROCHLORIDE; HERBESSER 60 TABLET 60 mg,MACLEODS PHARMS LTD; PT Mitsubishi Tanabe Pharma Indonesia
+calcitriol,B: confirm date(s),1,FDA(2026-02-27); HSA(no-date),2026-02-27,CALCITRIOL; RASPUTIN SOFT CAPSULE 0.25 mcg,HUMANWELL PURACAP; YOUNG IL PHARM CO LTD&&Hanmi Pharmaceuticals
+moxifloxacin,B: confirm date(s),1,FDA(2026-03-02); HSA(no-date),2026-03-02,JOYLOXIN INJECTION 400MG/250ML; MOXIFLOXACIN HYDROCHLORIDE,KOREA UNITED PHARM .INC; MACLEODS PHARMS LTD
+rivaroxaban,B: confirm date(s),1,FDA(2026-03-02); HSA(no-date),2026-03-02,INVAROX FILM COATED TABLET 20MG; RIVAROXABAN,APOTEX; RONTIS HELLAS MEDICAL AND PHARMACEUTICAL PRODUCTS S.A.&&PHAROS MT LTD
+glipizide,B: confirm date(s),1,FDA(2026-03-04); HSA(no-date),2026-03-04,DIBIZIDE TABLETS 5 mg; GLIPIZIDE,GRAVITI PHARMS; MICRO LABS LTD
+rocuronium,B: confirm date(s),1,FDA(2026-03-04); HSA(no-date),2026-03-04,ROCURONIUM BROMIDE; ROCURONIUM-HAMELN INJECTION 10MG/ML,ASPIRO; Siegfried Hameln GmbH
+ibuprofen,B: confirm date(s),1,FDA(2026-03-05); HSA(no-date),2026-03-05,BRUFEN TABLET 200 mg; IBUPROFEN,RUBICON RESEARCH; THE BOOTS CO PLC
+olanzapine,B: confirm date(s),1,FDA(2026-03-05); HSA(no-date),2026-03-05,OLANKLINE TABLETS 10MG; OLANZAPINE,ANTHEA PHARMA; DR REDDY'S LABORATORIES LIMITED
+bisoprolol,B: confirm date(s),1,FDA(2026-03-09); HSA(no-date),2026-03-09,BISODAC 5 FILM-COATED TABLETS 5MG; BISOPROLOL FUMARATE,"AUROBINDO PHARMA LIMITED, FORMULATION (UNIT-XV); MICRO LABS"
+fluticasone,B: confirm date(s),1,FDA(2026-03-16); HSA(no-date),2026-03-16,FLIXOTIDE EVOHALER 125 mcg; FLUTICASONE PROPIONATE,GLAXO WELLCOME PRODUCTION&&Glaxo Wellcome S.A.; GLENMARK SPECLT
+valganciclovir,B: confirm date(s),1,FDA(2026-03-19); HSA(no-date),2026-03-19,VALCYTE TABLET 450 mg; VALGANCICLOVIR HYDROCHLORIDE,MICRO LABS; PATHEON INC
+ephedrine,B: confirm date(s),1,FDA(2026-03-19); HSA(no-date),2026-03-19,DBL EPHEDRINE SULFATE INJECTION 30 mg/ml; EPHEDRINE SULFATE,FRESENIUS KABI USA; Siegfried Hameln GmbH
+rifaximin,B: confirm date(s),1,FDA(2026-03-19); HSA(no-date),2026-03-19,RIFAXIMIN; XIFAXAN Film-coated Tablet 550mg,ACTAVIS LABS FL INC; Alfasigma S.p.A.
+lidocaine,B: confirm date(s),1,FDA(2026-03-20); HSA(no-date),2026-03-20,LIDOCAINE HYDROCHLORIDE; XYLOCAINE JELLY 2%,QUAGEN; Recipharm Karlskoga AB
+clindamycin,B: confirm date(s),1,FDA(2026-03-23); HSA(no-date),2026-03-23,CLIMADAN CAPSULE 150 mg; CLINDAMYCIN PHOSPHATE,PT. DANKOS FARMA; RISING
+cladribine,B: confirm date(s),1,FDA(2026-03-27); HSA(no-date),2026-03-27,CLADRIBINE; MAVENCLAD TABLET 10MG,HOPEWELL PHARMA; NerPharMa S.R.L.&&R-Pharm Germany GmbH
+phenylephrine,B: confirm date(s),1,FDA(2026-04-03); HSA(no-date),2026-04-03,MYDFRIN STERILE OPHTHALMIC SOLUTION 2.5%; PHENYLEPHRINE HYDROCHLORIDE,ALCON RESEARCH LLC; BAXTER HLTHCARE CORP
+dapagliflozin,B: confirm date(s),1,FDA(2026-04-06); HSA(no-date),2026-04-06,DAPAGLIFLOZIN; DAPAGLIFLOZIN SANDOZ FILM COATED TABLET 10MG,Sandoz Private Limited; TEVA PHARMS USA
+ivermectin,B: confirm date(s),1,FDA(2026-04-07); HSA(no-date),2026-04-07,IVERMECTIN; SOOLANTRA CREAM 10MG/G,AJANTA PHARMA LTD; LABORATOIRES GALDERMA
+progesterone,B: confirm date(s),1,FDA(2026-04-08); HSA(no-date),2026-04-08,CRINONE PROGESTERONE VAGINAL GEL 8%; PROGESTERONE,DENDRON BRANDS LTD&&maropack ag; GLENMARK PHARMS
+ofloxacin,B: confirm date(s),1,FDA(2026-04-08); HSA(no-date),2026-04-08,OFLOX TABLET 200 mg; OFLOXACIN,BROWN & BURK PHARMACEUTICAL LTD; MICRO LABS
+bicarbonate,B: confirm date(s),1,FDA(2026-04-15); HSA(no-date),2026-04-15,SODIUM BICARBONATE; SODIUM BICARBONATE INTRAVENOUS INFUSION BP 4.2% w/v,ASPIRO; B BRAUN MELSUNGEN AG
+atropine,B: confirm date(s),1,FDA(2026-04-15); HSA(no-date),2026-04-15,ATROPINE SULFATE; ATROPINE SULPHATE INJECTION 0.6 mg/ml,ATLANTIC LABORATORIES CORPN LTD; EDENBRIDGE PHARMS
+selexipag,B: confirm date(s),1,FDA(2026-04-16); HSA(no-date),2026-04-16,SELEXIPAG; UPTRAVI FILM-COATED TABLETS 1600MCG,EXCELLA GmbH & Co. KG&&ALLPACK GROUP AG (Primary and Secondary Packager); RK PHARMA
+enzalutamide,B: confirm date(s),1,FDA(2026-04-20); HSA(no-date),2026-04-20,ENZALUTAMIDE; XTANDI™ SOFT CAPSULES 40MG,"Catalent Pharma Solutions, LLC&&AndersonBrecon Inc. (primary and secondary packaging); SANDOZ"
+pirfenidone,B: confirm date(s),1,FDA(2026-04-20); HSA(no-date),2026-04-20,ESBRIET FILM COATED TABLET 267MG; PIRFENIDONE,AUROBINDO PHARMA; Delpharm Milano S.r.l.
+valsartan,B: confirm date(s),1,FDA(2026-04-21); HSA(no-date),2026-04-21,HOVID-VALSARTAN FILM COATED TABLET 160 MG; VALSARTAN,HOVID Bhd (Chemor); LAURUS
+tolvaptan,B: confirm date(s),1,FDA(2026-04-21); HSA(no-date),2026-04-21,SAMSCA TABLET 15MG; TOLVAPTAN,"ALKEM LABS LTD; Korea Otsuka Pharmaceutical Co., Ltd.&&Otsuka Pharmaceutical Co., Ltd. - Tokushima Factory (DP intermediate)"
+pantoprazole,B: confirm date(s),1,FDA(2026-04-22); HSA(no-date),2026-04-22,PANTOPRAZOLE SODIUM; PEPTAZOL 40 TABLET 40 mg,QUIMICA MONTPELLIER S A; SHUANGCHENG
+escitalopram,B: confirm date(s),1,FDA(2026-04-22); HSA(no-date),2026-04-22,ESCITALOPRAM OXALATE; LEXAPRO TABLET 5 mg,H LUNDBECK A/S; MICRO LABS
+bupivacaine,B: confirm date(s),1,FDA(2026-04-22); HSA(no-date),2026-04-22,BUPIVACAINE HYDROCHLORIDE; MARCAIN SPINAL 0.5% HEAVY INJECTION,ANTHEA PHARMA; Cenexi
+salbutamol,B: confirm date(s),1,FDA(2026-04-22); HSA(no-date),2026-04-22,ALBUTEROL SULFATE; SALBUAIR CFC-FREE INHALER 100 mcg/dose,CIPLA; LABORATORIO ALDO-UNION S.L.
+flecainide,B: confirm date(s),1,FDA(2026-04-22); HSA(no-date),2026-04-22,FLECAINIDE ACETATE; JAMP FLECAINIDE ACETATE TABLETS USP 100 MG,Aizant Drug Research Solutions Pvt. Ltd.&&Unison Pharmaceuticals Private Limited; OMSAV PHARMA
+ticagrelor,B: confirm date(s),1,FDA(2026-04-27); HSA(no-date),2026-04-27,BRILINTA TABLET 60 MG; TICAGRELOR,AstraZeneca AB&&AstraZeneca Pharmaceutical Co. Ltd; MICRO LABS
+methotrexate,B: confirm date(s),1,FDA(2026-04-30); HSA(no-date),2026-04-30,METHOTREXATE REMEDICA FILM-COATED TABLET 2.5MG; METHOTREXATE SODIUM,HETERO LABS LTD VI; REMEDICA LTD (BUILDING 10-ANTINEOPLASTIC AND IMMUNOMODULATING PRODUCTS)
+pregabalin,B: confirm date(s),1,FDA(2026-04-30); HSA(no-date),2026-04-30,PEGASET 25 CAPSULES 25MG; PREGABALIN,AUROBINDO PHARMA LIMITED - UNIT VII; UNICHEM
+mirabegron,B: confirm date(s),1,FDA(2026-05-01); HSA(no-date),2026-05-01,BETMIGA ® PROLONGED-RELEASE TABLETS 50MG; MIRABEGRON,"Avara Pharmaceutical Technologies, Inc.; DEVA HOLDING AS"
+trabectedin,B: confirm date(s),1,FDA(2026-05-01); HSA(no-date),2026-05-01,EVDI; YONDELIS Powder for Injection 1mg/vial,APOTEX; Baxter Oncology GmbH
+voriconazole,B: confirm date(s),1,FDA(2026-05-05); HSA(no-date),2026-05-05,VORICONAZOLE; VORICONAZOLE MYLAN POWDER FOR SOLUTION FOR INJECTION 200 MG/VIAL,Mylan Laboratories Ltd Hosur Steriles Facility (HSF); ZHEJIANG NOVUS
+vasopressin,B: confirm date(s),1,FDA(2026-05-06); HSA(no-date),2026-05-06,VASOPRESSIN; VASOPRESSIN INJECTION USP 20 u/ml,"Fresenius Kabi USA, LLC; SANDOZ"
+brimonidine,B: confirm date(s),1,FDA(2026-05-07); HSA(no-date),2026-05-07,BRIMONIDINE TARTRATE; RIMONAL EYE DROPS 0.15% w/v,MICRO LABS; World Medicine İlaç San ve Tic. A.Ş.
+hydrocortisone,B: confirm date(s),1,FDA(2026-05-07); HSA(no-date),2026-05-07,CORTISONE CREAM 1%; HYDROCORTISONE SODIUM SUCCINATE,HOVID BHD; ZYDUS PHARMS
+paliperidone,B: confirm date(s),1,FDA(2026-05-07); HSA(no-date),2026-05-07,Invega Extended-Release Tablet 9mg; PALIPERIDONE,I3 PHARMS; JANSSEN CILAG MANUFACTURING LLC
+levetiracetam,B: confirm date(s),1,FDA(2026-05-08); HSA(no-date),2026-05-08,INTIRACETAM FILM COATED TABLET 500mg; LEVETIRACETAM IN SODIUM CHLORIDE,MYLAN LABS LTD; Rontis Hellas Medical and Pharmaceutical Products S.A.
+estradiol,B: confirm date(s),1,FDA(2026-05-11); HSA(no-date),2026-05-11,ESTRADIOL; PROGYNOVA TABLET 2 mg,Bayer Weimar GmbH und Co. KG; ENCUBE
+famotidine,B: confirm date(s),1,FDA(2026-05-12); HSA(no-date),2026-05-12,FAMOTIDINE; FEBCID-40 TABLET 40 mg,LUPIN; Micro Labs Limited
+everolimus,B: confirm date(s),1,FDA(2026-05-12); HSA(no-date),2026-05-12,Afinitor Tablet 10mg; EVEROLIMUS,APOTEX; Novartis Pharma Stein AG&&Novartis Pharmaceutical Manufacturing LLC (drug product intermediate manufacturer)&&Novartis Pharma AG (drug product intermediate manufacturer)&&Sandoz S.R.L.&&Novart
+tadalafil,B: confirm date(s),1,FDA(2026-05-15); HSA(no-date),2026-05-15,TADALAFIL; ZENAVIL FILM COATED TABLETS 20MG,JUBILANT GENERICS; MEDOCHEMIE LTD - CENTRAL FACTORY&&MEDOCHEMIE LTD - FACTORY AZ (Primary & Secondary Packager)
+venetoclax,B: confirm date(s),1,FDA(2026-05-15); HSA(no-date),2026-05-15,VENCLEXTA FILM-COATED TABLET 10MG; VENETOCLAX,AbbVie Deutschland GmbH & Co. KG (Extrudate)&&AbbVie Ireland NL B.V.&&AbbVie Inc. (Primary & Secondary Packager); DR REDDYS
+clomiphene,B: confirm date(s),1,FDA(2026-05-15); HSA(no-date),2026-05-15,CLOMIPHENE CITRATE; CLOMIPHENE TABLETS 50 mg,ASCENT PHARMS INC; Y S P INDUSTRIES (M) SDN BHD
+mirtazapine,B: confirm date(s),1,FDA(2026-05-19); HSA(no-date),2026-05-19,APO-MIRTAZAPINE TABLET 30MG; MIRTAZAPINE,Apotex Inc. (Etobicoke Site); MICRO LABS
+levothyroxine,B: confirm date(s),1,FDA(2026-05-20); HSA(no-date),2026-05-20,LEVOTHYROXINE SODIUM; THYROCORD 100 TABLET 100 MCG,ALEMBIC; Intas Pharmaceuticals Limited.
+clonazepam,B: confirm date(s),1,FDA(2026-05-21); HSA(no-date),2026-05-21,CLONAZEPAM; CLONOTRIL 0.5 TABLET 0.5 mg,REMEDICA LTD; RUBICON RESEARCH
+topiramate,B: confirm date(s),1,FDA(2026-05-26); HSA(no-date),2026-05-26,TOPIRAMATE; TROKENDI XR® EXTENDED-RELEASE CAPSULE 200MG,"Orient Pharma Co., Ltd.; RICONPHARMA LLC"
+linagliptin,B: confirm date(s),1,FDA(2026-05-27); HSA(no-date),2026-05-27,LINAGLIPTIN; Trajenta Film-Coated Tablets 5mg,TEVA PHARMS USA; West-Ward Columbus Inc.&&Dragenopharm Apotheker Püschl GmbH&&Boehringer Ingelheim Seiyaku Co. Ltd.
+adrenaline,B: confirm date(s),1,FDA(2026-05-29); HSA(no-date),2026-05-29,EPINEPHRINE; EpiPen (Epinephrine) Auto-Injector 0.3mg/dose (1mg/ml),HIKMA; Meridian Medical Technologies LLC
+mycophenolate mofetil,B: confirm date(s),1,FDA(2026-06-01); HSA(no-date),2026-06-01,MYCOPHENOLATE MOFETIL; TRANSTERO MYCOPHENOLATE MOFETIL CAPSULES 250MG USP,CONCORD BIOTECH LTD; Hetero Labs Limited
+eribulin,B: confirm date(s),1,FDA(2026-06-01); HSA(no-date),2026-06-01,ERIBULIN MESYLATE; Halaven Solution for Injection 0.5mg/mL,NATCO; NERPHARMA S.R.L.&&BSP Pharmaceuticals S.p.A (DP & Primary packager)
+haloperidol,B: confirm date(s),1,FDA(2026-06-04); HSA(no-date),2026-06-04,HALOPERIDOL; MYUNG IN HALOPERIDOL INJECTION 5 mg/ml,ALEMBIC; MYUNG IN PHARM CO LTD
+cephalexin,B: confirm date(s),1,FDA(2026-06-09); HSA(no-date),2026-06-09,CEPHALEXIN; SOFILEX FOR ORAL SUSPENSION 125 mg/5 ml,AUROBINDO PHARMA; XEPA-SOUL PATTINSON (MALAYSIA) SDN BHD
+tofacitinib,B: confirm date(s),1,FDA(2026-06-09); HSA(no-date),2026-06-09,TOFACITINIB CITRATE; XELJANZ TABLET 5MG,Pfizer Manufacturing Deutschland GmbH; YAOPHARMA CO LTD
+hydroxyzine,B: confirm date(s),1,FDA(2026-06-11); HSA(no-date),2026-06-11,AA PHARMA HYDROXYZINE CAPSULE 10 mg; HYDROXYZINE HYDROCHLORIDE,CATALENT ONTARIO LIMITED; SAPTALIS PHARMS
+tretinoin,B: confirm date(s),1,FDA(2026-06-11); HSA(no-date),2026-06-11,RETRIEVE CREAM 0.05% w/w; TRETINOIN,ALEMBIC; Milpharma Pty Ltd
+gadobutrol,B: confirm date(s),1,FDA(2026-06-11); HSA(no-date),2026-06-11,GADOBUTROL; GADOVIST 1MMOL/ML PREFILLED SYRINGE 5.0 ML,BAYER AG; VIWIT PHARM
+cabergoline,B: confirm date(s),1,FDA(2026-06-15); HSA(no-date),2026-06-15,CABERGOLINE; DOSTINEX TABLET 0.5 mg,Pfizer Italia S.r.l.; RENATA
+liraglutide,B: confirm date(s),1,FDA(2026-06-15); HSA(no-date),2026-06-15,LIRAGLUTIDE; SAXENDA® SOLUTION FOR INJECTION IN PRE-FILLED PEN 6MG/ML,"MYLAN INSTITUTIONAL; Novo Nordisk A/S&&Novo Nordisk Pharmaceutical Industries, LP"
+perampanel,B: confirm date(s),1,FDA(2026-06-15); HSA(no-date),2026-06-15,FYCOMPA ORAL SUSPENSION 0.5MG/ML; PERAMPANEL,Delpharm Huningue S.A.S.; TARO
+aprepitant,B: confirm date(s),1,FDA(2026-06-16); HSA(no-date),2026-06-16,APREPITANT; EMEND CAPSULE 80 mg,AZURITY; Alkermes Pharma Ireland Limited&&PT Organon Pharma Indonesia Tbk (Primary and Secondary Packager)
+diphenhydramine,B: confirm date(s),1,FDA(2026-06-17); HSA(no-date),2026-06-17,DIPHENHYDRAMINE HYDROCHLORIDE; PAXIDORM TABLETS 25 mg,ANNORA PHARMA; PHARMASERVE LTD
+baloxavir marboxil,B: confirm date(s),1,FDA(2026-06-17); HSA(no-date),2026-06-17,BALOXAVIR MARBOXIL; XOFLUZA FILM COATED TABLETS 40MG,"NORWICH; Shionogi Pharma Co. Ltd. (Settsu Plant)&&Sharp Packaging Services, LLC (Primary and Secondary Packager)&&F. Hoffmann-La Roche Ltd (Primary and Secondary Packager)"
+bupropion,B: confirm date(s),1,FDA(2026-06-23); HSA(no-date),2026-06-23,BUPROPION HYDROCHLORIDE; WELLBUTRIN SR TABLETS 150 mg,GlaxoSmithKline LLC d/b/a GlaxoSmithKline&&Glaxo Wellcome S.A. (Primary and secondary packaging); MACLEODS PHARMS LTD
+gabapentin,B: confirm date(s),1,FDA(2026-06-23); HSA(no-date),2026-06-23,GABAPENTIN; PMS-GABAPENTIN CAPSULE 100 mg,ACTAVIS ELIZABETH; PHARMEL INC
+fluvoxamine,B: confirm date(s),1,FDA(2026-06-23); HSA(no-date),2026-06-23,APO-FLUVOXAMINE 100MG TABLET; FLUVOXAMINE MALEATE,APOTEX INC; MICRO LABS
+propranolol,B: confirm date(s),1,FDA(2026-06-24); HSA(no-date),2026-06-24,NALOL TABLET 80 mg; PROPRANOLOL HYDROCHLORIDE,MICRO LABS; SUNWARD PHARMACEUTICAL PRIVATE LIMITED
