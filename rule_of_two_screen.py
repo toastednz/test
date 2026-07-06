@@ -54,8 +54,9 @@ FDA_DRUGSFDA_ZIP = "https://download.open.fda.gov/drug/drugsfda/drug-drugsfda-00
 SG_RESOURCE_ID = "d_767279312753558cbf19d48344577084"
 SG_DATASTORE = "https://data.gov.sg/api/action/datastore_search"
 
-# CONFIRM: current EMA EPAR human-medicines table URL (EMA reshuffled its site in 2024).
-# Get it from https://www.ema.europa.eu/en/medicines/download-medicine-data  (Excel link).
+# EMA "medicines output" report (all human + veterinary medicines, regenerated nightly).
+# Verified live 2026-07-06. Source page: https://www.ema.europa.eu/en/medicines/download-medicine-data
+# NB: the .xlsx has banner rows above the real header -- fetch_ema() detects it dynamically.
 EMA_XLSX_URL = "https://www.ema.europa.eu/en/documents/report/medicines-output-medicines-report_en.xlsx"
 
 # CONFIRM: current Health Canada DPD "all files" extract (headerless CSVs).
@@ -248,10 +249,33 @@ def _find_col(cols_lower, needles):
     return None
 
 
-def fetch_ema():
+def _read_ema_table():
+    """Download the EMA report and return a DataFrame with the real header.
+
+    The EMA 'medicines output' .xlsx carries several banner rows (title,
+    generation timestamp, blanks) before the actual column header, so a plain
+    read_excel() treats the banner as column names and matches nothing. Find
+    the header row dynamically -- its height drifts as EMA regenerates the file.
+    """
     import pandas as pd
-    df = pd.read_excel(EMA_XLSX_URL)
-    cl = {c.lower(): c for c in df.columns}
+    content = _http_get(EMA_XLSX_URL).content
+    probe = pd.read_excel(io.BytesIO(content), header=None, nrows=40)
+    header_row = 0
+    for i, row in probe.iterrows():
+        cells = {str(v).strip().lower() for v in row.tolist()}
+        if "name of medicine" in cells or "category" in cells:
+            header_row = i
+            break
+    return pd.read_excel(io.BytesIO(content), header=header_row)
+
+
+def fetch_ema():
+    df = _read_ema_table()
+    cl = {str(c).lower(): c for c in df.columns}
+    # keep human medicines only (the file also carries veterinary rows)
+    catcol = _find_col(cl, ["category"])
+    if catcol:
+        df = df[df[catcol].astype(str).str.strip().str.lower() == "human"]
     inn = _find_col(cl, ["inn", "active substance", "common name"])
     dcol = _find_col(cl, ["marketing authorisation date", "authorisation date",
                           "decision date", "date of issue", "start date"])
