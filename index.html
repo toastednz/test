@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>World Cup 2026 Flag Game ⚽</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  html,body { height:100%; overflow:hidden; }
+  body {
+    font-family: 'Comic Sans MS','Chalkboard SE','Segoe UI',sans-serif;
+    background: linear-gradient(180deg,#7ec8ff 0%,#b3e5ff 55%,#8fe3a2 100%);
+    display:flex; align-items:center; justify-content:center;
+    user-select:none;
+  }
+  #app { width:100%; max-width:720px; padding:16px; text-align:center; position:relative; z-index:2; }
+
+  /* ---------- start / end screens ---------- */
+  .screen h1 { font-size:clamp(28px,6vw,44px); color:#14406b; text-shadow:0 2px 0 #fff; margin-bottom:12px; }
+  .screen p  { font-size:clamp(16px,3.5vw,22px); color:#14406b; margin-bottom:24px; }
+  .bigbtn {
+    font-family:inherit; font-size:clamp(26px,6vw,40px); font-weight:bold; color:#fff;
+    background:linear-gradient(180deg,#ffb300,#ff8f00);
+    border:none; border-radius:60px; padding:22px 64px; cursor:pointer;
+    box-shadow:0 8px 0 #d97400, 0 12px 24px rgba(0,0,0,.25);
+    transition:transform .1s;
+  }
+  .bigbtn:active { transform:translateY(6px); box-shadow:0 2px 0 #d97400; }
+  .balls { font-size:clamp(30px,7vw,48px); margin-bottom:10px; letter-spacing:8px; }
+
+  /* ---------- game screen ---------- */
+  #progressWrap { display:flex; align-items:center; gap:10px; margin-bottom:10px; }
+  #progressBar { flex:1; height:16px; background:rgba(255,255,255,.6); border-radius:10px; overflow:hidden; }
+  #progressFill { height:100%; width:0%; background:linear-gradient(90deg,#ffd54f,#ff9800); border-radius:10px; transition:width .5s; }
+  #progressText { font-size:20px; font-weight:bold; color:#14406b; white-space:nowrap; }
+
+  #flagCard {
+    background:#fff; border-radius:28px; padding:clamp(14px,4vw,28px);
+    box-shadow:0 10px 30px rgba(20,64,107,.25);
+    margin-bottom:14px;
+  }
+  #flagImg {
+    width:100%; max-height:44vh; object-fit:contain; border-radius:12px;
+    box-shadow:0 3px 12px rgba(0,0,0,.2);
+  }
+  #question { font-size:clamp(20px,4.5vw,30px); color:#14406b; font-weight:bold; margin-top:12px; min-height:1.4em; }
+
+  #micRow { display:flex; align-items:center; justify-content:center; gap:16px; min-height:96px; }
+  #micBtn {
+    width:88px; height:88px; border-radius:50%; border:none; cursor:pointer;
+    font-size:40px; background:linear-gradient(180deg,#ff6f91,#e91e63); color:#fff;
+    box-shadow:0 6px 0 #ad1457, 0 10px 20px rgba(0,0,0,.25);
+  }
+  #micBtn.listening { animation:pulse 1.2s infinite; }
+  @keyframes pulse {
+    0%   { box-shadow:0 6px 0 #ad1457, 0 0 0 0 rgba(233,30,99,.55); }
+    70%  { box-shadow:0 6px 0 #ad1457, 0 0 0 26px rgba(233,30,99,0); }
+    100% { box-shadow:0 6px 0 #ad1457, 0 0 0 0 rgba(233,30,99,0); }
+  }
+  #heard { font-size:18px; color:#14406b; min-height:1.3em; opacity:.85; font-style:italic; }
+
+  #feedback { font-size:clamp(24px,6vw,40px); font-weight:bold; min-height:1.3em; }
+  .good { color:#1b8a2f; text-shadow:0 2px 0 #fff; animation:pop .4s; }
+  .tryagain { color:#e65100; text-shadow:0 2px 0 #fff; }
+  @keyframes pop { 0%{transform:scale(.3)} 70%{transform:scale(1.2)} 100%{transform:scale(1)} }
+
+  /* ---------- grown-up corner ---------- */
+  #grownups {
+    position:fixed; bottom:10px; right:10px; display:flex; gap:8px; z-index:5; opacity:.65;
+  }
+  #grownups button {
+    font-size:18px; padding:8px 12px; border-radius:12px; border:2px solid #14406b;
+    background:rgba(255,255,255,.85); color:#14406b; cursor:pointer; font-family:inherit;
+  }
+  #grownupLabel { position:fixed; bottom:52px; right:12px; font-size:11px; color:#14406b; opacity:.6; z-index:5; }
+
+  #confetti { position:fixed; inset:0; pointer-events:none; z-index:10; }
+  .hidden { display:none !important; }
+
+  #endFlags { display:flex; flex-wrap:wrap; gap:6px; justify-content:center; margin:16px 0; max-height:30vh; overflow-y:auto; }
+  #endFlags img { width:44px; border-radius:4px; box-shadow:0 1px 4px rgba(0,0,0,.3); }
+</style>
+</head>
+<body>
+<canvas id="confetti"></canvas>
+
+<div id="app">
+
+  <!-- START SCREEN -->
+  <div id="startScreen" class="screen">
+    <div class="balls">⚽ 🏆 ⚽</div>
+    <h1>World Cup Flag Game!</h1>
+    <p>Look at the flag and <b>say the country's name</b> out loud!<br>All 48 World Cup 2026 teams are here. 🎤</p>
+    <button class="bigbtn" id="playBtn">▶ Play!</button>
+    <p id="startNote" style="margin-top:18px;font-size:14px;opacity:.75">A grown-up may need to press "Allow" for the microphone.</p>
+  </div>
+
+  <!-- GAME SCREEN -->
+  <div id="gameScreen" class="screen hidden">
+    <div id="progressWrap">
+      <div id="progressBar"><div id="progressFill"></div></div>
+      <div id="progressText">⭐ 0 / 48</div>
+    </div>
+    <div id="flagCard">
+      <img id="flagImg" src="" alt="flag">
+      <div id="question">What country is this?</div>
+    </div>
+    <div id="feedback"></div>
+    <div id="micRow">
+      <button id="micBtn" title="microphone">🎤</button>
+    </div>
+    <div id="heard"></div>
+  </div>
+
+  <!-- END SCREEN -->
+  <div id="endScreen" class="screen hidden">
+    <div class="balls">🎉 🏆 🎉</div>
+    <h1>WOW! You know all 48 flags!</h1>
+    <div id="endFlags"></div>
+    <button class="bigbtn" id="againBtn">Play again!</button>
+  </div>
+
+</div>
+
+<div id="grownupLabel">grown-ups:</div>
+<div id="grownups">
+  <button id="gotItBtn" title="He said it right — mark correct">✔️ got it</button>
+  <button id="skipBtn" title="Skip this flag">⏭️ skip</button>
+  <button id="muteBtn" title="Sound on/off">🔊</button>
+</div>
+
+<script src="flags-data.js"></script>
+<script>
+/* =================== CONFIG (grown-ups can edit) =================== */
+const CONFIG = {
+  // ⚠️ SECURITY NOTE: anyone who can see this file can see this key, and this
+  // repo is public — so no key is shipped here. The game works fully without
+  // it; the key only adds a smart backup judge for tricky kid-pronunciations.
+  // To use one, paste a key restricted (in Google Cloud Console) to the
+  // Generative Language API + your site's address.
+  GEMINI_KEY: "",
+  GEMINI_MODEL: "gemini-2.5-flash-lite",
+  LANG: (navigator.language || "en-US").startsWith("en") ? navigator.language : "en-US",
+  MISSES_BEFORE_HELP: 2,   // after this many tries, the game says the answer
+  SHUFFLE: true,
+};
+/* ==================================================================== */
+
+const $ = id => document.getElementById(id);
+const startScreen=$("startScreen"), gameScreen=$("gameScreen"), endScreen=$("endScreen");
+const flagImg=$("flagImg"), question=$("question"), feedback=$("feedback"),
+      heard=$("heard"), micBtn=$("micBtn"),
+      progressFill=$("progressFill"), progressText=$("progressText");
+
+let order=[], idx=0, misses=0, muted=false;
+let state="idle";          // idle | listening | teach | busy | done
+let recognition=null, recActive=false, recSupported=false;
+let advanceTimer=null;
+
+const PRAISE=["Yes!","Great job!","You got it!","Amazing!","Super!","Fantastic!","Woohoo!"];
+
+/* ---------------- text-to-speech ---------------- */
+function speak(text, cb){
+  if(muted || !window.speechSynthesis){ if(cb) cb(); return; }
+  speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang=CONFIG.LANG; u.rate=0.92; u.pitch=1.1;
+  let done=false; const fin=()=>{ if(!done){done=true; if(cb) cb();} };
+  u.onend=fin; u.onerror=fin;
+  setTimeout(fin, 1000 + text.length*90);   // safety net if TTS stalls
+  speechSynthesis.speak(u);
+}
+
+/* ---------------- sounds ---------------- */
+let audioCtx=null;
+function tone(freq,t0,dur,type="sine",vol=0.25){
+  const o=audioCtx.createOscillator(), g=audioCtx.createGain();
+  o.type=type; o.frequency.value=freq;
+  g.gain.setValueAtTime(vol, audioCtx.currentTime+t0);
+  g.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime+t0+dur);
+  o.connect(g); g.connect(audioCtx.destination);
+  o.start(audioCtx.currentTime+t0); o.stop(audioCtx.currentTime+t0+dur+0.05);
+}
+function soundYay(){ if(muted||!audioCtx) return; [523,659,784,1047].forEach((f,i)=>tone(f,i*0.12,0.3,"triangle")); }
+function soundTry(){ if(muted||!audioCtx) return; tone(330,0,0.18,"sine",0.15); tone(392,0.2,0.25,"sine",0.15); }
+
+/* ---------------- confetti ---------------- */
+const canvas=$("confetti"), ctx=canvas.getContext("2d");
+let parts=[];
+function resize(){ canvas.width=innerWidth; canvas.height=innerHeight; }
+addEventListener("resize",resize); resize();
+function confetti(){
+  const colors=["#ff5252","#ffd740","#69f0ae","#40c4ff","#e040fb","#ff9800"];
+  for(let i=0;i<120;i++){
+    parts.push({x:Math.random()*canvas.width, y:-20-Math.random()*canvas.height*0.4,
+      vy:2+Math.random()*3.5, vx:(Math.random()-0.5)*2.5,
+      s:6+Math.random()*7, c:colors[i%colors.length], r:Math.random()*Math.PI, vr:(Math.random()-0.5)*0.25});
+  }
+}
+(function loop(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  parts=parts.filter(p=>p.y<canvas.height+30);
+  for(const p of parts){
+    p.x+=p.vx; p.y+=p.vy; p.r+=p.vr;
+    ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.r);
+    ctx.fillStyle=p.c; ctx.fillRect(-p.s/2,-p.s/2,p.s,p.s); ctx.restore();
+  }
+  requestAnimationFrame(loop);
+})();
+
+/* ---------------- answer matching ---------------- */
+function norm(s){
+  return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"")
+          .replace(/[^a-z ]/g," ").replace(/\s+/g," ").trim();
+}
+function lev(a,b){
+  const m=a.length,n=b.length;
+  if(Math.abs(m-n)>3) return 99;
+  const d=Array.from({length:m+1},(_,i)=>[i,...Array(n).fill(0)]);
+  for(let j=1;j<=n;j++) d[0][j]=j;
+  for(let i=1;i<=m;i++) for(let j=1;j<=n;j++)
+    d[i][j]=Math.min(d[i-1][j]+1, d[i][j-1]+1, d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));
+  return d[m][n];
+}
+function fuzzyTol(len){ return len<=5 ? 1 : len<=8 ? 2 : 3; }
+function matchesTeam(transcript, team){
+  const t=norm(transcript);
+  if(!t) return false;
+  const words=t.split(" ");
+  for(const raw of team.aliases){
+    const a=norm(raw);
+    if(t.includes(a)) return true;
+    const aw=a.split(" ").length;      // compare against every n-gram of same length
+    for(let i=0;i+aw<=words.length;i++){
+      const gram=words.slice(i,i+aw).join(" ");
+      if(lev(gram,a)<=fuzzyTol(a.length)) return true;
+    }
+  }
+  return false;
+}
+
+/* ---------------- Gemini backup judge ---------------- */
+async function geminiJudge(transcript, team){
+  if(!CONFIG.GEMINI_KEY) return false;
+  try{
+    const controller=new AbortController();
+    const to=setTimeout(()=>controller.abort(), 4000);
+    const res=await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/${CONFIG.GEMINI_MODEL}:generateContent?key=${CONFIG.GEMINI_KEY}`,
+      { method:"POST", headers:{"Content-Type":"application/json"}, signal:controller.signal,
+        body:JSON.stringify({contents:[{parts:[{text:
+          `A 5-year-old child is playing a flag game. The correct answer is the country "${team.name}". `+
+          `Speech recognition heard the child say: "${transcript}". `+
+          `Considering how young children mispronounce words and how speech recognition garbles them, `+
+          `is the child most likely saying "${team.name}"? Answer with exactly one word: YES or NO.`}]}],
+          generationConfig:{temperature:0, maxOutputTokens:5}})});
+    clearTimeout(to);
+    if(!res.ok) return false;
+    const data=await res.json();
+    const txt=(data.candidates?.[0]?.content?.parts?.[0]?.text||"").trim().toUpperCase();
+    return txt.startsWith("YES");
+  }catch(e){ return false; }
+}
+
+/* ---------------- speech recognition ---------------- */
+function setupRecognition(){
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  if(!SR){ recSupported=false; return; }
+  recSupported=true;
+  recognition=new SR();
+  recognition.lang=CONFIG.LANG;
+  recognition.continuous=true;
+  recognition.interimResults=true;
+  recognition.maxAlternatives=5;
+
+  recognition.onresult=e=>{
+    if(state!=="listening" && state!=="teach") return;
+    const res=e.results[e.results.length-1];
+    const best=res[0].transcript.trim();
+    heard.textContent = best ? `I heard: “${best}”` : "";
+    if(!res.isFinal) return;
+    const alts=[]; for(let i=0;i<res.length;i++) alts.push(res[i].transcript);
+    handleAnswer(alts);
+  };
+  recognition.onend=()=>{ recActive=false; if(state==="listening"||state==="teach") startListening(); };
+  recognition.onerror=ev=>{
+    recActive=false;
+    if(ev.error==="not-allowed"||ev.error==="service-not-allowed"){
+      recSupported=false;
+      micBtn.classList.remove("listening");
+      heard.textContent="Microphone blocked — grown-ups can use the ✔️ button!";
+    }
+  };
+}
+function startListening(){
+  if(!recSupported||recActive) return;
+  try{ recognition.start(); recActive=true; micBtn.classList.add("listening"); }catch(e){}
+}
+function stopListening(){
+  micBtn.classList.remove("listening");
+  if(recognition&&recActive){ try{recognition.stop();}catch(e){} recActive=false; }
+}
+
+/* ---------------- game flow ---------------- */
+function currentTeam(){ return TEAMS[order[idx]]; }
+
+function showFlag(){
+  clearTimeout(advanceTimer);
+  misses=0;
+  const team=currentTeam();
+  flagImg.src=team.img;
+  flagImg.alt="mystery flag";
+  question.textContent="What country is this?";
+  feedback.textContent=""; feedback.className="";
+  heard.textContent="";
+  progressFill.style.width=(idx/TEAMS.length*100)+"%";
+  progressText.textContent=`⭐ ${idx} / ${TEAMS.length}`;
+  state="busy";
+  speak("What country is this?", ()=>{ if(state==="busy"){ state="listening"; startListening(); } });
+  startListening();
+}
+
+async function handleAnswer(alternatives){
+  const team=currentTeam();
+  const wasTeach = state==="teach";
+  let ok=alternatives.some(a=>matchesTeam(a,team));
+  if(!ok && !wasTeach && alternatives[0]){
+    state="busy";                       // pause while the backup judge thinks
+    ok=await geminiJudge(alternatives[0],team);
+    if(state!=="busy") return;          // grown-up pressed a button meanwhile
+    state=wasTeach?"teach":"listening";
+  }
+  if(ok || wasTeach){ celebrate(wasTeach && !ok); }
+  else miss();
+}
+
+function celebrate(gentle){
+  clearTimeout(advanceTimer);
+  state="busy"; stopListening();
+  const team=currentTeam();
+  const praise=PRAISE[Math.floor(Math.random()*PRAISE.length)];
+  feedback.textContent=`${praise} ${team.name}! 🎉`;
+  feedback.className="good";
+  question.textContent=team.name+"!";
+  confetti(); soundYay();
+  speak(gentle ? `Good try! That's ${team.name}!` : `${praise} That's ${team.name}!`, next);
+  advanceTimer=setTimeout(next, 4000);  // in case TTS callback never fires
+}
+
+let advancing=false;
+function next(){
+  if(advancing) return; advancing=true; setTimeout(()=>advancing=false,500);
+  clearTimeout(advanceTimer);
+  idx++;
+  if(idx>=order.length) return endGame();
+  setTimeout(showFlag, 400);
+}
+
+function miss(){
+  misses++;
+  const team=currentTeam();
+  if(misses>=CONFIG.MISSES_BEFORE_HELP){
+    state="busy"; soundTry();
+    feedback.textContent=`This is ${team.name}!`;
+    feedback.className="tryagain";
+    question.textContent=team.name+"!";
+    speak(`This is ${team.name}! Can you say ${team.name}?`, ()=>{
+      state="teach"; startListening();
+      advanceTimer=setTimeout(()=>{ if(state==="teach") celebrate(true); }, 8000);
+    });
+  }else{
+    soundTry();
+    feedback.textContent="Hmm, try again! 🤔";
+    feedback.className="tryagain";
+    speak("Hmm, try again!");
+  }
+}
+
+function endGame(){
+  state="done"; stopListening();
+  gameScreen.classList.add("hidden");
+  endScreen.classList.remove("hidden");
+  const grid=$("endFlags"); grid.innerHTML="";
+  for(const i of order){ const im=document.createElement("img"); im.src=TEAMS[i].img; im.title=TEAMS[i].name; grid.appendChild(im); }
+  confetti(); soundYay();
+  setTimeout(confetti,600); setTimeout(confetti,1200);
+  speak("Wow! You know all forty eight World Cup flags! You are a champion!");
+}
+
+function startGame(){
+  order=TEAMS.map((_,i)=>i);
+  if(CONFIG.SHUFFLE) for(let i=order.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [order[i],order[j]]=[order[j],order[i]]; }
+  idx=0;
+  startScreen.classList.add("hidden");
+  endScreen.classList.add("hidden");
+  gameScreen.classList.remove("hidden");
+  showFlag();
+}
+
+/* ---------------- buttons ---------------- */
+$("playBtn").onclick=()=>{
+  audioCtx=audioCtx||new (window.AudioContext||window.webkitAudioContext)();
+  if(window.speechSynthesis){ speechSynthesis.cancel(); speechSynthesis.speak(new SpeechSynthesisUtterance("")); }
+  setupRecognition();
+  if(!recSupported) $("startNote").textContent="This browser can't listen 🎤 — please use Chrome or Edge, or grown-ups can use the ✔️ button.";
+  startGame();
+};
+$("againBtn").onclick=()=>startGame();
+$("gotItBtn").onclick=()=>{ if(state==="listening"||state==="teach"||state==="busy") celebrate(false); };
+$("skipBtn").onclick=()=>{ if(state!=="idle"&&state!=="done"){ state="busy"; stopListening(); speechSynthesis&&speechSynthesis.cancel(); next(); } };
+$("muteBtn").onclick=()=>{ muted=!muted; $("muteBtn").textContent=muted?"🔇":"🔊"; if(muted&&window.speechSynthesis) speechSynthesis.cancel(); };
+micBtn.onclick=()=>{ if(state==="listening"||state==="teach") startListening(); };
+</script>
+</body>
+</html>
