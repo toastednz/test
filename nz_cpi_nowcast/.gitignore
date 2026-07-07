@@ -1,0 +1,4 @@
+# cached Stats NZ downloads (re-fetched on demand; weights xlsx is committed)
+data/spi-*.csv
+data/cpi-*.csv
+__pycache__/
