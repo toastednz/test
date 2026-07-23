@@ -1,0 +1,1202 @@
+[
+ {
+  "id": 993,
+  "score": 9.17,
+  "tract": 7.0,
+  "fame": 3.3,
+  "targets": 3,
+  "avoids": 0,
+  "lit": 1,
+  "conj": [],
+  "n": 3,
+  "attack": "Locate and verify published counterexamples to unimodality of independence polynomials of trees, then give the",
+  "stmt": "The independent set sequence of any tree or forest is unimodal. In other words, if $i_k(G)$ counts the number of independent sets of vertices of size ",
+  "status": "FALSIFIABLE",
+  "prize": 0,
+  "tags": [
+   "graph theory"
+  ],
+  "flags": []
+ },
+ {
+  "id": 197,
+  "score": 9.0,
+  "tract": 5.7,
+  "fame": 1.7,
+  "targets": 3,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Seek a recursive two-colour block construction in which each colour admits an explicit 3-AP-avoiding ordering.",
+  "stmt": "Can $\\mathbb{N}$ be partitioned into two sets, each of which can be permuted to avoid monotone 3-term arithmetic progressions?",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "arithmetic progressions"
+  ],
+  "flags": []
+ },
+ {
+  "id": 885,
+  "score": 8.97,
+  "tract": 6.3,
+  "fame": 2.7,
+  "targets": 3,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Encode prescribed common factor differences as simultaneous equations N_i=x_{ij}(x_{ij}+d_j) and seek an induc",
+  "stmt": "For integer $n\\geq 1$ we define the factor difference set of $n$ by\\[D(n) = \\{\\lvert a-b\\rvert : n=ab\\}.\\]Is it true that, for every $k\\geq 1$, there ",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "number theory",
+   "divisors"
+  ],
+  "flags": []
+ },
+ {
+  "id": 68,
+  "score": 8.2,
+  "tract": 5.3,
+  "fame": 2.3,
+  "targets": 3,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Seek an irrationality proof from factorial-scale rational approximations after multiplying by a carefully chos",
+  "stmt": "Is\\[\\sum_{n\\geq 2}\\frac{1}{n!-1}\\]irrational?",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "number theory",
+   "irrationality"
+  ],
+  "flags": []
+ },
+ {
+  "id": 734,
+  "score": 8.17,
+  "tract": 6.3,
+  "fame": 1.7,
+  "targets": 2,
+  "avoids": 0,
+  "lit": 1,
+  "conj": [],
+  "n": 3,
+  "attack": "Apply modern pairwise-balanced-design existence or absorption machinery with a carefully chosen block-size mul",
+  "stmt": "Find, for all large $n$, a non-trivial pairwise balanced block design $A_1,\\ldots,A_m\\subseteq \\{1,\\ldots,n\\}$ such that, for all $t$, there are $O(n^",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "combinatorics"
+  ],
+  "flags": []
+ },
+ {
+  "id": 249,
+  "score": 7.9,
+  "tract": 4.3,
+  "fame": 1.3,
+  "targets": 3,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Assume rationality, analyze suitably scaled tails modulo powers of two, and exploit divisor-sum identities for",
+  "stmt": "Is\\[\\sum_n \\frac{\\phi(n)}{2^n}\\]irrational? Here $\\phi$ is the Euler totient function .",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "number theory",
+   "irrationality"
+  ],
+  "flags": []
+ },
+ {
+  "id": 348,
+  "score": 7.6,
+  "tract": 6.0,
+  "fame": 2.0,
+  "targets": 2,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Attack the first open case m=2,n=3 via finite-prefix search guided by interval-coverage criteria for complete ",
+  "stmt": "For what values of $0\\leq m<n$ is there a complete sequence $A=\\{a_1\\leq a_2\\leq \\cdots\\}$ of integers such that $A$ remains complete after removing a",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "number theory",
+   "complete sequences"
+  ],
+  "flags": []
+ },
+ {
+  "id": 644,
+  "score": 7.27,
+  "tract": 5.7,
+  "fame": 2.0,
+  "targets": 2,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Reformulate the condition using transversal numbers of finite subfamilies and classify extremal configurations",
+  "stmt": "Let $f(k,r)$ be minimal such that if $A_1,A_2,\\ldots$ is a family of sets, all of size $k$, such that for every collection of $r$ of the $A_is$ there ",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "combinatorics"
+  ],
+  "flags": []
+ },
+ {
+  "id": 881,
+  "score": 7.27,
+  "tract": 5.7,
+  "fame": 2.0,
+  "targets": 2,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Translate minimality into essential-element representations and attempt a diagonal thinning argument that rais",
+  "stmt": "Let $A\\subset\\mathbb{N}$ be an additive basis of order $k$ which is minimal, in the sense that if $B\\subset A$ is any infinite set then $A\\backslash B",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "number theory",
+   "additive basis"
+  ],
+  "flags": []
+ },
+ {
+  "id": 193,
+  "score": 7.17,
+  "tract": 5.3,
+  "fame": 1.7,
+  "targets": 2,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Model a putative counterexample as a finite-step symbolic walk and seek either a modular-periodic construction",
+  "stmt": "Let $S\\subseteq \\mathbb{Z}^3$ be a finite set and let $A=\\{a_1,a_2,\\ldots,\\}\\subset \\mathbb{Z}^3$ be an infinite $S$-walk, so that $a_{i+1}-a_i\\in S$ ",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "geometry"
+  ],
+  "flags": []
+ },
+ {
+  "id": 156,
+  "score": 6.9,
+  "tract": 6.0,
+  "fame": 3.0,
+  "targets": 2,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Construct a sparse Sidon set whose forbidden-extension neighborhoods cover the interval, using a randomized al",
+  "stmt": "Does there exist a maximal Sidon set $A\\subset \\{1,\\ldots,N\\}$ of size $O(N^{1/3})$?",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "sidon sets"
+  ],
+  "flags": []
+ },
+ {
+  "id": 195,
+  "score": 6.8,
+  "tract": 5.7,
+  "fame": 2.7,
+  "targets": 2,
+  "avoids": 0,
+  "lit": 1,
+  "conj": [],
+  "n": 3,
+  "attack": "Translate the permutation into an ordering of the integers and search for a 4-AP-avoiding order via recursive ",
+  "stmt": "What is the largest $k$ such that in any permutation of $\\mathbb{Z}$ there must exist a monotone $k$-term arithmetic progression $x_1<\\cdots<x_k$?",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "arithmetic progressions"
+  ],
+  "flags": []
+ },
+ {
+  "id": 864,
+  "score": 6.7,
+  "tract": 5.3,
+  "fame": 2.3,
+  "targets": 2,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Exploit the unique repeated-sum hypothesis through difference multiplicities and additive-energy decomposition",
+  "stmt": "Let $A\\subseteq \\{1,\\ldots N\\}$ be a set such that there exists at most one $n$ with more than one solution to $n=a+b$ (with $a\\leq b\\in A$). Estimate",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "number theory",
+   "sidon sets",
+   "additive combinatorics"
+  ],
+  "flags": []
+ },
+ {
+  "id": 614,
+  "score": 6.4,
+  "tract": 5.3,
+  "fame": 1.3,
+  "targets": 2,
+  "avoids": 1,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Pass to the complement, where every induced subgraph on k+2 vertices must contain a vertex of degree at most o",
+  "stmt": "Let $f(n,k)$ be minimal such that there is a graph with $n$ vertices and $f(n,k)$ edges where every set of $k+2$ vertices induces a subgraph with maxi",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "graph theory"
+  ],
+  "flags": []
+ },
+ {
+  "id": 103,
+  "score": 6.37,
+  "tract": 5.0,
+  "fame": 2.3,
+  "targets": 2,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Classify or computationally enumerate exact small-diameter packing minimizers and seek systematic boundary mod",
+  "stmt": "Let $h(n)$ count the number of incongruent sets of $n$ points in $\\mathbb{R}^2$ which minimise the diameter subject to the constraint that $d(x,y)\\geq",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "geometry",
+   "distances"
+  ],
+  "flags": []
+ },
+ {
+  "id": 930,
+  "score": 6.13,
+  "tract": 5.0,
+  "fame": 2.7,
+  "targets": 2,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Try to combine primitive-divisor arguments for products of intervals with a valuation parity analysis and indu",
+  "stmt": "Is it true that, for every $r$, there is a $k$ such that if $I_1,\\ldots,I_r$ are disjoint intervals of consecutive integers, all of length at least $k",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "number theory"
+  ],
+  "flags": []
+ },
+ {
+  "id": 827,
+  "score": 6.1,
+  "tract": 6.0,
+  "fame": 2.0,
+  "targets": 1,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 2,
+  "attack": "Refine the probabilistic/combinatorial argument bounding n_k further, perhaps matching upper and lower bounds ",
+  "stmt": "Let $n_k$ be minimal such that if $n_k$ points in $\\mathbb{R}^2$ are in general position then there exists a subset of $k$ points such that all $\\bino",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "geometry"
+  ],
+  "flags": []
+ },
+ {
+  "id": 463,
+  "score": 5.95,
+  "tract": 5.5,
+  "fame": 1.5,
+  "targets": 1,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 2,
+  "attack": "construct explicit slowly growing f(n) using known gaps between n and next number with small least prime facto",
+  "stmt": "Is there a function $f$ with $f(n)\\to \\infty$ as $n\\to \\infty$ such that, for all large $n$, there is a composite number $m$ such that\\[n+f(n)<m<n+p(m",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "number theory",
+   "primes"
+  ],
+  "flags": []
+ },
+ {
+  "id": 774,
+  "score": 5.75,
+  "tract": 6.0,
+  "fame": 2.5,
+  "targets": 1,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 2,
+  "attack": "Adapt the Ne\u0161et\u0159il\u2013R\u00f6dl\u2013Sales counterexample construction technique from the Sidon analogue to the dissociated",
+  "stmt": "We call $A\\subset \\mathbb{N}$ dissociated if $\\sum_{n\\in X}n\\neq \\sum_{m\\in Y}m$ for all finite $X,Y\\subset A$ with $X\\neq Y$. Let $A\\subset \\mathbb{N",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "number theory"
+  ],
+  "flags": []
+ },
+ {
+  "id": 1210,
+  "score": 5.67,
+  "tract": 5.3,
+  "fame": 1.7,
+  "targets": 1,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Recast pairwise coprimality as disjoint prime-factor resources and optimize the reciprocal weight by a sieve o",
+  "stmt": "Let $A\\subseteq [1,n)$ be a set of integers such that $(a,b)=1$ for all distinct $a,b\\in A$. Is it true that\\[\\sum_{a\\in A}\\frac{1}{n-a}\\leq \\sum_{p<n",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "number theory"
+  ],
+  "flags": []
+ },
+ {
+  "id": 106,
+  "score": 5.33,
+  "tract": 4.7,
+  "fame": 3.3,
+  "targets": 2,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [
+   "Erd\u0151s square-packing conjecture"
+  ],
+  "n": 3,
+  "attack": "Search for a counterexample using exact/computer-assisted square-packing optimization, then certify it by expl",
+  "stmt": "Draw $n$ squares inside the unit square with no common interior point. Let $f(n)$ be the maximum possible sum of the side-lengths of the squares. Is $",
+  "status": "FALSIFIABLE",
+  "prize": 0,
+  "tags": [
+   "geometry"
+  ],
+  "flags": []
+ },
+ {
+  "id": 261,
+  "score": 5.1,
+  "tract": 5.0,
+  "fame": 2.0,
+  "targets": 1,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 2,
+  "attack": "Model identities as finite binary carry transformations and search for inductive rewriting rules that cover ev",
+  "stmt": "Are there infinitely many $n$ such that there exists some $t\\geq 2$ and distinct integers $a_1,\\ldots,a_t\\geq 1$ such that\\[\\frac{n}{2^n}=\\sum_{1\\leq ",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "number theory"
+  ],
+  "flags": []
+ },
+ {
+  "id": 660,
+  "score": 5.1,
+  "tract": 5.0,
+  "fame": 2.0,
+  "targets": 1,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Use convex-polytope visibility or antipodal-pair structure to associate many edges or vertex pairs to distinct",
+  "stmt": "Let $x_1,\\ldots,x_n\\in \\mathbb{R}^3$ be the vertices of a convex polyhedron. Are there at least\\[(1-o(1))\\frac{n}{2}\\]many distinct distances between ",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "geometry",
+   "distances",
+   "convex"
+  ],
+  "flags": []
+ },
+ {
+  "id": 1117,
+  "score": 5.1,
+  "tract": 5.0,
+  "fame": 2.0,
+  "targets": 1,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 2,
+  "attack": "Construct explicit entire functions with controlled maximum-modulus point multiplicities using Herzog-Piranian",
+  "stmt": "Let $f(z)$ be an entire function which is not a monomial. Let $\\nu(r)$ count the number of $z$ with $\\lvert z\\rvert=r$ such that $\\lvert f(z)\\rvert=\\m",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "analysis"
+  ],
+  "flags": []
+ },
+ {
+  "id": 188,
+  "score": 4.97,
+  "tract": 5.3,
+  "fame": 2.7,
+  "targets": 1,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Search computationally for periodic red independent sets that hit every blue unit-spaced chain of a fixed leng",
+  "stmt": "What is the smallest $k$ such that $\\mathbb{R}^2$ can be red/blue coloured with no pair of red points unit distance apart, and no $k$-term arithmetic ",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "geometry",
+   "ramsey theory"
+  ],
+  "flags": []
+ },
+ {
+  "id": 467,
+  "score": 4.8,
+  "tract": 4.0,
+  "fame": 1.0,
+  "targets": 1,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 2,
+  "attack": "explicit greedy/covering-system construction assigning residues and partition of primes achieving the covering",
+  "stmt": "Prove the following for all large $x$: there is a choice of congruence classes $a_p$ for all primes $p\\leq x$ and a decomposition $\\{p\\leq x\\}=A\\sqcup",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "number theory"
+  ],
+  "flags": []
+ },
+ {
+  "id": 217,
+  "score": 4.77,
+  "tract": 4.7,
+  "fame": 2.0,
+  "targets": 1,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Use symbolic-coordinate search and exact distance-multiplicity constraints to seek either new constructions or",
+  "stmt": "For which $n$ are there $n$ points in $\\mathbb{R}^2$, no three on a line and no four on a circle, which determine $n-1$ distinct distances and so that",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "geometry",
+   "distances"
+  ],
+  "flags": []
+ },
+ {
+  "id": 839,
+  "score": 4.63,
+  "tract": 5.0,
+  "fame": 2.7,
+  "targets": 1,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Model the forbidden consecutive-block sums via prefix sums and attempt a density-increment or modular construc",
+  "stmt": "Let $1\\leq a_1<a_2<\\cdots$ be a sequence of integers such that no $a_i$ is the sum of consecutive $a_j$ for $j<i$. Is it true that\\[\\limsup \\frac{a_n}",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "number theory"
+  ],
+  "flags": []
+ },
+ {
+  "id": 413,
+  "score": 4.53,
+  "tract": 4.7,
+  "fame": 2.3,
+  "targets": 1,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Translate barriers into record gaps in the upper envelope of \u03c9(m) and seek an elementary sieve or probabilisti",
+  "stmt": "Let $\\omega(n)$ count the number of distinct primes dividing $n$. Are there infinitely many $n$ such that, for all $m<n$, we have $m+\\omega(m) \\leq n$",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "number theory",
+   "iterated functions"
+  ],
+  "flags": []
+ },
+ {
+  "id": 893,
+  "score": 4.43,
+  "tract": 5.3,
+  "fame": 2.0,
+  "targets": 1,
+  "avoids": 1,
+  "lit": 2,
+  "conj": [],
+  "n": 3,
+  "attack": "Strengthen the known constructions causing large divisor sums along selected Mersenne-number subsequences.",
+  "stmt": "If $\\tau(n)$ counts the divisors of $n$ then let\\[f(n)=\\sum_{1\\leq k\\leq n}\\tau(2^k-1).\\]Does $f(2n)/f(n)$ tend to a limit?",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "number theory",
+   "divisors"
+  ],
+  "flags": []
+ },
+ {
+  "id": 291,
+  "score": 4.2,
+  "tract": 4.3,
+  "fame": 2.3,
+  "targets": 1,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Use the leading-base-digit characterization to construct infinitely many integers avoiding every prime harmoni",
+  "stmt": "Let $n\\geq 1$ and define $L_n$ to be the least common multiple of $\\{1,\\ldots,n\\}$ and $a_n$ by\\[\\sum_{1\\leq k\\leq n}\\frac{1}{k}=\\frac{a_n}{L_n}.\\]Is ",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "number theory",
+   "unit fractions"
+  ],
+  "flags": []
+ },
+ {
+  "id": 180,
+  "score": 3.93,
+  "tract": 6.0,
+  "fame": 3.7,
+  "targets": 1,
+  "avoids": 1,
+  "lit": 1,
+  "conj": [
+   "Erd\u0151s-Stone / Tur\u00e1n theory",
+   "extremal graph theory"
+  ],
+  "n": 3,
+  "attack": "Formalize Hunter's counterexample using a star and a matching, proving the joint extremal number is bounded wh",
+  "stmt": "If $\\mathcal{F}$ is a finite set of finite graphs then $\\mathrm{ex}(n;\\mathcal{F})$ is the maximum number of edges a graph on $n$ vertices can have wi",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "graph theory",
+   "turan number"
+  ],
+  "flags": []
+ },
+ {
+  "id": 173,
+  "score": 3.9,
+  "tract": 4.0,
+  "fame": 3.0,
+  "targets": 2,
+  "avoids": 1,
+  "lit": 0,
+  "conj": [
+   "Euclidean monochromatic triangle conjecture"
+  ],
+  "n": 3,
+  "attack": "Translate absence of a monochromatic copy into constraints on two-color distance graphs and seek a finite geom",
+  "stmt": "In any $2$-colouring of $\\mathbb{R}^2$, for all but at most one triangle $T$, there is a monochromatic congruent copy of $T$.",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "geometry",
+   "ramsey theory"
+  ],
+  "flags": []
+ },
+ {
+  "id": 472,
+  "score": 3.77,
+  "tract": 3.7,
+  "fame": 2.0,
+  "targets": 1,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Reformulate the recursion as a finite-state constraint on prime offsets and seek an invariant or explicitly se",
+  "stmt": "Given some initial finite sequence of primes $q_1<\\cdots<q_m$ extend it so that $q_{n+1}$ is the smallest prime of the form $q_n+q_i-1$ for $n\\geq m$.",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "number theory"
+  ],
+  "flags": []
+ },
+ {
+  "id": 567,
+  "score": 3.7,
+  "tract": 5.0,
+  "fame": 4.0,
+  "targets": 1,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Treat the three small graphs separately, using modern subdivision-Ramsey machinery and searching for a direct ",
+  "stmt": "Let $G$ be either $Q_3$ or $K_{3,3}$ or $H_5$ (the last formed by adding two vertex-disjoint chords to $C_5$). Is it true that, if $H$ has $m$ edges a",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "graph theory",
+   "ramsey theory"
+  ],
+  "flags": []
+ },
+ {
+  "id": 1016,
+  "score": 3.6,
+  "tract": 5.0,
+  "fame": 2.0,
+  "targets": 0,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 2,
+  "attack": "Try to close the gap between the log_2(n) lower bound and log_2(n)+log*(n) upper bound for pancyclic graph edg",
+  "stmt": "Let $h(n)$ be minimal such that there is a graph on $n$ vertices with $n+h(n)$ edges which contains a cycle on $k$ vertices, for all $3\\leq k\\leq n$. ",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "graph theory",
+   "cycles"
+  ],
+  "flags": []
+ },
+ {
+  "id": 809,
+  "score": 3.47,
+  "tract": 6.0,
+  "fame": 4.3,
+  "targets": 1,
+  "avoids": 1,
+  "lit": 1,
+  "conj": [
+   "anti-Ramsey number asymptotics"
+  ],
+  "n": 3,
+  "attack": "Verify and package the Buci\u0107-Chen-Ma result for k>=4, while noting that k=3 directly contradicts the displayed",
+  "stmt": "Define the anti-Ramsey number $\\chi_S(n,e,G)$ as the smallest $r$ such that there is a graph with $n$ vertices and $e$ edges with an $r$-colouring of ",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "graph theory",
+   "ramsey theory"
+  ],
+  "flags": []
+ },
+ {
+  "id": 14,
+  "score": 3.4,
+  "tract": 4.0,
+  "fame": 3.0,
+  "targets": 1,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Translate unique representations into additive-energy constraints and test explicit sparse perturbations of Si",
+  "stmt": "Let $A\\subseteq \\mathbb{N}$. Let $B\\subseteq \\mathbb{N}$ be the set of integers which are representable in exactly one way as the sum of two elements ",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "number theory",
+   "sidon sets",
+   "additive combinatorics"
+  ],
+  "flags": []
+ },
+ {
+  "id": 1110,
+  "score": 3.25,
+  "tract": 5.0,
+  "fame": 2.5,
+  "targets": 0,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 2,
+  "attack": "Generalize the inductive greedy-representation argument used for {2,3} to other coprime pairs (p,q), tracking ",
+  "stmt": "Let $p>q\\geq 2$ be two coprime integers. We call $n$ representable if it is the sum of integers of the form $p^kq^l$, none of which divide each other.",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "number theory"
+  ],
+  "flags": []
+ },
+ {
+  "id": 561,
+  "score": 3.0,
+  "tract": 5.3,
+  "fame": 3.3,
+  "targets": 0,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Develop a minimal Ramsey witness reduction showing every extremal host can be replaced by an ordered union of ",
+  "stmt": "Let $\\hat{R}(G)$ denote the size Ramsey number, the minimal number of edges $m$ such that there is a graph $H$ with $m$ edges such that in any $2$-col",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "graph theory",
+   "ramsey theory"
+  ],
+  "flags": []
+ },
+ {
+  "id": 411,
+  "score": 2.87,
+  "tract": 4.0,
+  "fame": 2.3,
+  "targets": 1,
+  "avoids": 1,
+  "lit": 0,
+  "conj": [
+   "phi(n)=2/3(n+1) infinitude conjecture"
+  ],
+  "n": 3,
+  "attack": "Exploit eventual doubling to reduce the orbit equation to explicit totient identities and then classify their ",
+  "stmt": "Let $g_1=g(n)=n+\\phi(n)$ and $g_k(n)=g(g_{k-1}(n))$. For which $n$ and $r$ is it true that $g_{k+r}(n)=2g_k(n)$ for all large $k$?",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "number theory",
+   "iterated functions"
+  ],
+  "flags": []
+ },
+ {
+  "id": 475,
+  "score": 2.77,
+  "tract": 6.0,
+  "fame": 5.3,
+  "targets": 1,
+  "avoids": 1,
+  "lit": 1,
+  "conj": [
+   "Alspach's sequencing conjecture",
+   "Alspach conjecture"
+  ],
+  "n": 3,
+  "attack": "Combine the recent range-specific theorems with exhaustive verification of the remaining finite exceptional pr",
+  "stmt": "Let $p$ be a prime. Given any finite set $A\\subseteq \\mathbb{F}_p\\backslash \\{0\\}$, is there always a rearrangement $A=\\{a_1,\\ldots,a_t\\}$ such that a",
+  "status": "DECIDABLE",
+  "prize": 0,
+  "tags": [
+   "number theory",
+   "additive combinatorics"
+  ],
+  "flags": []
+ },
+ {
+  "id": 361,
+  "score": 2.5,
+  "tract": 4.7,
+  "fame": 1.7,
+  "targets": 0,
+  "avoids": 1,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Classify near-maximal sets using the smallest missing subset sum and periodic modular constructions tied to di",
+  "stmt": "Let $c>0$ and $n$ be some large integer. What is the size of the largest $A\\subseteq \\{1,\\ldots,\\lfloor cn\\rfloor\\}$ such that $n$ is not a sum of a s",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "number theory"
+  ],
+  "flags": []
+ },
+ {
+  "id": 919,
+  "score": 2.37,
+  "tract": 4.0,
+  "fame": 2.3,
+  "targets": 0,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [
+   "set-theoretic reflection principles"
+  ],
+  "n": 3,
+  "attack": "Recast the requested graph as a coloring/partition relation on ordinal rectangles and search for a strengthene",
+  "stmt": "Is there a graph $G$ with vertex set $\\omega_2^2$ and chromatic number $\\aleph_2$ such that every subgraph whose vertices have a lesser type has chrom",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "graph theory",
+   "chromatic number"
+  ],
+  "flags": []
+ },
+ {
+  "id": 1093,
+  "score": 2.37,
+  "tract": 4.0,
+  "fame": 2.3,
+  "targets": 0,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Translate the condition through p-adic valuations and search computationally for structural parametrizations o",
+  "stmt": "For $n\\geq 2k$ we define the deficiency of $\\binom{n}{k}$ as follows. If $\\binom{n}{k}$ is divisible by a prime $p\\leq k$ then the deficiency is undef",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "number theory",
+   "binomial coefficients"
+  ],
+  "flags": []
+ },
+ {
+  "id": 568,
+  "score": 2.3,
+  "tract": 3.7,
+  "fame": 2.7,
+  "targets": 1,
+  "avoids": 1,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Try to derive a general sparse-host versus dense-host dichotomy, reducing an arbitrary H to tree-like and cliq",
+  "stmt": "Let $G$ be a graph such that $R(G,T_n)\\ll n$ for any tree $T_n$ on $n$ vertices and $R(G,K_n)\\ll n^2$. Is it true that, for any $H$ with $m$ edges and",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "graph theory",
+   "ramsey theory"
+  ],
+  "flags": []
+ },
+ {
+  "id": 719,
+  "score": 2.27,
+  "tract": 3.7,
+  "fame": 2.0,
+  "targets": 0,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Formulate the claim as an edge-disjoint clique-packing optimization problem and test whether a minimal-counter",
+  "stmt": "Let $\\mathrm{ex}_r(n;K_{r+1}^r)$ be the maximum number of $r$-edges that can be placed on $n$ vertices without forming a $K_{r+1}^r$ (the $r$-uniform ",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "graph theory",
+   "hypergraphs"
+  ],
+  "flags": []
+ },
+ {
+  "id": 859,
+  "score": 2.27,
+  "tract": 3.7,
+  "fame": 2.0,
+  "targets": 0,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Develop a multiplicative probabilistic model for divisor subset sums and isolate the prime-factor configuratio",
+  "stmt": "Let $t\\geq 1$ and let $d_t$ be the density of the set of integers $n\\in\\mathbb{N}$ for which $t$ can be represented as the sum of distinct divisors of",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "number theory",
+   "divisors"
+  ],
+  "flags": []
+ },
+ {
+  "id": 811,
+  "score": 2.23,
+  "tract": 4.3,
+  "fame": 3.0,
+  "targets": 0,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Classify small graphs via rainbow embedding/counting under exact colour-regularity, beginning with C6 and K4.",
+  "stmt": "Suppose $n\\equiv 1\\pmod{m}$. We say that an edge-colouring of $K_n$ using $m$ colours is balanced if every vertex sees exactly $\\lfloor n/m\\rfloor$ ma",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "graph theory",
+   "ramsey theory"
+  ],
+  "flags": []
+ },
+ {
+  "id": 1192,
+  "score": 2.2,
+  "tract": 5.0,
+  "fame": 4.0,
+  "targets": 0,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Seek an inductive or random block construction that upgrades Ruzsa's order-two basis while preserving bounded ",
+  "stmt": "For $A\\subset \\mathbb{N}$ let $f_r(n)$ count the number of solutions to $n=a_1+\\cdots+a_r$ with $a_i\\in A$. Does there exist, for all $r\\geq 2$, a bas",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "additive combinatorics",
+   "additive basis"
+  ],
+  "flags": []
+ },
+ {
+  "id": 126,
+  "score": 2.17,
+  "tract": 4.0,
+  "fame": 3.3,
+  "targets": 1,
+  "avoids": 1,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Exploit divisibility relations among pair sums and isolate many primes using carefully chosen pairs, perhaps v",
+  "stmt": "Let $f(n)$ be maximal such that if $A\\subseteq\\mathbb{N}$ has $\\lvert A\\rvert=n$ then $\\prod_{a\\neq b\\in A}(a+b)$ has at least $f(n)$ distinct prime f",
+  "status": "OPEN",
+  "prize": 250,
+  "tags": [
+   "number theory"
+  ],
+  "flags": []
+ },
+ {
+  "id": 410,
+  "score": 2.17,
+  "tract": 4.0,
+  "fame": 3.3,
+  "targets": 1,
+  "avoids": 1,
+  "lit": 0,
+  "conj": [
+   "Aliquot sequence divergence problems"
+  ],
+  "n": 3,
+  "attack": "One would need uniform multiplicative-growth information for iterated divisor sums despite possible long near-",
+  "stmt": "Let $\\sigma_1(n)=\\sigma(n)$, the sum of divisors function, and $\\sigma_k(n)=\\sigma(\\sigma_{k-1}(n))$. Is it true that for all $n\\geq 2$\\[\\lim_{k\\to \\i",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "number theory",
+   "iterated functions"
+  ],
+  "flags": []
+ },
+ {
+  "id": 612,
+  "score": 1.83,
+  "tract": 4.7,
+  "fame": 3.3,
+  "targets": 1,
+  "avoids": 2,
+  "lit": 1,
+  "conj": [
+   "amended K_{k+1}-free diameter conjecture"
+  ],
+  "n": 3,
+  "attack": "Verify and formalize the Czabarka--Singgih--Sz\u00e9kely construction, which directly contradicts the displayed K_{",
+  "stmt": "Let $G$ be a connected graph with $n$ vertices, minimum degree $d$, and diameter $D$. Show if that $G$ contains no $K_{2r}$ and $(r-1)(3r+2)\\mid d$ th",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "graph theory"
+  ],
+  "flags": []
+ },
+ {
+  "id": 50,
+  "score": 1.8,
+  "tract": 3.7,
+  "fame": 2.7,
+  "targets": 0,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Exploit the Euler-product description of the distribution of \u03c6(n)/n to prove that any finite derivative must v",
+  "stmt": "Schoenberg proved that for every $c\\in [0,1]$ the density of\\[\\{ n\\in \\mathbb{N} : \\phi(n)<cn\\}\\]exists. Let this density be denoted by $f(c)$. Is it ",
+  "status": "OPEN",
+  "prize": 250,
+  "tags": [
+   "number theory"
+  ],
+  "flags": []
+ },
+ {
+  "id": 430,
+  "score": 1.8,
+  "tract": 3.7,
+  "fame": 2.7,
+  "targets": 0,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Seek a sieve construction of a composite n-d with all prime factors exceeding d for every large n.",
+  "stmt": "Fix some integer $n$ and define a decreasing sequence in $[1,n)$ by $a_1=n-1$ and, for $k\\geq 2$, letting $a_k$ be the greatest integer in $[1,a_{k-1}",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "number theory"
+  ],
+  "flags": []
+ },
+ {
+  "id": 883,
+  "score": 1.77,
+  "tract": 4.3,
+  "fame": 3.7,
+  "targets": 0,
+  "avoids": 0,
+  "lit": 1,
+  "conj": [],
+  "n": 3,
+  "attack": "For the remaining odd-cycle length threshold, sharpen the coprimality graph argument using residue-class and e",
+  "stmt": "For $A\\subseteq \\{1,\\ldots,n\\}$ let $G(A)$ be the graph with vertex set $A$, where two integers are joined by an edge if they are coprime. Is it true ",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "number theory",
+   "graph theory"
+  ],
+  "flags": []
+ },
+ {
+  "id": 414,
+  "score": 1.75,
+  "tract": 3.5,
+  "fame": 2.5,
+  "targets": 0,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 2,
+  "attack": "Seek a structural invariant or a finite-attractor theorem for the directed graph of n mapsto n+tau(n), support",
+  "stmt": "Let $h_1(n)=h(n)=n+\\tau(n)$ (where $\\tau(n)$ counts the number of divisors of $n$) and $h_k(n)=h(h_{k-1}(n))$. Is it true, for any $m,n$, there exist ",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "number theory",
+   "iterated functions"
+  ],
+  "flags": []
+ },
+ {
+  "id": 661,
+  "score": 1.7,
+  "tract": 4.0,
+  "fame": 4.0,
+  "targets": 1,
+  "avoids": 1,
+  "lit": 0,
+  "conj": [
+   "Erd\u0151s distinct distances problem"
+  ],
+  "n": 3,
+  "attack": "Seek arithmetic planar constructions with unusually few cross-distances, perhaps via products of lattice or ci",
+  "stmt": "Are there, for all large $n$, some points $x_1,\\ldots,x_n,y_1,\\ldots,y_n\\in \\mathbb{R}^2$ such that the number of distinct distances $d(x_i,y_j)$ is\\[",
+  "status": "OPEN",
+  "prize": 50,
+  "tags": [
+   "geometry",
+   "distances"
+  ],
+  "flags": []
+ },
+ {
+  "id": 1152,
+  "score": 1.7,
+  "tract": 3.3,
+  "fame": 2.3,
+  "targets": 0,
+  "avoids": 0,
+  "lit": 0,
+  "conj": [],
+  "n": 3,
+  "attack": "Translate the universal interpolation requirement into lower bounds for near-critical polynomial interpolation",
+  "stmt": "For $n\\geq 1$ fix some sequence of $n$ distinct numbers $x_{1n},\\ldots,x_{nn}\\in [-1,1]$. Let $\\epsilon=\\epsilon(n)\\to 0$. Does there always exist a c",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "analysis",
+   "polynomials"
+  ],
+  "flags": []
+ },
+ {
+  "id": 831,
+  "score": 1.6,
+  "tract": 4.0,
+  "fame": 2.0,
+  "targets": 0,
+  "avoids": 1,
+  "lit": 0,
+  "conj": [],
+  "n": 2,
+  "attack": "Improve combinatorial counting bounds on distinct circle radii among point configurations.",
+  "stmt": "Let $h(n)$ be maximal such that in any $n$ points in $\\mathbb{R}^2$ (with no three on a line and no four on a circle) there are at least $h(n)$ many c",
+  "status": "OPEN",
+  "prize": 0,
+  "tags": [
+   "geometry"
+  ],
+  "flags": []
+ }
+]
