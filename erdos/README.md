@@ -10,12 +10,21 @@ independent model families, and repair loops — plus local computation
 
 ## Status
 
-**No open problem is claimed solved yet.** Everything below is honest interim
-state. All solver outputs that claimed anything were to be audited by three
-independent models (Claude Opus 4.8, Gemini 3.1 Pro, Grok 4.5); so far all
-round-1 attempts self-reported BLOCKED or PARTIAL with precise diagnoses
-(which is the intended behavior of the prompt design — a wrong proof is
-worthless).
+**Headline: Erdős Problem #906 has a candidate affirmative solution** — two
+independent probabilistic proofs (a planar Gaussian Entire Function argument
+via summable hole probabilities, and an order-4 Gaussian Taylor series
+argument via first/second moments of smooth zero statistics). The primary
+proof passed a complete adversarial audit sweep (Claude Opus 4.8, Gemini 3.1
+Pro, Grok 4.5 — all VALID, zero substantive objections), was verified
+line-by-line by the orchestrating model, and its key identity/asymptotics
+were machine-checked. See `solutions/906.md`. Fittingly, #906 is the problem
+Erdős said had been solved before ~1972 by a proof that was subsequently
+lost; these are independent reconstructions. **Human expert review is still
+required before this counts as resolved.**
+
+All other attempts self-reported BLOCKED or PARTIAL with precise diagnoses
+(the intended behavior of the prompt design — a wrong proof is worthless);
+several produced substantial reusable partial results, catalogued below.
 
 ## Problem selection
 
