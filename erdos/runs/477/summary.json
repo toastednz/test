@@ -1,0 +1,10 @@
+{
+ "pid": 477,
+ "routes": {
+  "1": "BLOCKED",
+  "2": "BLOCKED",
+  "3": "BLOCKED"
+ },
+ "candidates": {},
+ "final": "NO-SOLUTION-CLAIMED"
+}
