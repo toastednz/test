@@ -1,0 +1,11 @@
+{
+ "pid": 893,
+ "routes": {
+  "1": "BLOCKED",
+  "2": "BLOCKED",
+  "3": "BLOCKED",
+  "4": "BLOCKED"
+ },
+ "candidates": {},
+ "final": "NO-SOLUTION-CLAIMED"
+}
