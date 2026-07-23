@@ -1,0 +1,19 @@
+{
+ "pid": 180,
+ "routes": {
+  "1": "SOLVED-DISPROOF",
+  "2": "SOLVED-DISPROOF",
+  "3": "BLOCKED",
+  "4": "BLOCKED"
+ },
+ "candidates": {
+  "r1": [
+   [
+    "VALID",
+    "VALID",
+    "VALID"
+   ]
+  ]
+ },
+ "final": "CANDIDATE-r1-SURVIVED-SOLVED-DISPROOF"
+}
