@@ -13,7 +13,7 @@ SP = os.path.dirname(os.path.abspath(__file__))
 SOLVER = "openai/gpt-5.6-sol"
 BRIEF_MODEL = "openai/gpt-5.6-sol"
 AUDITORS = [
-    ("anthropic/claude-opus-4.8", "max"),
+    ("anthropic/claude-opus-4.8", "xhigh"),
     ("google/gemini-3.1-pro-preview", "high"),
     ("x-ai/grok-4.5", "high"),
 ]
@@ -127,7 +127,7 @@ def run_attempt(pid, brief, route_id, tag_suffix=""):
 YOUR ASSIGNMENT: pursue ROUTE {route_id} (as numbered in the brief's ATTACK ROUTES section). If that route is manifestly hopeless after real effort, you may switch to the most promising alternative — but only after documenting the block. Work now. Take as long as you need."""
     r = chat(SOLVER, [{"role": "system", "content": ATTEMPT_SYS.replace("{route_id}", str(route_id))},
                       {"role": "user", "content": user}],
-             effort="max", max_tokens=120000, tag=f"attempt-{pid}-r{route_id}{tag_suffix}")
+             effort="xhigh", max_tokens=150000, tag=f"attempt-{pid}-r{route_id}{tag_suffix}")
     sv(pid, fn, r["content"])
     if r.get("reasoning"):
         sv(pid, f"attempt_r{route_id}{tag_suffix}.reasoning.txt", r["reasoning"][-200000:])
@@ -176,7 +176,7 @@ HOSTILE REFEREE REPORTS:
 Produce your revised, self-contained result now."""
     r = chat(SOLVER, [{"role": "system", "content": REPAIR_SYS},
                       {"role": "user", "content": user}],
-             effort="max", max_tokens=120000, tag=f"repair-{pid}-{cand_name}-{round_i}")
+             effort="xhigh", max_tokens=150000, tag=f"repair-{pid}-{cand_name}-{round_i}")
     sv(pid, fn, r["content"])
     return r["content"]
 

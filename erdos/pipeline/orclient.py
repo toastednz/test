@@ -96,8 +96,10 @@ def chat(model, messages, effort=None, max_tokens=None, temperature=None,
                         "ct": (usage or {}).get("completion_tokens"),
                         "finish": finish,
                     }) + "\n")
-            if not out["content"] and not out["reasoning"]:
-                raise RuntimeError(f"empty response (finish={finish})")
+            if not out["content"]:
+                raise RuntimeError(f"no content (finish={finish}, reasoning_len={len(out['reasoning'])})")
+            if finish is None:
+                raise RuntimeError("stream truncated (no finish_reason)")
             return out
         except Exception as e:
             last_err = e
