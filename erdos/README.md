@@ -34,17 +34,19 @@ fame / linkage to major conjectures, per the selection philosophy: obscure,
 recently digitized, constructive/finite-flavored problems; avoid famous or
 prize problems and asymptotic-estimate problems.
 
-Wave-1 targets:
+Targets and outcomes (round 1 + round 2):
 
-| # | Problem | Round-1 outcome |
-|---|---------|-----------------|
-| 1212 | Infinite path in coprime lattice avoiding prime-prime pairs | 5 routes + orchestrator staircase: all BLOCKED with strong negative lemmas (bounded-coordinate impossibility; periodic monotone certificates impossible — proved here; CRT barrier circuits kill barrier-exclusion strategies) |
-| 389 | n(n+1)…(n+k−1) divides (n+k)…(n+2k−1) for some k | BLOCKED ×4; orchestrator found clean reformulation C(x+2k,k)/C(x+k,k) ∈ ℤ + minimal-k data (OEIS A375071 extended to n=11) with shared-boundary structure; round 2 in flight |
-| 196 | Every permutation of ℕ contains a monotone 4-term AP? | BLOCKED ×4 with substantial structure (U³-uniformity criterion; digitwise constructions provably fail) |
-| 289 | 1 as a sum of k interval harmonic sums (all large k) | BLOCKED ×4 but rich exact machinery: count-changing equal-weight gadgets, near-solution off by 1/7140; round 2 in flight |
-| 203 | m with 2^k3^ℓm+1 composite for all k,ℓ ≥ 0 | PARTIAL: q-cohort obstruction (sharp necessary condition on covering pools); orchestrator added Sophie-Germain/Izotov algebraic coset covering (m an odd fourth power kills k≡2, ℓ≡0 mod 4 for free) + smooth-index pool data; round 2 in flight |
-| 273 | Covering system with all moduli p−1, p ≥ 5 prime | Computational: greedy/annealing insufficient; exact CP-SAT on the N=332640 universe (71 usable moduli, mass 1.083) running |
-| 617 | Erdős–Gyárfás balanced-coloring conjecture (falsification at r=5) | SAT instance (K₂₆, 5 colors, 1.15M clauses) — suspended, low priority |
+| # | Problem | Outcome |
+|---|---------|---------|
+| **906** | Entire f with every derivative subsequence having dense zeros | **SOLVED (candidate)** — two independent probabilistic proofs; primary passed full 3/3 adversarial audit sweep; see `solutions/906.md` |
+| 477 | Polynomial f, set A with unique representation n = a + f(k) | BLOCKED ×3 (degree-2 case was already settled in comments; general case resists) |
+| 1212 | Infinite path in coprime lattice avoiding prime-prime pairs | BLOCKED ×5 + orchestrator staircase refuted: strong negative lemmas (bounded-coordinate impossibility; periodic monotone certificates impossible — proved here via wall argument; CRT barrier circuits kill barrier-exclusion strategies) |
+| 389 | n(n+1)…(n+k−1) divides (n+k)…(n+2k−1) for some k | BLOCKED ×4 + ×3 (round 2 with clean reformulation C(x+2k,k)/C(x+k,k) ∈ ℤ, carry criterion, extended minimal-k data, shared-boundary structure) |
+| 196 | Every permutation of ℕ contains a monotone 4-term AP? | BLOCKED ×4 + ×2 (U³-uniformity criterion; LSB-lex obstruction shows local arguments cannot work; strengthened DEGS mechanisms) |
+| 289 | 1 as a sum of k interval harmonic sums (all large k) | BLOCKED ×4 + ×3; machine-verified telescoping reservoir (residual exactly 1/Q_m) and 4→5 identity; problem localized at count-flexible completions (orchestrator proved fixed-shape compensations impossible) |
+| 203 | m with 2^k3^ℓm+1 composite for all k,ℓ ≥ 0 | PARTIAL ×2 + BLOCKED: q-cohort obstruction; Sophie-Germain fourth-power coset covering (verified); proofs that smooth-index pools + algebraic identities alone cannot cover (mass < 3/4 + 1/4 barrier); exact finite-state row-orbit formulation for future search |
+| 273 | Covering system with all moduli p−1, p ≥ 5 prime | UNDECIDED: greedy/annealing insufficient; CP-SAT on N=332640 (mass 1.083) and N=55440 (mass 1.044) both timed out UNKNOWN; parity-split analysis and side-B infeasibility at lcm 360 proved |
+| 617 | Erdős–Gyárfás balanced-coloring (falsification at r=5) | SAT instance (K₂₆, 5 colors, 1.15M clauses) ran without verdict — suspended |
 
 ## Layout
 
