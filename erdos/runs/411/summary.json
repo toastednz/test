@@ -1,0 +1,11 @@
+{
+ "pid": 411,
+ "routes": {
+  "1": "BLOCKED",
+  "2": "BLOCKED",
+  "3": "PARTIAL",
+  "4": "BLOCKED"
+ },
+ "candidates": {},
+ "final": "NO-SOLUTION-CLAIMED"
+}
