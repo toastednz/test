@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Maths Flashcards 🌟</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+  :root {
+    --bg1: #7ec8f7;
+    --bg2: #b3e5fc;
+    --card: #ffffff;
+    --purple: #7c4dff;
+    --green: #4caf50;
+    --orange: #ff9800;
+    --pink: #ff5c8d;
+    --yellow: #ffd54f;
+  }
+
+  html, body { height: 100%; }
+
+  body {
+    font-family: "Comic Sans MS", "Chalkboard SE", "Marker Felt", sans-serif;
+    background: linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    user-select: none;
+  }
+
+  .screen {
+    width: 100%;
+    max-width: 560px;
+    padding: 16px;
+    text-align: center;
+  }
+
+  .hidden { display: none !important; }
+
+  /* ---------- Menu screen ---------- */
+  h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+    color: #fff;
+    text-shadow: 0 3px 0 rgba(0,0,0,0.15);
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    color: #275a7a;
+    margin-bottom: 24px;
+  }
+
+  .menu-btn {
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 24px;
+    padding: 22px 16px;
+    margin: 14px 0;
+    font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 6px 0 rgba(0,0,0,0.18);
+    transition: transform 0.1s;
+  }
+  .menu-btn:active { transform: translateY(4px); box-shadow: 0 2px 0 rgba(0,0,0,0.18); }
+  .menu-btn .big { font-size: 2rem; display: block; margin-bottom: 4px; }
+  .menu-counting { background: var(--purple); }
+  .menu-adding { background: var(--green); }
+  .menu-takeaway { background: var(--orange); }
+  .menu-mixed { background: var(--pink); }
+
+  .total-stars {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    color: #275a7a;
+  }
+
+  /* ---------- Game screen ---------- */
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .home-btn {
+    border: none;
+    background: #fff;
+    border-radius: 16px;
+    font-size: 1.6rem;
+    padding: 8px 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 0 rgba(0,0,0,0.15);
+  }
+  .home-btn:active { transform: translateY(3px); box-shadow: 0 1px 0 rgba(0,0,0,0.15); }
+
+  .star-count {
+    background: #fff;
+    border-radius: 16px;
+    padding: 8px 16px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #f5a623;
+    box-shadow: 0 4px 0 rgba(0,0,0,0.15);
+  }
+
+  .progress-track {
+    background: rgba(255,255,255,0.6);
+    border-radius: 999px;
+    height: 18px;
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    background: var(--yellow);
+    height: 100%;
+    width: 0%;
+    border-radius: 999px;
+    transition: width 0.4s ease;
+  }
+
+  .card {
+    background: var(--card);
+    border-radius: 28px;
+    padding: 24px 16px;
+    box-shadow: 0 8px 0 rgba(0,0,0,0.12);
+    margin-bottom: 20px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .question-text {
+    font-size: clamp(2.2rem, 10vw, 3.2rem);
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 2px;
+  }
+
+  .emoji-row {
+    font-size: clamp(1.8rem, 8vw, 2.6rem);
+    line-height: 1.4;
+    letter-spacing: 4px;
+    margin: 8px 0;
+    word-break: break-all;
+  }
+
+  .emoji-group-label {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #555;
+    margin: 0 8px;
+  }
+
+  .counting-prompt {
+    font-size: 1.4rem;
+    color: #666;
+    margin-top: 10px;
+  }
+
+  .answers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .answer-btn {
+    border: none;
+    border-radius: 22px;
+    background: #fff;
+    font-family: inherit;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #333;
+    padding: 22px 0;
+    cursor: pointer;
+    box-shadow: 0 6px 0 rgba(0,0,0,0.15);
+    transition: transform 0.1s, background 0.2s;
+  }
+  .answer-btn:active { transform: translateY(4px); box-shadow: 0 2px 0 rgba(0,0,0,0.15); }
+  .answer-btn.correct { background: var(--green); color: #fff; animation: pop 0.4s; }
+  .answer-btn.wrong { background: #ef5350; color: #fff; animation: shake 0.4s; }
+  .answer-btn:disabled { cursor: default; }
+
+  @keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+  }
+
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-8px); }
+    75% { transform: translateX(8px); }
+  }
+
+  .feedback {
+    min-height: 2.4rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: 16px;
+    color: #275a7a;
+  }
+
+  /* ---------- Celebration screen ---------- */
+  .celebrate-emoji { font-size: 5rem; margin-bottom: 12px; animation: bounce 1s infinite; }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-18px); }
+  }
+  .celebrate-title { font-size: 2.4rem; color: #fff; text-shadow: 0 3px 0 rgba(0,0,0,0.15); margin-bottom: 10px; }
+  .celebrate-stars { font-size: 2.2rem; margin-bottom: 20px; }
+
+  /* ---------- Confetti ---------- */
+  .confetti {
+    position: fixed;
+    top: -20px;
+    font-size: 1.6rem;
+    animation: fall linear forwards;
+    pointer-events: none;
+    z-index: 10;
+  }
+  @keyframes fall {
+    to { transform: translateY(110vh) rotate(720deg); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ MENU ============ -->
+<div id="menu" class="screen">
+  <h1>🌟 Maths Fun! 🌟</h1>
+  <p class="subtitle">Pick a game to play!</p>
+  <button class="menu-btn menu-counting" data-mode="counting"><span class="big">🔢</span>Counting</button>
+  <button class="menu-btn menu-adding" data-mode="adding"><span class="big">➕</span>Adding</button>
+  <button class="menu-btn menu-takeaway" data-mode="takeaway"><span class="big">➖</span>Taking Away</button>
+  <button class="menu-btn menu-mixed" data-mode="mixed"><span class="big">🎲</span>Mix It Up!</button>
+  <p class="total-stars">⭐ Stars earned: <span id="totalStars">0</span></p>
+</div>
+
+<!-- ============ GAME ============ -->
+<div id="game" class="screen hidden">
+  <div class="topbar">
+    <button class="home-btn" id="homeBtn">🏠</button>
+    <div class="star-count">⭐ <span id="gameStars">0</span></div>
+  </div>
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <div class="card" id="card"></div>
+  <div class="answers" id="answers"></div>
+  <div class="feedback" id="feedback"></div>
+</div>
+
+<!-- ============ CELEBRATION ============ -->
+<div id="celebrate" class="screen hidden">
+  <div class="celebrate-emoji" id="celebrateEmoji">🎉</div>
+  <div class="celebrate-title" id="celebrateTitle">Amazing!</div>
+  <div class="celebrate-stars" id="celebrateStars"></div>
+  <button class="menu-btn menu-adding" id="playAgainBtn"><span class="big">🔁</span>Play Again</button>
+  <button class="menu-btn menu-counting" id="backHomeBtn"><span class="big">🏠</span>Choose a Game</button>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var QUESTIONS_PER_ROUND = 8;
+  var EMOJIS = ["🍎", "🐶", "⭐", "🎈", "🐟", "🚗", "🦆", "🍓", "⚽", "🐸"];
+  var PRAISE = ["Awesome!", "Well done!", "You got it!", "Super!", "Great job!", "Ka pai!"];
+  var ENCOURAGE = ["Try again!", "Almost!", "Have another go!"];
+
+  var state = {
+    mode: null,
+    questionIndex: 0,
+    stars: 0,
+    current: null,
+    firstTry: true
+  };
+
+  var totalStars = 0;
+  try {
+    totalStars = parseInt(localStorage.getItem("mathsFlashcardStars") || "0", 10) || 0;
+  } catch (e) { /* localStorage unavailable — stars just won't persist */ }
+
+  var el = {
+    menu: document.getElementById("menu"),
+    game: document.getElementById("game"),
+    celebrate: document.getElementById("celebrate"),
+    card: document.getElementById("card"),
+    answers: document.getElementById("answers"),
+    feedback: document.getElementById("feedback"),
+    gameStars: document.getElementById("gameStars"),
+    totalStars: document.getElementById("totalStars"),
+    progressFill: document.getElementById("progressFill"),
+    celebrateTitle: document.getElementById("celebrateTitle"),
+    celebrateStars: document.getElementById("celebrateStars"),
+    celebrateEmoji: document.getElementById("celebrateEmoji")
+  };
+
+  el.totalStars.textContent = totalStars;
+
+  /* ---------- Sounds (Web Audio, no files needed) ---------- */
+  var audioCtx = null;
+  function beep(freq, duration, delay, type) {
+    try {
+      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      var osc = audioCtx.createOscillator();
+      var gain = audioCtx.createGain();
+      osc.type = type || "sine";
+      osc.frequency.value = freq;
+      gain.gain.setValueAtTime(0.2, audioCtx.currentTime + delay);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + delay + duration);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start(audioCtx.currentTime + delay);
+      osc.stop(audioCtx.currentTime + delay + duration);
+    } catch (e) { /* no sound — fine */ }
+  }
+  function soundCorrect() { beep(523, 0.15, 0); beep(659, 0.15, 0.12); beep(784, 0.25, 0.24); }
+  function soundWrong() { beep(220, 0.25, 0, "triangle"); }
+  function soundFanfare() {
+    [523, 659, 784, 1047].forEach(function (f, i) { beep(f, 0.2, i * 0.15); });
+  }
+
+  /* ---------- Helpers ---------- */
+  function randInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function shuffle(arr) {
+    for (var i = arr.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = arr[i]; arr[i] = arr[j]; arr[j] = t;
+    }
+    return arr;
+  }
+
+  function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+  function emojiRow(emoji, count) {
+    var out = [];
+    for (var i = 0; i < count; i++) out.push(emoji);
+    return out.join(" ");
+  }
+
+  function makeChoices(answer, maxValue) {
+    var choices = [answer];
+    while (choices.length < 3) {
+      var wrong = answer + randInt(-3, 3);
+      if (wrong < 0 || wrong > maxValue + 2 || choices.indexOf(wrong) !== -1) continue;
+      choices.push(wrong);
+    }
+    return shuffle(choices);
+  }
+
+  /* ---------- Question generators ---------- */
+  function makeCounting() {
+    var count = randInt(1, 10);
+    var emoji = pick(EMOJIS);
+    return {
+      answer: count,
+      choices: makeChoices(count, 10),
+      render: function () {
+        el.card.innerHTML =
+          '<div class="emoji-row">' + emojiRow(emoji, count) + '</div>' +
+          '<div class="counting-prompt">How many ' + emoji + ' can you count?</div>';
+      }
+    };
+  }
+
+  function makeAdding() {
+    var a = randInt(1, 5);
+    var b = randInt(1, 5);
+    var emoji = pick(EMOJIS);
+    return {
+      answer: a + b,
+      choices: makeChoices(a + b, 10),
+      render: function () {
+        el.card.innerHTML =
+          '<div class="question-text">' + a + ' + ' + b + ' = ?</div>' +
+          '<div class="emoji-row">' + emojiRow(emoji, a) +
+          '<span class="emoji-group-label">+</span>' + emojiRow(emoji, b) + '</div>';
+      }
+    };
+  }
+
+  function makeTakeaway() {
+    var a = randInt(2, 10);
+    var b = randInt(1, a - 1);
+    var emoji = pick(EMOJIS);
+    return {
+      answer: a - b,
+      choices: makeChoices(a - b, 10),
+      render: function () {
+        var kept = emojiRow(emoji, a - b);
+        var gone = [];
+        for (var i = 0; i < b; i++) gone.push('<s style="opacity:0.35">' + emoji + '</s>');
+        el.card.innerHTML =
+          '<div class="question-text">' + a + ' − ' + b + ' = ?</div>' +
+          '<div class="emoji-row">' + kept + (kept ? " " : "") + gone.join(" ") + '</div>';
+      }
+    };
+  }
+
+  function makeQuestion() {
+    var mode = state.mode;
+    if (mode === "mixed") mode = pick(["counting", "adding", "takeaway"]);
+    if (mode === "counting") return makeCounting();
+    if (mode === "adding") return makeAdding();
+    return makeTakeaway();
+  }
+
+  /* ---------- Game flow ---------- */
+  function startGame(mode) {
+    state.mode = mode;
+    state.questionIndex = 0;
+    state.stars = 0;
+    el.gameStars.textContent = "0";
+    el.menu.classList.add("hidden");
+    el.celebrate.classList.add("hidden");
+    el.game.classList.remove("hidden");
+    nextQuestion();
+  }
+
+  function nextQuestion() {
+    if (state.questionIndex >= QUESTIONS_PER_ROUND) {
+      endRound();
+      return;
+    }
+    state.current = makeQuestion();
+    state.firstTry = true;
+    el.feedback.textContent = "";
+    el.progressFill.style.width = (state.questionIndex / QUESTIONS_PER_ROUND * 100) + "%";
+    state.current.render();
+
+    el.answers.innerHTML = "";
+    state.current.choices.forEach(function (choice) {
+      var btn = document.createElement("button");
+      btn.className = "answer-btn";
+      btn.textContent = choice;
+      btn.addEventListener("click", function () { handleAnswer(btn, choice); });
+      el.answers.appendChild(btn);
+    });
+  }
+
+  function handleAnswer(btn, choice) {
+    if (choice === state.current.answer) {
+      soundCorrect();
+      btn.classList.add("correct");
+      var buttons = el.answers.querySelectorAll("button");
+      buttons.forEach(function (b) { b.disabled = true; });
+      if (state.firstTry) {
+        state.stars++;
+        el.gameStars.textContent = state.stars;
+      }
+      el.feedback.textContent = "🎉 " + pick(PRAISE);
+      state.questionIndex++;
+      el.progressFill.style.width = (state.questionIndex / QUESTIONS_PER_ROUND * 100) + "%";
+      setTimeout(nextQuestion, 1200);
+    } else {
+      soundWrong();
+      state.firstTry = false;
+      btn.classList.add("wrong");
+      btn.disabled = true;
+      el.feedback.textContent = "💪 " + pick(ENCOURAGE);
+    }
+  }
+
+  function endRound() {
+    soundFanfare();
+    totalStars += state.stars;
+    try { localStorage.setItem("mathsFlashcardStars", String(totalStars)); } catch (e) {}
+    el.totalStars.textContent = totalStars;
+
+    el.game.classList.add("hidden");
+    el.celebrate.classList.remove("hidden");
+
+    var perfect = state.stars === QUESTIONS_PER_ROUND;
+    el.celebrateEmoji.textContent = perfect ? "🏆" : "🎉";
+    el.celebrateTitle.textContent = perfect ? "Perfect! Superstar!" : "Well done!";
+
+    var starRow = [];
+    for (var i = 0; i < state.stars; i++) starRow.push("⭐");
+    el.celebrateStars.textContent = starRow.length
+      ? "You earned " + starRow.join("")
+      : "Great practising! 💪";
+
+    launchConfetti();
+  }
+
+  function launchConfetti() {
+    var bits = ["🎉", "⭐", "🎈", "✨", "🌈"];
+    for (var i = 0; i < 30; i++) {
+      var span = document.createElement("span");
+      span.className = "confetti";
+      span.textContent = pick(bits);
+      span.style.left = randInt(0, 100) + "vw";
+      span.style.animationDuration = (randInt(20, 45) / 10) + "s";
+      span.style.animationDelay = (randInt(0, 10) / 10) + "s";
+      document.body.appendChild(span);
+      span.addEventListener("animationend", function (e) { e.target.remove(); });
+    }
+  }
+
+  function goHome() {
+    el.game.classList.add("hidden");
+    el.celebrate.classList.add("hidden");
+    el.menu.classList.remove("hidden");
+  }
+
+  /* ---------- Wire up ---------- */
+  document.querySelectorAll(".menu-btn[data-mode]").forEach(function (btn) {
+    btn.addEventListener("click", function () { startGame(btn.dataset.mode); });
+  });
+  document.getElementById("homeBtn").addEventListener("click", goHome);
+  document.getElementById("backHomeBtn").addEventListener("click", goHome);
+  document.getElementById("playAgainBtn").addEventListener("click", function () {
+    startGame(state.mode);
+  });
+})();
+</script>
+</body>
+</html>
