@@ -6,8 +6,15 @@ colourful buttons.
 
 ## How to play
 
-Open `index.html` in any browser (works great on a phone or tablet), then pick
-a game:
+**Play it online: https://toastednz.github.io/test/maths/**
+
+(The site is published from the `claude/world-cup-flag-game-m9xwf2` branch,
+which GitHub Pages is configured to serve — the copy there lives at
+`maths/index.html`. After changing `index.html` on this branch, copy it over
+to that branch to update the live site.)
+
+Or open `index.html` in any browser (works great on a phone or tablet), then
+pick a game:
 
 - **🔢 Counting** — count the pictures and tap how many (1–10)
 - **➕ Adding** — addition with picture hints (sums up to 10)
