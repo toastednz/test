@@ -1,0 +1,34 @@
+1APS: Spearman(entropy, RSA)=+0.37  mean entropy buried(RSA<0.2)=1.62 exposed(RSA>0.5)=2.19
+1CRN: Spearman(entropy, RSA)=+0.08  mean entropy buried(RSA<0.2)=2.83 exposed(RSA>0.5)=2.84
+1CSP: Spearman(entropy, RSA)=+0.35  mean entropy buried(RSA<0.2)=1.25 exposed(RSA>0.5)=1.80
+1FKB: Spearman(entropy, RSA)=+0.48  mean entropy buried(RSA<0.2)=1.07 exposed(RSA>0.5)=1.93
+1HHO: Spearman(entropy, RSA)=-0.02  mean entropy buried(RSA<0.2)=2.68 exposed(RSA>0.5)=2.66
+1HRC: Spearman(entropy, RSA)=+0.51  mean entropy buried(RSA<0.2)=1.11 exposed(RSA>0.5)=2.00
+1MBN: Spearman(entropy, RSA)=-0.11  mean entropy buried(RSA<0.2)=2.68 exposed(RSA>0.5)=2.59
+1PGB: Spearman(entropy, RSA)=+0.19  mean entropy buried(RSA<0.2)=2.31 exposed(RSA>0.5)=2.35
+1R69: Spearman(entropy, RSA)=+0.44  mean entropy buried(RSA<0.2)=1.29 exposed(RSA>0.5)=1.98
+1SHG: Spearman(entropy, RSA)=+0.41  mean entropy buried(RSA<0.2)=1.35 exposed(RSA>0.5)=2.00
+1TEN: Spearman(entropy, RSA)=+0.40  mean entropy buried(RSA<0.2)=1.64 exposed(RSA>0.5)=2.37
+1TIT: Spearman(entropy, RSA)=+0.49  mean entropy buried(RSA<0.2)=2.02 exposed(RSA>0.5)=2.48
+1UBQ: Spearman(entropy, RSA)=+0.48  mean entropy buried(RSA<0.2)=1.33 exposed(RSA>0.5)=2.08
+1WIT: Spearman(entropy, RSA)=+0.39  mean entropy buried(RSA<0.2)=1.63 exposed(RSA>0.5)=2.26
+2ABD: Spearman(entropy, RSA)=-0.06  mean entropy buried(RSA<0.2)=2.69 exposed(RSA>0.5)=2.53
+2CI2: Spearman(entropy, RSA)=+0.02  mean entropy buried(RSA<0.2)=2.33 exposed(RSA>0.5)=2.21
+2LZM: Spearman(entropy, RSA)=-0.01  mean entropy buried(RSA<0.2)=2.78 exposed(RSA>0.5)=2.76
+5PTI: Spearman(entropy, RSA)=+0.54  mean entropy buried(RSA<0.2)=1.23 exposed(RSA>0.5)=2.38
+== facebook/esm2_t12_35M_UR50D Exp4: per-protein Spearman(entropy,RSA) mean=+0.275 (min -0.11, max +0.54); pooled=+0.127, n=1612
+mean entropy by DSSP: H=2.42, E=1.96, -=2.11
+exp5 seq 0
+exp5 seq 20
+exp5 seq 40
+exp5 seq 60
+exp5 seq 80
+
+== facebook/esm2_t12_35M_UR50D Exp5: model substitution matrix S[a,b]=mean log P(b|a masked) over 100 seqs ==
+Spearman(S, BLOSUM62) = +0.794;  Spearman(S, SNV-reachability) = +0.368
+OLS S ~ BLOSUM62 + 5 physchem distances + SNV: SNV coef=+1.187 t=+1.37 p=1.7e-01 (R2=0.65)
+random-genetic-code null for the SNV t-stat: mean +0.00, sd 0.69; real t=+1.37; empirical p = 0.016
+[transformers] [1mEsmModel LOAD REPORT[0m from: facebook/esm2_t12_35M_UR50D
+
+input-embedding cosine ~ BLOSUM62 + physchem + SNV: SNV t=+7.53 p=2.3e-12; random-code null mean +0.07 sd 0.87; empirical p=0.000
+asymmetry: corr(S[a,b]-S[b,a], vol(b)-vol(a)) = -0.374  (negative => model finds substituting to a LARGER residue less likely than the reverse)
