@@ -1,0 +1,16 @@
+1APS: Spearman(entropy, RSA)=+0.50  mean entropy buried(RSA<0.2)=0.98 exposed(RSA>0.5)=1.81
+1CRN: Spearman(entropy, RSA)=+0.07  mean entropy buried(RSA<0.2)=2.78 exposed(RSA>0.5)=2.79
+1CSP: Spearman(entropy, RSA)=+0.34  mean entropy buried(RSA<0.2)=0.97 exposed(RSA>0.5)=1.52
+1FKB: Spearman(entropy, RSA)=+0.51  mean entropy buried(RSA<0.2)=0.92 exposed(RSA>0.5)=1.95
+1HHO: Spearman(entropy, RSA)=+0.24  mean entropy buried(RSA<0.2)=0.97 exposed(RSA>0.5)=1.45
+1HRC: Spearman(entropy, RSA)=+0.52  mean entropy buried(RSA<0.2)=1.08 exposed(RSA>0.5)=1.94
+1MBN: Spearman(entropy, RSA)=+0.32  mean entropy buried(RSA<0.2)=1.75 exposed(RSA>0.5)=2.09
+1PGB: Spearman(entropy, RSA)=+0.34  mean entropy buried(RSA<0.2)=2.23 exposed(RSA>0.5)=2.40
+1R69: Spearman(entropy, RSA)=+0.46  mean entropy buried(RSA<0.2)=1.12 exposed(RSA>0.5)=1.89
+1SHG: Spearman(entropy, RSA)=+0.34  mean entropy buried(RSA<0.2)=1.17 exposed(RSA>0.5)=1.84
+1TEN: Spearman(entropy, RSA)=+0.49  mean entropy buried(RSA<0.2)=1.40 exposed(RSA>0.5)=2.29
+1TIT: Spearman(entropy, RSA)=+0.61  mean entropy buried(RSA<0.2)=1.05 exposed(RSA>0.5)=2.16
+1UBQ: Spearman(entropy, RSA)=+0.25  mean entropy buried(RSA<0.2)=0.98 exposed(RSA>0.5)=1.46
+1WIT: Spearman(entropy, RSA)=+0.47  mean entropy buried(RSA<0.2)=1.53 exposed(RSA>0.5)=2.20
+2ABD: Spearman(entropy, RSA)=-0.08  mean entropy buried(RSA<0.2)=2.64 exposed(RSA>0.5)=2.53
+2CI2: Spearman(entropy, RSA)=+0.32  mean entropy buried(RSA<0.2)=1.09 exposed(RSA>0.5)=1.65

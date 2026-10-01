@@ -1,0 +1,24 @@
+facebook/esm2_t30_150M_UR50D ubiquitin: Spearman(entropy,RSA)=+0.25; slope entropy~RSA = +0.42
+
+Most conserved-beyond-burial residues (lowest residual entropy), with RSA and p(wt):
+  G76  RSA=1.34 ss=- entropy=0.25 (expected 1.78) p(wt)=0.96  C-term tail
+  G47  RSA=0.75 ss=- entropy=0.04 (expected 1.54) p(wt)=0.99  
+  G75  RSA=0.72 ss=- entropy=0.05 (expected 1.52) p(wt)=0.99  C-term tail
+  R74  RSA=0.77 ss=- entropy=0.29 (expected 1.55) p(wt)=0.94  C-term tail
+  H68  RSA=0.40 ss=E entropy=0.17 (expected 1.39) p(wt)=0.97  I44 patch
+  M1   RSA=0.24 ss=- entropy=0.14 (expected 1.32) p(wt)=0.98  M1
+  K6   RSA=0.44 ss=E entropy=0.23 (expected 1.41) p(wt)=0.95  TEK box; Ub-linkage Lys
+  Q41  RSA=0.00 ss=E entropy=0.08 (expected 1.23) p(wt)=0.99  
+  K27  RSA=0.06 ss=H entropy=0.19 (expected 1.25) p(wt)=0.97  Ub-linkage Lys
+  I44  RSA=0.15 ss=E entropy=0.30 (expected 1.29) p(wt)=0.94  I44 patch
+  L43  RSA=0.01 ss=E entropy=0.26 (expected 1.23) p(wt)=0.96  
+  R42  RSA=0.33 ss=E entropy=0.61 (expected 1.36) p(wt)=0.87  
+  Y59  RSA=0.13 ss=H entropy=0.53 (expected 1.28) p(wt)=0.90  
+  L50  RSA=0.03 ss=- entropy=0.50 (expected 1.24) p(wt)=0.89  
+  L8   RSA=0.69 ss=- entropy=0.82 (expected 1.51) p(wt)=0.83  I44 patch
+  L69  RSA=0.03 ss=E entropy=0.59 (expected 1.24) p(wt)=0.85  
+
+Among 31 exposed residues (RSA>0.4), the 10 most conserved: G47, G75, K6, G76, R74, L8, R54, R72, L73, K11
+Least conserved exposed: Q62, T9, K33, G53, E24, E51, K63, S57
+
+known functional residues: 9/19 in the most-conserved-beyond-burial quartile vs 22/76 overall (enrichment 1.64x)

@@ -1,0 +1,22 @@
+[transformers] A new version of the following files was downloaded from https://huggingface.co/LongSafari/hyenadna-medium-160k-seqlen-hf:
+- configuration_hyena.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+[transformers] A new version of the following files was downloaded from https://huggingface.co/LongSafari/hyenadna-medium-160k-seqlen-hf:
+- tokenization_hyena.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+[transformers] A new version of the following files was downloaded from https://huggingface.co/LongSafari/hyenadna-medium-160k-seqlen-hf:
+- modeling_hyena.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+fetched 80 ids
+usable mRNAs: 72
+
+== D1: mean per-base NLL (nats) by position mod 3 ==
+CDS  : pos1 1.320±0.002  pos2 1.382±0.002  pos3 1.263±0.002   (max-min = 0.120; n=106269)
+UTR5 : pos1 1.312±0.005  pos2 1.314±0.005  pos3 1.298±0.005   (max-min = 0.016; n=20934)
+UTR3 : pos1 1.273±0.003  pos2 1.271±0.003  pos3 1.284±0.003   (max-min = 0.013; n=59401)
+relative spectral power at period-3 (300-nt windows, 51 transcripts): CDS median 2.2x vs 3'UTR median 0.9x; CDS>UTR in 82%
+
+== D2: probability assigned to completing a stop codon after 'TA'/'TG' inside CDS ==
+in-frame (would create premature stop): mean p=0.347 (n=2247);  out-of-frame: mean p=0.284 (n=8390);  ratio=1.22
+by frame of the TA/TG dinucleotide: {0: 0.347, 1: 0.271, 2: 0.301}
+Mann-Whitney in-frame vs out-of-frame p = 3.51649777565818e-22

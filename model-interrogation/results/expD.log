@@ -1,0 +1,13 @@
+fetched 80 ids
+usable mRNAs: 72
+
+== D1: mean per-base NLL (nats) by position mod 3 ==
+CDS  : pos1 1.327±0.002  pos2 1.386±0.002  pos3 1.272±0.002   (max-min = 0.114; n=106269)
+UTR5 : pos1 1.295±0.006  pos2 1.297±0.006  pos3 1.303±0.006   (max-min = 0.007; n=20934)
+UTR3 : pos1 1.281±0.003  pos2 1.284±0.003  pos3 1.295±0.003   (max-min = 0.013; n=59401)
+relative spectral power at period-3 (300-nt windows, 51 transcripts): CDS median 2.3x vs 3'UTR median 0.5x; CDS>UTR in 78%
+
+== D2: probability assigned to completing a stop codon after 'TA'/'TG' inside CDS ==
+in-frame (would create premature stop): mean p=0.356 (n=2247);  out-of-frame: mean p=0.290 (n=8390);  ratio=1.23
+by frame of the TA/TG dinucleotide: {0: 0.356, 1: 0.277, 2: 0.306}
+Mann-Whitney in-frame vs out-of-frame p = 2.3626700512414883e-37

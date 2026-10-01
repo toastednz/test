@@ -1,0 +1,14 @@
+CHGNet v0.3.0 initialized with 412,525 parameters
+rock-salt MO: M  d-count  Hund high-spin  CHGNet |magmom(M)|  magmom(O)
+Sc  d1       1 μB        0.04 μB        0.02
+Ti  d2       2 μB        0.06 μB        0.01
+V   d3       3 μB        1.73 μB        0.02
+Cr  d4       4 μB        3.46 μB        0.01
+Mn  d5       5 μB        4.63 μB        0.04
+Fe  d6       4 μB        3.74 μB        0.09
+Co  d7       3 μB        2.65 μB        0.08
+Ni  d8       2 μB        1.79 μB        0.11
+Cu  d9       1 μB        0.20 μB        0.12
+Zn  d10      0 μB        0.02 μB        0.00
+Pearson r(Hund high-spin, CHGNet magmom)=0.941, Spearman=0.939
+Fe2O3 (Fe3+, d5 -> Hund 5): mean |magmom(Fe)| = 4.44

@@ -1,0 +1,27 @@
+n=62; model prefers CN4 (zinc-blende) in 28 compounds; experiment CN4 in 24
+log radius ratio (Pauling)            : LOO accuracy predicting MODEL's CN4-vs-CN6 choice = 0.79;  LOO r for E(ZB)-E(RS) = +0.54;  LOO accuracy predicting EXPERIMENT = 0.77
+electronegativity diff (ionicity)     : LOO accuracy predicting MODEL's CN4-vs-CN6 choice = 0.82;  LOO r for E(ZB)-E(RS) = +0.48;  LOO accuracy predicting EXPERIMENT = 0.87
+both                                  : LOO accuracy predicting MODEL's CN4-vs-CN6 choice = 0.81;  LOO r for E(ZB)-E(RS) = +0.54;  LOO accuracy predicting EXPERIMENT = 0.84
+model's ionicity boundary: dEN* = 1.36 (Pauling's 50%-ionic point is dEN≈1.7)
+
+Same radius-ratio window 0.5-0.7, different ionicity:
+  CdTe  r+/r-=0.53 dEN=0.41  E(ZB)-E(RS)=-0.096  model CN4 exp CN4
+  AgI   r+/r-=0.63 dEN=0.73  E(ZB)-E(RS)=-0.054  model CN4 exp CN4
+  CdSe  r+/r-=0.59 dEN=0.86  E(ZB)-E(RS)=-0.092  model CN4 exp CN4
+  CdS   r+/r-=0.64 dEN=0.89  E(ZB)-E(RS)=-0.107  model CN4 exp CN4
+  ZnS   r+/r-=0.52 dEN=0.93  E(ZB)-E(RS)=-0.302  model CN4 exp CN4
+  CuBr  r+/r-=0.50 dEN=1.06  E(ZB)-E(RS)=-0.187  model CN4 exp CN4
+  CaTe  r+/r-=0.55 dEN=1.10  E(ZB)-E(RS)=+0.170  model CN6 exp CN6
+  SrTe  r+/r-=0.64 dEN=1.15  E(ZB)-E(RS)=+0.253  model CN6 exp CN6
+  GaN   r+/r-=0.58 dEN=1.23  E(ZB)-E(RS)=-0.423  model CN4 exp CN4
+  CuCl  r+/r-=0.54 dEN=1.26  E(ZB)-E(RS)=-0.165  model CN4 exp CN4
+  MgS   r+/r-=0.51 dEN=1.27  E(ZB)-E(RS)=+0.039  model CN6 exp CN6
+  AlN   r+/r-=0.51 dEN=1.43  E(ZB)-E(RS)=-0.208  model CN4 exp CN4
+  CaSe  r+/r-=0.62 dEN=1.55  E(ZB)-E(RS)=+0.252  model CN6 exp CN6
+  CaS   r+/r-=0.67 dEN=1.58  E(ZB)-E(RS)=+0.246  model CN6 exp CN6
+  NaI   r+/r-=0.56 dEN=1.73  E(ZB)-E(RS)=+0.028  model CN6 exp CN6
+  ZnO   r+/r-=0.70 dEN=1.79  E(ZB)-E(RS)=-0.144  model CN4 exp CN4
+  NaBr  r+/r-=0.64 dEN=2.03  E(ZB)-E(RS)=+0.059  model CN6 exp CN6
+  MgO   r+/r-=0.68 dEN=2.13  E(ZB)-E(RS)=+0.121  model CN6 exp CN6
+  LiCl  r+/r-=0.54 dEN=2.18  E(ZB)-E(RS)=+0.002  model CN6 exp CN6
+  NaCl  r+/r-=0.69 dEN=2.23  E(ZB)-E(RS)=+0.078  model CN6 exp CN6

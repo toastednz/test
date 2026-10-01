@@ -1,0 +1,41 @@
+[transformers] [1mEsmModel LOAD REPORT[0m from: facebook/esm2_t30_150M_UR50D
+
+== facebook/esm2_t30_150M_UR50D: heads whose attention is concentrated at a specific relative offset ==
+L 2H14: peak offset  +2  mean attn 0.920  share of ±16 window 0.94
+L 3H 4: peak offset  -2  mean attn 0.905  share of ±16 window 0.92
+L 1H16: peak offset  +4  mean attn 0.911  share of ±16 window 0.92
+L27H18: peak offset  +1  mean attn 0.868  share of ±16 window 0.92
+L27H 6: peak offset  -1  mean attn 0.853  share of ±16 window 0.91
+L 2H16: peak offset  -3  mean attn 0.879  share of ±16 window 0.89
+L28H19: peak offset  -1  mean attn 0.797  share of ±16 window 0.89
+L24H 6: peak offset  +1  mean attn 0.758  share of ±16 window 0.89
+L10H17: peak offset  -4  mean attn 0.853  share of ±16 window 0.89
+L 4H 2: peak offset  +1  mean attn 0.754  share of ±16 window 0.88
+L 1H 8: peak offset  -1  mean attn 0.805  share of ±16 window 0.88
+L 1H 2: peak offset  +3  mean attn 0.859  share of ±16 window 0.87
+L29H19: peak offset  +1  mean attn 0.792  share of ±16 window 0.87
+L 9H14: peak offset  -2  mean attn 0.843  share of ±16 window 0.86
+L 5H13: peak offset  -5  mean attn 0.785  share of ±16 window 0.86
+L 9H 2: peak offset  +1  mean attn 0.661  share of ±16 window 0.84
+L 5H18: peak offset  -1  mean attn 0.696  share of ±16 window 0.84
+L12H14: peak offset  +3  mean attn 0.811  share of ±16 window 0.84
+L 5H 8: peak offset  +3  mean attn 0.799  share of ±16 window 0.84
+L 8H14: peak offset  -1  mean attn 0.629  share of ±16 window 0.83
+L 2H17: peak offset  +1  mean attn 0.678  share of ±16 window 0.82
+L10H 8: peak offset  +5  mean attn 0.734  share of ±16 window 0.81
+L26H16: peak offset  -1  mean attn 0.723  share of ±16 window 0.81
+L14H 2: peak offset  -3  mean attn 0.743  share of ±16 window 0.81
+L16H 5: peak offset  -1  mean attn 0.652  share of ±16 window 0.80
+
+all-head mean attention by offset (|d|=1..8): {1: 18.042, 2: 15.83, 3: 15.872, 4: 14.612, 5: 9.921, 6: 8.303, 7: 8.897, 8: 7.761}
+
+== Which heads' i->i+d attention discriminates helix (d=3,4) or strand (d=2) pairs? (AUC, 18 proteins) ==
+d=4 H: best L29H7 AUC=0.916   (most anti: L23H13 AUC=0.177)   n=1540 pos=0.26
+d=3 H: best L23H8 AUC=0.893   (most anti: L27H3 AUC=0.105)   n=1558 pos=0.27
+d=2 E: best L28H14 AUC=0.903   (most anti: L26H13 AUC=0.185)   n=1576 pos=0.14
+d=1 H: best L26H13 AUC=0.766   (most anti: L28H14 AUC=0.098)   n=1594 pos=0.33
+d=1 E: best L25H14 AUC=0.843   (most anti: L26H13 AUC=0.150)   n=1594 pos=0.17
+d=2 H: best L26H13 AUC=0.771   (most anti: L28H14 AUC=0.089)   n=1576 pos=0.30
+d=4 E: best L20H18 AUC=0.763   (most anti: L29H7 AUC=0.198)   n=1540 pos=0.09
+
+Leave-one-protein-out helix classifier from (d=3,4) attention of all heads: mean AUC=0.865 over 16 proteins

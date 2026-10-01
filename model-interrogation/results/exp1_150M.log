@@ -1,0 +1,34 @@
+[transformers] [1mEsmModel LOAD REPORT[0m from: facebook/esm2_t30_150M_UR50D
+
+== facebook/esm2_t30_150M_UR50D: embedding similarity vs BLOSUM62 (Spearman over 190 pairs) ==
+input_embedding    rho(BLOSUM62)=+0.619  rho(SNV-reach)=+0.544  | OLS std-coef: BLOSUM +0.404 (p=9.4e-27), SNV +5.913 (p=1.1e-10)
+ctx_layer0         rho(BLOSUM62)=+0.619  rho(SNV-reach)=+0.544  | OLS std-coef: BLOSUM +0.404 (p=9.4e-27), SNV +5.913 (p=1.1e-10)
+ctx_layer5         rho(BLOSUM62)=+0.745  rho(SNV-reach)=+0.403  | OLS std-coef: BLOSUM +0.449 (p=1.3e-28), SNV +3.427 (p=2.4e-04)
+ctx_layer10        rho(BLOSUM62)=+0.811  rho(SNV-reach)=+0.438  | OLS std-coef: BLOSUM +0.494 (p=1.9e-38), SNV +3.110 (p=1.6e-04)
+ctx_layer15        rho(BLOSUM62)=+0.715  rho(SNV-reach)=+0.441  | OLS std-coef: BLOSUM +0.420 (p=2.5e-24), SNV +3.898 (p=7.3e-05)
+ctx_layer20        rho(BLOSUM62)=+0.656  rho(SNV-reach)=+0.393  | OLS std-coef: BLOSUM +0.386 (p=2.0e-17), SNV +2.221 (p=4.6e-02)
+ctx_layer25        rho(BLOSUM62)=+0.676  rho(SNV-reach)=+0.389  | OLS std-coef: BLOSUM +0.403 (p=4.2e-19), SNV +1.956 (p=7.4e-02)
+ctx_layer30        rho(BLOSUM62)=+0.814  rho(SNV-reach)=+0.296  | OLS std-coef: BLOSUM +0.523 (p=2.8e-36), SNV +0.042 (p=9.6e-01)
+
+== leave-one-out ridge probes: embedding -> property (LOO Pearson r; n=20) ==
+property                   input      ctx_L0     ctx_mid    ctx_last
+hydropathy(KD)              0.95        0.95        0.95        0.93
+volume                      0.90        0.90        0.89        0.78
+mass                        0.83        0.83        0.84        0.72
+charge                      0.94        0.94        0.95        0.88
+helix_ddG(Pace)            -0.42       -0.41       -0.62       -0.27
+beta_prop(CF)               0.74        0.74        0.61        0.84
+alpha_prop(CF)              0.28        0.26       -0.08        0.21
+pI                          0.92        0.92        0.77        0.89
+polarity(Grantham)          0.98        0.98        0.97        0.94
+n_codons                    0.37        0.37        0.36        0.12
+aromatic                    0.86        0.86        0.90        0.80
+log_frequency               0.75        0.75        0.60        0.46
+
+== PCA of input embedding: which properties align with the top PCs? ==
+explained var: [0.12  0.102 0.093 0.079 0.071]
+PC1: polarity(Grantham) |r|=0.99, hydropathy(KD) |r|=0.82, beta_prop(CF) |r|=0.81
+PC2: mass |r|=0.86, volume |r|=0.71, aromatic |r|=0.56
+PC3: pI |r|=0.75, charge |r|=0.73, aromatic |r|=0.39
+PC1 order: DENKQRHGPSATCVYLMIWF
+PC2 order: WHYRKQFNCMEDLPSGIVAT

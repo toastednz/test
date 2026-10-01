@@ -1,0 +1,26 @@
+CHGNet v0.3.0 initialized with 412,525 parameters
+embedding shape (94, 64)
+
+== LOO ridge probes: CHGNet element embedding -> property (Pearson r) ==
+electronegativity         r=+0.881  (n=91)
+atomic_radius             r=+0.893  (n=87)
+group                     r=+0.796  (n=94)
+row                       r=+0.853  (n=94)
+Z                         r=+0.780  (n=94)
+log_mass                  r=+0.863  (n=94)
+ionization_energy         r=+0.683  (n=94)
+electron_affinity         r=+0.534  (n=94)
+melting_point             r=+0.862  (n=94)
+max_oxidation_state       r=+0.778  (n=94)
+min_oxidation_state       r=+0.809  (n=94)
+n_valence(s+p+d outer)    r=+0.859  (n=94)
+
+block (s/p/d/f) 5-fold accuracy: 0.839 | chance(majority)= 0.33
+is_metal 5-fold accuracy: 0.882 | chance= 0.734
+
+nearest neighbour in embedding space: same group 0.56 (chance ~0.09), same block 0.88, adjacent Z 0.48
+examples (element -> nearest): H->He, Li->Na, C->N, N->O, O->F, F->O, Na->K, Mg->Al, Si->P, Cl->Br, K->Rb, Ca->Sr, Fe->Co, Cu->Ag, Se->S, Br->Cl, Rb->K, Ag->Au, I->Br, Cs->Rb, Au->Pt, U->Pa
+PCA explained: [0.189 0.109 0.076 0.064]
+PC1: atomic_radius |r|=0.75, electronegativity |r|=0.73, min_oxidation_state |r|=0.69
+PC2: melting_point |r|=0.75, max_oxidation_state |r|=0.67, log_mass |r|=0.28
+PC3: log_mass |r|=0.60, n_valence(s+p+d outer) |r|=0.58, Z |r|=0.53
