@@ -14,3 +14,18 @@
 1WIT: Spearman(entropy, RSA)=+0.47  mean entropy buried(RSA<0.2)=1.53 exposed(RSA>0.5)=2.20
 2ABD: Spearman(entropy, RSA)=-0.08  mean entropy buried(RSA<0.2)=2.64 exposed(RSA>0.5)=2.53
 2CI2: Spearman(entropy, RSA)=+0.32  mean entropy buried(RSA<0.2)=1.09 exposed(RSA>0.5)=1.65
+2LZM: Spearman(entropy, RSA)=+0.37  mean entropy buried(RSA<0.2)=1.30 exposed(RSA>0.5)=2.23
+5PTI: Spearman(entropy, RSA)=+0.55  mean entropy buried(RSA<0.2)=1.09 exposed(RSA>0.5)=2.32
+== facebook/esm2_t30_150M_UR50D Exp4: per-protein Spearman(entropy,RSA) mean=+0.368 (min -0.08, max +0.61); pooled=+0.341, n=1612
+mean entropy by DSSP: H=1.76, E=1.55, -=1.71
+exp5 seq 0
+exp5 seq 20
+
+== facebook/esm2_t30_150M_UR50D Exp5: model substitution matrix S[a,b]=mean log P(b|a masked) over 40 seqs ==
+Spearman(S, BLOSUM62) = +0.851;  Spearman(S, SNV-reachability) = +0.411
+OLS S ~ BLOSUM62 + 5 physchem distances + SNV: SNV coef=+1.862 t=+2.64 p=8.9e-03 (R2=0.77)
+random-genetic-code null for the SNV t-stat: mean +0.00, sd 0.74; real t=+2.64; empirical p = 0.002
+[transformers] [1mEsmModel LOAD REPORT[0m from: facebook/esm2_t30_150M_UR50D
+
+input-embedding cosine ~ BLOSUM62 + physchem + SNV: SNV t=+7.19 p=1.6e-11; random-code null mean +0.10 sd 0.90; empirical p=0.000
+asymmetry: corr(S[a,b]-S[b,a], vol(b)-vol(a)) = -0.300  (negative => model finds substituting to a LARGER residue less likely than the reverse)
