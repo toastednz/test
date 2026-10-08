@@ -1,0 +1,90 @@
+{
+ "TIC 404664386 (G dwarf) QLP S13 2019, 30-min": {
+  "column": "kspsap_flux",
+  "depth_ppm": 8840,
+  "depth_err": 326,
+  "odd": 9122,
+  "odd_err": 467,
+  "even": 8590,
+  "even_err": 441,
+  "secondary": 213,
+  "secondary_err": 324,
+  "rms_ppm": 1194,
+  "npts": 1049
+ },
+ "TIC 404664386 QLP S94 2025, 200-s": {
+  "column": "det_flux",
+  "depth_ppm": 8560,
+  "depth_err": 140,
+  "odd": 8898,
+  "odd_err": 191,
+  "even": 8191,
+  "even_err": 199,
+  "secondary": -91,
+  "secondary_err": 142,
+  "rms_ppm": 2069,
+  "npts": 7997
+ },
+ "TIC 404664386 QLP S104 2026, 200-s": {
+  "column": "det_flux",
+  "depth_ppm": 8848,
+  "depth_err": 134,
+  "odd": 9305,
+  "odd_err": 185,
+  "even": 8379,
+  "even_err": 187,
+  "secondary": 9,
+  "secondary_err": 136,
+  "rms_ppm": 2084,
+  "npts": 8643
+ },
+ "TIC 404664390 (M dwarf aperture) QLP S13": {
+  "column": "kspsap_flux",
+  "depth_ppm": 23262,
+  "depth_err": 886,
+  "odd": 24085,
+  "odd_err": 1271,
+  "even": 22533,
+  "even_err": 1199,
+  "secondary": 840,
+  "secondary_err": 882,
+  "rms_ppm": 3530,
+  "npts": 1049
+ },
+ "TIC 404664390 aperture, SPOC 2-min S104": {
+  "column": "SPOC PDCSAP 2-min",
+  "depth_ppm": 10111,
+  "depth_err": 186,
+  "odd": 10868,
+  "odd_err": 259,
+  "even": 9355,
+  "even_err": 259,
+  "secondary": 491,
+  "secondary_err": 179,
+  "rms_ppm": 6616,
+  "npts": 15661
+ },
+ "tls_Gdwarf_S94_S104": {
+  "P": 0.6532793231611019,
+  "P_err": 5.628292954723557e-05,
+  "t0": 3857.799464153867,
+  "SDE": 98.7696323866075,
+  "snr": 51.35250801280839,
+  "depth": 0.99031698567705,
+  "rp_rs": 0.08849371635142153,
+  "duration_h": 0.12364533212266066,
+  "odd_even_mismatch": 2.619466677766588,
+  "transit_count": 531,
+  "distinct_transit_count": 63,
+  "FAP": 8.0032e-05,
+  "rp_rearth": 8.75678065972366,
+  "rp_rjup": 0.7811579535881944
+ },
+ "derived": {
+  "a_au": 0.01469,
+  "a_over_rstar": 3.48,
+  "T_eq_K_full_redistribution": 2127,
+  "max_central_duration_h": 1.56,
+  "ellipsoidal_ppm_per_Mjup": 34.3
+ }
+}

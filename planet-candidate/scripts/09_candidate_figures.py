@@ -31,7 +31,7 @@ G = load_qlp(404664386); M = load_qlp(404664390)
 fm = ts.build_filemap(DATA); fn = [f for s, f in fm[404664390] if s == 104][0]; p = ts.download(fn, os.path.join(DATA, "lc_cache"))
 t, f, e, s = ts.load_sector(p); tS, fS, eS, madS = ts.detrend(t, f, e, window=0.5)
 
-def fold(t, f, P, t0):
+def fold(t, P, t0):
     return ((t - t0 + 0.5 * P) % P) - 0.5 * P
 def binned(ph, f, nb=60, w=0.5):
     bins = np.linspace(-w, w, nb + 1); idx = np.digitize(ph, bins)
