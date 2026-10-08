@@ -37,7 +37,7 @@ for k in epochs:
     diffs.append(np.nanmedian(flux[mo], axis=0) - np.nanmedian(flux[mi], axis=0)); weights.append(mi.sum())
 if not diffs:
     raise SystemExit("no usable transits in this sector")
-diff = np.average(np.array(diffs), axis=0, weights=np.array(weights))
+diff = np.nanmedian(np.array(diffs), axis=0) if len(diffs) >= 3 else np.average(np.array(diffs), axis=0, weights=np.array(weights))
 direct = np.nanmedian(flux[oot], axis=0)
 # noise estimate for the diff image: scatter of per-epoch diffs / sqrt(N) (or from random-phase 'fake' transits)
 rng = np.random.default_rng(1)
@@ -50,7 +50,7 @@ for i in range(40):
         mi = fi & (nf == k); mo = fo & (nf == k)
         if mi.sum() < 5 or mo.sum() < 10: continue
         dd.append(np.nanmedian(flux[mo], axis=0) - np.nanmedian(flux[mi], axis=0)); ww.append(mi.sum())
-    if dd: fakes.append(np.average(np.array(dd), axis=0, weights=np.array(ww)))
+    if dd: fakes.append(np.nanmedian(np.array(dd), axis=0) if len(dd) >= 3 else np.average(np.array(dd), axis=0, weights=np.array(ww)))
 noise = np.nanstd(np.array(fakes), axis=0) if fakes else np.full_like(diff, np.nan)
 snr_img = diff / noise
 # centroids

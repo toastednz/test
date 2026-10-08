@@ -11,17 +11,17 @@
   4.66646444247851
  ],
  "diff_centroid_in_aperture": [
-  NaN,
-  NaN
+  4.9339249705310015,
+  4.7544890803523385
  ],
  "diff_centroid_snr3": [
-  NaN,
-  NaN
+  5.710408838555574,
+  4.870256765628167
  ],
- "offset_pix": NaN,
- "offset_arcsec": NaN,
- "offset_from_target_pix": NaN,
- "max_diff_snr": -0.9577793868992859,
+ "offset_pix": 0.16821812525975485,
+ "offset_arcsec": 3.5325806304548517,
+ "offset_from_target_pix": 0.06273084047866546,
+ "max_diff_snr": 20.680276291292607,
  "diff_peak_pix": [
   6,
   5
@@ -30,5 +30,5 @@
   2,
   3
  ],
- "total_depth_in_aperture_ppm": -64710.600619373654
+ "total_depth_in_aperture_ppm": 3724.8699199797097
 }
