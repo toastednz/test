@@ -115,3 +115,11 @@ the photometric aperture, not just the searched TIC ID.
 * Signals that the box search ranked highest by raw SNR (up to SNR 70) were without exception
   stellar: spotted rapid rotators, flares, and single scattered-light dips, caught by the per-transit
   χ² and the secondary-eclipse test.
+
+After the full run 1 triage (1,416 stars), a second fast consistency pass over the next 80 ranked
+signals found 11 more repeatable ones; the 8 that were not variability or SPOC-known were put through
+the coherent periodogram test and all failed (candidate SDE 2.5–5.0; `results/vet_blind_fast/*/fullbls.json`).
+The two best-looking of these were also checked at pixel level and in Gaia: TIC 77840675 (24.06 d,
+1.2 ppt, 4 transits) sits 53″ from a star 2.4 mag brighter (contamination ratio 1.8, RUWE 2.0) and
+its difference image peaks on that neighbour; TIC 364979563 (BD−07 184 AB, 6.8″ binary, 25.4 d,
+0.7 ppt, 3 transits) shows no transit in its sector-97 difference image. Neither is credible.

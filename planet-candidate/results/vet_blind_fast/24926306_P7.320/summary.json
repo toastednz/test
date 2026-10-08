@@ -1,0 +1,126 @@
+{
+ "tic": 24926306,
+ "P": 7.320261865722727,
+ "t0": 1390.159802336852,
+ "dur_h": 2.16,
+ "depth_ppm": 1191.8482717422785,
+ "depth_err_ppm": 120.99481216046871,
+ "bls_snr": 9.850408050236041,
+ "depth_odd_ppm": 1083.2369319352385,
+ "depth_odd_err": 186.15476162950495,
+ "depth_even_ppm": 1270.0959492707443,
+ "depth_even_err": 158.20093588063443,
+ "depth_half_ppm": 621.6600258666106,
+ "depth_half_err": 92.95629727496697,
+ "depth_phased_ppm": -175.39481400552503,
+ "depth_phased_err": 142.99335347739768,
+ "harmonic_delta_log_likelihood": -48.06934017896856,
+ "npts": 41908,
+ "nsec": 2,
+ "baseline": 2602.134267440503,
+ "per_transit": [
+  {
+   "epoch": 0,
+   "time": 1390.159802336852,
+   "sector": 3,
+   "depth_ppm": 2842.7,
+   "err_ppm": 456.5,
+   "snr": 6.23,
+   "nin": 64
+  },
+  {
+   "epoch": 1,
+   "time": 1397.4800642025746,
+   "sector": 3,
+   "depth_ppm": 197.7,
+   "err_ppm": 415.9,
+   "snr": 0.48,
+   "nin": 65
+  },
+  {
+   "epoch": 2,
+   "time": 1404.8003260682974,
+   "sector": 3,
+   "depth_ppm": 1183.3,
+   "err_ppm": 440.3,
+   "snr": 2.69,
+   "nin": 64
+  },
+  {
+   "epoch": 348,
+   "time": 3937.6109316083607,
+   "sector": 97,
+   "depth_ppm": 1021.9,
+   "err_ppm": 469.2,
+   "snr": 2.18,
+   "nin": 65
+  },
+  {
+   "epoch": 349,
+   "time": 3944.9311934740836,
+   "sector": 97,
+   "depth_ppm": 731.7,
+   "err_ppm": 475.7,
+   "snr": 1.54,
+   "nin": 65
+  },
+  {
+   "epoch": 350,
+   "time": 3952.2514553398064,
+   "sector": 97,
+   "depth_ppm": 1376.9,
+   "err_ppm": 464.0,
+   "snr": 2.97,
+   "nin": 64
+  },
+  {
+   "epoch": 351,
+   "time": 3959.5717172055292,
+   "sector": 97,
+   "depth_ppm": 1858.5,
+   "err_ppm": 465.4,
+   "snr": 3.99,
+   "nin": 65
+  },
+  {
+   "epoch": 352,
+   "time": 3966.8919790712516,
+   "sector": 97,
+   "depth_ppm": 1877.6,
+   "err_ppm": 523.9,
+   "snr": 3.58,
+   "nin": 65
+  },
+  {
+   "epoch": 353,
+   "time": 3974.2122409369745,
+   "sector": 97,
+   "depth_ppm": 1865.5,
+   "err_ppm": 527.6,
+   "snr": 3.54,
+   "nin": 65
+  },
+  {
+   "epoch": 354,
+   "time": 3981.5325028026973,
+   "sector": 97,
+   "depth_ppm": 1019.4,
+   "err_ppm": 666.2,
+   "snr": 1.53,
+   "nin": 50
+  }
+ ],
+ "n_transits": 10,
+ "n_transits_positive": 10,
+ "depth_wmean_ppm": 1371.1852425261438,
+ "depth_wmean_err_ppm": 151.7064035783877,
+ "chi2_red_depths": 2.675878901666773,
+ "snr_combined": 9.038413739850101,
+ "snr_without_strongest": 7.388921222828462,
+ "n_transits_snr_gt2": 7,
+ "max_single_snr": 6.227163198247535,
+ "sectors_with_transits": [
+  3,
+  97
+ ]
+}

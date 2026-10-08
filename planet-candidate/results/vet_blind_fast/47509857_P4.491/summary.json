@@ -1,0 +1,108 @@
+{
+ "tic": 47509857,
+ "P": 4.527527087327289,
+ "t0": 2090.5831379254914,
+ "dur_h": 6.300000000000001,
+ "depth_ppm": 776.7469544609908,
+ "depth_err_ppm": 59.41662424850945,
+ "bls_snr": 13.072889351846282,
+ "depth_odd_ppm": 853.6336142257461,
+ "depth_odd_err": 82.8003348356979,
+ "depth_even_ppm": 699.6658094414743,
+ "depth_even_err": 82.90199500086001,
+ "depth_half_ppm": 412.3656010256438,
+ "depth_half_err": 43.75765098955468,
+ "depth_phased_ppm": 28.52517960039158,
+ "depth_phased_err": 60.8661710227483,
+ "harmonic_delta_log_likelihood": 34.15601305805467,
+ "npts": 26762,
+ "nsec": 2,
+ "baseline": 2171.908025283297,
+ "per_transit": [
+  {
+   "epoch": 0,
+   "time": 2090.5831379254914,
+   "sector": 29,
+   "depth_ppm": 572.4,
+   "err_ppm": 171.6,
+   "snr": 3.33,
+   "nin": 188
+  },
+  {
+   "epoch": 1,
+   "time": 2095.1106650128186,
+   "sector": 29,
+   "depth_ppm": 803.3,
+   "err_ppm": 191.0,
+   "snr": 4.21,
+   "nin": 189
+  },
+  {
+   "epoch": 3,
+   "time": 2104.1657191874733,
+   "sector": 29,
+   "depth_ppm": 482.3,
+   "err_ppm": 187.0,
+   "snr": 2.58,
+   "nin": 188
+  },
+  {
+   "epoch": 4,
+   "time": 2108.6932462748005,
+   "sector": 29,
+   "depth_ppm": 140.5,
+   "err_ppm": 195.3,
+   "snr": 0.72,
+   "nin": 189
+  },
+  {
+   "epoch": 474,
+   "time": 4236.630977318626,
+   "sector": 106,
+   "depth_ppm": 800.7,
+   "err_ppm": 178.1,
+   "snr": 4.49,
+   "nin": 189
+  },
+  {
+   "epoch": 475,
+   "time": 4241.158504405954,
+   "sector": 106,
+   "depth_ppm": 651.2,
+   "err_ppm": 164.2,
+   "snr": 3.97,
+   "nin": 189
+  },
+  {
+   "epoch": 476,
+   "time": 4245.686031493281,
+   "sector": 106,
+   "depth_ppm": 586.7,
+   "err_ppm": 178.1,
+   "snr": 3.29,
+   "nin": 186
+  },
+  {
+   "epoch": 479,
+   "time": 4259.268612755262,
+   "sector": 106,
+   "depth_ppm": 572.4,
+   "err_ppm": 174.2,
+   "snr": 3.29,
+   "nin": 185
+  }
+ ],
+ "n_transits": 8,
+ "n_transits_positive": 8,
+ "depth_wmean_ppm": 584.4355466233937,
+ "depth_wmean_err_ppm": 63.3366030578945,
+ "chi2_red_depths": 1.2040008678388,
+ "snr_combined": 9.227453295674461,
+ "snr_without_strongest": 8.162214342121926,
+ "n_transits_snr_gt2": 7,
+ "max_single_snr": 4.495788882650197,
+ "sectors_with_transits": [
+  29,
+  106
+ ]
+}

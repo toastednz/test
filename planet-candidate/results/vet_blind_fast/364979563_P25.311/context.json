@@ -1,0 +1,121 @@
+{
+ "tic": {
+  "ra": 17.4115741219415,
+  "dec": -7.1803081322387,
+  "pmRA": -234.83,
+  "pmDEC": -357.01,
+  "Tmag": 9.50937,
+  "Vmag": 11.387,
+  "Jmag": 7.956,
+  "Kmag": 7.114,
+  "GAIA": "2475655231435310208",
+  "Teff": 3616.0,
+  "logg": 4.65461,
+  "rad": 0.595978,
+  "mass": 0.584795,
+  "rho": 2.76257,
+  "lum": 0.05471027,
+  "d": 29.7440434,
+  "plx": 26.61,
+  "contratio": 0.168903291,
+  "disposition": null,
+  "objType": "STAR",
+  "lumclass": "DWARF",
+  "numcont": 21.0,
+  "gaiabp": 11.7442,
+  "gaiarp": 9.54497
+ },
+ "gaia_neighbours_1arcmin": [
+  {
+   "source_id": 2475655227139842176,
+   "ra": 17.4112,
+   "dec": -7.1817,
+   "phot_g_mean_mag": 12.705900192260742,
+   "phot_bp_mean_mag": 13.94890022277832,
+   "phot_rp_mean_mag": 11.414899826049805,
+   "parallax": 28.9041,
+   "pmra": -244.0698,
+   "pmdec": -350.9221,
+   "ruwe": 1.4700000286102295,
+   "non_single_star": 0,
+   "sep_arcsec": 5.2119
+  },
+  {
+   "source_id": 2475655231435310208,
+   "ra": 17.4105,
+   "dec": -7.1819,
+   "phot_g_mean_mag": 10.594499588012695,
+   "phot_bp_mean_mag": 11.724499702453613,
+   "phot_rp_mean_mag": 9.52929973602295,
+   "parallax": NaN,
+   "pmra": NaN,
+   "pmdec": NaN,
+   "ruwe": NaN,
+   "non_single_star": 0,
+   "sep_arcsec": 6.8352
+  },
+  {
+   "source_id": 2475655227139842048,
+   "ra": 17.4159,
+   "dec": -7.1761,
+   "phot_g_mean_mag": 18.75510025024414,
+   "phot_bp_mean_mag": 19.26729965209961,
+   "phot_rp_mean_mag": 18.09760093688965,
+   "parallax": 1.0888,
+   "pmra": 10.7022,
+   "pmdec": -26.5129,
+   "ruwe": 0.9857000112533569,
+   "non_single_star": 0,
+   "sep_arcsec": 21.5618
+  }
+ ],
+ "neighbour_flux_fraction_within_1arcmin": 6.9954423904418945,
+ "brightest_neighbour": {
+  "sep_arcsec": 6.835206852856102,
+  "dG": -2.111447334289551
+ },
+ "target_ruwe": 1.4699842929840088,
+ "target_non_single_star_flag": 0,
+ "simbad": [
+  {
+   "main_id": "BD-07   184B",
+   "otype": "PM*",
+   "sp_type": "",
+   "ids": "Gaia DR3 2475655227139842176|BD-07   184B|** HDS  151B|CCDM J01096-0711B|WDS J01096-0711B|TYC 4683-148-2|UCAC4 415-001422"
+  },
+  {
+   "main_id": "BD-07   184A",
+   "otype": "PM*",
+   "sp_type": "",
+   "ids": "Gaia DR3 2475655231435310208|BD-07   184A|** HDS  151A|CCDM J01096-0711A|WDS J01096-0711A|TYC 4683-148-3|UCAC4 415-001421"
+  },
+  {
+   "main_id": "BD-07   184",
+   "otype": "**",
+   "sp_type": "M2.0V",
+   "ids": "TIC 364979563|1RXS J010938.3-071044|HIP 5443|2MASS J01093874-0710497|BD-07   184|G 270-158|G 271-4|HIC   5443|LTT   648|** HDS  151|WDS J01096-0711AB|CCDM J01096-0711AB|StKM 2-100|WISEA J010938.63-071052.8|PM J01096-0710|TYC 4683-148-1|NLTT  3861"
+  }
+ ],
+ "nearby_tois_3arcmin": [],
+ "spoc_tces_this_star": [
+  {
+   "tceid": "00364979563-01",
+   "sectors": "s0001-s0036",
+   "tce_period": 22.197,
+   "tce_depth": 1369.46,
+   "tce_model_snr": 9.84236,
+   "tce_num_transits": 2,
+   "tce_ntoi": 1
+  },
+  {
+   "tceid": "00364979563-01",
+   "sectors": "s0029",
+   "tce_period": 22.1952,
+   "tce_depth": 1365.67,
+   "tce_model_snr": 9.76078,
+   "tce_num_transits": 2,
+   "tce_ntoi": 1
+  }
+ ],
+ "sectors_2min": "3,30,97"
+}
