@@ -71,3 +71,47 @@ orbital period or its harmonics.
 * Difference imaging from the target pixel file: out-of-transit minus in-transit image, per-pixel
   depth map, difference-image centroid versus the star's WCS position, with a noise estimate
   from random-phase fake transits.
+
+## Results so far (updated as runs complete)
+
+### Track A – SPOC TCEs on cool dwarfs that were never promoted to TOIs
+
+15,923 TCEs sit on the 23,705 clean cool dwarfs. Filtering to SNR ≥ 8, R_p < 5 R_⊕, ≥ 3 transits and
+a physically plausible duration leaves 566 TCEs on 406 stars. The 24 strongest planet-like ones were
+re-vetted on the 2-min data:
+
+| Outcome | Count | Examples |
+|---|---|---|
+| Eclipsing binary (secondary eclipse at phase 0.5, ≥ 5σ) | 7 | TIC 290003896, 238872494, 311188656, 181015118, 256324377 |
+| Ellipsoidal / rotational variable (brightening at phase 0.5, inconsistent depths) | 6 | TIC 402980664, 189565557, 237286849, 140045538 |
+| Single deep event with aliases (per-transit depths inconsistent, χ²_red ≫ 3) | 9 | TIC 272550631, 359313701, 289726188, 593228 |
+| Flare-like dip + brightening | 1 | TIC 401283888 |
+| **Transit-like and clean, but already claimed** | 1 | TIC 293689266 = GJ 237 A: P = 14.81 d, 1.0–1.5 ppt, 12 transits over 7 years, no secondary. The companion GJ 237 B (TIC 293689267, 7″ away, blended) carries **CTOI 293689267.01** at this period (submitted 2019). Not new. |
+
+Lesson applied to the pipeline: a signal must be checked against TOIs/CTOIs of *every* star within
+the photometric aperture, not just the searched TIC ID.
+
+### Track B – blind search, run 1 (G3 + G1: 1,416 cool dwarfs, 2–12 sectors each, data through sector 108)
+
+* 1,416 stars searched; 403 stars have at least one BLS peak with SNR ≥ 7; 138 stars pass the physical
+  cuts; after requiring per-transit repeatability (≥ 4 measured transits, ≥ 75 % positive, no single
+  event > 3× the median) 7 signals on 7 stars remained, all shallow (0.2–1.3 ppt, 0.5–1.6 R_⊕ if real)
+  at combined SNR 7–10.
+* The decisive test, a fully coherent BLS periodogram over the star's entire multi-year baseline
+  (2–3 × 10⁵ trial periods), rejects all seven: candidate SDE 3.6–6.2, never the global maximum
+  (`results/vet_blind_fast/*/fullbls.json`). Their "transits" are consistent with noise selected by
+  the search.
+
+| TIC | Star | P (d) | depth (ppm) | transits | SNR w/o strongest | χ²_red | coherent SDE / rank |
+|---|---|---|---|---|---|---|---|
+| 231055581 | L 173-19, M2.0Ve, 8.2 pc, T=9.3 | 18.50 | 245 | 9 | 8.0 | 2.6 | 3.6 / 9 |
+| 245949052 | LP 475-1699, M1, 47 pc | 19.17 | 691 | 5 | 7.9 | 1.2 | 4.0 / 9 |
+| 220524896 | | 12.11 | 606 | 13 | 9.0 | 4.4 | 4.0 / 9 |
+| 332286707 | T=9.0 | 25.95 | 228 | 7 | 9.4 | 6.5 | 5.1 / 2 |
+| 435905591 | | 46.78 | 587 | 4 | 7.8 | 3.9 | 4.3 / 9 |
+| 456894306 | | 24.51 | 1258 | 8 | 8.3 | 3.4 | 5.0 / 9 |
+| 423211395 | | 6.004 | 1093 | 31 | 7.1 | 1.5 | 6.2 / 5 |
+
+* Signals that the box search ranked highest by raw SNR (up to SNR 70) were without exception
+  stellar: spotted rapid rotators, flares, and single scattered-light dips, caught by the per-transit
+  χ² and the secondary-eclipse test.
