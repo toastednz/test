@@ -1,0 +1,32 @@
+{
+ "Gdwarf_QLP_S94_S104_200s": {
+  "n": 6143,
+  "depth_ppm": 11558,
+  "depth_err": 172,
+  "T14_h": 1.446,
+  "T14_err_h": 0.015,
+  "T23_h": 0.211,
+  "T23_err_h": 0.024,
+  "T23_over_T14": 0.146,
+  "chi2_trap": 3705.7,
+  "chi2_V": 3724.6,
+  "delta_chi2_V_minus_trap": 18.8,
+  "cadence_min": 3.3,
+  "ingress_h": 0.618
+ },
+ "blend_SPOC_2min_S104": {
+  "n": 5564,
+  "depth_ppm": 13628,
+  "depth_err": 568,
+  "T14_h": 1.382,
+  "T14_err_h": 0.037,
+  "T23_h": 0.157,
+  "T23_err_h": 0.063,
+  "T23_over_T14": 0.114,
+  "chi2_trap": 4316.4,
+  "chi2_V": 4320.2,
+  "delta_chi2_V_minus_trap": 3.7,
+  "cadence_min": 2.0,
+  "ingress_h": 0.613
+ }
+}

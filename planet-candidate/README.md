@@ -123,3 +123,52 @@ The two best-looking of these were also checked at pixel level and in Gaia: TIC 
 1.2 ppt, 4 transits) sits 53″ from a star 2.4 mag brighter (contamination ratio 1.8, RUWE 2.0) and
 its difference image peaks on that neighbour; TIC 364979563 (BD−07 184 AB, 6.8″ binary, 25.4 d,
 0.7 ppt, 3 transits) shows no transit in its sector-97 difference image. Neither is credible.
+
+### Track C – the one uncatalogued, persistent, on-sky-localised eclipse signal: TIC 404664386 (TYC 8377-835-1)
+
+**What was found.** The blind search flagged TIC 404664390 (an M dwarf, T = 12.4, 78 pc) with a
+~1 % deep signal at P = 0.6533 d in its sector-104 2-min data (32 transits, all positive,
+χ²_red = 1.9, TLS SDE = 20). SPOC's pipeline recorded the same signal as a raw TCE on this M dwarf in
+July 2026; it is not a TOI, not a CTOI, not in the Exoplanet Archive, and neither star returns any
+literature hit. Pixel-level difference imaging (`results/vet_blind/404664390_P3.268/centroid_s104.png`)
+puts the dimming source on the **brighter background G dwarf 14″ away, TIC 404664386** (TYC 8377-835-1,
+T = 11.5, T_eff = 5612 K, R = 0.91 R_⊙, 241 pc), whose own QLP full-frame-image light curves show the
+signal in **2019 (S13), 2025 (S94) and 2026 (S104)** with a constant depth
+(`results/candidate_TIC404664386/candidate_folds.png`):
+
+| Data set | depth (ppm) | odd / even (ppm) | secondary at phase 0.5 (ppm) |
+|---|---|---|---|
+| TIC 404664386 QLP S13 (2019, 30-min) | 8840 ± 326 | 9241 ± 467 / 8829 ± 447 | 196 ± 329 |
+| TIC 404664386 QLP S94 (2025, 200-s) | 8560 ± 140 | 8898 ± 191 / 8191 ± 199 | −91 ± 142 |
+| TIC 404664386 QLP S104 (2026, 200-s) | 8848 ± 134 | 9305 ± 185 / 8379 ± 187 | 9 ± 136 |
+| TIC 404664390 SPOC 2-min S104 (blended aperture) | 10111 ± 186 | 10868 ± 259 / 9355 ± 259 | 491 ± 179 |
+
+TLS on S94+S104: P = 0.653279 ± 0.000056 d, SDE = 99, 63 distinct transits, r_p/R_⋆ = 0.088.
+Period from the 7-year baseline: 0.6532993 d (alias spacing 1.1 × 10⁻⁵ d).
+
+**Planet or binary?** Taken at face value the occulter is 0.78 R_Jup on a 0.65-day orbit around a
+G dwarf (T_eq ≈ 2100 K), which would be the shortest-period giant planet known (TOI-2109 b: 0.672 d).
+Three independent tests were run (`results/candidate_TIC404664386/`, `results/vet_blind/404664390_P0.653/`):
+
+1. *Mass from the phase curve.* A BEER fit to the out-of-eclipse QLP photometry (S94+S104, 13,139
+   points) gives an ellipsoidal amplitude of 10 ± 29 ppm. At a/R_⋆ = 3.5 the expected amplitude is
+   34 ppm per Jupiter mass, 450 ppm for 13 M_Jup and 3600 ppm for a 0.1 M_⊙ star, so **any companion
+   orbiting the G dwarf itself is < 3 M_Jup** (3σ). A brown dwarf or M-dwarf companion *to the G dwarf*
+   is excluded.
+2. *Eclipse shape.* A trapezoid fit gives T_23/T_14 = 0.15 ± 0.02 (T_14 = 1.45 h): the eclipse is
+   **V-shaped**. A non-grazing 0.088 R_⋆ planet would give T_23/T_14 = 0.7–0.8; a grazing planet would
+   be V-shaped but only ≈ 1.0 h long.
+3. *Odd/even depths.* Odd eclipses are 8–10 % deeper than even ones in S94 (2.6σ), S104 (3.5σ) and
+   the SPOC data (4.1σ, same photons as QLP S104), with consistent parity: ≈ 4σ combined.
+
+Points 2 and 3 are the signature of an eclipsing binary whose true period is 1.3066 d with two
+slightly unequal, partial (V-shaped) eclipses, diluted by the G dwarf's light. Point 1 shows the
+binary is not the G dwarf plus a stellar companion; the simplest picture is a **fainter near-twin
+eclipsing binary blended within a few arcsec of TYC 8377-835-1** (the difference-image centroid is
+within 0.1–0.2 pixel of it). A grazing giant planet is not strictly excluded but requires the
+odd/even asymmetry to be a systematic.
+
+**Verdict.** A genuine, uncatalogued, seven-year-stable eclipse signal on a star that no catalogue
+lists, but on the TESS evidence it is more likely an eclipsing binary than a planet. It is reported
+here as an eclipsing-binary-or-planet candidate needing ground-based follow-up (seeing-limited
+photometry to separate the two stars, and radial velocities of the G dwarf), not as a planet claim.
