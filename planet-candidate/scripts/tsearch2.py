@@ -167,15 +167,28 @@ def stage_b(tb, fb, eb, P0, dur0, bl_block):
             oe = abs(odd[0] - even[0]) / np.sqrt(odd[1] ** 2 + even[1] ** 2 + 1e-30)
             sec = st["depth_phased"]
             ntr = count_transits(tb, grid[i], res.transit_time[i], res.duration[i])
-            n_ = np.round((tb - res.transit_time[i]) / grid[i]); intr = np.abs(tb - (res.transit_time[i] + n_ * grid[i])) < 0.5 * res.duration[i]
-            ptd = {}
+            n_ = np.round((tb - res.transit_time[i]) / grid[i]); phs = tb - (res.transit_time[i] + n_ * grid[i])
+            intr = np.abs(phs) < 0.5 * res.duration[i]; oot = (np.abs(phs) > 0.75 * res.duration[i]) & (np.abs(phs) < 3.0 * res.duration[i])
+            ptd, pte = {}, {}
             for k in np.unique(n_[intr]):
-                mm = intr & (n_ == k)
-                if mm.sum() >= 2:
-                    ptd[int(k)] = round(float(1e6 * (1 - np.mean(fb[mm]))), 1)
+                mm = intr & (n_ == k); mo = oot & (n_ == k)
+                if mm.sum() >= 2 and mo.sum() >= 6:
+                    ptd[int(k)] = round(float(1e6 * (np.mean(fb[mo]) - np.mean(fb[mm]))), 1)
+                    pte[int(k)] = round(float(1e6 * np.std(fb[mo]) / np.sqrt(mm.sum())), 1)
+            # red-noise-aware statistics from per-transit depths (local baselines)
+            if len(ptd) >= 2:
+                dd = np.array([ptd[k] for k in ptd]); ee = np.array([max(pte[k], 1e-3) for k in ptd])
+                w = 1 / ee ** 2; wm = np.sum(dd * w) / np.sum(w)
+                snr_comb = float(wm * np.sqrt(np.sum(w))); chi2 = float(np.sum((dd - wm) ** 2 * w) / max(len(dd) - 1, 1))
+                j = int(np.argmax(dd / ee)); keep = np.ones(len(dd), bool); keep[j] = False
+                snr_wo = float(np.sum(dd[keep] * w[keep]) / np.sum(w[keep]) * np.sqrt(np.sum(w[keep]))) if keep.sum() else 0.0
+                n_sig = int(np.sum(dd / ee > 2))
+            else:
+                snr_comb, chi2, snr_wo, n_sig = np.nan, np.nan, np.nan, 0
             best = dict(P=float(grid[i]), t0=float(res.transit_time[i]), dur=float(res.duration[i]), depth=float(res.depth[i]),
                         depth_err=float(res.depth_err[i]), snr=float(pw[i]), ntr=int(ntr), mult=mult, oe_sig=float(oe),
-                        sec_depth=float(sec[0]), sec_sig=float(sec[0] / (sec[1] + 1e-30)), per_transit_ppm=ptd)
+                        sec_depth=float(sec[0]), sec_sig=float(sec[0] / (sec[1] + 1e-30)), per_transit_ppm=ptd, per_transit_err=pte,
+                        snr_comb=snr_comb, chi2_depths=chi2, snr_wo_max=snr_wo, n_transits_sig=n_sig)
     return best
 
 
@@ -235,7 +248,8 @@ def search_star(tic, files, cache_dir, keep=False):
         b = refined[0]
         out.update(P=round(b["P"], 6), t0=round(b["t0"], 5), dur_h=round(b["dur"] * 24, 3), depth_ppm=round(1e6 * b["depth"], 1),
                    snr=round(b["snr"], 2), ntr=b["ntr"], oe_sig=round(b["oe_sig"], 2), sec_sig=round(b["sec_sig"], 2),
-                   block_snr=round(b["block_snr"], 2), block_sde=round(b["block_sde"], 2), from_block=b["from_block"])
+                   block_snr=round(b["block_snr"], 2), block_sde=round(b["block_sde"], 2), from_block=b["from_block"],
+                   snr_comb=round(b.get("snr_comb", np.nan), 2), chi2_depths=round(b.get("chi2_depths", np.nan), 2), snr_wo_max=round(b.get("snr_wo_max", np.nan), 2))
     else:
         out.update(P=np.nan, snr=np.nan)
     out["best_block_snr"] = round(max([p["snr"] for p in block_peaks], default=np.nan), 2)
@@ -254,7 +268,7 @@ def _worker(args):
 
 
 COLS = ["tic", "status", "nsec", "npts", "baseline", "rms10_ppm", "mad2_ppm", "nblocks", "P", "t0", "dur_h", "depth_ppm",
-        "snr", "ntr", "oe_sig", "sec_sig", "block_snr", "block_sde", "from_block", "best_block_snr", "best_block_sde", "runtime_s", "peaks_json"]
+        "snr", "ntr", "oe_sig", "sec_sig", "block_snr", "block_sde", "from_block", "best_block_snr", "best_block_sde", "snr_comb", "chi2_depths", "snr_wo_max", "runtime_s", "peaks_json"]
 
 
 def main():

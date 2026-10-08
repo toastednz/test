@@ -73,7 +73,8 @@ for x in r.itertuples():
                          has_tce_match=bool(tce_match), nearby_toi_match=";".join(f"{a}({b})" for a, b in near_match),
                          n_nearby_toi=len(near), n_toi_ctoi_within_1arcmin=n_near_1arcmin, sys13_7=sysflag, rms10_ppm=x.rms10_ppm,
                          n_pos_transits=sum(1 for v in ptd.values() if v > 0), n_transits_measured=len(ptd),
-                         median_transit_ppm=round(med_d, 0) if np.isfinite(med_d) else np.nan, max_over_median=round(max_ratio, 2) if np.isfinite(max_ratio) else np.nan))
+                         median_transit_ppm=round(med_d, 0) if np.isfinite(med_d) else np.nan, max_over_median=round(max_ratio, 2) if np.isfinite(max_ratio) else np.nan,
+                         snr_comb=round(ref.get("snr_comb", np.nan), 1), chi2_depths=round(ref.get("chi2_depths", np.nan), 1), snr_wo_max=round(ref.get("snr_wo_max", np.nan), 1), n_transits_sig=ref.get("n_transits_sig", np.nan)))
 c = pd.DataFrame(rows)
 c["frac_pos"] = c.n_pos_transits / c.n_transits_measured.clip(lower=1)
 # maximum central transit duration for a circular orbit around this star (hours)
@@ -86,7 +87,11 @@ c["claimed_nearby"] = (c.nearby_toi_match != "") | (c.n_toi_ctoi_within_1arcmin 
 c["pass_phys"] = (c.dur_ratio < 2.5) & (c.oe_sig < 3) & (c.sec_sig.abs() < 4) & (c.depth_ppm > 150) & (c.depth_ppm < 150000) & (c.ntr >= 3)
 # per-transit consistency: not dominated by one event, most transits positive, >=4 transits measured
 c["consistent"] = (c.n_transits_measured >= 4) & (c.frac_pos >= 0.75) & (c.max_over_median < 3.0) & (c.median_transit_ppm > 0.4 * c.depth_ppm)
-c = c.sort_values(["pass_phys", "consistent", "snr"], ascending=[False, False, False])
+# when the search recorded red-noise-aware statistics, require them too
+has = c.snr_wo_max.notna()
+c.loc[has, "consistent"] = c.loc[has, "consistent"] & (c.loc[has, "chi2_depths"] < 4.0) & (c.loc[has, "snr_wo_max"] >= 6.0) & (c.loc[has, "snr_comb"] >= 7.0)
+c["rank_snr"] = np.where(has, c.snr_wo_max, c.snr)
+c = c.sort_values(["pass_phys", "consistent", "rank_snr"], ascending=[False, False, False])
 c.to_csv(OUT, index=False)
 print("consistent & physical & unclaimed:", (c.pass_phys & c.consistent & ~c.claimed_nearby).sum(), "on", c[c.pass_phys & c.consistent & ~c.claimed_nearby].tic.nunique(), "stars")
 print("passing physical cuts:", c.pass_phys.sum(), "signals on", c[c.pass_phys].tic.nunique(), "stars;  of which no TCE match:", (c.pass_phys & ~c.has_tce_match).sum(), "; claimed by nearby TOI/CTOI:", (c.pass_phys & c.claimed_nearby).sum())
@@ -94,5 +99,5 @@ print("signals passing SNR>=7:", len(c), " on", c.tic.nunique(), "stars")
 print(" with TCE match:", c.has_tce_match.sum(), " with nearby TOI period match:", (c.nearby_toi_match != "").sum())
 cols = ["tic", "Tmag", "Teff", "rad", "nsec", "P", "dur_h", "dur_ratio", "depth_ppm", "rp_re", "snr", "ntr", "oe_sig", "sec_sig", "block_sde", "has_tce_match", "nearby_toi_match", "claimed_nearby", "sys13_7", "frac_pos"]
 pd.set_option("display.width", 250)
-cols += ["consistent", "max_over_median", "n_transits_measured"]
+cols += ["consistent", "max_over_median", "n_transits_measured", "snr_comb", "chi2_depths", "snr_wo_max"]
 print(c[c.pass_phys & c.consistent & ~c.claimed_nearby][cols].head(40).round(2).to_string(index=False))
