@@ -1,0 +1,91 @@
+{
+ "tic": 332660818,
+ "P": 9.066367724338624,
+ "t0": 4236.9619541411075,
+ "dur_h": 4.08,
+ "depth_ppm": 2257.763930252008,
+ "depth_err_ppm": 97.99723690281661,
+ "bls_snr": 23.039057034751107,
+ "depth_odd_ppm": 1954.302801383756,
+ "depth_odd_err": 174.4412331402419,
+ "depth_even_ppm": 2393.6473614667443,
+ "depth_even_err": 117.38504501531276,
+ "depth_half_ppm": 1331.6870316683048,
+ "depth_half_err": 72.99402877968481,
+ "depth_phased_ppm": 234.1826944713965,
+ "depth_phased_err": 106.1445726628715,
+ "harmonic_delta_log_likelihood": -241.8801778952984,
+ "npts": 12046,
+ "nsec": 1,
+ "baseline": 24.492059140071433,
+ "per_transit": [
+  {
+   "epoch": 0,
+   "time": 4236.9619541411075,
+   "sector": 106,
+   "depth_ppm": 3885.5,
+   "err_ppm": 255.3,
+   "snr": 15.22,
+   "nin": 123
+  },
+  {
+   "epoch": 1,
+   "time": 4246.028321865446,
+   "sector": 106,
+   "depth_ppm": 1754.9,
+   "err_ppm": 252.4,
+   "snr": 6.95,
+   "nin": 111
+  },
+  {
+   "epoch": 2,
+   "time": 4255.094689589785,
+   "sector": 106,
+   "depth_ppm": 2150.3,
+   "err_ppm": 240.3,
+   "snr": 8.95,
+   "nin": 118
+  }
+ ],
+ "n_transits": 3,
+ "n_transits_positive": 3,
+ "depth_wmean_ppm": 2572.4841024789057,
+ "depth_wmean_err_ppm": 143.8029900772704,
+ "chi2_red_depths": 20.015078908970928,
+ "snr_combined": 17.88894724022511,
+ "snr_without_strongest": 11.275136072784981,
+ "n_transits_snr_gt2": 3,
+ "max_single_snr": 15.219349784567175,
+ "sectors_with_transits": [
+  106
+ ],
+ "tls": {
+  "P": 11.60964218390406,
+  "t0": 4236.960540719881,
+  "SDE": 4.803923615742266,
+  "snr": 16.564228922118264,
+  "depth": 0.9961498821095498,
+  "rp_rs": 0.055801279948596155,
+  "duration_h": 2.2637853438349183,
+  "odd_even_mismatch": NaN,
+  "transit_count": 3,
+  "distinct_transit_count": 2,
+  "per_transit_depths": [
+   0.9959347423994176,
+   0.9961234044191536
+  ],
+  "R_star": 0.646813,
+  "M_star": 0.624733,
+  "snr_per_transit": [
+   12.537511198658928,
+   0.0,
+   10.832225770868943
+  ],
+  "period_range": [
+   0.5,
+   12.246029570035716
+  ],
+  "npts_used": 12046,
+  "tls_matches_bls": false
+ }
+}

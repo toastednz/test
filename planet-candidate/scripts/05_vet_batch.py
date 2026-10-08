@@ -8,10 +8,11 @@ import pandas as pd
 ap = argparse.ArgumentParser()
 ap.add_argument("data_dir"); ap.add_argument("triage"); ap.add_argument("out_root")
 ap.add_argument("--n", type=int, default=5); ap.add_argument("--include-tce", action="store_true"); ap.add_argument("--tls", action="store_true")
-ap.add_argument("--tics", default="")
+ap.add_argument("--tics", default=""); ap.add_argument("--all", action="store_true")
 a = ap.parse_args()
 c = pd.read_csv(a.triage)
 c = c[c.pass_phys & ~c.claimed_nearby]
+if 'consistent' in c and not a.all: c = c[c.consistent]
 if not a.include_tce:
     c = c[~c.has_tce_match]
 if a.tics:

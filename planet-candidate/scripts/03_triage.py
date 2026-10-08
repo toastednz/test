@@ -61,6 +61,9 @@ for x in r.itertuples():
         # TESS orbital systematics
         sysflag = any(abs(P / (13.7 / n) - 1) < 0.02 for n in (1, 2, 3, 4)) or any(abs(P / (13.7 * n) - 1) < 0.02 for n in (1, 2))
         ptd = ref.get("per_transit_ppm", {})
+        dd = np.array(list(ptd.values()), float) if ptd else np.array([])
+        med_d = float(np.median(dd)) if len(dd) else np.nan
+        max_ratio = float(np.max(dd) / med_d) if len(dd) and med_d > 0 else np.nan
         rows.append(dict(tic=tic, Tmag=st.Tmag, Teff=st.Teff, rad=st.rad, nsec=x.nsec, baseline=x.baseline,
                          P=round(P, 5), t0=round(ref["t0"], 4), dur_h=round(ref["dur"] * 24, 2), depth_ppm=round(depth, 0),
                          rp_re=round(np.sqrt(depth / 1e6) * st.rad * 109.1, 2) if np.isfinite(st.rad) else np.nan,
@@ -69,7 +72,8 @@ for x in r.itertuples():
                          n_tce_same_star=len(tm), tce_match=";".join(f"{a}({b},ntoi={c})" for a, b, c in tce_match),
                          has_tce_match=bool(tce_match), nearby_toi_match=";".join(f"{a}({b})" for a, b in near_match),
                          n_nearby_toi=len(near), n_toi_ctoi_within_1arcmin=n_near_1arcmin, sys13_7=sysflag, rms10_ppm=x.rms10_ppm,
-                         n_pos_transits=sum(1 for v in ptd.values() if v > 0), n_transits_measured=len(ptd)))
+                         n_pos_transits=sum(1 for v in ptd.values() if v > 0), n_transits_measured=len(ptd),
+                         median_transit_ppm=round(med_d, 0) if np.isfinite(med_d) else np.nan, max_over_median=round(max_ratio, 2) if np.isfinite(max_ratio) else np.nan))
 c = pd.DataFrame(rows)
 c["frac_pos"] = c.n_pos_transits / c.n_transits_measured.clip(lower=1)
 # maximum central transit duration for a circular orbit around this star (hours)
@@ -80,11 +84,15 @@ c["tmax_h"] = [tmax_h(P, R if np.isfinite(R) else 0.5, 0.9 * (R if np.isfinite(R
 c["dur_ratio"] = c.dur_h / c.tmax_h
 c["claimed_nearby"] = (c.nearby_toi_match != "") | (c.n_toi_ctoi_within_1arcmin > 0)
 c["pass_phys"] = (c.dur_ratio < 2.5) & (c.oe_sig < 3) & (c.sec_sig.abs() < 4) & (c.depth_ppm > 150) & (c.depth_ppm < 150000) & (c.ntr >= 3)
-c = c.sort_values(["pass_phys", "snr"], ascending=[False, False])
+# per-transit consistency: not dominated by one event, most transits positive, >=4 transits measured
+c["consistent"] = (c.n_transits_measured >= 4) & (c.frac_pos >= 0.75) & (c.max_over_median < 3.0) & (c.median_transit_ppm > 0.4 * c.depth_ppm)
+c = c.sort_values(["pass_phys", "consistent", "snr"], ascending=[False, False, False])
 c.to_csv(OUT, index=False)
+print("consistent & physical & unclaimed:", (c.pass_phys & c.consistent & ~c.claimed_nearby).sum(), "on", c[c.pass_phys & c.consistent & ~c.claimed_nearby].tic.nunique(), "stars")
 print("passing physical cuts:", c.pass_phys.sum(), "signals on", c[c.pass_phys].tic.nunique(), "stars;  of which no TCE match:", (c.pass_phys & ~c.has_tce_match).sum(), "; claimed by nearby TOI/CTOI:", (c.pass_phys & c.claimed_nearby).sum())
 print("signals passing SNR>=7:", len(c), " on", c.tic.nunique(), "stars")
 print(" with TCE match:", c.has_tce_match.sum(), " with nearby TOI period match:", (c.nearby_toi_match != "").sum())
 cols = ["tic", "Tmag", "Teff", "rad", "nsec", "P", "dur_h", "dur_ratio", "depth_ppm", "rp_re", "snr", "ntr", "oe_sig", "sec_sig", "block_sde", "has_tce_match", "nearby_toi_match", "claimed_nearby", "sys13_7", "frac_pos"]
 pd.set_option("display.width", 250)
-print(c[c.pass_phys][cols].head(60).round(2).to_string(index=False))
+cols += ["consistent", "max_over_median", "n_transits_measured"]
+print(c[c.pass_phys & c.consistent & ~c.claimed_nearby][cols].head(40).round(2).to_string(index=False))
