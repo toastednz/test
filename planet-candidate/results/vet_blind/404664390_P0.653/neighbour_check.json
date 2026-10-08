@@ -1,0 +1,94 @@
+{
+ "neighbour_tic": 404664386,
+ "neighbour": {
+  "ID": "404664386",
+  "Tmag": 11.5289,
+  "GAIA": "6704447969146374144",
+  "Teff": 5612.0,
+  "rad": 0.907425,
+  "mass": 0.99,
+  "d": 240.709,
+  "contratio": 0.446913,
+  "dstArcSec": 16.100430852064346
+ },
+ "folds": {
+  "404664390_s13": {
+   "col": "kspsap_flux",
+   "rms_ppm": 3530,
+   "P": 0.65338,
+   "snr": 26.7,
+   "depth_ppm": 23794,
+   "odd": 24472,
+   "odd_err": 1271,
+   "even": 23175,
+   "even_err": 1216,
+   "sec_ppm": 919,
+   "sec_err": 888
+  },
+  "404664390_s94": {
+   "col": "det_flux",
+   "rms_ppm": 4733,
+   "P": 0.65328,
+   "snr": 63.8,
+   "depth_ppm": 20320,
+   "odd": 19411,
+   "odd_err": 454,
+   "even": 21148,
+   "even_err": 433,
+   "sec_ppm": -451,
+   "sec_err": 322
+  },
+  "404664390_s104": {
+   "col": "det_flux",
+   "rms_ppm": 4816,
+   "P": 0.65332,
+   "snr": 60.6,
+   "depth_ppm": 19095,
+   "odd": 18304,
+   "odd_err": 442,
+   "even": 19860,
+   "even_err": 435,
+   "sec_ppm": 448,
+   "sec_err": 321
+  },
+  "404664386_s13": {
+   "col": "kspsap_flux",
+   "rms_ppm": 1194,
+   "P": 0.65335,
+   "snr": 27.5,
+   "depth_ppm": 9026,
+   "odd": 9241,
+   "odd_err": 467,
+   "even": 8829,
+   "even_err": 447,
+   "sec_ppm": 196,
+   "sec_err": 329
+  },
+  "404664386_s94": {
+   "col": "det_flux",
+   "rms_ppm": 2069,
+   "P": 0.6533,
+   "snr": 61.4,
+   "depth_ppm": 8654,
+   "odd": 8272,
+   "odd_err": 201,
+   "even": 9004,
+   "even_err": 192,
+   "sec_ppm": -119,
+   "sec_err": 143
+  },
+  "404664386_s104": {
+   "col": "det_flux",
+   "rms_ppm": 2084,
+   "P": 0.65325,
+   "snr": 67.1,
+   "depth_ppm": 9058,
+   "odd": 8626,
+   "odd_err": 190,
+   "even": 9475,
+   "even_err": 186,
+   "sec_ppm": -29,
+   "sec_err": 137
+  }
+ }
+}

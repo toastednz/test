@@ -1,0 +1,38 @@
+{
+ "13": {
+  "column": "kspsap_flux",
+  "cadence_min": 30.0,
+  "npts": 1049,
+  "rms_ppm": 3530,
+  "n_in": 96,
+  "depth_at_ephemeris_ppm": 39,
+  "err_ppm": 1217,
+  "local_bls_P": 0.65333,
+  "local_bls_snr": 26.6,
+  "local_bls_depth_ppm": 23600
+ },
+ "94": {
+  "column": "det_flux",
+  "cadence_min": 3.3,
+  "npts": 7998,
+  "rms_ppm": 4733,
+  "n_in": 736,
+  "depth_at_ephemeris_ppm": 16269,
+  "err_ppm": 200,
+  "local_bls_P": 0.65335,
+  "local_bls_snr": 63.7,
+  "local_bls_depth_ppm": 20127
+ },
+ "104": {
+  "column": "det_flux",
+  "cadence_min": 3.3,
+  "npts": 8637,
+  "rms_ppm": 4816,
+  "n_in": 791,
+  "depth_at_ephemeris_ppm": 15088,
+  "err_ppm": 195,
+  "local_bls_P": 0.65325,
+  "local_bls_snr": 60.6,
+  "local_bls_depth_ppm": 19029
+ }
+}
