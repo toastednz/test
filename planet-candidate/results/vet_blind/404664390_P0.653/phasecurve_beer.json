@@ -1,0 +1,147 @@
+{
+ "G_dwarf_QLP_S13_sap_flux": {
+  "c": [
+   1000037.1,
+   43.6
+  ],
+  "sin1 (beaming)": [
+   -239.1,
+   52.3
+  ],
+  "cos1 (reflection/thermal)": [
+   -108.4,
+   65.5
+  ],
+  "sin2": [
+   -39.0,
+   53.1
+  ],
+  "cos2 (ellipsoidal; negative = dimming at quadrature... sign: A_ellip = -cos2)": [
+   -100.5,
+   68.2
+  ],
+  "secondary_eclipse_ppm": [
+   31.1,
+   153.1,
+   96
+  ],
+  "n_oot": 837,
+  "rms_ppm": 1179
+ },
+ "G_dwarf_QLP_S94_sap_flux": {
+  "c": [
+   1000239.3,
+   27.6
+  ],
+  "sin1 (beaming)": [
+   -102.0,
+   33.2
+  ],
+  "cos1 (reflection/thermal)": [
+   8.0,
+   41.5
+  ],
+  "sin2": [
+   24.5,
+   33.6
+  ],
+  "cos2 (ellipsoidal; negative = dimming at quadrature... sign: A_ellip = -cos2)": [
+   -33.6,
+   43.2
+  ],
+  "secondary_eclipse_ppm": [
+   -188.9,
+   93.2,
+   763
+  ],
+  "n_oot": 6276,
+  "rms_ppm": 2051
+ },
+ "G_dwarf_QLP_S104_sap_flux": {
+  "c": [
+   1000078.2,
+   24.9
+  ],
+  "sin1 (beaming)": [
+   -19.6,
+   29.9
+  ],
+  "cos1 (reflection/thermal)": [
+   -30.9,
+   37.4
+  ],
+  "sin2": [
+   -10.3,
+   30.3
+  ],
+  "cos2 (ellipsoidal; negative = dimming at quadrature... sign: A_ellip = -cos2)": [
+   51.8,
+   39.0
+  ],
+  "secondary_eclipse_ppm": [
+   11.1,
+   85.4,
+   804
+  ],
+  "n_oot": 6863,
+  "rms_ppm": 1932
+ },
+ "G_dwarf_QLP_S94+S104": {
+  "c": [
+   1000155.4,
+   18.5
+  ],
+  "sin1 (beaming)": [
+   -60.9,
+   22.3
+  ],
+  "cos1 (reflection/thermal)": [
+   -12.2,
+   27.8
+  ],
+  "sin2": [
+   6.0,
+   22.6
+  ],
+  "cos2 (ellipsoidal; negative = dimming at quadrature... sign: A_ellip = -cos2)": [
+   10.4,
+   29.0
+  ],
+  "secondary_eclipse_ppm": [
+   -96.3,
+   63.1,
+   1567
+  ],
+  "n_oot": 13139,
+  "rms_ppm": 1992
+ },
+ "Mdwarf_aperture_SPOC_SAP_S104": {
+  "c": [
+   1000056.5,
+   42.4
+  ],
+  "sin1 (beaming)": [
+   54.9,
+   51.3
+  ],
+  "cos1 (reflection/thermal)": [
+   341.4,
+   63.7
+  ],
+  "sin2": [
+   -6.7,
+   51.8
+  ],
+  "cos2 (ellipsoidal; negative = dimming at quadrature... sign: A_ellip = -cos2)": [
+   -20.6,
+   66.6
+  ],
+  "secondary_eclipse_ppm": [
+   330.2,
+   142.5,
+   1696
+  ],
+  "n_oot": 13708,
+  "rms_ppm": 4676
+ }
+}
