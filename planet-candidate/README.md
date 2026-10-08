@@ -172,3 +172,15 @@ odd/even asymmetry to be a systematic.
 lists, but on the TESS evidence it is more likely an eclipsing binary than a planet. It is reported
 here as an eclipsing-binary-or-planet candidate needing ground-based follow-up (seeing-limited
 photometry to separate the two stars, and radial velocities of the G dwarf), not as a planet claim.
+
+### Track B – blind search, run 2 (G4 + G1b: 2,309 stars; dwarfs first observed in sectors 103–107 plus long-baseline cool dwarfs)
+
+2,309 stars searched; 854 have a peak with SNR ≥ 7; 258 pass the physical cuts; 69 stars carry a
+repeatable (red-noise-aware) signal that is not claimed by any TOI/CTOI. The strongest "planet-like"
+one, TIC 142884338 (LEHPM 3325 A, K4–5 dwarf, T = 10.3, 67 pc, co-moving M-dwarf companion 9″ away;
+~600 ppm, 22 "transits" at 2.008 d, no SPOC TCE), turned out on closer inspection to have a true
+period of 0.4015 d (9.6 h) with a broad, asymmetric, quasi-sinusoidal modulation rather than a
+box-shaped transit (`results/candidate_TIC142884338/alias_folds.png`): stellar variability or an
+ellipsoidal/contact binary in the blend, not a planet. Its 2.008-d and 0.803-d detections were 5:1
+and 2:1 harmonics of that modulation. The remaining repeatable signals were fast-vetted and the
+survivors put through the coherent-periodogram test (results appended below).
