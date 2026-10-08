@@ -34,11 +34,11 @@ diffs, weights = [], []
 for k in epochs:
     mi = intr & (n == k); mo = oot & (n == k)
     if mi.sum() < 5 or mo.sum() < 10: continue
-    diffs.append(np.nanmean(flux[mo], axis=0) - np.nanmean(flux[mi], axis=0)); weights.append(mi.sum())
+    diffs.append(np.nanmedian(flux[mo], axis=0) - np.nanmedian(flux[mi], axis=0)); weights.append(mi.sum())
 if not diffs:
     raise SystemExit("no usable transits in this sector")
 diff = np.average(np.array(diffs), axis=0, weights=np.array(weights))
-direct = np.nanmean(flux[oot], axis=0)
+direct = np.nanmedian(flux[oot], axis=0)
 # noise estimate for the diff image: scatter of per-epoch diffs / sqrt(N) (or from random-phase 'fake' transits)
 rng = np.random.default_rng(1)
 fakes = []
@@ -49,7 +49,7 @@ for i in range(40):
     for k in np.unique(nf[fi]):
         mi = fi & (nf == k); mo = fo & (nf == k)
         if mi.sum() < 5 or mo.sum() < 10: continue
-        dd.append(np.nanmean(flux[mo], axis=0) - np.nanmean(flux[mi], axis=0)); ww.append(mi.sum())
+        dd.append(np.nanmedian(flux[mo], axis=0) - np.nanmedian(flux[mi], axis=0)); ww.append(mi.sum())
     if dd: fakes.append(np.average(np.array(dd), axis=0, weights=np.array(ww)))
 noise = np.nanstd(np.array(fakes), axis=0) if fakes else np.full_like(diff, np.nan)
 snr_img = diff / noise
@@ -71,8 +71,8 @@ except Exception:
 depth_map = np.full(diff.shape, np.nan)
 for (j, i) in zip(*np.where(inap | (direct > 0.2 * np.nanmax(direct)))):
     pix = flux[:, j, i]
-    if np.nanmean(pix[oot]) > 0:
-        depth_map[j, i] = 1e6 * (np.nanmean(pix[oot]) - np.nanmean(pix[intr])) / np.nanmean(pix[oot])
+    if np.nanmedian(pix[oot]) > 0:
+        depth_map[j, i] = 1e6 * (np.nanmedian(pix[oot]) - np.nanmedian(pix[intr])) / np.nanmedian(pix[oot])
 res = dict(tic=tic, sector=sector, n_transits_used=len(diffs), target_pix=[px, py], direct_centroid=[cx_d, cy_d], diff_centroid_in_aperture=[cx_f, cy_f],
            diff_centroid_snr3=[cx_f2, cy_f2], offset_pix=float(np.hypot(cx_f - cx_d, cy_f - cy_d)), offset_arcsec=float(21 * np.hypot(cx_f - cx_d, cy_f - cy_d)),
            offset_from_target_pix=float(np.hypot(cx_f - px, cy_f - py)) if np.isfinite(px) else None,

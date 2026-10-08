@@ -7,28 +7,28 @@
   5.6514671580382325
  ],
  "direct_centroid": [
-  5.869361882094629,
-  5.869186349247825
+  5.868993918094927,
+  5.86888271317987
  ],
  "diff_centroid_in_aperture": [
-  6.119228431822225,
-  6.5626137076427495
+  5.898881606133789,
+  6.498766735183844
  ],
  "diff_centroid_snr3": [
   NaN,
   NaN
  ],
- "offset_pix": 0.7370717699405777,
- "offset_arcsec": 15.478507168752131,
- "offset_from_target_pix": 1.1103948791063392,
- "max_diff_snr": 0.009056406096629338,
+ "offset_pix": 0.6305927014105155,
+ "offset_arcsec": 13.242446729620825,
+ "offset_from_target_pix": 0.9431696565965458,
+ "max_diff_snr": 1.1160004477663423,
  "diff_peak_pix": [
-  6,
-  6
+  7,
+  7
  ],
  "direct_peak_pix": [
   6,
   6
  ],
- "total_depth_in_aperture_ppm": 1621.3993166850375
+ "total_depth_in_aperture_ppm": 912.6596190007476
 }
