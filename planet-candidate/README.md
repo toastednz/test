@@ -184,3 +184,53 @@ box-shaped transit (`results/candidate_TIC142884338/alias_folds.png`): stellar v
 ellipsoidal/contact binary in the blend, not a planet. Its 2.008-d and 0.803-d detections were 5:1
 and 2:1 harmonics of that modulation. The remaining repeatable signals were fast-vetted and the
 survivors put through the coherent-periodogram test (results appended below).
+
+Run-2 coherent-periodogram results for the ten repeatable, unclaimed, non-TCE survivors
+(`results/vet_blind_run2/*/fullbls.json`): candidate SDE 2.2–5.4, none a significant global maximum.
+In every case the star's true dominant periodicity is a short-period (0.4–0.8 d) variability of which
+the "transit" period was a harmonic. One survivor (TIC 161098507) shows a 5σ secondary eclipse
+(eclipsing binary); another (TIC 153125761) is already a SPOC TCE at the true 0.52-d period.
+
+## Bottom line
+
+| | Stars / signals examined | Credible new planet candidate |
+|---|---|---|
+| Track A: unpromoted SPOC TCEs on cool dwarfs | 566 TCEs filtered, 24 re-vetted | none (7 EBs, 6 variables, 9 single events, 1 flare, 1 already a CTOI on a blended companion) |
+| Track B, run 1: 1,416 cool dwarfs, 2–12 sectors incl. 2026 data | 793 stars with SNR ≥ 7 peaks, 15 fully vetted | none (all fail the coherent-periodogram test; 2 are blends) |
+| Track B, run 2: 2,309 dwarfs first observed in 2026 + long-baseline cool dwarfs | 854 stars with SNR ≥ 7 peaks, 20 fast-vetted, 10 coherent-tested | none |
+| Track C: the one persistent, pixel-localised, uncatalogued eclipse | TIC 404664386 / TYC 8377-835-1, P = 0.6533 d, 7-year baseline | **eclipsing-binary-or-planet candidate; EB favoured** (V-shaped, 4σ odd/even asymmetry), companion to the G dwarf itself < 3 M_Jup |
+
+**No signal found in this search can honestly be called a new planet candidate.** The clearest
+genuinely uncatalogued object is the 0.6533-day eclipse signal on TYC 8377-835-1, which the NASA
+pipeline attributed to the wrong (M-dwarf) star and which no catalogue lists; the TESS data favour a
+blended eclipsing binary over a planet, and ground-based photometry at ~1″ resolution plus a radial-velocity
+check of the G dwarf would settle it. Everything else that looked planet-like at the box-search stage was
+stellar activity, flares, scattered light, eclipsing binaries, or statistically insignificant once the full
+multi-year periodogram was computed.
+
+Why this is the expected outcome: the 2-min TESS targets have been searched by the SPOC pipeline
+(single- and multi-sector) and by many groups for seven years; the residual discovery space for small
+stars is dominated by low-SNR signals (SNR 7–10), where the false-alarm rate from red noise is high.
+A search with a better chance of success would need either data the pipelines have not combined yet
+(the 2026 sectors were included here, but SPOC single-sector runs already cover them), or systematic
+re-processing with detrending tuned to active M dwarfs, or the full-frame-image stars fainter than the
+QLP magnitude limit.
+
+## Reproducing
+
+```
+python3 -m venv venv && venv/bin/pip install numpy scipy astropy matplotlib pandas lightkurve astroquery transitleastsquares wotan requests
+DATA=/path/to/data   # ~1 GB of catalogues, light curves are streamed and deleted
+venv/bin/python scripts/01_query_tic.py $DATA/catalogs/tic_cool_dwarfs.csv
+# download MAST bulk lc scripts into $DATA/lclists, TCE tables into $DATA/tce, TOI/CTOI/pscomppars into $DATA/catalogs (see README top)
+venv/bin/python scripts/02_build_sample.py $DATA
+venv/bin/python scripts/tsearch2.py $DATA targets.csv results/search.csv --workers 4
+venv/bin/python scripts/03_triage.py $DATA results/search.csv results/triage.csv
+venv/bin/python scripts/05_vet_batch.py $DATA results/triage.csv results/vet --n 20 [--tls]
+venv/bin/python scripts/08_fullbls.py $DATA <TIC> <P> results/vet/<dir>       # coherent periodogram
+venv/bin/python scripts/07_centroid.py $DATA <TIC> <sector> <P> <t0> <dur_h> <outdir>   # pixel test
+venv/bin/python scripts/06_context.py $DATA <TIC> [P]                           # Gaia/SIMBAD/TOI/TCE
+```
+
+All search outputs are in `results/` (`search_run1.csv`, `search_run2.csv`, `triage_run*.csv`, the
+per-candidate vetting directories, and `candidate_TIC404664386/` for the one object worth following up).
