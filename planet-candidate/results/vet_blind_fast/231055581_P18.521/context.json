@@ -1,0 +1,76 @@
+{
+ "tic": {
+  "ra": 30.1595357067217,
+  "dec": -55.9679508023847,
+  "pmRA": 113.241,
+  "pmDEC": -69.6852,
+  "Tmag": 9.26953,
+  "Vmag": 11.827,
+  "Jmag": 7.625,
+  "Kmag": 6.773,
+  "GAIA": "4719430083410927232",
+  "Teff": 3284.0,
+  "logg": 4.93928,
+  "rad": 0.287941,
+  "mass": 0.262919,
+  "rho": 11.0131,
+  "lum": 0.00868789,
+  "d": 8.21242,
+  "plx": 121.738,
+  "contratio": 0.00019228259,
+  "disposition": null,
+  "objType": "STAR",
+  "lumclass": "DWARF",
+  "numcont": 46.0,
+  "gaiabp": 12.1412,
+  "gaiarp": 9.35135
+ },
+ "gaia_neighbours_1arcmin": [
+  {
+   "source_id": 4719430087707860736,
+   "ra": 30.1604,
+   "dec": -55.9683,
+   "phot_g_mean_mag": 10.557100296020508,
+   "phot_bp_mean_mag": 12.121600151062012,
+   "phot_rp_mean_mag": 9.33590030670166,
+   "parallax": 121.7084,
+   "pmra": 113.395,
+   "pmdec": -69.5592,
+   "ruwe": 1.0814000368118286,
+   "non_single_star": 0,
+   "sep_arcsec": 2.1276
+  },
+  {
+   "source_id": 4719431565176280832,
+   "ra": 30.1601,
+   "dec": -55.9641,
+   "phot_g_mean_mag": 21.17490005493164,
+   "phot_bp_mean_mag": 20.097200393676758,
+   "phot_rp_mean_mag": 18.51409912109375,
+   "parallax": NaN,
+   "pmra": NaN,
+   "pmdec": NaN,
+   "ruwe": NaN,
+   "non_single_star": 0,
+   "sep_arcsec": 14.0025
+  }
+ ],
+ "neighbour_flux_fraction_within_1arcmin": 5.661196701112203e-05,
+ "brightest_neighbour": {
+  "sep_arcsec": 14.002482408371574,
+  "dG": 10.617729187011719
+ },
+ "target_ruwe": 1.0814392566680908,
+ "target_non_single_star_flag": 0,
+ "simbad": [
+  {
+   "main_id": "L  173-19",
+   "otype": "PM*",
+   "sp_type": "M2.0Ve",
+   "ids": "TIC 231055581|Gaia DR3 4719430087707860736|2MASS J02003830-5558047|GSC 08485-00936|L  173-19|NLTT  6772|CNS5 511|RAVE J020038.3-555805|Gaia DR2 4719430083410927232"
+  }
+ ],
+ "nearby_tois_3arcmin": [],
+ "spoc_tces_this_star": [],
+ "sectors_2min": "2,3,29,30,69,96,104,105"
+}
