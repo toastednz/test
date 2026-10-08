@@ -13,7 +13,13 @@ print("stars searched:", len(r))
 tce = pd.read_csv(f"{DATA}/catalogs/tce_all.csv")
 toi = pd.read_csv(f"{DATA}/catalogs/toi.csv", low_memory=False)
 ctoi = pd.read_csv(f"{DATA}/catalogs/ctoi.csv", low_memory=False)
-sample = pd.read_csv(f"{DATA}/catalogs/sample.csv").set_index("ID")
+sample = pd.read_csv(f"{DATA}/catalogs/sample.csv")
+try:   # stars from the newly-observed dwarf list (run 2) are not in the cool-dwarf sample
+    extra = pd.read_csv(f"{DATA}/catalogs/new_since_s103_tic.csv")[["ID", "ra", "dec", "Tmag", "Teff", "rad"]]
+    sample = pd.concat([sample, extra[~extra.ID.isin(sample.ID)]], ignore_index=True)
+except Exception:
+    pass
+sample = sample.set_index("ID")
 
 def ra_deg(s):
     h, m, sec = [float(x) for x in str(s).split(":")]; return 15 * (h + m / 60 + sec / 3600)
