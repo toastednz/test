@@ -1,0 +1,360 @@
+{
+ "tic": {
+  "ra": 97.9629787714996,
+  "dec": -43.5340395253038,
+  "pmRA": -277.539,
+  "pmDEC": -29.7605,
+  "Tmag": 9.06092,
+  "Vmag": 10.58,
+  "Jmag": 7.631,
+  "Kmag": 6.789,
+  "GAIA": "5568872394338114560",
+  "Teff": 3842.0,
+  "logg": 4.62651,
+  "rad": 0.629474,
+  "mass": 0.6115,
+  "rho": 2.45168,
+  "lum": 0.07778212,
+  "d": 23.8323,
+  "plx": 41.9309,
+  "contratio": 0.6421444,
+  "disposition": null,
+  "objType": "STAR",
+  "lumclass": "DWARF",
+  "numcont": 121.0,
+  "gaiabp": 10.9963,
+  "gaiarp": 9.0751
+ },
+ "gaia_neighbours_1arcmin": [
+  {
+   "source_id": 5568872394338114560,
+   "ra": 97.9613,
+   "dec": -43.5342,
+   "phot_g_mean_mag": 10.022199630737305,
+   "phot_bp_mean_mag": 10.973899841308594,
+   "phot_rp_mean_mag": 9.059100151062012,
+   "parallax": 41.9907,
+   "pmra": -277.5272,
+   "pmdec": -29.7618,
+   "ruwe": 1.0121999979019165,
+   "non_single_star": 0,
+   "sep_arcsec": 4.466
+  },
+  {
+   "source_id": 5568872398635858816,
+   "ra": 97.9605,
+   "dec": -43.5349,
+   "phot_g_mean_mag": 11.598199844360352,
+   "phot_bp_mean_mag": 12.860300064086914,
+   "phot_rp_mean_mag": 10.444999694824219,
+   "parallax": 42.063,
+   "pmra": -263.6709,
+   "pmdec": -13.039,
+   "ruwe": 0.9815999865531921,
+   "non_single_star": 0,
+   "sep_arcsec": 7.2279
+  },
+  {
+   "source_id": 5568872398635860992,
+   "ra": 97.9672,
+   "dec": -43.5366,
+   "phot_g_mean_mag": 16.244800567626953,
+   "phot_bp_mean_mag": 16.956499099731445,
+   "phot_rp_mean_mag": 15.428199768066406,
+   "parallax": 1.5997,
+   "pmra": -5.5898,
+   "pmdec": 8.6011,
+   "ruwe": 1.0224000215530396,
+   "non_single_star": 0,
+   "sep_arcsec": 14.2424
+  },
+  {
+   "source_id": 5568872329916385408,
+   "ra": 97.9619,
+   "dec": -43.5434,
+   "phot_g_mean_mag": 13.781299591064453,
+   "phot_bp_mean_mag": 14.109000205993652,
+   "phot_rp_mean_mag": 13.290900230407715,
+   "parallax": 1.2581,
+   "pmra": -1.8402,
+   "pmdec": 21.7987,
+   "ruwe": 1.0456000566482544,
+   "non_single_star": 0,
+   "sep_arcsec": 33.7426
+  },
+  {
+   "source_id": 5568875353572465664,
+   "ra": 97.9623,
+   "dec": -43.5218,
+   "phot_g_mean_mag": 21.12070083618164,
+   "phot_bp_mean_mag": 21.320499420166016,
+   "phot_rp_mean_mag": 20.30590057373047,
+   "parallax": NaN,
+   "pmra": NaN,
+   "pmdec": NaN,
+   "ruwe": NaN,
+   "non_single_star": 0,
+   "sep_arcsec": 43.9337
+  },
+  {
+   "source_id": 5568872325619216000,
+   "ra": 97.9805,
+   "dec": -43.5326,
+   "phot_g_mean_mag": 18.90369987487793,
+   "phot_bp_mean_mag": 20.051599502563477,
+   "phot_rp_mean_mag": 17.845199584960938,
+   "parallax": 1.0491,
+   "pmra": -3.3719,
+   "pmdec": 1.5396,
+   "ruwe": 1.0127999782562256,
+   "non_single_star": 0,
+   "sep_arcsec": 46.057
+  },
+  {
+   "source_id": 5568872291259460224,
+   "ra": 97.9468,
+   "dec": -43.5417,
+   "phot_g_mean_mag": 19.885799407958984,
+   "phot_bp_mean_mag": 20.136199951171875,
+   "phot_rp_mean_mag": 19.41710090637207,
+   "parallax": -1.1351,
+   "pmra": 0.9695,
+   "pmdec": 1.2624,
+   "ruwe": 1.093400001525879,
+   "non_single_star": 0,
+   "sep_arcsec": 50.4213
+  },
+  {
+   "source_id": 5568872295554896128,
+   "ra": 97.9477,
+   "dec": -43.5427,
+   "phot_g_mean_mag": 20.570899963378906,
+   "phot_bp_mean_mag": 21.466699600219727,
+   "phot_rp_mean_mag": 19.509700775146484,
+   "parallax": 1.2028,
+   "pmra": -7.8621,
+   "pmdec": -9.3154,
+   "ruwe": 1.0592000484466553,
+   "non_single_star": 0,
+   "sep_arcsec": 50.6091
+  },
+  {
+   "source_id": 5568875349276207104,
+   "ra": 97.975,
+   "dec": -43.5213,
+   "phot_g_mean_mag": 20.181299209594727,
+   "phot_bp_mean_mag": 20.867799758911133,
+   "phot_rp_mean_mag": 19.008399963378906,
+   "parallax": 1.0111,
+   "pmra": 1.3317,
+   "pmdec": -6.511,
+   "ruwe": 1.0432000160217285,
+   "non_single_star": 0,
+   "sep_arcsec": 55.454
+  }
+ ],
+ "neighbour_flux_fraction_within_1arcmin": 0.2694047689437866,
+ "brightest_neighbour": {
+  "sep_arcsec": 7.22790264894008,
+  "dG": 1.575918197631836
+ },
+ "target_ruwe": 1.012244701385498,
+ "target_non_single_star_flag": 0,
+ "simbad": [
+  {
+   "main_id": "CD-43  2523B",
+   "otype": "PM*",
+   "sp_type": "M2.5V",
+   "ids": "TIC 293689267|GJ 237 B|Gaia DR3 5568872398635858816|CNS5 1618|CCDM J06319-4332B|IDS 06289-4328 B|WDS J06319-4332B|** CPO  138B|CD-43  2523B|TYC 7626-520-2|UCAC4 233-009810|2MASS J06315093-4332052|PM J06318-4332S|Gaia DR2 5568872398635858816"
+  },
+  {
+   "main_id": "CD-43  2523A",
+   "otype": "PM*",
+   "sp_type": "M0V(k)",
+   "ids": "TIC 293689266|GJ 237 A|Gaia DR3 5568872394338114560|CNS5 1619|CCDM J06319-4332A|IDS 06289-4328 A|WDS J06319-4332A|** CPO  138A|CD-43  2523A|TYC 7626-520-3|UCAC4 233-009811|2MASS J06315111-4332026|PM J06318-4332N|Gaia DR2 5568872394338114560"
+  },
+  {
+   "main_id": "CD-43  2523",
+   "otype": "**",
+   "sp_type": "M0V(k)+M2.5V",
+   "ids": "RAVE J063151.1-433203|GJ 237|HIP 31126|PLX 1528|CD-43  2523|CF  2283|CPD-43   912|HIC  31126|LTT  2581|NSV  3023|UBV M   6159|[CS62] E3  74|[RHG95]  1053|PLX 1528.00|WDS J06319-4332AB|** CPO  138|NLTT 16664|GEN# -0.04302523"
+  }
+ ],
+ "nearby_tois_3arcmin": [],
+ "spoc_tces_this_star": [
+  {
+   "tceid": "00293689266-01",
+   "sectors": "s0001-s0009",
+   "tce_period": 14.8143,
+   "tce_depth": 1071.44,
+   "tce_model_snr": 17.83625,
+   "tce_num_transits": 4,
+   "tce_ntoi": 1
+  },
+  {
+   "tceid": "00293689266-01",
+   "sectors": "s0001-s0036",
+   "tce_period": 14.8104,
+   "tce_depth": 1518.95,
+   "tce_model_snr": 26.36791,
+   "tce_num_transits": 7,
+   "tce_ntoi": 1
+  },
+  {
+   "tceid": "00293689266-02",
+   "sectors": "s0065",
+   "tce_period": 104.592,
+   "tce_depth": 1011.01,
+   "tce_model_snr": 7.359,
+   "tce_num_transits": 2,
+   "tce_ntoi": 2
+  },
+  {
+   "tceid": "00293689266-01",
+   "sectors": "s0065",
+   "tce_period": 14.8105,
+   "tce_depth": 1523.62,
+   "tce_model_snr": 29.01412,
+   "tce_num_transits": 9,
+   "tce_ntoi": 2
+  },
+  {
+   "tceid": "00293689266-01",
+   "sectors": "s0096",
+   "tce_period": 14.8104,
+   "tce_depth": 1544.85,
+   "tce_model_snr": 32.14431,
+   "tce_num_transits": 10,
+   "tce_ntoi": 2
+  },
+  {
+   "tceid": "00293689266-02",
+   "sectors": "s0096",
+   "tce_period": 29.2855,
+   "tce_depth": 931.231,
+   "tce_model_snr": 10.8234,
+   "tce_num_transits": 6,
+   "tce_ntoi": 2
+  },
+  {
+   "tceid": "00293689266-01",
+   "sectors": "s0006",
+   "tce_period": 14.8223,
+   "tce_depth": 1644.43,
+   "tce_model_snr": 14.42055,
+   "tce_num_transits": 2,
+   "tce_ntoi": 1
+  },
+  {
+   "tceid": "00293689266-01",
+   "sectors": "s0007",
+   "tce_period": 14.8306,
+   "tce_depth": 1407.79,
+   "tce_model_snr": 15.51692,
+   "tce_num_transits": 2,
+   "tce_ntoi": 1
+  },
+  {
+   "tceid": "00293689266-01",
+   "sectors": "s0033",
+   "tce_period": 14.8111,
+   "tce_depth": 1335.77,
+   "tce_model_snr": 12.5626,
+   "tce_num_transits": 2,
+   "tce_ntoi": 1
+  },
+  {
+   "tceid": "00293689266-01",
+   "sectors": "s0034",
+   "tce_period": 11.0178,
+   "tce_depth": 792.482,
+   "tce_model_snr": 7.44472,
+   "tce_num_transits": 3,
+   "tce_ntoi": 1
+  },
+  {
+   "tceid": "00293689266-01",
+   "sectors": "s0061",
+   "tce_period": 14.8303,
+   "tce_depth": 1410.25,
+   "tce_model_snr": 10.5652,
+   "tce_num_transits": 2,
+   "tce_ntoi": 1
+  }
+ ],
+ "tce_period_match": [
+  {
+   "tceid": "00293689266-01",
+   "sectors": "s0001-s0009",
+   "tce_period": 14.8143,
+   "tce_depth": 1071.44,
+   "tce_model_snr": 17.83625,
+   "tce_num_transits": 4,
+   "tce_ntoi": 1
+  },
+  {
+   "tceid": "00293689266-01",
+   "sectors": "s0001-s0036",
+   "tce_period": 14.8104,
+   "tce_depth": 1518.95,
+   "tce_model_snr": 26.36791,
+   "tce_num_transits": 7,
+   "tce_ntoi": 1
+  },
+  {
+   "tceid": "00293689266-01",
+   "sectors": "s0065",
+   "tce_period": 14.8105,
+   "tce_depth": 1523.62,
+   "tce_model_snr": 29.01412,
+   "tce_num_transits": 9,
+   "tce_ntoi": 2
+  },
+  {
+   "tceid": "00293689266-01",
+   "sectors": "s0096",
+   "tce_period": 14.8104,
+   "tce_depth": 1544.85,
+   "tce_model_snr": 32.14431,
+   "tce_num_transits": 10,
+   "tce_ntoi": 2
+  },
+  {
+   "tceid": "00293689266-01",
+   "sectors": "s0006",
+   "tce_period": 14.8223,
+   "tce_depth": 1644.43,
+   "tce_model_snr": 14.42055,
+   "tce_num_transits": 2,
+   "tce_ntoi": 1
+  },
+  {
+   "tceid": "00293689266-01",
+   "sectors": "s0007",
+   "tce_period": 14.8306,
+   "tce_depth": 1407.79,
+   "tce_model_snr": 15.51692,
+   "tce_num_transits": 2,
+   "tce_ntoi": 1
+  },
+  {
+   "tceid": "00293689266-01",
+   "sectors": "s0033",
+   "tce_period": 14.8111,
+   "tce_depth": 1335.77,
+   "tce_model_snr": 12.5626,
+   "tce_num_transits": 2,
+   "tce_ntoi": 1
+  },
+  {
+   "tceid": "00293689266-01",
+   "sectors": "s0061",
+   "tce_period": 14.8303,
+   "tce_depth": 1410.25,
+   "tce_model_snr": 10.5652,
+   "tce_num_transits": 2,
+   "tce_ntoi": 1
+  }
+ ],
+ "sectors_2min": "6,7,33,34,61,87,88,98"
+}

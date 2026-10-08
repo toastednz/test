@@ -11,7 +11,7 @@ ap.add_argument("--n", type=int, default=5); ap.add_argument("--include-tce", ac
 ap.add_argument("--tics", default="")
 a = ap.parse_args()
 c = pd.read_csv(a.triage)
-c = c[c.pass_phys]
+c = c[c.pass_phys & ~c.claimed_nearby]
 if not a.include_tce:
     c = c[~c.has_tce_match]
 if a.tics:
