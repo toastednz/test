@@ -1,0 +1,125 @@
+{
+ "tic": {
+  "ra": 51.6547058683278,
+  "dec": -32.3356470068317,
+  "pmRA": 122.184,
+  "pmDEC": -27.8727,
+  "Tmag": 10.2809,
+  "Vmag": 11.309,
+  "Jmag": 9.331,
+  "Kmag": 8.646,
+  "GAIA": "5054095657399076480",
+  "Teff": 4504.0,
+  "logg": 4.60779,
+  "rad": 0.693053,
+  "mass": 0.71,
+  "rho": 2.13285,
+  "lum": 0.178082362,
+  "d": 67.3644,
+  "plx": 14.8157,
+  "contratio": 0.07021199,
+  "disposition": null,
+  "objType": "STAR",
+  "lumclass": "DWARF",
+  "numcont": 35.0,
+  "gaiabp": 11.6039,
+  "gaiarp": 10.2303
+ },
+ "gaia_neighbours_1arcmin": [
+  {
+   "source_id": 5054095657399076480,
+   "ra": 51.6553,
+   "dec": -32.3358,
+   "phot_g_mean_mag": 10.963700294494629,
+   "phot_bp_mean_mag": 11.574899673461914,
+   "phot_rp_mean_mag": 10.218500137329102,
+   "parallax": 14.8527,
+   "pmra": 122.2086,
+   "pmdec": -27.8454,
+   "ruwe": 1.0149999856948853,
+   "non_single_star": 0,
+   "sep_arcsec": 2.0053
+  },
+  {
+   "source_id": 5054095657399125376,
+   "ra": 51.657,
+   "dec": -32.3372,
+   "phot_g_mean_mag": 14.48960018157959,
+   "phot_bp_mean_mag": 16.053300857543945,
+   "phot_rp_mean_mag": 13.254500389099121,
+   "parallax": 14.8129,
+   "pmra": 121.8402,
+   "pmdec": -26.2764,
+   "ruwe": 1.198199987411499,
+   "non_single_star": 0,
+   "sep_arcsec": 9.0152
+  },
+  {
+   "source_id": 5054096035356197888,
+   "ra": 51.6651,
+   "dec": -32.3385,
+   "phot_g_mean_mag": 19.344900131225586,
+   "phot_bp_mean_mag": 19.632299423217773,
+   "phot_rp_mean_mag": 18.965599060058594,
+   "parallax": -0.402,
+   "pmra": 2.4382,
+   "pmdec": -4.4433,
+   "ruwe": 1.020799994468689,
+   "non_single_star": 0,
+   "sep_arcsec": 33.26
+  },
+  {
+   "source_id": 5054095623039339008,
+   "ra": 51.6464,
+   "dec": -32.3455,
+   "phot_g_mean_mag": 15.760000228881836,
+   "phot_bp_mean_mag": 16.851999282836914,
+   "phot_rp_mean_mag": 14.721500396728516,
+   "parallax": 4.9058,
+   "pmra": -34.7862,
+   "pmdec": -34.6679,
+   "ruwe": 0.9825999736785889,
+   "non_single_star": 0,
+   "sep_arcsec": 43.577
+  },
+  {
+   "source_id": 5054095657397725056,
+   "ra": 51.6565,
+   "dec": -32.3515,
+   "phot_g_mean_mag": 19.613500595092773,
+   "phot_bp_mean_mag": 21.106000900268555,
+   "phot_rp_mean_mag": 18.368900299072266,
+   "parallax": 2.5753,
+   "pmra": -0.4851,
+   "pmdec": -29.0916,
+   "ruwe": 1.067199945449829,
+   "non_single_star": 0,
+   "sep_arcsec": 57.4902
+  }
+ ],
+ "neighbour_flux_fraction_within_1arcmin": 0.05172673612833023,
+ "brightest_neighbour": {
+  "sep_arcsec": 9.015158594880196,
+  "dG": 3.5259218215942383
+ },
+ "target_ruwe": 1.0150350332260132,
+ "target_non_single_star_flag": 0,
+ "simbad": [
+  {
+   "main_id": "LEHPM 3325B",
+   "otype": "PM*",
+   "sp_type": "",
+   "ids": "Gaia DR3 5054095657399125376|UCAC4 289-003361|2MASS J03263752-3220136|LEHPM 3325B|** UC 1006B|WDS J03266-3220B"
+  },
+  {
+   "main_id": "LEHPM 3325",
+   "otype": "PM*",
+   "sp_type": "",
+   "ids": "TIC 142884338|** UC 1006A|WDS J03266-3220A|Gaia DR3 5054095657399076480|LEHPM 3325|2MASS J03263712-3220083|TYC 7021-102-1|RAVE J032637.1-322008|Gaia DR1 5054095653102218496|Gaia DR2 5054095657399076480"
+  }
+ ],
+ "nearby_tois_3arcmin": [],
+ "spoc_tces_this_star": [],
+ "tce_period_match": [],
+ "sectors_2min": null
+}

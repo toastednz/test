@@ -1,0 +1,98 @@
+{
+ "tic": 2929964,
+ "P": 3.4857946666666666,
+ "t0": 4156.1834275633355,
+ "dur_h": 5.355,
+ "depth_ppm": 5930.987781634731,
+ "depth_err_ppm": 69.19683162901755,
+ "bls_snr": 85.71184029685519,
+ "depth_odd_ppm": 5954.819549064516,
+ "depth_odd_err": 103.92757150666432,
+ "depth_even_ppm": 5913.395374265829,
+ "depth_even_err": 89.80369130146639,
+ "depth_half_ppm": 3456.0423698916097,
+ "depth_half_err": 54.18338148286556,
+ "depth_phased_ppm": 63.22371520639525,
+ "depth_phased_err": 80.29152148732814,
+ "harmonic_delta_log_likelihood": -3665.283708757408,
+ "npts": 15255,
+ "nsec": 1,
+ "baseline": 24.23568373562557,
+ "per_transit": [
+  {
+   "epoch": 0,
+   "time": 4156.1834275633355,
+   "sector": 103,
+   "depth_ppm": 6826.7,
+   "err_ppm": 227.4,
+   "snr": 30.02,
+   "nin": 161
+  },
+  {
+   "epoch": 1,
+   "time": 4159.669222230003,
+   "sector": 103,
+   "depth_ppm": 6369.8,
+   "err_ppm": 224.9,
+   "snr": 28.32,
+   "nin": 160
+  },
+  {
+   "epoch": 2,
+   "time": 4163.155016896669,
+   "sector": 103,
+   "depth_ppm": 6090.9,
+   "err_ppm": 226.9,
+   "snr": 26.84,
+   "nin": 160
+  },
+  {
+   "epoch": 3,
+   "time": 4166.640811563336,
+   "sector": 103,
+   "depth_ppm": 7346.7,
+   "err_ppm": 205.7,
+   "snr": 35.71,
+   "nin": 161
+  },
+  {
+   "epoch": 4,
+   "time": 4170.126606230002,
+   "sector": 103,
+   "depth_ppm": 7438.1,
+   "err_ppm": 203.8,
+   "snr": 36.5,
+   "nin": 160
+  },
+  {
+   "epoch": 5,
+   "time": 4173.612400896669,
+   "sector": 103,
+   "depth_ppm": 7007.8,
+   "err_ppm": 190.6,
+   "snr": 36.76,
+   "nin": 160
+  },
+  {
+   "epoch": 6,
+   "time": 4177.098195563335,
+   "sector": 103,
+   "depth_ppm": 6617.8,
+   "err_ppm": 241.8,
+   "snr": 27.37,
+   "nin": 160
+  }
+ ],
+ "n_transits": 7,
+ "n_transits_positive": 7,
+ "depth_wmean_ppm": 6860.482275697303,
+ "depth_wmean_err_ppm": 81.41307995537188,
+ "chi2_red_depths": 5.251804460153024,
+ "snr_combined": 84.26756830054833,
+ "snr_without_strongest": 75.82834374474596,
+ "n_transits_snr_gt2": 7,
+ "max_single_snr": 36.76705141657923,
+ "sectors_with_transits": [
+  103
+ ]
+}
