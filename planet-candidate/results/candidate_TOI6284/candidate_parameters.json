@@ -1,0 +1,69 @@
+{
+ "host": {
+  "tic": 286763141,
+  "name": "L 463-104 (TOI-6284 host)",
+  "spectral_type": "M3",
+  "Tmag": 9.723,
+  "Teff_K": 3548.0,
+  "R_sun": 0.467725,
+  "M_sun": 0.465272,
+  "d_pc": 21.02,
+  "contratio": 0.021,
+  "nearest_gaia_neighbour": "G=18.4 at 13.4 arcsec",
+  "known_candidate": "TOI-6284.01: P=3.4476 d, 320 ppm, PC"
+ },
+ "signal": {
+  "P_d": 7.34934,
+  "t0_BTJD": 1551.8563,
+  "duration_h": 1.58,
+  "depth_ppm": 403,
+  "depth_err_ppm": 31,
+  "n_transits": 20,
+  "n_transits_positive": 20,
+  "sectors": [
+   9,
+   62,
+   63,
+   89,
+   90,
+   99
+  ],
+  "chi2_red_per_transit": 1.13,
+  "snr_combined": 15.0,
+  "snr_without_strongest": 14.2,
+  "odd_ppm": 315,
+  "odd_err": 49,
+  "even_ppm": 463,
+  "even_err": 40,
+  "secondary_ppm": -75,
+  "secondary_err": 34,
+  "sap_over_pdc_depth": 1.08,
+  "bkg_in_transit_over_median": 0.993,
+  "tls_SDE_sectors_with_transits": 16.2,
+  "tls_rp_rs": 0.0187,
+  "coherent_periodogram": {
+   "SDE": 11.1,
+   "is_global_max": true,
+   "nperiods": 342941,
+   "baseline_d": 2528,
+   "range_d": [
+    0.5,
+    70.0
+   ]
+  },
+  "unmasked_depth_ppm": 398,
+  "unmasked_snr": 14.6,
+  "spoc_tce": "TCE 00286763141-01 in the multi-sector run ending S96: P=7.3493 d, 469 ppm, SNR 11.2, 19 transits; not a TOI/CTOI",
+  "period_ratio_to_TOI6284_01": 2.132
+ },
+ "derived": {
+  "rp_rearth": 1.02,
+  "rp_rearth_tls": 0.95,
+  "a_au": 0.0573,
+  "a_over_rstar": 26.4,
+  "T_eq_K": 489,
+  "insolation_earth": 9.5,
+  "max_central_duration_h": 2.17,
+  "implied_impact_parameter_note": "observed T14 ~1.5-1.6 h vs 2.2 h central -> b ~ 0.7"
+ }
+}

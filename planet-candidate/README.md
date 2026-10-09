@@ -247,3 +247,49 @@ remain eclipsing-binary-like; every shallow planet-like signal disappears in the
 4 events) kept a 4σ hint in FFI data, but its events exist only in the PDC-corrected flux, not in the
 raw aperture flux, and coincide with elevated background: a correction artifact. Lesson added to the
 vetting: compare raw (SAP) and corrected (PDCSAP) depths and check the background at transit times.
+
+### E. Mining SPOC's own centroid statistics for signals on the wrong star
+
+11,018 planet-like TCEs carry a significant difference-image centroid offset. For the 500 shallowest
+on unclaimed stars the neighbour at the offset position was identified in the TIC and its own light
+curves folded at the TCE ephemeris (`scripts/11_wrong_host.py`, `12_neighbour_check.py`,
+`results/wrong_host_tces_shallow.csv`, `results/neighbour_check.json`). 22 neighbours would host a
+planet-sized signal; on their own light curves 18 show a secondary eclipse or a brightening at phase
+0.5 (eclipsing binaries, like TYC 8377-835-1), the rest are too faint or ambiguous. No planet.
+
+### F. Residual search around 275 known transiting-planet hosts  → **one credible new candidate**
+
+Known TOI/CTOI transits (358 ephemerides) were masked and the two-stage search re-run on the cool-dwarf
+hosts (`results/search_hosts.csv`, `triage_hosts.csv`). Fifteen repeatable signals do not match any
+known period; four were fully vetted with the known planets masked, a raw-flux check and a masked,
+fully coherent periodogram (`results/vet_hosts/`):
+
+| Host | new P (d) | depth (ppm) | transits | coherent SDE (masked) | verdict |
+|---|---|---|---|---|---|
+| **TIC 286763141 = TOI-6284 (L 463-104, M3, 21 pc, T=9.7)** | **7.3493** | **403 ± 31** | **20 / 20 positive** | **11.1, global max** | **new Earth-sized candidate** |
+| TIC 275083922 (M dwarf, 43 pc, crowded field) | 2.9263 | 1543 (PDC) / 1025 (raw) | 23 | 12.1, global max | real signal, SPOC-known since 2019 but never promoted; pixel centroid offset 9–11″ in two sectors and a crowded field → host ambiguous |
+| TIC 422217860 = TOI-5662 | 4.9921 | 1657 | 8 | 8.0, global max | marginal (SNR 8) |
+| TIC 277634430 = TOI-771 | 4.1846 | 806 | 35 | 6.7, rank 7 | not significant |
+
+**TOI-6284 candidate c (unofficial), `results/candidate_TOI6284/`:**
+
+* 20 transits across sectors 9, 62, 63, 89, 90, 99 (2019–2026), every one positive, per-sector depths
+  385–495 ppm (χ²_red = 1.0), combined SNR 15.0 (13.7 without the strongest event), identical with
+  and without masking the known 3.45-d candidate.
+* Fully coherent BLS over the 7-year baseline (167,000 periods, 0.5–70 d, known candidate masked):
+  the 7.349-d peak is the global maximum, SDE = 11.1; the next unrelated peak has SDE 7.4.
+  TLS on the sectors with transits: SDE 16.
+* Odd 315 ± 49 / even 463 ± 40 ppm (2.3σ); secondary at phase 0.5: −75 ± 34 ppm (none).
+* Raw SAP depth / PDCSAP depth = 1.08 and normal background during transit: not a correction artifact.
+* Host isolated: contamination ratio 0.02, nearest Gaia source 8 mag fainter at 13″; RUWE 1.19.
+* SPOC's pipeline detected the same signal (TCE 00286763141-01, SNR 11.2, 19 transits, multi-sector
+  run through sector 96, 2025); it is not a TOI, not a CTOI, not in the Exoplanet Archive, and a
+  literature search returns nothing.
+* Implied planet: R_p ≈ 1.0 R_⊕ (0.95–1.02), P = 7.3493 d, a = 0.058 au, a/R_⋆ = 26, T_eq ≈ 490 K,
+  ≈ 13 × Earth's insolation; transit duration 1.5–1.6 h implies b ≈ 0.7. Period ratio to TOI-6284.01
+  is 2.13, just wide of 2:1, as is common in compact multi-planet systems.
+
+Caveats: SNR ~14 is modest (a few per cent of such signals are red-noise artifacts even after these
+tests); the pixel test cannot localise a 400-ppm transit; and the odd/even difference is 2.3σ. The
+natural follow-up is to request a TESS DV report check, submit it as a CTOI, and obtain ground-based
+confirmation (the 3.45-d candidate TOI-6284.01 is itself still a PC).
