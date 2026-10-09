@@ -286,7 +286,7 @@ fully coherent periodogram (`results/vet_hosts/`):
   run through sector 96, 2025); it is not a TOI, not a CTOI, not in the Exoplanet Archive, and a
   literature search returns nothing.
 * Implied planet: R_p ≈ 1.0 R_⊕ (0.95–1.02), P = 7.3493 d, a = 0.058 au, a/R_⋆ = 26, T_eq ≈ 490 K,
-  ≈ 13 × Earth's insolation; transit duration 1.5–1.6 h implies b ≈ 0.7. Period ratio to TOI-6284.01
+  ≈ 9.5 × Earth's insolation; transit duration 1.5–1.6 h implies b ≈ 0.7. Period ratio to TOI-6284.01
   is 2.13, just wide of 2:1, as is common in compact multi-planet systems.
 
 Caveats: SNR ~14 is modest (a few per cent of such signals are red-noise artifacts even after these
