@@ -13,7 +13,7 @@ import os, sys, glob, json, time, argparse, warnings
 import numpy as np, pandas as pd
 warnings.filterwarnings("ignore")
 from astroquery.mast import Catalogs
-ap = argparse.ArgumentParser(); ap.add_argument("data_dir"); ap.add_argument("out"); ap.add_argument("--max", type=int, default=400); a = ap.parse_args()
+ap = argparse.ArgumentParser(); ap.add_argument("data_dir"); ap.add_argument("out"); ap.add_argument("--max", type=int, default=400); ap.add_argument("--sort", default="snr", choices=["snr", "depth"]); ap.add_argument("--maxdepth", type=float, default=30000); a = ap.parse_args()
 D = a.data_dir
 cols = ["tceid", "ticid", "sectors", "tce_period", "tce_time0bt", "tce_depth", "tce_duration", "tce_model_snr", "tce_prad", "tce_num_transits",
         "tce_dicco_mra", "tce_dicco_mra_err", "tce_dicco_mdec", "tce_dicco_mdec_err", "tce_dicco_msky", "tce_dicco_msky_err", "tce_steff", "tce_sradius", "tce_ntoi"]
@@ -22,7 +22,7 @@ for f in sorted(glob.glob(os.path.join(D, "tce", "*_dvr-tcestats.csv"))):
     df = pd.read_csv(f, comment="#", low_memory=False)
     keep = [c for c in cols if c in df.columns]
     df = df[keep]
-    df = df[(df.tce_model_snr >= 9) & (df.tce_depth < 30000) & (df.tce_depth > 300) & (df.tce_num_transits >= 3) & (df.tce_period > 0.5)]
+    df = df[(df.tce_model_snr >= 9) & (df.tce_depth < a.maxdepth) & (df.tce_depth > 300) & (df.tce_num_transits >= 3) & (df.tce_period > 0.5)]
     if "tce_dicco_msky" in df.columns:
         df = df[(df.tce_dicco_msky > 5) & (df.tce_dicco_msky < 90) & (df.tce_dicco_msky / df.tce_dicco_msky_err.replace(0, np.nan) >= 3)]
         frames.append(df)
@@ -38,7 +38,7 @@ toi["ra_deg"] = toi.RA.apply(ra_deg); toi["dec_deg"] = toi.Dec.apply(dec_deg); c
 claimed = set(toi["TIC ID"]) | set(ctoi["TIC ID"])
 t = t[~t.ticid.isin(claimed)]
 print("after removing TOI/CTOI hosts:", len(t), flush=True)
-t = t.sort_values("tce_model_snr", ascending=False).head(a.max)
+t = (t.sort_values("tce_depth", ascending=True) if a.sort == "depth" else t.sort_values("tce_model_snr", ascending=False)).head(a.max)
 rows = []
 for i, r in enumerate(t.itertuples()):
     try:

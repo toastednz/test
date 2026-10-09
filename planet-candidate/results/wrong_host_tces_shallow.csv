@@ -1,0 +1,2 @@
+tceid,tic,sectors,P,t0,depth_ppm,dur_h,snr,ntr,offset_arcsec,offset_sig,tgt_Tmag,tgt_Teff,tgt_rad,nb_tic,nb_sep_from_offset_arcsec,nb_Tmag,nb_Teff,nb_rad,nb_d_pc,nb_lumclass,nb_flux_frac,depth_on_nb_ppm,rp_on_nb_re,nb_claimed_within_1arcmin,nb_is_toi_ctoi
+00141685180-01,141685180,s0001-s0006,0.5721519999999999,1325.83,300.129,1.82478,9.095576,238,15.92736,4.956612339249059,11.7667,4277.0,0.613235,735417970,2.639653408914246,19.1122,,,1944.92,nan,0.001,248368,,0,False
