@@ -508,7 +508,7 @@ P_c/P_b = 2.415. Verification package: `results/candidate_TOI669/TOI669c_candida
 **The other 24 vetted host signals** (`results/vet_hosts_fgk_summary.csv`, deep tests in `results/vet_hosts_fgk_deep/`):
 15 fail quick vetting (depth mismatch between raw and corrected flux, odd/even differences, inconsistent per-transit
 depths, negative transits, or a secondary eclipse: TOI-1824, 2080-like FPs, TOI-4299's 0.59-d signal with an 86 ± 24 ppm
-secondary, TOI-7060's 12.7-d signal with a 143 ± 34 ppm secondary, …). Nine went through the full deep vetting
+secondary, TOI-7060's 12.7-d signal with a 143 ± 34 ppm secondary, …). Ten went through the full deep vetting
 (masked coherent periodogram over all sectors, TLS, sector-shuffle bootstrap, per-sector difference-image centroids):
 
 | host | P (d) | depth (ppm) | transits | coherent-periodogram rank / SDE | bootstrap | verdict |
@@ -522,6 +522,7 @@ secondary, TOI-7060's 12.7-d signal with a 143 ± 34 ppm secondary, …). Nine w
 | TOI-2091 (TIC 219778329) | 54.8 | 133 ± 19 | 14/15 | 9 / 3.7 | 6/6 | rejected (0.6-h "transits" at 55 d are also physically implausible) |
 | TOI-6075 (TIC 424388628) | 14.73 | 153 ± 24 | 35/43 | 9 / 3.9 | 6/6 | rejected |
 | TOI-6729 (TIC 426032475) | 37.6 | 158 ± 22 | 6/6 | 8 / 4.5 | 4/6 | rejected |
+| TOI-7910 (TIC 270619211) | 6.527 | 133 ± 18 | 16/19 | 9 / 4.2 | 6/6 | rejected |
 
 The three "possible" rows are weaker than TOI-669 c (no SPOC confirmation, no RV hint, one caveat each) and are listed
 for completeness; they would need pixel-level and ground-based checks before any claim. The final triage of all 1,115

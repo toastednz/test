@@ -13,7 +13,7 @@ tic,P,depth_ppm,depth_err,n_pos,n_tr,chi2_red,snr_comb,snr_wo_max,odd,even,sec,s
 238898571,23.1533,337,44,6,7,7.2,8.1,6.1,587,156,-41,34,0.38,1.05,"rejected: SAP/PDC depth mismatch, odd/even, inconsistent depths"
 259606227,1.0638,161,12,58,64,2.3,15.6,14.9,157,166,12,12,1.07,1.0,possible candidate (deep-vetted; USP around evolved F star)
 267414551,13.588,540,71,5,5,0.2,9.3,7.4,474,585,97,48,0.13,1.23,rejected: SAP/PDC depth mismatch
-270619211,6.5271,133,18,16,19,3.0,8.2,7.2,161,102,-41,18,1.24,0.79,passes quick vetting; deep-vetted
+270619211,6.5271,133,18,16,19,3.0,8.2,7.2,161,102,-41,18,1.24,0.79,rejected (deep-vetted; bootstrap 6/6)
 29191624,6.4101,214,27,7,7,1.5,9.1,7.5,207,219,9,27,1.51,0.87,marginal (deep-vetted; SDE 5.4)
 295541511,4.5786,451,40,22,23,1.6,11.9,11.0,519,378,-4,39,0.95,1.0,TOI-1117 c transits (section J)
 368628986,19.9046,322,42,5,5,6.8,9.9,7.4,446,243,40,54,1.33,0.99,rejected: inconsistent depths
