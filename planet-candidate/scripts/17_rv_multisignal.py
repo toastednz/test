@@ -18,7 +18,7 @@ from astropy.timeseries import LombScargle
 warnings.filterwarnings("ignore")
 ap = argparse.ArgumentParser(); ap.add_argument("rvdir"); ap.add_argument("name"); ap.add_argument("outdir")
 ap.add_argument("--mstar", type=float, default=1.0); ap.add_argument("--nmax", type=int, default=6); ap.add_argument("--fapmax", type=float, default=1e-3)
-ap.add_argument("--jitter", type=float, default=1.0); ap.add_argument("--csv", default="", help="alternative input CSV with BJD, DRVmlcnzp, e_DRVmlcnzp, Flag"); ap.add_argument("--pmin", type=float, default=1.2); ap.add_argument("--pmax", type=float, default=5000.0)
+ap.add_argument("--jitter", type=float, default=1.0); ap.add_argument("--csv", default="", help="alternative input CSV with BJD, DRVmlcnzp, e_DRVmlcnzp, Flag"); ap.add_argument("--periods", default="", help="skip the iterative search and evaluate these fixed periods (comma list); one extra residual-search stage is still run"); ap.add_argument("--pmin", type=float, default=1.2); ap.add_argument("--pmax", type=float, default=5000.0)
 a = ap.parse_args(); os.makedirs(a.outdir, exist_ok=True)
 
 # ---- load
@@ -72,7 +72,15 @@ def fap(resid, P):
 signals = []; stages = []
 coef, resid, chi2 = linfit([])
 chi2_0 = chi2
-for it in range(a.nmax):
+if a.periods:
+    periods = [float(x) for x in a.periods.split(",")]
+    p0 = np.log(np.array(periods)); sol = least_squares(resid_fun, p0, args=(len(p0),), method="lm")
+    periods = list(np.exp(sol.x)); coef, resid, chi2 = linfit(periods); signals = [dict(P=float(Pj)) for Pj in periods]
+    off = G.shape[1] + 1
+    for j, s_ in enumerate(signals):
+        A, B = coef[off + 2 * j], coef[off + 2 * j + 1]; s_["K_ms"] = float(np.hypot(A, B)); s_["phase"] = float(np.arctan2(B, A))
+    f, pw = gls(resid); i = int(np.argmax(pw)); P = 1 / f[i]; stages.append(dict(stage=len(periods) + 1, P=float(P), power=float(pw[i]), fap=fap(resid, P), f=f, pw=pw))
+for it in range(0 if a.periods else a.nmax):
     f, pw = gls(resid); i = int(np.argmax(pw)); P = 1 / f[i]; fp = fap(resid, P)
     stages.append(dict(stage=it + 1, P=float(P), power=float(pw[i]), fap=fp, f=f, pw=pw))
     if fp > a.fapmax: break

@@ -59,7 +59,7 @@ for j, p in enumerate(kep["planets"]):
     ptr = star["radius_rsun"] * 0.00465 / a
     planets.append(dict(letter="bcde"[j], P_d=p["P"], eP_d=p["eP"], K_ms=p["K_ms"], eK_ms=p["eK_ms"], e=p["e"], msini_earth=p["msini_earth"], emsini_earth=p["emsini_earth"], a_au=a,
                         insolation_earth=float(S), Teq_K_A0p3=float(Teq), Rp_est_rearth_if_rocky_or_volatile=float(Rp_est), expected_transit_depth_ppm=float(depth_ppm), transit_probability=float(ptr),
-                        fap_drop_one_baluev=ms["signals"][j]["fap_drop_one"], dBIC_vs_without=kep["model_comparison"][f"without_{p['P']:.4f}"]["dBIC"]))
+                        fap_drop_one_baluev=ms["signals"][j]["fap_drop_one"], dBIC_vs_without=[v for k, v in kep["model_comparison"].items() if k.startswith("without_") and abs(float(k.split("_")[1]) / p["P"] - 1) < 0.01][0]["dBIC"]))
 summary = dict(
     star=star,
     data=dict(source="HARPS RVBank (Trifonov et al. 2020, CDS J/A+A/636/A74), SERVAL NZP-corrected RVs; cross-checked with the 2024 corrected release (Perdelwitz et al. 2024, J/A+A/683/A125 table4) and the HARPS DRS pipeline velocities",
@@ -74,6 +74,7 @@ summary = dict(
                   indicator_power_at_signal_periods={c: {P_: round(v["power"], 3) for P_, v in r["at_P"].items()} for c, r in act["indicators"].items()},
                   indicator_spearman_vs_rv_resid={c: {P_: round(v["spearman_rho_vs_rv_resid"], 2) for P_, v in r["at_P"].items()} for c, r in act["indicators"].items()},
                   note="No indicator shows periodicity at any of the four periods after prewhitening long-term trends; weak overall CRX anti-correlation (rho~-0.2) with RV residuals present at all periods"),
+    inner_period_alias_note="The inner signal's period is 2.5566 d, not 1.635 d: 1.635 d is the highest single-signal GLS peak, but once the three longer-period signals are modelled jointly the daily/yearly alias partner 2.5566 d is preferred by delta-lnL = 30 (chi2 302 vs 404); a 2023 hobbyist analysis (DeviantArt, Tullimonstrum1) had already adopted 2.5566 d. Residuals of the four-signal model show a weak 122-d peak (K~0.8 m/s, FAP 0.05), matching that analysis's claimed fifth planet at 123.7 d, but it is not significant here.",
     tess=dict(sectors=[5, 32], cadence="2-min SPOC", checks={k: dict(P=v["cand_P"], sde=v["cand_sde"], depth_ppm=v["cand_depth_ppm"], global_best_sde=v["global_sde"]) for k, v in tess.items()},
               note="No transit at 1.635 d (or its 2.575-d alias) or 11.06 d; depth limit ~60 ppm vs expected 300-900 ppm, so planet b does not transit"),
     prior_claims=dict(refereed_literature="none found (SIMBAD bibliography 49 refs, NASA Exoplanet Archive, exoplanet.eu, Mayor et al. 2011 table, arXiv API)",

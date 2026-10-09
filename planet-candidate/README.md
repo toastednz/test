@@ -419,7 +419,7 @@ this analysis. All survivors with a Baluev FAP < 10⁻⁴, no alias or indicator
 | GJ 3436, HD 95456, GJ 838, HD 200633, GJ 1085 | 1400–3700 | 2–8 | 45–172 | long-period, indicator-correlated or amplitude unstable: cycles/trends |
 | GJ 787, GJ 9592, GJ 224, GJ 204, GJ 472, GJ 656, HD 125881, GJ 9527, HD 78286, GJ 579.2, HD 36152, GJ 616 (18 Sco), GJ 812.1, HD 114853, HD 45346 | 5.6–102 | 0.7–12 | 37–438 | same period or correlation in activity indicators, or K not stable between halves: rotation/activity |
 | GJ 845 = ε Indi A | 16.5 | 4.0 | 123 | amplitude 1.7 vs 4.3 m/s between halves, dLW/Na D: activity (known Jovian at 25 000 d not in range) |
-| HD 32564 | 1.635, 11.06, 23.62, 48.97 | 4.2, 3.4, 2.9, 2.0 | 191 | **unexplained, coherent, four signals – section H** |
+| HD 32564 | 2.557 (first-pass alias 1.635), 11.06, 23.61, 49.13 | 4.0, 3.4, 2.9, 2.0 | 191 | **unexplained, coherent, four signals – section H** |
 | HD 144628 (GJ 613) | 15.73 | 1.1 | 168 | weak possible: no indicator counterpart (rotation is 38.5 d, seen in dLW/FWHM/BIS at 40 d), ΔBIC 27, but period not stable in the joint fit (15.73 → 15.83 d) |
 | HD 17970 (GJ 3187) | 72.3 | 1.7 | 74 | weak possible: no indicator counterpart, ΔBIC 30, K 1.3 vs 2.3 m/s between halves |
 | HD 71334 (GJ 9263) | 88.9 | 3.0 | 66 | possible but suspect: ΔBIC 47, no literature, yet CRX anti-correlates (ρ = −0.31) with the signal |
@@ -430,24 +430,29 @@ The three "possible" rows are noted for completeness only; none passes every tes
 
 HD 32564 (HIP 23575, TIC 213078996; G6V, V = 8.6, T_eff = 5574 K, R = 0.94 R_⊙, M = 0.98 M_⊙, 48.5 pc,
 log R'_HK = −5.03, Gaia RUWE 0.97, single) was observed on 191 nights (205 spectra) between 2009 and 2016,
+(note: the first version of this section gave the inner period as 1.635 d; see the alias bullet below)
 almost all under the HARPS GTO high-precision programme 183.C-0972 (PI Udry). It is in no planet paper, no
 catalogue, and no arXiv listing. Its velocities contain four coherent signals
 (`scripts/17_rv_multisignal.py`, `19_rv_keplerian.py`; `results/candidate_HD32564/`):
 
-| signal | P (d) | K (m/s) | m sin i (M_⊕) | a (AU) | insolation (S_⊕) | T_eq (K) | drop-one FAP | ΔBIC |
-|---|---|---|---|---|---|---|---|---|
-| b | 1.6350 | 4.22 ± 0.17 | 7.3 ± 0.3 | 0.026 | 1100 | 1470 | 6e−39 | 62 |
-| c | 11.0627 ± 0.0017 | 3.37 ± 0.15 | 11.1 ± 0.5 | 0.095 | 86 | 780 | 3e−27 | 84 |
-| d | 23.622 ± 0.014 | 2.86 ± 0.15 | 12.1 ± 0.6 | 0.157 | 31 | 600 | 2e−23 | 65 |
-| e | 48.97 ± 0.07 | 2.02 ± 0.15 | 10.9 ± 0.8 | 0.255 | 12 | 470 | 1e−7 | 58 |
+| signal | P (d) | K (m/s) | m sin i (M_⊕) | a (AU) | insolation (S_⊕) | T_eq (K) | drop-one FAP |
+|---|---|---|---|---|---|---|---|
+| b | 2.55662 ± 0.00008 | 4.02 ± 0.21 | 8.5 ± 0.5 | 0.036 | 580 | 1250 | 3e−52 |
+| c | 11.0643 ± 0.0016 | 3.36 ± 0.15 | 11.6 ± 0.5 | 0.097 | 83 | 770 | 4e−40 |
+| d | 23.611 ± 0.013 | 2.85 ± 0.16 | 12.6 ± 0.7 | 0.160 | 30 | 600 | 7e−33 |
+| e | 49.13 ± 0.07 | 1.95 ± 0.15 | 11.0 ± 0.9 | 0.261 | 11 | 470 | 9e−13 |
 
-The raw scatter of 4.8 m/s drops to 2.1 m/s (fitted jitter 1.0 m/s); eccentricities converge to zero;
-no fifth signal (next peak FAP 0.009). Checks, all passed (`candidate_summary.json`):
+The raw scatter of 4.8 m/s drops to 1.8 m/s (fitted jitter 1.0 m/s); eccentricities converge to zero;
+no significant fifth signal (the residuals' best peak is at 122 d, K ≈ 0.8 m/s, FAP 0.05). Checks, all passed
+(`candidate_summary.json`):
 
-* **Aliases.** The daily alias of b (2.575 d) has a third of the power; the yearly alias (1.6423 d) is
-  disfavoured by Δln L = 38. The three longer periods are not aliases of each other.
+* **Aliases.** A single-signal periodogram peaks at 1.635 d, and that is what the first pass reported. Once the
+  three longer-period signals are modelled jointly, the inner signal's alias web (1.635 ↔ 1.6423 d yearly;
+  1.6423 ↔ 2.5566 d and 1.635 ↔ 2.575 d daily) resolves clearly in favour of **2.5566 d** (χ² 302 against
+  404, 769 and 964 for 1.635, 1.6423 and 2.575 d; Δln L = 56 in the jitter-fitted Keplerian fit). The three
+  longer periods are not aliases of each other.
 * **Coherence.** Season by season (2009–10, 10–11, 11–12, 12–13) signal b keeps K = 3.3–4.7 m/s and phase
-  −119 … −125°, signal c K = 3.0–3.4 m/s and phase −162 … −177°. Stellar activity does not hold phase for
+  −66 … −79°, signal c K = 3.4–3.8 m/s and phase 34 … 41°. Stellar activity does not hold phase for
   four years; planets do. Sector-shuffle bootstrap FAP for b: 0/300.
 * **Activity.** The star is as quiet as the Sun at minimum (log R'_HK = −5.03, expected rotation 30–40 d,
   none detected by Yu et al. 2024). After removing long-term trends no indicator (CRX, dLW, Hα, Na D,
@@ -456,15 +461,19 @@ no fifth signal (next peak FAP 0.009). Checks, all passed (`candidate_summary.js
   exact harmonics a rotation signal would produce.
 * **Independence from the reduction.** The same four periods and amplitudes come out of the 2024
   corrected RVBank release and of the separate HARPS DRS pipeline velocities (`rvbank2024/`, `drs_pipeline/`).
-* **TESS.** Sectors 5 and 32 (2-min) show no transit at 1.635 d, 2.575 d or 11.06 d down to ~60 ppm
-  (a 7 M_⊕ planet would give 300–900 ppm), so b does not transit (prior probability ~17 %).
+* **TESS.** Sectors 5 and 32 (2-min) show no transit at 2.5566 d (nor at 1.635 or 11.06 d) down to ~60 ppm
+  (an 8.5 M_⊕ planet would give 300–900 ppm), so b does not transit (prior probability ~12 %).
 
-Prior claims: none refereed. A hobbyist's illustration on DeviantArt (2023-09-06) is captioned as a
-five-planet system "recently found" by that user in HARPS data of this star, and the HARPS GTO team
-re-observed the star in 2022–2025 (programmes 108.22KV, 112.25YG), so the data owners are presumably
-aware of it. Neither constitutes a publication. What can honestly be said: **a compact system of four
-7–12 M_⊕ (minimum-mass) planet candidates around HD 32564 is present in public data and unreported in
-the literature as of 2026-10-09.** `results/candidate_HD32564/HD32564_candidate_verification_package.zip`
+Prior claims: none refereed. A hobbyist's illustration on DeviantArt (user Tullimonstrum1, 2023-09-06,
+https://www.deviantart.com/tullimonstrum1/art/HD-32564-System-981157980) is captioned as a five-planet
+system "recently found" by that user in HARPS data, and its table lists periods 2.55656, 11.06464, 23.6079,
+49.1523 and 123.716 d with masses 8.78, 11.29, 12.27, 10.37 and 8.62 M_⊕: the first four agree with the
+solution above to within the uncertainties (and that analysis chose the correct 2.5566-d alias from the
+start); the fifth, at 123.7 d, corresponds to the 122-d residual peak here but is not significant in this
+analysis. The HARPS GTO team re-observed the star in 2022–2025 (programmes 108.22KV, 112.25YG), so the data
+owners are presumably aware of it. Neither constitutes a publication. What can honestly be said: **a compact
+system of four 8–13 M_⊕ (minimum-mass) planet candidates around HD 32564 is present in public data and
+unreported in the literature as of 2026-10-09; a hobbyist reached the same solution in 2023.** `results/candidate_HD32564/HD32564_candidate_verification_package.zip`
 contains the nightly velocities, all 205 spectra with both pipelines and indicators, the fits and tests, and
 a recipe for independent checking.
 
@@ -550,8 +559,8 @@ next to a 2.46 R_⊕, 8.9 M_⊕ planet at 2.23 d (period ratio 2.055) is a measu
 pair. Package: `results/candidate_TOI1117c/TOI1117c_transit_verification_package.zip`.
 
 **Revised bottom line for the whole project:** three results came out of the "other avenues": (1) **HD 32564**,
-four coherent radial-velocity signals (1.635, 11.06, 23.6, 49.0 d; 7–12 M_⊕ minimum masses) in public HARPS data
-(section H), unpublished; (2) **TOI-669 c**, a 2.2–2.6 R_⊕ transit candidate at 9.529 d around a confirmed-planet
+four coherent radial-velocity signals (2.557, 11.06, 23.6, 49.1 d; 8–13 M_⊕ minimum masses) in public HARPS data
+(section H), unpublished in the literature (a hobbyist posted the same solution in 2023); (2) **TOI-669 c**, a 2.2–2.6 R_⊕ transit candidate at 9.529 d around a confirmed-planet
 host (section I), found independently by SPOC in Dec 2025 but never promoted to a TOI, matching a weak RV hint in
 the published Keck data; (3) **TOI-1117 c transits** (section J): a published RV planet, listed everywhere as
 non-transiting, shows 22 transits at its RV period and phase, which turns it into a planet with both mass and
