@@ -336,3 +336,39 @@ confirmation (the 3.45-d candidate TOI-6284.01 is itself still a PC).
    dwarfs are usually confirmed when a mass is out of reach.
 6. Wait for sectors 110–113 (2027), re-run the coherent search and a joint two-planet fit; check
    for transit-timing variations between the 3.45-d and 7.35-d signals (period ratio 2.13).
+
+### Correction after independent verification (2026-10-09)
+
+An independent re-analysis by a second AI (from the verification package, using the original MAST
+FITS files) **reproduces the detection**: strongest blind peak at 7.3493 d, 445 ± 36 ppm in both SAP and
+PDCSAP, 20 of 20 baselined events positive, no secondary at phase 0.5, odd/even 2.1σ, radius ≈ 1.08 R_⊕.
+It also corrected four of my statements, all accepted:
+
+* SAP/PDCSAP depth ratio is ≈ 1.00, not 1.08 (my SAP measurement used a cruder baseline).
+* "Centroid on target" overstates a 5.7 ± 3.9″ offset; the pixel data do not localise a 400-ppm dip.
+* Three predicted events are not usable: the sector-9 first event lacks baseline, the sector-63 epoch-200
+  event starts at mid-transit with background structure, and the sector-99 epoch-342 event falls in a gap.
+* A weak feature near phase 0.73 (~150 ppm) has p ≈ 0.05 after accounting for the phase search; not a
+  detection, but to be re-tested with sectors 110–113.
+
+**Literature status, and it changes the headline.** The verifier found a preprint my web searches had
+missed: Tschudi (2026), arXiv:2607.23781, *A uniform transit survey of 461 ExoFOP M-dwarf TOI hosts*,
+submitted 26 July 2026. Checked directly: it reports TOI-6284 as "a candidate three-planet chain", with
+two new blind detections beside TOI-6284.01: **P = 5.24 d (SDE 23.8, 33 events) and P = 7.35 d
+(SDE 24.0, 26 events)**, Gemini speckle imaging of the field, and a ground-based nearby-eclipsing-binary
+check. So the 7.349-d signal was reported publicly ten weeks before this search, and the 5.24-d
+feature the verifier flagged is its second candidate. My pipeline recovers that one too once both known
+signals are masked (`results/candidate_TOI6284/third_signal_5p24d_check.json`: global maximum, SDE 8.2,
+26/26 events positive, 335 ± 34 ppm, χ²_red = 1.2, odd/even consistent, no secondary).
+
+What this work therefore is: an **independent confirmation** of both Tschudi (2026) candidates from a
+different pipeline, with additional evidence (sector-99 data, sector 35/36 FFI transits, a masked coherent
+periodogram, a sector-shuffle false-alarm test, SPOC's DV report), plus one substantive point for the
+author and the TESS follow-up group: the verifier showed that the archived LCO-SAAO nearby-eclipsing-binary
+observation (BJD 2460325.36–2460325.52) falls at phase 0.32–0.34 of the 7.349-d ephemeris, so it does not
+clear the field for this signal, contrary to the preprint's use of it. A CTOI submission by us would be a
+duplicate under ExoFOP's rules; the useful contributions are a confirmation note and that correction.
+
+**Revised bottom line for the whole project:** no previously unreported planet candidate was found.
+The best object, TOI-6284's 7.35-d Earth-sized candidate, is real and worth following up, but was first
+reported by Tschudi (2026). Everything else that looked new was stellar, instrumental, or already claimed.
