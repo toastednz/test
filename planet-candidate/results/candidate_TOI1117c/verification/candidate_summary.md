@@ -16,3 +16,5 @@ Lockley et al. (2025) found TOI-1117 b (transiting, 2.228 d) and two "non-transi
 | radius | 2.43 Re  ->  with M = 8.78 Me: density 3.4 g/cm3 |
 
 **RV phase test** (published HARPS velocities, 133 points, re-fitted with b fixed to its transit ephemeris and c fixed to the transit period): the inferior conjunction of planet c predicted by the RVs falls +0.028 ± 0.03 in phase (+3.1 h) from the transit times, 149 cycles away; chi2 penalty for forcing the RV phase to the transit phase: 0.8; at anti-phase: 29. Planet b's K comes out at 4.4 m/s at its transit phase, validating the time system. Planet c's RV semi-amplitude at the transit phase: 3.34 m/s.
+
+TLS (masked, 0.5-60 d): P = 4.57865 d, SDE 11.6, Rp/R* = 0.0196 (-> 2.24 Re), odd/even mismatch 0.87 sigma, 22 distinct transits.

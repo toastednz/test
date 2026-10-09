@@ -1,0 +1,27 @@
+tic,P,depth_ppm,depth_err,n_pos,n_tr,chi2_red,snr_comb,snr_wo_max,odd,even,sec,sec_err,sap_over_pdc,bkg,verdict
+124573851,9.5293,414,41,10,10,1.2,12.2,10.8,476,374,3,50,0.98,1.0,candidate: TOI-669 c (section I)
+142387023,17.8017,256,19,5,8,73.3,15.6,10.4,274,228,15,18,1.08,1.01,"rejected: inconsistent depths, negative transits"
+142937186,22.1983,625,61,4,4,0.8,11.1,9.0,611,642,25,58,1.22,1.01,passes quick vetting; deep-vetted
+144645881,24.8518,842,72,3,3,22.6,11.8,7.4,0,842,36,72,0.84,1.01,"rejected: odd/even, inconsistent depths"
+146282666,9.995,180,15,13,13,2.3,13.8,12.2,139,228,27,17,1.06,0.98,passes quick vetting; deep-vetted
+154840461,46.7793,573,23,7,7,40.9,24.6,21.0,822,-13,-5,30,0.9,1.42,"rejected: odd/even, inconsistent depths"
+159851831,13.9669,755,66,4,4,4.3,14.4,10.7,900,607,-41,45,0.07,1.31,rejected: SAP/PDC depth mismatch
+161738745,7.6917,211,22,8,9,5.9,11.9,10.2,237,191,-35,23,0.89,1.0,rejected: inconsistent depths
+179739873,5.5899,497,37,9,9,50.9,13.6,8.1,134,791,-37,40,0.92,1.0,"rejected: odd/even, inconsistent depths"
+198512478,25.3239,170,21,7,7,0.8,8.4,7.1,194,151,-23,21,0.95,1.0,passes quick vetting; deep-vetted
+219778329,54.8471,133,19,14,15,1.2,7.2,6.4,103,159,36,19,1.21,1.15,passes quick vetting; deep-vetted
+238898571,23.1533,337,44,6,7,7.2,8.1,6.1,587,156,-41,34,0.38,1.05,"rejected: SAP/PDC depth mismatch, odd/even, inconsistent depths"
+259606227,1.0638,161,12,58,64,2.3,15.6,14.9,157,166,12,12,1.07,1.0,passes quick vetting; deep-vetted
+267414551,13.588,540,71,5,5,0.2,9.3,7.4,474,585,97,48,0.13,1.23,rejected: SAP/PDC depth mismatch
+270619211,6.5271,133,18,16,19,3.0,8.2,7.2,161,102,-41,18,1.24,0.79,passes quick vetting; deep-vetted
+29191624,6.4101,214,27,7,7,1.5,9.1,7.5,207,219,9,27,1.51,0.87,passes quick vetting; deep-vetted
+295541511,4.5786,451,40,22,23,1.6,11.9,11.0,519,378,-4,39,0.95,1.0,TOI-1117 c transits (section J)
+368628986,19.9046,322,42,5,5,6.8,9.9,7.4,446,243,40,54,1.33,0.99,rejected: inconsistent depths
+420529106,22.2245,872,95,3,3,25.7,11.6,7.3,1660,585,-170,94,0.91,0.97,"rejected: odd/even, inconsistent depths"
+424388628,14.7309,153,24,35,43,1.1,6.5,6.0,121,184,-14,21,1.0,1.17,passes quick vetting; deep-vetted
+426032475,37.6063,149,20,6,6,1.2,8.7,7.3,146,157,-18,28,1.19,0.98,passes quick vetting; deep-vetted
+450649506,8.1209,512,55,10,11,8.0,11.4,9.2,472,546,-140,54,0.96,1.0,rejected: inconsistent depths
+469810663,12.6908,342,33,10,10,2.3,11.1,9.8,326,358,143,34,1.35,0.99,rejected: secondary
+67535663,0.5894,299,24,64,72,1.7,14.5,14.0,310,287,86,24,0.91,1.0,rejected: secondary
+82452140,14.6779,345,37,10,10,1.1,11.7,10.6,316,354,23,40,1.32,0.64,passes quick vetting; deep-vetted
+9151337,6.5586,832,65,5,5,4.4,11.7,8.7,927,680,104,59,0.37,1.01,rejected: SAP/PDC depth mismatch

@@ -43,6 +43,26 @@
    "exceeding": 0,
    "max_trial_sde": 5.216013644698806,
    "real_sde": 9.897034375940015
+  },
+  "tls": {
+   "P": 4.578645371146134,
+   "SDE": 11.62914466638687,
+   "rp_rs": 0.01956667780099188,
+   "odd_even_mismatch": 0.8698344303727884,
+   "distinct_transit_count": 22
+  },
+  "deep_vet_with_mask": {
+   "depth_ppm": 458.4797260160925,
+   "depth_err_ppm": 40.92417450710266,
+   "n_transits": 22,
+   "n_transits_positive": 21,
+   "chi2_red_depths": 1.4852422999190078,
+   "snr_combined": 11.479810736649586,
+   "depth_odd_ppm": 523.8357507320046,
+   "depth_even_ppm": 395.0387697421176,
+   "depth_phased_ppm": 13.769727052137526,
+   "depth_phased_err": 40.73567326666051,
+   "sap_over_pdc_depth": 0.9304374437769288
   }
  },
  "rv_phase_test": {
