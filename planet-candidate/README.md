@@ -234,3 +234,16 @@ venv/bin/python scripts/06_context.py $DATA <TIC> [P]                           
 
 All search outputs are in `results/` (`search_run1.csv`, `search_run2.csv`, `triage_run*.csv`, the
 per-candidate vetting directories, and `candidate_TIC404664386/` for the one object worth following up).
+
+## Second round: different approaches (2026-10-09)
+
+### D. Adding full-frame-image light curves to the marginal candidates
+
+The 14 best marginal blind-search signals were re-measured in every QLP / TESS-SPOC full-frame-image
+sector not already used (`scripts/10_ffi_extend.py`, `results/ffi_extend.json`). The deep, long-duration
+ones (TIC 248285521, 161098507, 153125761, 76673558) do persist in 2019–2023 data at high SNR but
+remain eclipsing-binary-like; every shallow planet-like signal disappears in the independent data
+(e.g. BD−07 184: nothing at the ephemeris in S30/S97 QLP). TIC 143951327 (13.34 d, 1.3–2 ppt,
+4 events) kept a 4σ hint in FFI data, but its events exist only in the PDC-corrected flux, not in the
+raw aperture flux, and coincide with elevated background: a correction artifact. Lesson added to the
+vetting: compare raw (SAP) and corrected (PDCSAP) depths and check the background at transit times.
