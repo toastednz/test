@@ -1,0 +1,15 @@
+Please independently check a transiting-exoplanet candidate claim. Do not take the claims on trust; re-derive them from the attached data and, if you can access the internet, from the original public TESS files listed in verification_package.json.
+
+Attached:
+- TIC286763141_2min_lightcurve_all_sectors.csv: TESS 2-minute photometry of TIC 286763141 (L 463-104) for sectors 9, 62, 63, 89, 90, 99. Columns: sector, time_btjd (BJD-2457000), pdcsap_flux_norm, pdcsap_err_norm, sap_flux_norm, quality (TESS quality flags; 0 = good), sap_bkg, detrended_flux_biweight0p6d (my detrended version; blank where excluded).
+- TIC286763141_10min_binned_detrended.csv: 10-minute binned version of the detrended flux.
+- phase_fold_P7.34932_15min_bins.csv and per_transit_depths.csv: my derived products, for comparison only.
+- verification_package.json: ephemeris, stellar parameters, the known candidate TOI-6284.01 to mask, the list of claims, and the MAST URLs of the original files.
+- spoc_dv_summary_tce01_s0001-s0096.pdf: NASA SPOC pipeline validation summary for the same signal.
+
+Tasks:
+1. Using only pdcsap_flux_norm with quality == 0, detrend each sector yourself (any reasonable method), mask transits of the known candidate (P = 3.4475935 d, t0 = BJD 2460035.841876, duration 1.73 h), and fold at P = 7.34932 d, t0 = BJD 2458544.5091. Report the depth, duration, and whether all individual transit windows show a dip.
+2. Run a transit search (BLS or TLS) over 0.5 to 70 days on your detrended, masked data. Report the strongest peak and its significance (SDE or equivalent). Is 7.349 d the top peak?
+3. Check for a secondary eclipse at phase 0.5, compare odd and even transits, and compare the dip depth in sap_flux_norm versus pdcsap_flux_norm.
+4. Compute the implied planet radius for a 0.468 solar-radius host and the transit duration expected for a circular orbit; comment on consistency.
+5. List anything that argues against a planetary origin (stellar variability, systematics at 7.35 d or its aliases, sector-edge effects, inconsistent depths), and give your overall verdict: planet candidate, false positive, or inconclusive, with reasons.

@@ -1,0 +1,94 @@
+{
+ "target": {
+  "tic": 286763141,
+  "name": "L 463-104 (host of TOI-6284.01)",
+  "ra_deg": 150.349211832287,
+  "dec_deg": -38.8401465428886,
+  "Tmag": 9.723,
+  "Teff_K": 3548,
+  "R_sun": 0.4677,
+  "M_sun": 0.4653,
+  "d_pc": 21.02,
+  "known_candidate": {
+   "name": "TOI-6284.01",
+   "P_d": 3.4475935,
+   "t0_bjd": 2460035.841876,
+   "depth_ppm": 320,
+   "duration_h": 1.731,
+   "status": "PC"
+  }
+ },
+ "claimed_signal": {
+  "P_d": 7.34932,
+  "P_err_d": 1e-05,
+  "t0_btjd": 1544.5091,
+  "t0_bjd": 2458544.5091,
+  "t0_err_d": 0.0017,
+  "depth_ppm": "400-470",
+  "duration_h": "1.5-1.9",
+  "Rp_earth": "1.0-1.1",
+  "sectors_2min": [
+   9,
+   62,
+   63,
+   89,
+   90,
+   99
+  ],
+  "sectors_ffi_extra": [
+   35,
+   36
+  ]
+ },
+ "claims_to_verify": [
+  "Folding the detrended 2-min PDCSAP flux at P=7.34932 d, t0=1544.5091 BTJD shows a ~400 ppm, ~1.6 h dip (file phase_fold_P7.34932_15min_bins.csv; re-derive from the light-curve CSV).",
+  "All 20 individual transit windows in the 2-min data show a flux decrease (per_transit_depths.csv); weighted-mean depth ~403 +- 31 ppm; chi2_red of per-transit depths ~1.0.",
+  "Per-sector depths are consistent: S9 ~385, S62 ~430, S63 ~480, S89 ~490, S90 ~460, S99 ~495 ppm.",
+  "No secondary eclipse at phase 0.5 (expect ~-75 +- 34 ppm, i.e. consistent with zero).",
+  "Odd and even transits agree within ~2.3 sigma (315 +- 49 vs 463 +- 40 ppm).",
+  "The dip is present in the raw SAP flux too (SAP/PDCSAP depth ratio ~1.08) and the background is normal during transits.",
+  "A BLS or TLS periodogram over 0.5-70 d on the detrended data with the 3.4476-d candidate masked has its strongest peak at 7.349 d (SDE ~11); an unmasked search still finds 7.349 d among the top peaks together with 3.4476 d.",
+  "The same ephemeris predicts dips of ~450-550 ppm in the TESS-SPOC/QLP full-frame-image light curves of sectors 35 and 36 (not included here; fetch via lightkurve: search_lightcurve('TIC 286763141', author='TESS-SPOC')).",
+  "SPOC's own multi-sector (s0001-s0096) DV report lists TCE 00286763141-01 at P=7.34932 d, depth 468.8 +- 48 ppm, MES 10.2, 19 transits, bootstrap false-alarm 2.05e-25, centroid offset 5.7 +- 3.9 arcsec (on target), 'TOI 6284: No Ephemeris Match' (file spoc_dv_summary_tce01_s0001-s0096.pdf; MAST product tess2018206190142-s0001-s0096-0000000286763141-01-01071_dvs.pdf).",
+  "The signal is not in the ExoFOP TOI list, CTOI list, or NASA Exoplanet Archive as of 2026-10-08/09 (check https://exofop.ipac.caltech.edu/tess/target.php?id=286763141)."
+ ],
+ "how_data_were_processed": {
+  "quality_mask": "bits 1|2|4|8|32|128|1024|2048|8192|32768|65536 excluded (lightkurve default)",
+  "normalization": "each sector divided by its median PDCSAP flux",
+  "detrending": "wotan biweight, window 0.6 d, edge_cutoff 0.1 d, break_tolerance 0.3 d; flares clipped at +3 MAD only",
+  "binning": "10-min bins for the binned file"
+ },
+ "original_public_files": [
+  {
+   "sector": 9,
+   "filename": "tess2019058134432-s0009-0000000286763141-0139-s_lc.fits",
+   "url": "https://mast.stsci.edu/api/v0.1/Download/file/?uri=mast:TESS/product/tess2019058134432-s0009-0000000286763141-0139-s_lc.fits"
+  },
+  {
+   "sector": 62,
+   "filename": "tess2023043185947-s0062-0000000286763141-0254-s_lc.fits",
+   "url": "https://mast.stsci.edu/api/v0.1/Download/file/?uri=mast:TESS/product/tess2023043185947-s0062-0000000286763141-0254-s_lc.fits"
+  },
+  {
+   "sector": 63,
+   "filename": "tess2023069172124-s0063-0000000286763141-0255-s_lc.fits",
+   "url": "https://mast.stsci.edu/api/v0.1/Download/file/?uri=mast:TESS/product/tess2023069172124-s0063-0000000286763141-0255-s_lc.fits"
+  },
+  {
+   "sector": 89,
+   "filename": "tess2025042113628-s0089-0000000286763141-0286-s_lc.fits",
+   "url": "https://mast.stsci.edu/api/v0.1/Download/file/?uri=mast:TESS/product/tess2025042113628-s0089-0000000286763141-0286-s_lc.fits"
+  },
+  {
+   "sector": 90,
+   "filename": "tess2025071122000-s0090-0000000286763141-0287-s_lc.fits",
+   "url": "https://mast.stsci.edu/api/v0.1/Download/file/?uri=mast:TESS/product/tess2025071122000-s0090-0000000286763141-0287-s_lc.fits"
+  },
+  {
+   "sector": 99,
+   "filename": "tess2026005125623-s0099-0000000286763141-0300-s_lc.fits",
+   "url": "https://mast.stsci.edu/api/v0.1/Download/file/?uri=mast:TESS/product/tess2026005125623-s0099-0000000286763141-0300-s_lc.fits"
+  }
+ ],
+ "reproduce_from_scratch": "pip install lightkurve wotan transitleastsquares; lc = lightkurve.search_lightcurve('TIC 286763141', author='SPOC', exptime=120).download_all(); stitch, flatten (window 0.6 d), mask TOI-6284.01 transits, then run astropy BoxLeastSquares or transitleastsquares over 0.5-70 d."
+}
