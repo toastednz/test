@@ -22,7 +22,7 @@ os.makedirs(a.outdir, exist_ok=True)
 cache = os.path.join(a.data_dir, "lc_cache"); os.makedirs(cache, exist_ok=True)
 fmap = ts.build_filemap(a.data_dir)
 files = fmap.get(a.tic, [])
-raw, det = [], []
+raw, det, sapd = [], [], []
 for sec, fname in sorted(files):
     p = ts.download(fname, cache)
     if p is None: continue
@@ -30,6 +30,14 @@ for sec, fname in sorted(files):
     if r is None: continue
     t, f, e, s = r
     raw.append((t, f, e, s))
+    try:   # raw SAP flux and background, for the PDC-artifact check
+        from astropy.io import fits as _fits
+        with _fits.open(p, memmap=False) as h:
+            d_ = h[1].data; tt_ = d_["TIME"].astype(float); sap_ = d_["SAP_FLUX"].astype(float); bkg_ = d_["SAP_BKG"].astype(float); q_ = d_["QUALITY"]
+        m_ = np.isfinite(tt_) & np.isfinite(sap_) & ((q_ & ts.DEFAULT_BITMASK) == 0)
+        sapd.append((tt_[m_], sap_[m_] / np.nanmedian(sap_[m_]), bkg_[m_], s))
+    except Exception:
+        pass
     td, fd, ed, mad = ts.detrend(t, f, e, window=a.window)
     det.append((td, fd, ed, np.full(len(td), s)))
 t = np.concatenate([d[0] for d in det]); f = np.concatenate([d[1] for d in det]); e = np.concatenate([d[2] for d in det]); s = np.concatenate([d[3] for d in det])
@@ -62,6 +70,17 @@ for k in np.unique(n[intr]):
     if m.sum() < 5 or win.sum() < 10: continue
     d = 1e6 * (np.mean(f[win]) - np.mean(f[m])); err = 1e6 * np.std(f[win]) / np.sqrt(m.sum())
     per.append(dict(epoch=int(k), time=float(t0 + k * P), sector=int(np.median(s[m])), depth_ppm=round(d, 1), err_ppm=round(err, 1), snr=round(d / err, 2), nin=int(m.sum())))
+# PDC-artifact check: depth in raw SAP flux at the same epochs, and background level in transit vs. sector median
+if sapd:
+    tS = np.concatenate([x[0] for x in sapd]); fS = np.concatenate([x[1] for x in sapd]); bS = np.concatenate([x[2] for x in sapd]); oS = np.argsort(tS); tS, fS, bS = tS[oS], fS[oS], bS[oS]
+    tS2, fS2, _, _ = ts.detrend(tS, fS, np.full(len(tS), 1e-3), window=a.window)
+    nS = np.round((tS2 - t0) / P); phS = tS2 - (t0 + nS * P); iS = np.abs(phS) < 0.5 * dur; oSo = (np.abs(phS) > 0.75 * dur) & (np.abs(phS) < 3 * dur)
+    sap_depth = 1e6 * (np.median(fS2[oSo]) - np.median(fS2[iS])) if iS.sum() > 5 and oSo.sum() > 10 else np.nan
+    sap_err = 1e6 * 1.2533 * np.std(fS2[oSo]) / np.sqrt(max(iS.sum(), 1)) if iS.sum() > 5 else np.nan
+    nB = np.round((tS - t0) / P); phB = tS - (t0 + nB * P); iB = np.abs(phB) < 0.5 * dur
+    summary["sap_depth_ppm"] = float(sap_depth); summary["sap_depth_err_ppm"] = float(sap_err)
+    summary["sap_over_pdc_depth"] = float(sap_depth / depth / 1e6) if depth > 0 and np.isfinite(sap_depth) else None
+    summary["bkg_in_transit_over_median"] = float(np.median(bS[iB]) / np.median(bS)) if iB.sum() > 5 else None
 summary["per_transit"] = per
 summary["n_transits"] = len(per); summary["n_transits_positive"] = sum(1 for p in per if p["depth_ppm"] > 0)
 if per:

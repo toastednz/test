@@ -1,0 +1,41 @@
+{
+ "350715999->350715996": {
+  "tce": {
+   "P": 0.974404,
+   "t0": 1325.68,
+   "depth_ppm": 414.734,
+   "snr": 38.42736,
+   "offset_arcsec": 50.93504,
+   "offset_sig": 20.34829575416673,
+   "nb_flux_frac": 0.168,
+   "expected_ratio": 6.0,
+   "rp_on_nb_re": 4.46,
+   "nb_Tmag": 9.5307,
+   "nb_Teff": 4740.0,
+   "nb_rad": 0.824027,
+   "nb_d_pc": 63.6217
+  },
+  "target": {
+   "error": "LightkurveError('Download of mast:TESS/product/tess2018349182500-s0006-0000000350715999-0126-s_lc.fits failed. MAST returns ERROR: HTTPError: 404 Clie"
+  },
+  "neighbour": {
+   "nsec": 75,
+   "npts": 332517,
+   "rms_ppm": 32000,
+   "P": 0.973688,
+   "t0": 1326.3534,
+   "dur_h": 5.53,
+   "snr": 196.5,
+   "depth_ppm": 11731,
+   "depth_err": 60,
+   "odd": 11661,
+   "odd_err": 79,
+   "even": 11966,
+   "even_err": 79,
+   "sec": 17141,
+   "sec_err": 63,
+   "n_transits": 1038
+  },
+  "depth_ratio_nb_over_tgt": null
+ }
+}
