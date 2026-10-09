@@ -1,0 +1,63 @@
+Transit Least Squares TLS 2.0 (5 Oct 2026)
+Creating model cache for 60 durations
+Searching 83283 data points, 1526 periods from 9.895 to 10.095 days
+Using all 4 CPU threads
+{
+ "tic": 146282666,
+ "P": 9.99499394308838,
+ "t0": 1389.34241039321,
+ "dur_h": 4.799999999999999,
+ "depth_ppm": 180.13166605585437,
+ "depth_err_ppm": 15.28084659464289,
+ "bls_snr": 11.788068477763813,
+ "depth_odd_ppm": 139.39251188466173,
+ "depth_odd_err": 20.678701524967973,
+ "depth_even_ppm": 228.08106575911148,
+ "depth_even_err": 22.41419643742825,
+ "depth_half_ppm": 110.71063182310769,
+ "depth_half_err": 11.38253152255557,
+ "depth_phased_ppm": 27.089772576704974,
+ "depth_phased_err": 16.684135821780156,
+ "harmonic_delta_log_likelihood": -69.43213774001924,
+ "npts": 83283,
+ "nsec": 6,
+ "baseline": 2904.6226931206156,
+ "sap_depth_ppm": 191.46549599002861,
+ "sap_depth_err_ppm": 21.96053171741958,
+ "sap_over_pdc_depth": 1.062919697476511,
+ "bkg_in_transit_over_median": 0.9816915285607417,
+ "n_transits": 13,
+ "n_transits_positive": 13,
+ "depth_wmean_ppm": 212.41969882388707,
+ "depth_wmean_err_ppm": 15.410174374526257,
+ "chi2_red_depths": 2.3557309491098786,
+ "snr_combined": 13.784379959711996,
+ "snr_without_strongest": 12.201411247085595,
+ "n_transits_snr_gt2": 12,
+ "max_single_snr": 7.507067137809186,
+ "sectors_with_transits": [
+  3,
+  30,
+  104,
+  105,
+  106,
+  107
+ ],
+ "tls": {
+  "P": 9.99506498824677,
+  "t0": 1389.3195569981413,
+  "SDE": 11.823280088801235,
+  "snr": 2.952749845476836,
+  "depth": 0.9997998196581104,
+  "rp_rs": 0.012723830064223262,
+  "duration_h": 0.21246931488799947,
+  "odd_even_mismatch": 0.18888907536020194,
+  "transit_count": 291,
+  "distinct_transit_count": 12,
+  "R_star": 1.22059,
+  "M_star": 1.14,
+  "npts_used": 83283,
+  "tls_matches_bls": true
+ }
+}
+per-transit (sector, depth, snr): [(3, 215, np.float64(4.2)), (3, 154, np.float64(3.0)), (30, 160, np.float64(2.8)), (30, 247, np.float64(4.3)), (104, 274, np.float64(5.1)), (104, 109, np.float64(1.7)), (105, 160, np.float64(2.9)), (105, 178, np.float64(3.3)), (105, 322, np.float64(5.9)), (106, 191, np.float64(3.6)), (106, 138, np.float64(2.5)), (107, 173, np.float64(2.6)), (107, 425, np.float64(7.5))]
