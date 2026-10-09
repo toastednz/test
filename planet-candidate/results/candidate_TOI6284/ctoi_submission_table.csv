@@ -1,0 +1,2 @@
+TIC ID,Candidate,Period (days),Period err,Epoch (BJD),Epoch err,Depth (ppm),Depth err,Duration (hrs),Duration err,Rp (Re),Rp err,Rs (Rsun),Teff (K),Tmag,Notes
+286763141,286763141.02 (TOI-6284 c?),7.34932,1e-05,2458544.5091,0.0017,403,31,1.6,0.3,1.02,0.25,0.468,3548,9.723,"20 transits S9,62,63,89,90,99; coherent BLS SDE 11.1 (known TOI-6284.01 masked); TLS SDE 16; no secondary (-75+-34 ppm); odd/even 315+-49 vs 463+-40; SAP/PDC depth 1.08; SPOC TCE 00286763141-01 (s1-s96) MES 10.2, bootstrap FAP 2e-25, centroid on target; period ratio to .01 = 2.13"

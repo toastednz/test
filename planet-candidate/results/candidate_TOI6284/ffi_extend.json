@@ -1,0 +1,182 @@
+{
+ "286763141": {
+  "P": 7.34932,
+  "t0": 1551.8598,
+  "dur_h": 1.58,
+  "authors": {
+   "SPOC": 10,
+   "QLP": 8,
+   "TARS": 7,
+   "TESS-SPOC": 5,
+   "GSFC-ELEANOR-LITE": 1,
+   "T16": 1,
+   "TGLC": 1
+  },
+  "sectors_2min": [
+   9,
+   62,
+   63,
+   89,
+   90,
+   99
+  ],
+  "sectors_ffi": [
+   9,
+   35,
+   36,
+   62,
+   63,
+   89,
+   90,
+   99
+  ],
+  "ffi_only_sectors": [
+   35,
+   36
+  ],
+  "per_sector": {
+   "S9_TESS-SPOC": {
+    "cadence_min": 30.0,
+    "npts": 995,
+    "rms_ppm": 262,
+    "n_in": 10,
+    "n_transits": 3,
+    "depth_ppm": 472,
+    "err_ppm": 86,
+    "snr": 5.5
+   },
+   "S35_TESS-SPOC": {
+    "cadence_min": 10.0,
+    "npts": 2664,
+    "rms_ppm": 449,
+    "n_in": 29,
+    "n_transits": 4,
+    "depth_ppm": 423,
+    "err_ppm": 100,
+    "snr": 4.2
+   },
+   "S36_TESS-SPOC": {
+    "cadence_min": 10.0,
+    "npts": 2997,
+    "rms_ppm": 452,
+    "n_in": 16,
+    "n_transits": 2,
+    "depth_ppm": 467,
+    "err_ppm": 136,
+    "snr": 3.4
+   },
+   "S62_TESS-SPOC": {
+    "cadence_min": 3.3,
+    "npts": 9371,
+    "rms_ppm": 712,
+    "n_in": 86,
+    "n_transits": 3,
+    "depth_ppm": 420,
+    "err_ppm": 99,
+    "snr": 4.2
+   },
+   "S63_TESS-SPOC": {
+    "cadence_min": 3.3,
+    "npts": 10821,
+    "rms_ppm": 730,
+    "n_in": 84,
+    "n_transits": 3,
+    "depth_ppm": 481,
+    "err_ppm": 95,
+    "snr": 5.0
+   },
+   "S9_QLP": {
+    "cadence_min": 30.0,
+    "npts": 895,
+    "rms_ppm": 251,
+    "n_in": 9,
+    "n_transits": 3,
+    "depth_ppm": 345,
+    "err_ppm": 96,
+    "snr": 3.6
+   },
+   "S35_QLP": {
+    "cadence_min": 10.0,
+    "npts": 1866,
+    "rms_ppm": 516,
+    "n_in": 23,
+    "n_transits": 3,
+    "depth_ppm": 643,
+    "err_ppm": 154,
+    "snr": 4.2
+   },
+   "S36_QLP": {
+    "cadence_min": 10.0,
+    "npts": 2496,
+    "rms_ppm": 434,
+    "n_in": 18,
+    "n_transits": 2,
+    "depth_ppm": 667,
+    "err_ppm": 118,
+    "snr": 5.7
+   },
+   "S62_QLP": {
+    "cadence_min": 3.3,
+    "npts": 9502,
+    "rms_ppm": 673,
+    "n_in": 86,
+    "n_transits": 3,
+    "depth_ppm": 359,
+    "err_ppm": 93,
+    "snr": 3.9
+   },
+   "S63_QLP": {
+    "cadence_min": 3.3,
+    "npts": 10125,
+    "rms_ppm": 670,
+    "n_in": 84,
+    "n_transits": 3,
+    "depth_ppm": 320,
+    "err_ppm": 89,
+    "snr": 3.6
+   },
+   "S89_QLP": {
+    "cadence_min": 3.3,
+    "npts": 10974,
+    "rms_ppm": 661,
+    "n_in": 114,
+    "n_transits": 4,
+    "depth_ppm": 480,
+    "err_ppm": 78,
+    "snr": 6.2
+   },
+   "S90_QLP": {
+    "cadence_min": 3.3,
+    "npts": 10941,
+    "rms_ppm": 698,
+    "n_in": 115,
+    "n_transits": 4,
+    "depth_ppm": 409,
+    "err_ppm": 78,
+    "snr": 5.2
+   },
+   "S99_QLP": {
+    "cadence_min": 3.3,
+    "npts": 6930,
+    "rms_ppm": 622,
+    "n_in": 57,
+    "n_transits": 2,
+    "depth_ppm": 487,
+    "err_ppm": 102,
+    "snr": 4.8
+   }
+  },
+  "ffi_only_combined": {
+   "npts": 10023,
+   "n_transits": 6,
+   "depth_ppm": 541,
+   "err_ppm": 64,
+   "snr": 8.5
+  },
+  "ffi_only_local_bls": {
+   "P": 7.33506,
+   "snr": 8.0,
+   "depth_ppm": 413
+  }
+ }
+}

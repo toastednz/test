@@ -293,3 +293,44 @@ Caveats: SNR ~14 is modest (a few per cent of such signals are red-noise artifac
 tests); the pixel test cannot localise a 400-ppm transit; and the odd/even difference is 2.3σ. The
 natural follow-up is to request a TESS DV report check, submit it as a CTOI, and obtain ground-based
 confirmation (the 3.45-d candidate TOI-6284.01 is itself still a PC).
+
+### Follow-up checks on the TOI-6284 candidate (2026-10-09, second pass)
+
+* **SPOC's own data-validation report** (`results/candidate_TOI6284/spoc_dv_summary_tce01_s0001-s0096.pdf`,
+  run s0001–s0096, generated 2025-12-25, "TOI 6284: No Ephemeris Match"): MES 10.2, SNR 11.2,
+  depth 469 ± 48 ppm, 19 transits, odd/even difference 0.65σ, weak-secondary MES 2.5 (none),
+  bootstrap false-alarm probability 2 × 10⁻²⁵, difference-image centroid 5.7 ± 3.9″ from the target
+  (1.5σ, i.e. on target, 5/5 sectors usable), ghost diagnostic negative, R_p = 1.14 ± 0.25 R_⊕,
+  b = 0.84 ± 0.39, T_eq = 447 ± 20 K. The pipeline's second TCE on the star is the known
+  TOI-6284.01. No red flags.
+* **Independent data never used before**: TESS-SPOC and QLP full-frame-image light curves of sectors
+  35 and 36 (2021) show the transit at the predicted ephemeris, 423 ± 100 and 467 ± 136 ppm
+  (TESS-SPOC), combined FFI-only 541 ± 64 ppm (8.5σ, 6 transits); every FFI pipeline reproduces
+  the depth in each 2-min sector (`results/candidate_TOI6284/ffi_extend.json`). Total: 26 transits in
+  8 sectors from 2019 to 2026.
+* **Empirical false-alarm test** (`scripts/13_bootstrap_fap.py`, `results/candidate_TOI6284/bootstrap_fap.json`):
+  the fully coherent masked search repeated on sector-shifted light curves; result recorded in the JSON.
+* **Numbers for follow-up** (`results/candidate_TOI6284/next_steps_numbers.json`): RV semi-amplitude
+  ≈ 0.6 m/s for 1.1 M_⊕ (below current precision for an M3 dwarf, so a mass is not realistic);
+  TSM ≈ 54 (J = 8.33), ESM ≈ 1.2 (K = 7.46); next transits every 7.3493 d with ±0.1 h ephemeris
+  uncertainty (list in the JSON, starting 2026-10-16 09:37 UTC); **TESS will re-observe the star in
+  sectors 110–113**, which should add ~16 transits and push the SNR past 20.
+* `results/candidate_TOI6284/ctoi_submission_table.csv` holds the parameters in ExoFOP's CTOI format.
+
+**Recommended next steps, in order**
+
+1. Submit it as a Community TOI on ExoFOP (needs a registered account; the table above has the
+   values) so the claim is on record before the SPOC s1–s96 TOI release, which will probably alert
+   this TCE within months.
+2. Ask for CHEOPS time (the only facility besides TESS that detects 400 ppm on a T = 9.7 star in a
+   single transit) at one of the predicted times to confirm the depth and sharpen the ephemeris.
+3. Rule out blends: seeing-limited photometry of the Gaia neighbours at a predicted transit time
+   (any eclipsing binary within ~30″ would need a ≥ 50 % eclipse to mimic 400 ppm), and speckle or
+   adaptive-optics imaging for companions inside 1″.
+4. Reconnaissance spectroscopy (one or two spectra) to confirm a single, slowly rotating M3 dwarf
+   and refine R_⋆, which sets R_p.
+5. Statistical validation (TRICERATOPS/VESPA-style false-positive probability) with the TESS data,
+   the DV centroid result and the imaging constraints; this is how Earth-sized TESS planets around M
+   dwarfs are usually confirmed when a mass is out of reach.
+6. Wait for sectors 110–113 (2027), re-run the coherent search and a joint two-planet fit; check
+   for transit-timing variations between the 3.45-d and 7.35-d signals (period ratio 2.13).

@@ -1,0 +1,259 @@
+{
+ "ephemeris_spoc": {
+  "P_d": 7.34932,
+  "P_err_d": 1e-05,
+  "t0_btjd": 1544.5091,
+  "t0_err_d": 0.0017,
+  "duration_h": 1.9
+ },
+ "feasibility": {
+  "assumed_Mp_earth": 1.1,
+  "RV_semi_amplitude_m_s": 0.6,
+  "TSM": 53.5,
+  "ESM": 1.15,
+  "note": "TSM/ESM per Kempton et al. 2018; J/K approximate; RV K assumes 1.1 M_Earth",
+  "J_mag": 8.33,
+  "K_mag": 7.46
+ },
+ "next_transits_utc": [
+  {
+   "epoch": 378,
+   "btjd": 4322.5521,
+   "utc": "2026-10-09 01:14",
+   "uncertainty_h": 0.1
+  },
+  {
+   "epoch": 379,
+   "btjd": 4329.9014,
+   "utc": "2026-10-16 09:37",
+   "uncertainty_h": 0.1
+  },
+  {
+   "epoch": 380,
+   "btjd": 4337.2507,
+   "utc": "2026-10-23 18:01",
+   "uncertainty_h": 0.1
+  },
+  {
+   "epoch": 381,
+   "btjd": 4344.6,
+   "utc": "2026-10-31 02:24",
+   "uncertainty_h": 0.1
+  },
+  {
+   "epoch": 382,
+   "btjd": 4351.9493,
+   "utc": "2026-11-07 10:47",
+   "uncertainty_h": 0.1
+  },
+  {
+   "epoch": 383,
+   "btjd": 4359.2987,
+   "utc": "2026-11-14 19:10",
+   "uncertainty_h": 0.1
+  },
+  {
+   "epoch": 384,
+   "btjd": 4366.648,
+   "utc": "2026-11-22 03:33",
+   "uncertainty_h": 0.1
+  },
+  {
+   "epoch": 385,
+   "btjd": 4373.9973,
+   "utc": "2026-11-29 11:56",
+   "uncertainty_h": 0.1
+  },
+  {
+   "epoch": 386,
+   "btjd": 4381.3466,
+   "utc": "2026-12-06 20:19",
+   "uncertainty_h": 0.1
+  },
+  {
+   "epoch": 387,
+   "btjd": 4388.6959,
+   "utc": "2026-12-14 04:42",
+   "uncertainty_h": 0.1
+  },
+  {
+   "epoch": 388,
+   "btjd": 4396.0453,
+   "utc": "2026-12-21 13:05",
+   "uncertainty_h": 0.1
+  },
+  {
+   "epoch": 389,
+   "btjd": 4403.3946,
+   "utc": "2026-12-28 21:28",
+   "uncertainty_h": 0.1
+  },
+  {
+   "epoch": 390,
+   "btjd": 4410.7439,
+   "utc": "2027-01-05 05:51",
+   "uncertainty_h": 0.1
+  },
+  {
+   "epoch": 391,
+   "btjd": 4418.0932,
+   "utc": "2027-01-12 14:14",
+   "uncertainty_h": 0.1
+  },
+  {
+   "epoch": 392,
+   "btjd": 4425.4425,
+   "utc": "2027-01-19 22:37",
+   "uncertainty_h": 0.1
+  },
+  {
+   "epoch": 393,
+   "btjd": 4432.7919,
+   "utc": "2027-01-27 07:00",
+   "uncertainty_h": 0.1
+  },
+  {
+   "epoch": 394,
+   "btjd": 4440.1412,
+   "utc": "2027-02-03 15:23",
+   "uncertainty_h": 0.1
+  },
+  {
+   "epoch": 395,
+   "btjd": 4447.4905,
+   "utc": "2027-02-10 23:46",
+   "uncertainty_h": 0.1
+  },
+  {
+   "epoch": 396,
+   "btjd": 4454.8398,
+   "utc": "2027-02-18 08:09",
+   "uncertainty_h": 0.1
+  },
+  {
+   "epoch": 397,
+   "btjd": 4462.1891,
+   "utc": "2027-02-25 16:32",
+   "uncertainty_h": 0.1
+  },
+  {
+   "epoch": 398,
+   "btjd": 4469.5385,
+   "utc": "2027-03-05 00:55",
+   "uncertainty_h": 0.1
+  },
+  {
+   "epoch": 399,
+   "btjd": 4476.8878,
+   "utc": "2027-03-12 09:18",
+   "uncertainty_h": 0.1
+  },
+  {
+   "epoch": 400,
+   "btjd": 4484.2371,
+   "utc": "2027-03-19 17:41",
+   "uncertainty_h": 0.1
+  },
+  {
+   "epoch": 401,
+   "btjd": 4491.5864,
+   "utc": "2027-03-27 02:04",
+   "uncertainty_h": 0.1
+  },
+  {
+   "epoch": 402,
+   "btjd": 4498.9357,
+   "utc": "2027-04-03 10:27",
+   "uncertainty_h": 0.1
+  },
+  {
+   "epoch": 403,
+   "btjd": 4506.2851,
+   "utc": "2027-04-10 18:50",
+   "uncertainty_h": 0.1
+  },
+  {
+   "epoch": 404,
+   "btjd": 4513.6344,
+   "utc": "2027-04-18 03:13",
+   "uncertainty_h": 0.11
+  },
+  {
+   "epoch": 405,
+   "btjd": 4520.9837,
+   "utc": "2027-04-25 11:36",
+   "uncertainty_h": 0.11
+  },
+  {
+   "epoch": 406,
+   "btjd": 4528.333,
+   "utc": "2027-05-02 19:59",
+   "uncertainty_h": 0.11
+  },
+  {
+   "epoch": 407,
+   "btjd": 4535.6823,
+   "utc": "2027-05-10 04:22",
+   "uncertainty_h": 0.11
+  },
+  {
+   "epoch": 408,
+   "btjd": 4543.0317,
+   "utc": "2027-05-17 12:45",
+   "uncertainty_h": 0.11
+  },
+  {
+   "epoch": 409,
+   "btjd": 4550.381,
+   "utc": "2027-05-24 21:08",
+   "uncertainty_h": 0.11
+  },
+  {
+   "epoch": 410,
+   "btjd": 4557.7303,
+   "utc": "2027-06-01 05:31",
+   "uncertainty_h": 0.11
+  }
+ ],
+ "tess_observability": {
+  "ra": 150.349211832287,
+  "dec": -38.8401465428886,
+  "sectors_all": [
+   9,
+   35,
+   36,
+   62,
+   63,
+   89,
+   90,
+   99,
+   110,
+   111,
+   112,
+   113
+  ],
+  "sectors_future": [
+   110,
+   111,
+   112,
+   113
+  ]
+ },
+ "spoc_dv": {
+  "run": "s0001-s0096, spoc-5.0.125, generated 2025-12-25",
+  "MES": 10.2,
+  "SNR": 11.2,
+  "depth_ppm": "468.8 \u00b1 48.0",
+  "transits": 19,
+  "duration_h": 1.9,
+  "odd_even_sigma": 0.65,
+  "secondary": "137.6 \u00b1 45.4 ppm at phase 0.675, MES 2.5 (insignificant)",
+  "bootstrap_pfa": 2.05e-25,
+  "centroid_offset_arcsec": "5.7 \u00b1 3.9 (1.46 sigma), TIC offset 4.96 (1.30 sigma)",
+  "ghost_diagnostic": -4.808,
+  "Rp_earth": "1.14 \u00b1 0.25",
+  "b": "0.84 \u00b1 0.39",
+  "Teq_K": "447 \u00b1 20",
+  "toi_correlation": "TOI 6284: No Ephemeris Match"
+ }
+}
