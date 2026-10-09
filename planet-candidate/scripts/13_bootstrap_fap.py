@@ -27,7 +27,7 @@ t_all = np.concatenate([x[0] for x in SEC]); baseline = t_all.max() - t_all.min(
 periods = ts.period_grid(baseline, a.pmin, min(a.pmax, baseline / 2), oversample=2.0)
 durs = np.array([0.75, 1.0, 1.5, 2.0, 3.0, 4.0, 6.0]) / 24
 def run(seed):
-    rng = np.random.default_rng(seed); T, F, E = [], [], []
+    rng = np.random.default_rng(max(seed, 0)); T, F, E = [], [], []
     for t, f, e in SEC:
         if seed >= 0:   # circular shift of the flux within the sector (keeps noise, destroys coherence)
             k = rng.integers(len(f) // 10, len(f) - len(f) // 10); f = np.roll(f, k); e = np.roll(e, k)
