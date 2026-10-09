@@ -400,9 +400,31 @@ star, plus targeted reading): HD 41248's 25.6-d signal is the known activity-dri
 (its rotation is 34 d, Yu et al. 2024, and the signal correlates with CRX, dLW, FWHM, BIS); GJ 479's 11.3-d
 signal is the Tuomi et al. (2019) candidate; HD 297396's 4.27-d signal was posted as a candidate on Zenodo
 on 2026-10-08 by an independent researcher (Fraser 2026b, doi:10.5281/zenodo.23249329), one day before
-this analysis. Most of the rest (GJ 787, GJ 224, GJ 9592, HD 125881, GJ 9527, HD 78286, GJ 579.2,
-GJ 3436, HD 95456 …) show the same period in one or more activity indicators or an amplitude that is not
-stable between halves of the data, i.e. rotation or cycles, and are not claimed.
+this analysis. All survivors with a Baluev FAP < 10⁻⁴, no alias or indicator flag in the first pass and no known planet
+(35 stars) were vetted individually (`results/rv_candidates/*/rv_vet.json`, `multisignal.json`,
+`activity_check.json`, `keplerian.json`):
+
+| star | P (d) | K (m/s) | nights | verdict |
+|---|---|---|---|---|
+| HD 157172 | 105.1 | 4.8 | 123 | known: HD 157172 b (Mayor+2011); eccentric, harmonic at 52 d |
+| HIP 112414 = HD 215456 | 194 (+2156) | 2.9 | 143 | known: HD 215456 b, c (Mayor+2011) |
+| GJ 634.1 = HD 150433 | 1022 | 3.1 | 113 | known: HD 150433 b (Mayor+2011) |
+| GJ 3822 | 619 | 6.0 | 66 | known candidate (Tuomi+2019, 661 d) |
+| GJ 479 | 11.30 | 4.3 | 57 | known candidate (Tuomi+2019, 11.292 d) |
+| HD 297396 = TOI-6263 | 4.268 | 5.5 | 101 | claimed 2026-10-08 in a Zenodo preprint (Fraser 2026b) |
+| HD 41248 | 25.6 | 2.9 | 164 | known activity signal (Faria+2020) |
+| ζ Tuc (GJ 17) | 267 | 1.0 | 276 | 1-yr alias of the ~950-d activity cycle |
+| HD 3964 | 1136 | 8.6 | 45 | magnetic cycle (Frensch+2023) |
+| HD 13060 | 2835 | 3.3 | 92 | cycle; correlates with CRX, dLW, FWHM, BIS |
+| GJ 3436, HD 95456, GJ 838, HD 200633, GJ 1085 | 1400–3700 | 2–8 | 45–172 | long-period, indicator-correlated or amplitude unstable: cycles/trends |
+| GJ 787, GJ 9592, GJ 224, GJ 204, GJ 472, GJ 656, HD 125881, GJ 9527, HD 78286, GJ 579.2, HD 36152, GJ 616 (18 Sco), GJ 812.1, HD 114853, HD 45346 | 5.6–102 | 0.7–12 | 37–438 | same period or correlation in activity indicators, or K not stable between halves: rotation/activity |
+| GJ 845 = ε Indi A | 16.5 | 4.0 | 123 | amplitude 1.7 vs 4.3 m/s between halves, dLW/Na D: activity (known Jovian at 25 000 d not in range) |
+| HD 32564 | 1.635, 11.06, 23.62, 48.97 | 4.2, 3.4, 2.9, 2.0 | 191 | **unexplained, coherent, four signals – section H** |
+| HD 144628 (GJ 613) | 15.73 | 1.1 | 168 | weak possible: no indicator counterpart (rotation is 38.5 d, seen in dLW/FWHM/BIS at 40 d), ΔBIC 27, but period not stable in the joint fit (15.73 → 15.83 d) |
+| HD 17970 (GJ 3187) | 72.3 | 1.7 | 74 | weak possible: no indicator counterpart, ΔBIC 30, K 1.3 vs 2.3 m/s between halves |
+| HD 71334 (GJ 9263) | 88.9 | 3.0 | 66 | possible but suspect: ΔBIC 47, no literature, yet CRX anti-correlates (ρ = −0.31) with the signal |
+
+The three "possible" rows are noted for completeness only; none passes every test the way HD 32564 does.
 
 ### H. The result: HD 32564, an apparently unpublished four-signal system  → **best candidate of the project**
 
