@@ -1,0 +1,112 @@
+{
+ "name": "HD13060",
+ "n_rv": 93,
+ "n_nights": 92,
+ "baseline_d": 4702.1,
+ "rv_rms_ms": 3.23,
+ "trend_ms_per_yr": 0.11,
+ "offset_post_minus_pre_ms": -0.54,
+ "P_search": 2781.5924,
+ "P_best_gls": 2834.9199,
+ "power_best": 0.561,
+ "fap_baluev": 3.28427401807676e-12,
+ "boot_fap": 0.0,
+ "n_boot": 300,
+ "boot_max_power_95": 0.256,
+ "K_ms": 3.28,
+ "resid_rms_ms": 2.15,
+ "halves": {
+  "first_half": {
+   "n": 46,
+   "K": 3.03,
+   "phase_deg": -111.5
+  },
+  "second_half": {
+   "n": 46,
+   "K": 3.5,
+   "phase_deg": -113.5
+  },
+  "pre2015": {
+   "n": 89,
+   "K": 3.32,
+   "phase_deg": -109.0
+  }
+ },
+ "second_signal": {
+  "P": 36.623,
+  "power": 0.232,
+  "fap": 0.09571451046889391
+ },
+ "aliases_1d": [
+  1.0
+ ],
+ "aliases_1yr": [
+  322.856
+ ],
+ "indicators": {
+  "CRX": {
+   "n": 92,
+   "corr_with_rv": -0.345,
+   "best_P": 415.31,
+   "best_power": 0.253,
+   "best_fap": 0.03039410937748761,
+   "power_at_P": 0.207
+  },
+  "dLW": {
+   "n": 92,
+   "corr_with_rv": 0.646,
+   "best_P": 3913.23,
+   "best_power": 0.673,
+   "best_fap": 7.879095398198845e-18,
+   "power_at_P": 0.564
+  },
+  "Halpha": {
+   "n": 92,
+   "corr_with_rv": 0.293,
+   "best_P": 1233.08,
+   "best_power": 0.294,
+   "best_fap": 0.002774565028686481,
+   "power_at_P": 0.141
+  },
+  "NaD1": {
+   "n": 92,
+   "corr_with_rv": 0.125,
+   "best_P": 19.36,
+   "best_power": 0.144,
+   "best_fap": 0.9998777869014193,
+   "power_at_P": 0.098
+  },
+  "NaD2": {
+   "n": 92,
+   "corr_with_rv": 0.131,
+   "best_P": 10.58,
+   "best_power": 0.209,
+   "best_fap": 0.2857297066019076,
+   "power_at_P": 0.057
+  },
+  "FWHMDRS": {
+   "n": 92,
+   "corr_with_rv": 0.679,
+   "best_P": 3529.64,
+   "best_power": 0.697,
+   "best_fap": 2.8775929303879627e-19,
+   "power_at_P": 0.621
+  },
+  "BIS": {
+   "n": 92,
+   "corr_with_rv": 0.576,
+   "best_P": 2449.26,
+   "best_power": 0.48,
+   "best_fap": 4.862621072752627e-09,
+   "power_at_P": 0.405
+  },
+  "Contrast": {
+   "n": 92,
+   "corr_with_rv": -0.658,
+   "best_P": 3711.55,
+   "best_power": 0.66,
+   "best_fap": 4.161636906810182e-17,
+   "power_at_P": 0.556
+  }
+ }
+}

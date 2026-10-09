@@ -1,0 +1,118 @@
+{
+ "name": "HD114853",
+ "n_rv": 145,
+ "n_nights": 135,
+ "baseline_d": 4933.7,
+ "rv_rms_ms": 2.08,
+ "trend_ms_per_yr": 0.12,
+ "offset_post_minus_pre_ms": -15.88,
+ "P_search": 74.4844,
+ "P_best_gls": 74.1361,
+ "power_best": 0.352,
+ "fap_baluev": 8.957938202106273e-09,
+ "boot_fap": 0.0,
+ "n_boot": 300,
+ "boot_max_power_95": 0.178,
+ "K_ms": 1.82,
+ "resid_rms_ms": 1.72,
+ "halves": {
+  "first_half": {
+   "n": 67,
+   "K": 1.31,
+   "phase_deg": 10.4
+  },
+  "second_half": {
+   "n": 68,
+   "K": 2.96,
+   "phase_deg": -12.6
+  },
+  "pre2015": {
+   "n": 71,
+   "K": 1.25,
+   "phase_deg": 5.9
+  },
+  "post2015": {
+   "n": 64,
+   "K": 3.03,
+   "phase_deg": -12.1
+  }
+ },
+ "second_signal": {
+  "P": 38.482,
+  "power": 0.166,
+  "fap": 0.08900839840673351
+ },
+ "aliases_1d": [
+  0.987
+ ],
+ "aliases_1yr": [
+  61.868,
+  93.565
+ ],
+ "indicators": {
+  "CRX": {
+   "n": 136,
+   "corr_with_rv": -0.12,
+   "best_P": 895.69,
+   "best_power": 0.086,
+   "best_fap": 0.9999999999982018,
+   "power_at_P": 0.037
+  },
+  "dLW": {
+   "n": 136,
+   "corr_with_rv": 0.126,
+   "best_P": 2727.55,
+   "best_power": 0.491,
+   "best_fap": 1.0362797928809922e-15,
+   "power_at_P": 0.031
+  },
+  "Halpha": {
+   "n": 136,
+   "corr_with_rv": 0.05,
+   "best_P": 362.98,
+   "best_power": 0.41,
+   "best_fap": 1.7504900857435802e-11,
+   "power_at_P": 0.011
+  },
+  "NaD1": {
+   "n": 136,
+   "corr_with_rv": -0.013,
+   "best_P": 6.78,
+   "best_power": 0.166,
+   "best_fap": 0.08413886854739094,
+   "power_at_P": 0.067
+  },
+  "NaD2": {
+   "n": 136,
+   "corr_with_rv": 0.026,
+   "best_P": 368.55,
+   "best_power": 0.452,
+   "best_fap": 1.42258337469592e-13,
+   "power_at_P": 0.091
+  },
+  "FWHMDRS": {
+   "n": 136,
+   "corr_with_rv": 0.048,
+   "best_P": 2951.09,
+   "best_power": 0.819,
+   "best_fap": 3.6875821764247166e-45,
+   "power_at_P": 0.09
+  },
+  "BIS": {
+   "n": 136,
+   "corr_with_rv": 0.027,
+   "best_P": 2834.92,
+   "best_power": 0.79,
+   "best_fap": 5.688395077130547e-41,
+   "power_at_P": 0.026
+  },
+  "Contrast": {
+   "n": 136,
+   "corr_with_rv": -0.052,
+   "best_P": 2951.09,
+   "best_power": 0.702,
+   "best_fap": 6.330427575102482e-31,
+   "power_at_P": 0.078
+  }
+ }
+}

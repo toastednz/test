@@ -1,0 +1,118 @@
+{
+ "name": "GJ3187",
+ "n_rv": 74,
+ "n_nights": 74,
+ "baseline_d": 5063.1,
+ "rv_rms_ms": 1.83,
+ "trend_ms_per_yr": 0.25,
+ "offset_post_minus_pre_ms": -1.07,
+ "P_search": 72.2132,
+ "P_best_gls": 72.276,
+ "power_best": 0.48,
+ "fap_baluev": 1.6546030165835747e-06,
+ "boot_fap": 0.0,
+ "n_boot": 100,
+ "boot_max_power_95": 0.293,
+ "K_ms": 1.69,
+ "resid_rms_ms": 1.34,
+ "halves": {
+  "first_half": {
+   "n": 37,
+   "K": 1.27,
+   "phase_deg": -88.5
+  },
+  "second_half": {
+   "n": 37,
+   "K": 2.25,
+   "phase_deg": -105.6
+  },
+  "pre2015": {
+   "n": 36,
+   "K": 1.06,
+   "phase_deg": -89.1
+  },
+  "post2015": {
+   "n": 38,
+   "K": 2.38,
+   "phase_deg": -104.6
+  }
+ },
+ "second_signal": {
+  "P": 361.158,
+  "power": 0.288,
+  "fap": 0.07417974139452221
+ },
+ "aliases_1d": [
+  0.986
+ ],
+ "aliases_1yr": [
+  60.293,
+  90.009
+ ],
+ "indicators": {
+  "CRX": {
+   "n": 74,
+   "corr_with_rv": 0.002,
+   "best_P": 95.59,
+   "best_power": 0.229,
+   "best_fap": 0.6767386351881369,
+   "power_at_P": 0.004
+  },
+  "dLW": {
+   "n": 74,
+   "corr_with_rv": 0.005,
+   "best_P": 5000.0,
+   "best_power": 0.369,
+   "best_fap": 0.0012711929247965269,
+   "power_at_P": 0.004
+  },
+  "Halpha": {
+   "n": 74,
+   "corr_with_rv": 0.049,
+   "best_P": 9.23,
+   "best_power": 0.214,
+   "best_fap": 0.8817025305290581,
+   "power_at_P": 0.011
+  },
+  "NaD1": {
+   "n": 74,
+   "corr_with_rv": -0.058,
+   "best_P": 1.89,
+   "best_power": 0.237,
+   "best_fap": 0.5534702090264915,
+   "power_at_P": 0.036
+  },
+  "NaD2": {
+   "n": 74,
+   "corr_with_rv": -0.043,
+   "best_P": 2449.26,
+   "best_power": 0.358,
+   "best_fap": 0.002276289404442355,
+   "power_at_P": 0.131
+  },
+  "FWHMDRS": {
+   "n": 74,
+   "corr_with_rv": 0.047,
+   "best_P": 5000.0,
+   "best_power": 0.528,
+   "best_fap": 6.15465210135554e-08,
+   "power_at_P": 0.124
+  },
+  "BIS": {
+   "n": 74,
+   "corr_with_rv": 0.021,
+   "best_P": 2727.55,
+   "best_power": 0.728,
+   "best_fap": 3.0891233243584204e-16,
+   "power_at_P": 0.114
+  },
+  "Contrast": {
+   "n": 74,
+   "corr_with_rv": 0.001,
+   "best_P": 5000.0,
+   "best_power": 0.516,
+   "best_fap": 1.3785445067593653e-07,
+   "power_at_P": 0.102
+  }
+ }
+}
