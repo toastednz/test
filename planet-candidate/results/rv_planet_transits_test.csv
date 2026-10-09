@@ -1,0 +1,3 @@
+pl_name,hostname,tic,status,nsec,npts,baseline,P_pub,eP_pub,P_best,t0_best,depth_ppm,dur_h,tdur_central_h,snr,sde_vs_wide,wide_max_snr,ntr,depth_est_ppm,rms_ppm,snr_expected,ptransit,Tc_pred_btjd,pred_phase_offset,pred_sigma_phase,depth_at_pred_ppm,disc_year,tmag
+GJ 2030 b,GJ 2030,9967949,ok,2,6057,758.8,2.38129,0.00015,2.3850346239694655,1411.852,43.4,1.65,5.51,11.23,1.11,19.14,17,159.0,97.0,145.0,0.303,-4062.355,-0.159,0.165,-3.5,2022,5.5464
+TOI-1117 c,TOI-1117,295541511,ok,5,14820,1815.4,4.579,0.004,4.578646563814867,2366.1258,447.1,1.6,3.2,11.24,9.97,9.56,22,1487.5,580.0,193.6,0.091,,,,,2025,10.4055
