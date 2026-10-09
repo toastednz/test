@@ -1,0 +1,369 @@
+{
+ "star": {
+  "name": "HD 32564",
+  "hip": "HIP 23575",
+  "tic": 213078996,
+  "gaia_dr3": 3227308623164447616,
+  "ra_deg": 76.026026,
+  "dec_deg": -0.649056,
+  "V": 8.6,
+  "Tmag": 7.94,
+  "sptype": "G6V",
+  "teff_K": 5574,
+  "logg": 4.48,
+  "radius_rsun": 0.94,
+  "mass_msun": 0.98,
+  "lum_lsun": 0.77,
+  "dist_pc": 48.5,
+  "ruwe": 0.97,
+  "gaia_non_single_star": 0,
+  "logRHK": -5.03,
+  "logRHK_source": "Yu et al. 2024 (MNRAS 528, 5511), Table 3",
+  "params_source": "TIC v8.2 / Gaia DR3"
+ },
+ "data": {
+  "source": "HARPS RVBank (Trifonov et al. 2020, CDS J/A+A/636/A74), SERVAL NZP-corrected RVs; cross-checked with the 2024 corrected release (Perdelwitz et al. 2024, J/A+A/683/A125 table4) and the HARPS DRS pipeline velocities",
+  "n_spectra": 205,
+  "n_nights": 191,
+  "baseline_d": 2300.878760000225,
+  "span": "2009-11-29 to 2016-03-18",
+  "eso_programmes": "183.C-0972(A) [174 spectra, 2009-2013, PI Udry: HARPS GTO high-precision], 192.C-0852(A) [19, 2013-2016], 090.C-0849, 091.C-0936; re-observed 2022-2025 under 108.22KV / 112.25YG (Delisle/S\u00e9gransan)",
+  "rms_raw_ms": 4.788058129926104,
+  "rms_after_4_signals_ms": 2.1182617434015283,
+  "fitted_jitter_ms": 1.000001544988421,
+  "trend_ms_per_yr": -9.1360662304668e-06
+ },
+ "planets": [
+  {
+   "letter": "b",
+   "P_d": 1.6349959573461734,
+   "eP_d": 3.3181849078138175e-05,
+   "K_ms": 4.219400810294614,
+   "eK_ms": 0.16717638771179338,
+   "e": 6.944255867791161e-12,
+   "msini_earth": 7.349567524882155,
+   "emsini_earth": 0.29119636251798137,
+   "a_au": 0.026416802431317003,
+   "insolation_earth": 1103.3930112274275,
+   "Teq_K_A0p3": 1465.554128211126,
+   "Rp_est_rearth_if_rocky_or_volatile": 2.160413779529901,
+   "expected_transit_depth_ppm": 443.0160376677759,
+   "transit_probability": 0.16546287202489723,
+   "fap_drop_one_baluev": 5.872179995712953e-39,
+   "dBIC_vs_without": 62.38000871471195
+  },
+  {
+   "letter": "c",
+   "P_d": 11.062729916464486,
+   "eP_d": 0.0017056727203410616,
+   "K_ms": 3.3723989433412425,
+   "eK_ms": 0.1469676607127149,
+   "e": 3.877629247985574e-12,
+   "msini_earth": 11.110454431959315,
+   "emsini_earth": 0.48418904768995374,
+   "a_au": 0.09450265266171917,
+   "insolation_earth": 86.21894944248515,
+   "Teq_K_A0p3": 774.8541932128679,
+   "Rp_est_rearth_if_rocky_or_volatile": 2.9688674902185923,
+   "expected_transit_depth_ppm": 836.6179906393482,
+   "transit_probability": 0.046252669918657105,
+   "fap_drop_one_baluev": 3.050795671717938e-27,
+   "dBIC_vs_without": 83.93857813933573
+  },
+  {
+   "letter": "d",
+   "P_d": 23.622199577445624,
+   "eP_d": 0.013790868347900304,
+   "K_ms": 2.857623254434375,
+   "eK_ms": 0.14827574442709007,
+   "e": 6.158804335240573e-11,
+   "msini_earth": 12.12319779442771,
+   "emsini_earth": 0.6290503191070579,
+   "a_au": 0.1567049381418515,
+   "insolation_earth": 31.35633968369898,
+   "Teq_K_A0p3": 601.7285891487967,
+   "Rp_est_rearth_if_rocky_or_volatile": 3.17492452188287,
+   "expected_transit_depth_ppm": 956.780645627372,
+   "transit_probability": 0.027893186084814437,
+   "fap_drop_one_baluev": 1.612204657904803e-23,
+   "dBIC_vs_without": 65.16736655205204
+  },
+  {
+   "letter": "e",
+   "P_d": 48.97389924289668,
+   "eP_d": 0.07137826909486254,
+   "K_ms": 2.020210116967849,
+   "eK_ms": 0.15005743997735138,
+   "e": 1.8110891783117648e-11,
+   "msini_earth": 10.92840742056719,
+   "emsini_earth": 0.8117590855634154,
+   "a_au": 0.2547879678647015,
+   "insolation_earth": 11.861316519501651,
+   "Teq_K_A0p3": 471.9027734022524,
+   "Rp_est_rearth_if_rocky_or_volatile": 2.9313766602670372,
+   "expected_transit_depth_ppm": 815.621795092712,
+   "transit_probability": 0.01715544119540647,
+   "fap_drop_one_baluev": 1.3270691768016234e-07,
+   "dBIC_vs_without": 58.08652233644921
+  }
+ ],
+ "model": {
+  "n_signals": 4,
+  "chi2_null_fixed_jitter": 2360.1931576145817,
+  "chi2_4signals_fixed_jitter": 403.86297841708455,
+  "dlnL_4_vs_0_free_jitter": 58.053282692019934,
+  "bic_4": 1145.0363581939814,
+  "fifth_signal_search": {
+   "stage": 5,
+   "P": 1.642458243207892,
+   "power": 0.13317226868702892,
+   "fap": 0.00865996173978335
+  },
+  "alias_1yr_test": {
+   "P": 1.642347,
+   "lnL": -548.0040679511948,
+   "dlnL_vs_best": 38.51316999076357
+  },
+  "eccentricities_converge_to_zero": true
+ },
+ "robustness": {
+  "rvbank2024_corrected": [
+   {
+    "P": 1.6349918754772765,
+    "K": 3.9876250778189304
+   },
+   {
+    "P": 11.064022954224457,
+    "K": 3.2365622678707404
+   },
+   {
+    "P": 23.621134588228642,
+    "K": 2.955613692616714
+   },
+   {
+    "P": 48.986714696573394,
+    "K": 1.6108697022664056
+   }
+  ],
+  "drs_pipeline": [
+   {
+    "P": 1.6349771458271152,
+    "K": 4.053377327854034
+   },
+   {
+    "P": 11.064362606070782,
+    "K": 3.3514508530836675
+   },
+   {
+    "P": 23.633323107696953,
+    "K": 2.798272918687037
+   },
+   {
+    "P": 48.95060059069151,
+    "K": 1.6842547525749567
+   }
+  ],
+  "halves_signal1": {
+   "first_half": {
+    "n": 95,
+    "K": 3.92,
+    "phase_deg": -24.0
+   },
+   "second_half": {
+    "n": 96,
+    "K": 4.6,
+    "phase_deg": -22.7
+   },
+   "pre2015": {
+    "n": 184,
+    "K": 4.23,
+    "phase_deg": -24.2
+   }
+  },
+  "bootstrap_fap_signal1": "0.0 (300 sector-shuffle draws)",
+  "per_season": {
+   "season_2009-2010": {
+    "n_nights": 43,
+    "P1.635": {
+     "K": 3.8556805102667098,
+     "phase_deg": -118.94673132034731
+    },
+    "P11.063": {
+     "K": 3.1063566362319155,
+     "phase_deg": -161.98113107431024
+    }
+   },
+   "season_2010-2011": {
+    "n_nights": 36,
+    "P1.635": {
+     "K": 3.3323253508157418,
+     "phase_deg": -124.96500849321738
+    },
+    "P11.063": {
+     "K": 3.044689406601698,
+     "phase_deg": -176.91434437998086
+    }
+   },
+   "season_2011-2012": {
+    "n_nights": 49,
+    "P1.635": {
+     "K": 3.8374375108580816,
+     "phase_deg": -117.7316487057543
+    },
+    "P11.063": {
+     "K": 3.145039649649703,
+     "phase_deg": -161.78833688944823
+    }
+   },
+   "season_2012-2013": {
+    "n_nights": 51,
+    "P1.635": {
+     "K": 4.65204324475212,
+     "phase_deg": -125.17438246065431
+    },
+    "P11.063": {
+     "K": 3.3624074918876765,
+     "phase_deg": -165.7824707497369
+    }
+   }
+  }
+ },
+ "activity": {
+  "logRHK": -5.03,
+  "expected_rotation_d_from_logRHK": "~30-40 (Mamajek & Hillenbrand 2008 relation); no rotation period detected by Yu et al. 2024",
+  "indicator_power_at_signal_periods": {
+   "CRX": {
+    "1.6350": 0.044,
+    "11.0627": 0.026,
+    "23.6220": 0.008,
+    "48.9740": 0.016
+   },
+   "dLW": {
+    "1.6350": 0.034,
+    "11.0627": 0.017,
+    "23.6220": 0.044,
+    "48.9740": 0.024
+   },
+   "Halpha": {
+    "1.6350": 0.045,
+    "11.0627": 0.024,
+    "23.6220": 0.035,
+    "48.9740": 0.007
+   },
+   "NaD1": {
+    "1.6350": 0.055,
+    "11.0627": 0.017,
+    "23.6220": 0.019,
+    "48.9740": 0.028
+   },
+   "NaD2": {
+    "1.6350": 0.06,
+    "11.0627": 0.022,
+    "23.6220": 0.012,
+    "48.9740": 0.022
+   },
+   "FWHMDRS": {
+    "1.6350": 0.054,
+    "11.0627": 0.039,
+    "23.6220": 0.021,
+    "48.9740": 0.022
+   },
+   "Contrast": {
+    "1.6350": 0.357,
+    "11.0627": 0.366,
+    "23.6220": 0.355,
+    "48.9740": 0.35
+   },
+   "BIS": {
+    "1.6350": 0.052,
+    "11.0627": 0.04,
+    "23.6220": 0.039,
+    "48.9740": 0.002
+   }
+  },
+  "indicator_spearman_vs_rv_resid": {
+   "CRX": {
+    "1.6350": -0.17,
+    "11.0627": -0.22,
+    "23.6220": -0.14,
+    "48.9740": -0.19
+   },
+   "dLW": {
+    "1.6350": 0.08,
+    "11.0627": 0.08,
+    "23.6220": 0.21,
+    "48.9740": 0.07
+   },
+   "Halpha": {
+    "1.6350": 0.01,
+    "11.0627": 0.04,
+    "23.6220": -0.08,
+    "48.9740": -0.09
+   },
+   "NaD1": {
+    "1.6350": -0.04,
+    "11.0627": -0.07,
+    "23.6220": -0.09,
+    "48.9740": -0.07
+   },
+   "NaD2": {
+    "1.6350": -0.08,
+    "11.0627": -0.14,
+    "23.6220": 0.04,
+    "48.9740": -0.02
+   },
+   "FWHMDRS": {
+    "1.6350": 0.07,
+    "11.0627": 0.15,
+    "23.6220": 0.14,
+    "48.9740": 0.04
+   },
+   "Contrast": {
+    "1.6350": -0.04,
+    "11.0627": -0.1,
+    "23.6220": -0.17,
+    "48.9740": -0.11
+   },
+   "BIS": {
+    "1.6350": -0.02,
+    "11.0627": 0.08,
+    "23.6220": -0.11,
+    "48.9740": -0.03
+   }
+  },
+  "note": "No indicator shows periodicity at any of the four periods after prewhitening long-term trends; weak overall CRX anti-correlation (rho~-0.2) with RV residuals present at all periods"
+ },
+ "tess": {
+  "sectors": [
+   5,
+   32
+  ],
+  "cadence": "2-min SPOC",
+  "checks": {
+   "tess": {
+    "P": 1.6307223160215953,
+    "sde": 2.0820375205788584,
+    "depth_ppm": 60.33576611482654,
+    "global_best_sde": 5.583129570990068
+   },
+   "tess_p2575": {
+    "P": 2.580172410474586,
+    "sde": 2.9755041853486106,
+    "depth_ppm": 63.92010737199184,
+    "global_best_sde": 5.8885260648737825
+   },
+   "tess_p11": {
+    "P": 10.9531951955501,
+    "sde": 2.636098540631337,
+    "depth_ppm": 181.83593891502352,
+    "global_best_sde": 4.195686087529863
+   }
+  },
+  "note": "No transit at 1.635 d (or its 2.575-d alias) or 11.06 d; depth limit ~60 ppm vs expected 300-900 ppm, so planet b does not transit"
+ },
+ "prior_claims": {
+  "refereed_literature": "none found (SIMBAD bibliography 49 refs, NASA Exoplanet Archive, exoplanet.eu, Mayor et al. 2011 table, arXiv API)",
+  "other": "DeviantArt illustration by user 'Tullimonstrum1' (2023-09-06) captioned as a 5-planet system (periods 2.56-123 d) 'recently found' in HARPS data by that user; not a scientific publication. The HARPS GTO team (PI Udry) re-observed the star in 2022-2025, which suggests they are aware of the signals."
+ },
+ "verdict": "Four coherent, low-amplitude (1.6-4 m/s) signals at 1.635, 11.06, 23.62 and 48.97 d in 191 nights of public HARPS velocities of a very inactive G6V star; all survive activity-indicator, alias, half-sample, per-season, independent-pipeline and data-release checks. Minimum masses 7, 11, 12 and 11 Earth masses. Period ratios 2.14 and 2.07 (near 2:1, like Kepler compact systems). Unpublished planet-candidate system from public data; confirmation requires the data owners' analysis or new RVs (e.g. ESPRESSO/HARPS) to be independent."
+}

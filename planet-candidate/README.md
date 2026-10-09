@@ -369,6 +369,86 @@ observation (BJD 2460325.36–2460325.52) falls at phase 0.32–0.34 of the 7.34
 clear the field for this signal, contrary to the preprint's use of it. A CTOI submission by us would be a
 duplicate under ExoFOP's rules; the useful contributions are a confirmation note and that correction.
 
-**Revised bottom line for the whole project:** no previously unreported planet candidate was found.
-The best object, TOI-6284's 7.35-d Earth-sized candidate, is real and worth following up, but was first
-reported by Tschudi (2026). Everything else that looked new was stellar, instrumental, or already claimed.
+## Third round: a different data set – archival radial velocities (2026-10-09)
+
+### G. Blind search of the public HARPS RVBank for unpublished periodic signals
+
+The user asked for "other avenues". Transit photometry had been exhausted, so the search moved to the
+other main discovery channel: 18 years of public HARPS radial velocities, re-reduced homogeneously in the
+HARPS RVBank (Trifonov et al. 2020, CDS J/A+A/636/A74; cross-checked with the 2024 corrected release,
+Perdelwitz et al. 2024, J/A+A/683/A125). `scripts/14_rvbank_search.py` runs, for each of the 543 stars with
+≥ 40 usable spectra: nightly binning, 5σ clipping, removal of a linear trend and of the pre/post-2015 fibre
+offset, a floating-offset generalised Lomb–Scargle periodogram over 1.2–5000 d, a Baluev false-alarm
+probability, the same periodogram of the SERVAL/DRS activity indicators (CRX, dLW, Hα, Na D, FWHM, BIS,
+contrast), and checks against the 1-day, 1-year and window-function aliases. `scripts/15_rv_vet.py` then
+vets the best signals (sector-shuffle bootstrap FAP, first/second-half and pre/post-2015 amplitude and
+phase consistency, residual second signal, indicator correlation and power at the period).
+
+**Known-planet matching had to be rebuilt.** The first pass matched hosts to the NASA Exoplanet Archive by
+coordinates only and missed (a) high-proper-motion stars (ε Indi A) and (b) the 2011 HARPS planets that
+the NASA archive does not list because their paper was never refereed. `scripts/16_rv_known_match.py` now
+matches by HD/HIP/GJ/TIC name against exoplanet.eu and the NASA archive and by position within 3′
+(`results/rvbank_search_matched.csv`): 218 of the 543 stars have known planets and 131 of the detected
+signals are known planets. That is the validation of the method: it recovers, blind, e.g. HD 157172 b
+(105 d), HD 150433 b (1096 d), HD 215456 b (192 d) and c, all from Mayor et al. (2011), and GJ 3822 b
+(Tuomi et al. 2019 candidate, 661 d) at the right periods and amplitudes.
+
+**Literature check of every survivor** (`results/rv_survivor_bibliography.csv`, SIMBAD bibliography of each
+star, plus targeted reading): HD 41248's 25.6-d signal is the known activity-driven false planet
+(Faria et al. 2020); ζ Tuc's 267-d signal is the 1-yr alias of its ~950-d activity cycle; HD 3964's
+3.1-yr signal is tied to its magnetic cycle (Frensch et al. 2023); HD 13060's 2800-d signal is a cycle
+(its rotation is 34 d, Yu et al. 2024, and the signal correlates with CRX, dLW, FWHM, BIS); GJ 479's 11.3-d
+signal is the Tuomi et al. (2019) candidate; HD 297396's 4.27-d signal was posted as a candidate on Zenodo
+on 2026-10-08 by an independent researcher (Fraser 2026b, doi:10.5281/zenodo.23249329), one day before
+this analysis. Most of the rest (GJ 787, GJ 224, GJ 9592, HD 125881, GJ 9527, HD 78286, GJ 579.2,
+GJ 3436, HD 95456 …) show the same period in one or more activity indicators or an amplitude that is not
+stable between halves of the data, i.e. rotation or cycles, and are not claimed.
+
+### H. The result: HD 32564, an apparently unpublished four-signal system  → **best candidate of the project**
+
+HD 32564 (HIP 23575, TIC 213078996; G6V, V = 8.6, T_eff = 5574 K, R = 0.94 R_⊙, M = 0.98 M_⊙, 48.5 pc,
+log R'_HK = −5.03, Gaia RUWE 0.97, single) was observed on 191 nights (205 spectra) between 2009 and 2016,
+almost all under the HARPS GTO high-precision programme 183.C-0972 (PI Udry). It is in no planet paper, no
+catalogue, and no arXiv listing. Its velocities contain four coherent signals
+(`scripts/17_rv_multisignal.py`, `19_rv_keplerian.py`; `results/candidate_HD32564/`):
+
+| signal | P (d) | K (m/s) | m sin i (M_⊕) | a (AU) | insolation (S_⊕) | T_eq (K) | drop-one FAP | ΔBIC |
+|---|---|---|---|---|---|---|---|---|
+| b | 1.6350 | 4.22 ± 0.17 | 7.3 ± 0.3 | 0.026 | 1100 | 1470 | 6e−39 | 62 |
+| c | 11.0627 ± 0.0017 | 3.37 ± 0.15 | 11.1 ± 0.5 | 0.095 | 86 | 780 | 3e−27 | 84 |
+| d | 23.622 ± 0.014 | 2.86 ± 0.15 | 12.1 ± 0.6 | 0.157 | 31 | 600 | 2e−23 | 65 |
+| e | 48.97 ± 0.07 | 2.02 ± 0.15 | 10.9 ± 0.8 | 0.255 | 12 | 470 | 1e−7 | 58 |
+
+The raw scatter of 4.8 m/s drops to 2.1 m/s (fitted jitter 1.0 m/s); eccentricities converge to zero;
+no fifth signal (next peak FAP 0.009). Checks, all passed (`candidate_summary.json`):
+
+* **Aliases.** The daily alias of b (2.575 d) has a third of the power; the yearly alias (1.6423 d) is
+  disfavoured by Δln L = 38. The three longer periods are not aliases of each other.
+* **Coherence.** Season by season (2009–10, 10–11, 11–12, 12–13) signal b keeps K = 3.3–4.7 m/s and phase
+  −119 … −125°, signal c K = 3.0–3.4 m/s and phase −162 … −177°. Stellar activity does not hold phase for
+  four years; planets do. Sector-shuffle bootstrap FAP for b: 0/300.
+* **Activity.** The star is as quiet as the Sun at minimum (log R'_HK = −5.03, expected rotation 30–40 d,
+  none detected by Yu et al. 2024). After removing long-term trends no indicator (CRX, dLW, Hα, Na D,
+  FWHM, contrast, BIS) has power above 0.06 at any of the four periods (`activity_check.json`).
+  Period ratios d/c = 2.14 and e/d = 2.07 sit just wide of 2:1, as in Kepler's compact systems, not at the
+  exact harmonics a rotation signal would produce.
+* **Independence from the reduction.** The same four periods and amplitudes come out of the 2024
+  corrected RVBank release and of the separate HARPS DRS pipeline velocities (`rvbank2024/`, `drs_pipeline/`).
+* **TESS.** Sectors 5 and 32 (2-min) show no transit at 1.635 d, 2.575 d or 11.06 d down to ~60 ppm
+  (a 7 M_⊕ planet would give 300–900 ppm), so b does not transit (prior probability ~17 %).
+
+Prior claims: none refereed. A hobbyist's illustration on DeviantArt (2023-09-06) is captioned as a
+five-planet system "recently found" by that user in HARPS data of this star, and the HARPS GTO team
+re-observed the star in 2022–2025 (programmes 108.22KV, 112.25YG), so the data owners are presumably
+aware of it. Neither constitutes a publication. What can honestly be said: **a compact system of four
+7–12 M_⊕ (minimum-mass) planet candidates around HD 32564 is present in public data and unreported in
+the literature as of 2026-10-09.** `results/candidate_HD32564/HD32564_candidate_verification_package.zip`
+contains the nightly velocities, all 205 spectra with both pipelines and indicators, the fits and tests, and
+a recipe for independent checking.
+
+**Revised bottom line for the whole project:** in the transit searches no previously unreported planet
+candidate was found (TOI-6284's 7.35-d Earth-sized candidate is real but was first reported by Tschudi 2026).
+The archival radial-velocity search (sections G–H) did find one: **HD 32564, four coherent low-amplitude
+signals at 1.635, 11.06, 23.6 and 49.0 d (7–12 M_⊕ minimum masses) in public HARPS data, unpublished in the
+refereed literature.** It remains a candidate system until confirmed with independent velocities; the data
+owners (HARPS GTO, PI Udry) have re-observed the star recently and may publish it first.
