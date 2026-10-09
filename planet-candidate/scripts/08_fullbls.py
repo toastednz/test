@@ -14,6 +14,7 @@ warnings.filterwarnings("ignore")
 ap = argparse.ArgumentParser()
 ap.add_argument("data_dir"); ap.add_argument("tic", type=int); ap.add_argument("P", type=float); ap.add_argument("outdir")
 ap.add_argument("--pmin", type=float, default=1.0); ap.add_argument("--pmax", type=float, default=70.0); ap.add_argument("--oversample", type=float, default=2.0)
+ap.add_argument("--mask", default="", help="P:t0:dur_h of known signals to mask, ;-separated")
 a = ap.parse_args(); os.makedirs(a.outdir, exist_ok=True)
 cache = os.path.join(a.data_dir, "lc_cache"); os.makedirs(cache, exist_ok=True)
 fmap = ts.build_filemap(a.data_dir)
@@ -28,6 +29,10 @@ for sec, fname in sorted(fmap.get(a.tic, [])):
     t, f, e, mad = ts.detrend(t, f, e)
     T.append(t); F.append(f); E.append(e)
 t = np.concatenate(T); f = np.concatenate(F); e = np.concatenate(E); o = np.argsort(t); t, f, e = t[o], f[o], e[o]
+for spec in [x for x in a.mask.split(";") if x]:
+    Pm, t0m, dm = [float(v) for v in spec.split(":")]
+    phm = ((t - t0m + 0.5 * Pm) % Pm) - 0.5 * Pm; keep = np.abs(phm) > max(1.0 * dm / 24, 0.06)
+    t, f, e = t[keep], f[keep], e[keep]
 baseline = t[-1] - t[0]
 periods = ts.period_grid(baseline, a.pmin, min(a.pmax, baseline / 2), oversample=a.oversample)
 durs = np.array([0.75, 1.0, 1.5, 2.0, 3.0, 4.0, 6.0]) / 24

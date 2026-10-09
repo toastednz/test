@@ -62,12 +62,18 @@ for x in r.itertuples():
         st = sample.loc[tic]
         dra = (toi.ra_deg - st.ra) * np.cos(np.radians(st.dec)); ddec = toi.dec_deg - st.dec
         near = toi[np.sqrt(dra ** 2 + ddec ** 2) * 60 < 3]
-        near_match = [(row.TOI, period_match(P, row._34 if False else row[toi.columns.get_loc("Period (days)") + 1])) for row in near.itertuples()]
-        near_match = [(t, m) for t, m in near_match if m]
+        near_match = []
+        for _, row in near.iterrows():
+            q = pd.to_numeric(row["Period (days)"], errors="coerce")
+            if np.isfinite(q) and q > 0 and period_match(P, q):
+                near_match.append((row["TOI"], period_match(P, q)))
         # CTOIs within 3 arcmin (blended companions carry their own TIC IDs)
         dra_c = (ctoi.ra_deg - st.ra) * np.cos(np.radians(st.dec)); ddec_c = ctoi.dec_deg - st.dec
         near_c = ctoi[np.sqrt(dra_c ** 2 + ddec_c ** 2) * 60 < 3]
-        near_match += [(f"CTOI{row.CTOI}", period_match(P, row._25)) for row in near_c.itertuples() if np.isfinite(row._25) and period_match(P, row._25)]
+        for _, row in near_c.iterrows():
+            q = pd.to_numeric(row["Period (days)"], errors="coerce")
+            if np.isfinite(q) and q > 0 and period_match(P, q):
+                near_match.append((f"CTOI{row['CTOI']}", period_match(P, q)))
         n_near_1arcmin = int((np.sqrt(dra ** 2 + ddec ** 2) * 60 < 1).sum() + (np.sqrt(dra_c ** 2 + ddec_c ** 2) * 60 < 1).sum())
         # TESS orbital systematics
         sysflag = any(abs(P / (13.7 / n) - 1) < 0.02 for n in (1, 2, 3, 4)) or any(abs(P / (13.7 * n) - 1) < 0.02 for n in (1, 2))

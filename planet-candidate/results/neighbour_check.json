@@ -37,5 +37,809 @@
    "n_transits": 1038
   },
   "depth_ratio_nb_over_tgt": null
+ },
+ "352693111->352693119": {
+  "tce": {
+   "P": 0.743751,
+   "t0": 1711.71,
+   "depth_ppm": 358.87,
+   "snr": 27.21428,
+   "offset_arcsec": 27.76826,
+   "offset_sig": 10.580698407956636,
+   "nb_flux_frac": 0.019,
+   "expected_ratio": 52.6,
+   "rp_on_nb_re": 9.83,
+   "nb_Tmag": 12.4579,
+   "nb_Teff": 4444.0,
+   "nb_rad": 0.647181,
+   "nb_d_pc": 157.311
+  },
+  "target": {
+   "error": "LightkurveError('Download of mast:TESS/product/tess2022217014003-s0055-0000000352693111-0242-s_lc.fits failed. MAST returns ERROR: HTTPError: 404 Clie"
+  },
+  "neighbour": {
+   "nsec": 18,
+   "npts": 119724,
+   "rms_ppm": 111724,
+   "P": 0.743339,
+   "t0": 1711.8774,
+   "dur_h": 3.58,
+   "snr": 118.2,
+   "depth_ppm": 38667,
+   "depth_err": 327,
+   "odd": 38986,
+   "odd_err": 438,
+   "even": 38347,
+   "even_err": 439,
+   "sec": 51607,
+   "sec_err": 339,
+   "n_transits": 546
+  },
+  "depth_ratio_nb_over_tgt": null
+ },
+ "307162587->307162569": {
+  "tce": {
+   "P": 0.962814,
+   "t0": 1437.99,
+   "depth_ppm": 422.227,
+   "snr": 16.07363,
+   "offset_arcsec": 52.47008,
+   "offset_sig": 20.956890061368806,
+   "nb_flux_frac": 0.117,
+   "expected_ratio": 8.5,
+   "rp_on_nb_re": 2.93,
+   "nb_Tmag": 13.5001,
+   "nb_Teff": 4175.0,
+   "nb_rad": 0.655204,
+   "nb_d_pc": 220.915
+  },
+  "target": {
+   "error": "LightkurveError('Download of mast:TESS/product/tess2019140104343-s0012-0000000307162587-0144-s_lc.fits failed. MAST returns ERROR: HTTPError: 404 Clie"
+  },
+  "neighbour": {
+   "nsec": 9,
+   "npts": 10345,
+   "rms_ppm": 25344,
+   "P": 0.962814,
+   "t0": 1326.3106,
+   "dur_h": 2.93,
+   "snr": 31.3,
+   "depth_ppm": 15781,
+   "depth_err": 505,
+   "odd": 15385,
+   "odd_err": 685,
+   "even": 16192,
+   "even_err": 696,
+   "sec": -11527,
+   "sec_err": 515,
+   "n_transits": 195
+  },
+  "depth_ratio_nb_over_tgt": null
+ },
+ "159345743->159345742": {
+  "tce": {
+   "P": 0.7323359999999999,
+   "t0": 1683.68,
+   "depth_ppm": 333.429,
+   "snr": 14.96699,
+   "offset_arcsec": 12.10138,
+   "offset_sig": 4.615174565279157,
+   "nb_flux_frac": 0.034,
+   "expected_ratio": 29.4,
+   "rp_on_nb_re": 11.67,
+   "nb_Tmag": 12.4495,
+   "nb_Teff": 5261.0,
+   "nb_rad": 1.12111,
+   "nb_d_pc": 395.491
+  },
+  "target": {
+   "error": "LightkurveError('Download of mast:TESS/product/tess2022357055054-s0060-0000000159345743-0249-s_lc.fits failed. MAST returns ERROR: HTTPError: 404 Clie"
+  },
+  "neighbour": {
+   "nsec": 19,
+   "npts": 90267,
+   "rms_ppm": 15052,
+   "P": 0.732027,
+   "t0": 1684.1278,
+   "dur_h": 2.1,
+   "snr": 86.9,
+   "depth_ppm": 11927,
+   "depth_err": 137,
+   "odd": 12099,
+   "odd_err": 189,
+   "even": 11760,
+   "even_err": 187,
+   "sec": 13098,
+   "sec_err": 138,
+   "n_transits": 588
+  },
+  "depth_ratio_nb_over_tgt": null
+ },
+ "100678988->100678986": {
+  "tce": {
+   "P": 0.61413,
+   "t0": 1438.53,
+   "depth_ppm": 400.096,
+   "snr": 14.6155,
+   "offset_arcsec": 38.86755,
+   "offset_sig": 15.17837373019062,
+   "nb_flux_frac": 0.119,
+   "expected_ratio": 8.4,
+   "rp_on_nb_re": 6.91,
+   "nb_Tmag": 11.0098,
+   "nb_Teff": 4963.0,
+   "nb_rad": 1.14875,
+   "nb_d_pc": 189.875
+  },
+  "target": {
+   "nsec": 17,
+   "npts": 163737,
+   "rms_ppm": 2270,
+   "P": 0.616403,
+   "t0": 1438.5214,
+   "dur_h": 7.22,
+   "snr": 65.6,
+   "depth_ppm": 725,
+   "depth_err": 11,
+   "odd": 727,
+   "odd_err": 14,
+   "even": 724,
+   "even_err": 14,
+   "sec": -406,
+   "sec_err": 37,
+   "n_transits": 302
+  },
+  "neighbour": {
+   "nsec": 11,
+   "npts": 51428,
+   "rms_ppm": 12692,
+   "P": 0.613312,
+   "t0": 1438.6547,
+   "dur_h": 7.22,
+   "snr": 97.9,
+   "depth_ppm": 10160,
+   "depth_err": 104,
+   "odd": 10350,
+   "odd_err": 128,
+   "even": 10349,
+   "even_err": 127,
+   "sec": -6909,
+   "sec_err": 384,
+   "n_transits": 276
+  },
+  "depth_ratio_nb_over_tgt": 14.01
+ },
+ "350841126->350841132": {
+  "tce": {
+   "P": 1.32328,
+   "t0": 1325.48,
+   "depth_ppm": 321.442,
+   "snr": 13.81111,
+   "offset_arcsec": 32.22761,
+   "offset_sig": 12.833662129884855,
+   "nb_flux_frac": 0.127,
+   "expected_ratio": 7.9,
+   "rp_on_nb_re": 3.07,
+   "nb_Tmag": 12.7197,
+   "nb_Teff": 3672.0,
+   "nb_rad": 0.591394,
+   "nb_d_pc": 114.531
+  },
+  "target": {
+   "nsec": 97,
+   "npts": 678081,
+   "rms_ppm": 1392,
+   "P": 1.321747,
+   "t0": 1325.6448,
+   "dur_h": 4.94,
+   "snr": 87.7,
+   "depth_ppm": 377,
+   "depth_err": 4,
+   "odd": 366,
+   "odd_err": 6,
+   "even": 387,
+   "even_err": 6,
+   "sec": 460,
+   "sec_err": 4,
+   "n_transits": 781
+  },
+  "neighbour": {
+   "nsec": 66,
+   "npts": 470600,
+   "rms_ppm": 10541,
+   "P": 1.321734,
+   "t0": 1326.3336,
+   "dur_h": 4.94,
+   "snr": 142.6,
+   "depth_ppm": 6018,
+   "depth_err": 42,
+   "odd": 6074,
+   "odd_err": 57,
+   "even": 5963,
+   "even_err": 57,
+   "sec": 7389,
+   "sec_err": 43,
+   "n_transits": 717
+  },
+  "depth_ratio_nb_over_tgt": 15.96
+ },
+ "179574710->179574708": {
+  "tce": {
+   "P": 0.912412,
+   "t0": 1325.31,
+   "depth_ppm": 385.449,
+   "snr": 12.5002,
+   "offset_arcsec": 13.2204,
+   "offset_sig": 4.023435039163394,
+   "nb_flux_frac": 0.018,
+   "expected_ratio": 55.6,
+   "rp_on_nb_re": 9.89,
+   "nb_Tmag": 16.7468,
+   "nb_Teff": 4521.0,
+   "nb_rad": 0.621194,
+   "nb_d_pc": 1075.16
+  },
+  "target": {
+   "nsec": 110,
+   "npts": 981102,
+   "rms_ppm": 4199,
+   "P": 0.9124,
+   "t0": 1325.9269,
+   "dur_h": 3.35,
+   "snr": 14.0,
+   "depth_ppm": 241,
+   "depth_err": 17,
+   "odd": 201,
+   "odd_err": 23,
+   "even": 281,
+   "even_err": 23,
+   "sec": -148,
+   "sec_err": 17,
+   "n_transits": 1054
+  },
+  "neighbour": {
+   "error": "ProxyError(MaxRetryError(\"HTTPSConnectionPool(host='mast.stsci.edu', port=443): Max retries exceeded with url: /api/v0/invoke (Caused by ProxyError('U"
+  },
+  "depth_ratio_nb_over_tgt": null
+ },
+ "353894348->353894340": {
+  "tce": {
+   "P": 2.03971,
+   "t0": 1684.39,
+   "depth_ppm": 335.248,
+   "snr": 12.45836,
+   "offset_arcsec": 88.87743,
+   "offset_sig": 34.814315019904825,
+   "nb_flux_frac": 0.492,
+   "expected_ratio": 2.0,
+   "rp_on_nb_re": 7.44,
+   "nb_Tmag": 11.6995,
+   "nb_Teff": 8135.0,
+   "nb_rad": 2.61793,
+   "nb_d_pc": 1303.31
+  },
+  "target": {
+   "error": "LightkurveError('Download of mast:TESS/product/tess2022027120115-s0048-0000000353894348-0219-s_lc.fits failed. MAST returns ERROR: HTTPError: 404 Clie"
+  },
+  "neighbour": {
+   "error": "LightkurveError('Download of mast:TESS/product/tess2024114025118-s0078-0000000353894340-0273-s_lc.fits failed. MAST returns ERROR: HTTPError: 404 Clie"
+  },
+  "depth_ratio_nb_over_tgt": null
+ },
+ "149449385->149449384": {
+  "tce": {
+   "P": 1.38152,
+   "t0": 1439.18,
+   "depth_ppm": 347.489,
+   "snr": 12.17725,
+   "offset_arcsec": 25.70442,
+   "offset_sig": 6.424848942031832,
+   "nb_flux_frac": 0.039,
+   "expected_ratio": 25.6,
+   "rp_on_nb_re": 5.72,
+   "nb_Tmag": 15.6592,
+   "nb_Teff": 5502.0,
+   "nb_rad": 0.715606,
+   "nb_d_pc": 1189.46
+  },
+  "target": {
+   "error": "LightkurveError('Download of mast:TESS/product/tess2021039152502-s0035-0000000149449385-0205-s_lc.fits failed. MAST returns ERROR: HTTPError: 404 Clie"
+  },
+  "neighbour": {
+   "error": "no light curves"
+  },
+  "depth_ratio_nb_over_tgt": null
+ },
+ "308404140->308404142": {
+  "tce": {
+   "P": 0.5630119999999998,
+   "t0": 1517.4,
+   "depth_ppm": 332.313,
+   "snr": 11.82232,
+   "offset_arcsec": 73.06859,
+   "offset_sig": 3.301924751537456,
+   "nb_flux_frac": 0.199,
+   "expected_ratio": 5.0,
+   "rp_on_nb_re": 6.16,
+   "nb_Tmag": 12.2436,
+   "nb_Teff": 6413.0,
+   "nb_rad": 1.43688,
+   "nb_d_pc": 600.823
+  },
+  "target": {
+   "error": "LightkurveError('Download of mast:TESS/product/tess2023069172124-s0063-0000000308404140-0255-s_lc.fits failed. MAST returns ERROR: HTTPError: 404 Clie"
+  },
+  "neighbour": {
+   "nsec": 21,
+   "npts": 109692,
+   "rms_ppm": 94715,
+   "P": 0.563697,
+   "t0": 1411.1042,
+   "dur_h": 1.41,
+   "snr": 64.1,
+   "depth_ppm": 3077,
+   "depth_err": 48,
+   "odd": 2715,
+   "odd_err": 66,
+   "even": 3433,
+   "even_err": 66,
+   "sec": -2017,
+   "sec_err": 49,
+   "n_transits": 687
+  },
+  "depth_ratio_nb_over_tgt": null
+ },
+ "233398254->233398252": {
+  "tce": {
+   "P": 0.537026,
+   "t0": 1711.45,
+   "depth_ppm": 420.592,
+   "snr": 11.80917,
+   "offset_arcsec": 16.36594,
+   "offset_sig": 6.543680003838418,
+   "nb_flux_frac": 0.139,
+   "expected_ratio": 7.2,
+   "rp_on_nb_re": 7.52,
+   "nb_Tmag": 10.7763,
+   "nb_Teff": 5532.0,
+   "nb_rad": 1.34707,
+   "nb_d_pc": 243.435
+  },
+  "target": {
+   "error": "LightkurveError('Download of mast:TESS/product/tess2019253231442-s0016-0000000233398254-0152-s_lc.fits failed. MAST returns ERROR: HTTPError: 404 Clie"
+  },
+  "neighbour": {
+   "nsec": 12,
+   "npts": 91138,
+   "rms_ppm": 15004,
+   "P": 0.537856,
+   "t0": 1683.7701,
+   "dur_h": 2.76,
+   "snr": 110.9,
+   "depth_ppm": 12801,
+   "depth_err": 115,
+   "odd": 12916,
+   "odd_err": 155,
+   "even": 12687,
+   "even_err": 154,
+   "sec": 17589,
+   "sec_err": 119,
+   "n_transits": 529
+  },
+  "depth_ratio_nb_over_tgt": null
+ },
+ "31415158->31415131": {
+  "tce": {
+   "P": 0.78969,
+   "t0": 1543.99,
+   "depth_ppm": 320.692,
+   "snr": 11.41366,
+   "offset_arcsec": 76.43165999999998,
+   "offset_sig": 30.567956534693646,
+   "nb_flux_frac": 0.176,
+   "expected_ratio": 5.7,
+   "rp_on_nb_re": 8.39,
+   "nb_Tmag": 12.4987,
+   "nb_Teff": 6397.94,
+   "nb_rad": 1.8361,
+   "nb_d_pc": 865.159
+  },
+  "target": {
+   "error": "LightkurveError('Download of mast:TESS/product/tess2019085135100-s0010-0000000031415158-0140-s_lc.fits failed. MAST returns ERROR: HTTPError: 404 Clie"
+  },
+  "neighbour": {
+   "error": "LightkurveError('Download of mast:TESS/product/tess2023124020739-s0065-0000000031415131-0259-s_lc.fits failed. MAST returns ERROR: HTTPError: 404 Clie"
+  },
+  "depth_ratio_nb_over_tgt": null
+ },
+ "421335923->421335921": {
+  "tce": {
+   "P": 1.72699,
+   "t0": 1685.0,
+   "depth_ppm": 392.472,
+   "snr": 11.31928,
+   "offset_arcsec": 19.14214,
+   "offset_sig": 3.5246919047393703,
+   "nb_flux_frac": 0.171,
+   "expected_ratio": 5.8,
+   "rp_on_nb_re": 6.85,
+   "nb_Tmag": 13.3334,
+   "nb_Teff": 6193.0,
+   "nb_rad": 1.45886,
+   "nb_d_pc": 1041.77
+  },
+  "target": {
+   "nsec": 61,
+   "npts": 521493,
+   "rms_ppm": 2533,
+   "P": 1.727168,
+   "t0": 1684.9509,
+   "dur_h": 7.72,
+   "snr": 26.0,
+   "depth_ppm": 208,
+   "depth_err": 8,
+   "odd": 201,
+   "odd_err": 11,
+   "even": 215,
+   "even_err": 11,
+   "sec": 217,
+   "sec_err": 8,
+   "n_transits": 352
+  },
+  "neighbour": {
+   "nsec": 25,
+   "npts": 157896,
+   "rms_ppm": 11242,
+   "P": 1.728845,
+   "t0": 1684.9045,
+   "dur_h": 5.41,
+   "snr": 6.5,
+   "depth_ppm": 471,
+   "depth_err": 73,
+   "odd": 420,
+   "odd_err": 101,
+   "even": 519,
+   "even_err": 98,
+   "sec": 41,
+   "sec_err": 73,
+   "n_transits": 345
+  },
+  "depth_ratio_nb_over_tgt": 2.26
+ },
+ "229406415->229406416": {
+  "tce": {
+   "P": 0.555919,
+   "t0": 1711.52,
+   "depth_ppm": 372.72,
+   "snr": 11.2138,
+   "offset_arcsec": 27.44186,
+   "offset_sig": 4.522523739992287,
+   "nb_flux_frac": 0.013,
+   "expected_ratio": 76.9,
+   "rp_on_nb_re": 11.7,
+   "nb_Tmag": 17.7286,
+   "nb_Teff": 4849.0,
+   "nb_rad": 0.637308,
+   "nb_d_pc": 2126.96
+  },
+  "target": {
+   "error": "LightkurveError('Download of mast:TESS/product/tess2020078014623-s0023-0000000229406415-0177-s_lc.fits failed. MAST returns ERROR: HTTPError: 404 Clie"
+  },
+  "neighbour": {
+   "error": "no light curves"
+  },
+  "depth_ratio_nb_over_tgt": null
+ },
+ "357687420->357687421": {
+  "tce": {
+   "P": 0.96042,
+   "t0": 1683.65,
+   "depth_ppm": 378.972,
+   "snr": 10.68135,
+   "offset_arcsec": 47.27761,
+   "offset_sig": 7.353866403606439,
+   "nb_flux_frac": 0.177,
+   "expected_ratio": 5.6,
+   "rp_on_nb_re": 3.36,
+   "nb_Tmag": 13.8423,
+   "nb_Teff": 5647.0,
+   "nb_rad": 0.880372,
+   "nb_d_pc": 688.183
+  },
+  "target": {
+   "error": "LightkurveError('Download of mast:TESS/product/tess2020020091053-s0021-0000000357687420-0167-s_lc.fits failed. MAST returns ERROR: HTTPError: 404 Clie"
+  },
+  "neighbour": {
+   "error": "KeyError('author')"
+  },
+  "depth_ratio_nb_over_tgt": null
+ },
+ "265086848->265086847": {
+  "tce": {
+   "P": 1.1596,
+   "t0": 2202.77,
+   "depth_ppm": 409.751,
+   "snr": 10.6556,
+   "offset_arcsec": 21.5483,
+   "offset_sig": 8.116609663859215,
+   "nb_flux_frac": 0.025,
+   "expected_ratio": 40.0,
+   "rp_on_nb_re": 11.09,
+   "nb_Tmag": 13.6842,
+   "nb_Teff": 4832.0,
+   "nb_rad": 0.804638,
+   "nb_d_pc": 410.882
+  },
+  "target": {
+   "nsec": 6,
+   "npts": 34232,
+   "rms_ppm": 763,
+   "P": 1.160295,
+   "t0": 1469.459,
+   "dur_h": 0.97,
+   "snr": 19.6,
+   "depth_ppm": 358,
+   "depth_err": 18,
+   "odd": 384,
+   "odd_err": 25,
+   "even": 329,
+   "even_err": 26,
+   "sec": -15,
+   "sec_err": 18,
+   "n_transits": 57
+  },
+  "neighbour": {
+   "error": "no light curves"
+  },
+  "depth_ratio_nb_over_tgt": null
+ },
+ "271799457->271799467": {
+  "tce": {
+   "P": 1.90851,
+   "t0": 2037.94,
+   "depth_ppm": 305.534,
+   "snr": 10.64329,
+   "offset_arcsec": 51.33223,
+   "offset_sig": 3.26219249467764,
+   "nb_flux_frac": 0.413,
+   "expected_ratio": 2.4,
+   "rp_on_nb_re": 2.87,
+   "nb_Tmag": 11.9189,
+   "nb_Teff": 5600.0,
+   "nb_rad": 1.06146,
+   "nb_d_pc": 304.082
+  },
+  "target": {
+   "error": "LightkurveError('Download of mast:TESS/product/tess2020238165205-s0029-0000000271799457-0193-s_lc.fits failed. MAST returns ERROR: HTTPError: 404 Clie"
+  },
+  "neighbour": {
+   "nsec": 42,
+   "npts": 220370,
+   "rms_ppm": 4204,
+   "P": 1.908471,
+   "t0": 1326.4098,
+   "dur_h": 2.51,
+   "snr": 218.4,
+   "depth_ppm": 7672,
+   "depth_err": 35,
+   "odd": 8016,
+   "odd_err": 49,
+   "even": 7326,
+   "even_err": 49,
+   "sec": 142,
+   "sec_err": 35,
+   "n_transits": 483
+  },
+  "depth_ratio_nb_over_tgt": null
+ },
+ "115722189->115559754": {
+  "tce": {
+   "P": 0.658228,
+   "t0": 2474.58,
+   "depth_ppm": 404.861,
+   "snr": 10.57143,
+   "offset_arcsec": 27.78078,
+   "offset_sig": 3.2129854632103254,
+   "nb_flux_frac": 0.132,
+   "expected_ratio": 7.6,
+   "rp_on_nb_re": 8.38,
+   "nb_Tmag": 12.7493,
+   "nb_Teff": 6556.0,
+   "nb_rad": 1.38641,
+   "nb_d_pc": 707.922
+  },
+  "target": {
+   "error": "LightkurveError('Download of mast:TESS/product/tess2022330142927-s0059-0000000115722189-0248-s_lc.fits failed. MAST returns ERROR: HTTPError: 404 Clie"
+  },
+  "neighbour": {
+   "nsec": 8,
+   "npts": 43141,
+   "rms_ppm": 20988,
+   "P": 0.65821,
+   "t0": 1818.0485,
+   "dur_h": 1.97,
+   "snr": 7.7,
+   "depth_ppm": 2184,
+   "depth_err": 285,
+   "odd": 2773,
+   "odd_err": 390,
+   "even": 1598,
+   "even_err": 389,
+   "sec": 1972,
+   "sec_err": 285,
+   "n_transits": 245
+  },
+  "depth_ratio_nb_over_tgt": null
+ },
+ "149449388->149449385": {
+  "tce": {
+   "P": 1.38131,
+   "t0": 1469.62,
+   "depth_ppm": 314.17,
+   "snr": 10.4556,
+   "offset_arcsec": 18.68817,
+   "offset_sig": 3.018186475327099,
+   "nb_flux_frac": 0.548,
+   "expected_ratio": 1.8,
+   "rp_on_nb_re": 1.28,
+   "nb_Tmag": 12.1683,
+   "nb_Teff": 4004.0,
+   "nb_rad": 0.674346,
+   "nb_d_pc": 113.555
+  },
+  "target": {
+   "error": "LightkurveError('Download of mast:TESS/product/tess2025014115807-s0088-0000000149449388-0285-s_lc.fits failed. MAST returns ERROR: HTTPError: 404 Clie"
+  },
+  "neighbour": {
+   "nsec": 89,
+   "npts": 737386,
+   "rms_ppm": 3835,
+   "P": 1.381268,
+   "t0": 1326.01,
+   "dur_h": 7.48,
+   "snr": 17.0,
+   "depth_ppm": 156,
+   "depth_err": 9,
+   "odd": 150,
+   "odd_err": 12,
+   "even": 162,
+   "even_err": 12,
+   "sec": 8,
+   "sec_err": 10,
+   "n_transits": 767
+  },
+  "depth_ratio_nb_over_tgt": null
+ },
+ "330626464->330626512": {
+  "tce": {
+   "P": 1.22796,
+   "t0": 1711.72,
+   "depth_ppm": 386.14,
+   "snr": 10.01531,
+   "offset_arcsec": 73.49799,
+   "offset_sig": 24.165436168460385,
+   "nb_flux_frac": 0.31,
+   "expected_ratio": 3.2,
+   "rp_on_nb_re": 8.14,
+   "nb_Tmag": 12.7381,
+   "nb_Teff": 6123.0,
+   "nb_rad": 2.28973,
+   "nb_d_pc": 1098.48
+  },
+  "target": {
+   "error": "LightkurveError('Download of mast:TESS/product/tess2019226182529-s0015-0000000330626464-0151-s_lc.fits failed. MAST returns ERROR: HTTPError: 404 Clie"
+  },
+  "neighbour": {
+   "nsec": 5,
+   "npts": 34067,
+   "rms_ppm": 35958,
+   "P": 1.22796,
+   "t0": 1711.7364,
+   "dur_h": 3.51,
+   "snr": 146.5,
+   "depth_ppm": 85076,
+   "depth_err": 581,
+   "odd": 84085,
+   "odd_err": 786,
+   "even": 86122,
+   "even_err": 806,
+   "sec": 27711,
+   "sec_err": 597,
+   "n_transits": 93
+  },
+  "depth_ratio_nb_over_tgt": null
+ },
+ "364326339->364326325": {
+  "tce": {
+   "P": 0.8819029999999999,
+   "t0": 2036.68,
+   "depth_ppm": 308.223,
+   "snr": 9.802011,
+   "offset_arcsec": 53.62001,
+   "offset_sig": 21.3076886089722,
+   "nb_flux_frac": 0.681,
+   "expected_ratio": 1.5,
+   "rp_on_nb_re": 4.11,
+   "nb_Tmag": 12.0453,
+   "nb_Teff": 7106.0,
+   "nb_rad": 1.79663,
+   "nb_d_pc": 835.495
+  },
+  "target": {
+   "error": "LightkurveError('Download of mast:TESS/product/tess2020324010417-s0032-0000000364326339-0200-s_lc.fits failed. MAST returns ERROR: HTTPError: 404 Clie"
+  },
+  "neighbour": {
+   "nsec": 68,
+   "npts": 286304,
+   "rms_ppm": 3188,
+   "P": 0.890984,
+   "t0": 1325.5337,
+   "dur_h": 4.12,
+   "snr": 14.9,
+   "depth_ppm": 216,
+   "depth_err": 15,
+   "odd": 276,
+   "odd_err": 20,
+   "even": 158,
+   "even_err": 19,
+   "sec": 273,
+   "sec_err": 15,
+   "n_transits": 1143
+  },
+  "depth_ratio_nb_over_tgt": null
+ },
+ "2779013->2779036": {
+  "tce": {
+   "P": 1.7448,
+   "t0": 2475.25,
+   "depth_ppm": 344.753,
+   "snr": 9.059098,
+   "offset_arcsec": 56.60007,
+   "offset_sig": 3.9494271593256953,
+   "nb_flux_frac": 0.148,
+   "expected_ratio": 6.8,
+   "rp_on_nb_re": 9.01,
+   "nb_Tmag": 11.9821,
+   "nb_Teff": 7107.0,
+   "nb_rad": 1.71378,
+   "nb_d_pc": 696.481
+  },
+  "target": {
+   "nsec": 22,
+   "npts": 179370,
+   "rms_ppm": 1351,
+   "P": 1.743761,
+   "t0": 1818.924,
+   "dur_h": 5.24,
+   "snr": 40.0,
+   "depth_ppm": 388,
+   "depth_err": 10,
+   "odd": 420,
+   "odd_err": 13,
+   "even": 357,
+   "even_err": 13,
+   "sec": 128,
+   "sec_err": 10,
+   "n_transits": 102
+  },
+  "neighbour": {
+   "nsec": 8,
+   "npts": 40706,
+   "rms_ppm": 7029,
+   "P": 1.716113,
+   "t0": 1818.5188,
+   "dur_h": 5.24,
+   "snr": 21.1,
+   "depth_ppm": 2122,
+   "depth_err": 101,
+   "odd": 2276,
+   "odd_err": 139,
+   "even": 1972,
+   "even_err": 137,
+   "sec": -1412,
+   "sec_err": 100,
+   "n_transits": 96
+  },
+  "depth_ratio_nb_over_tgt": 5.47
  }
 }
