@@ -192,7 +192,7 @@ def stage_b(tb, fb, eb, P0, dur0, bl_block):
     return best
 
 
-def search_star(tic, files, cache_dir, keep=False):
+def search_star(tic, files, cache_dir, keep=False, masks=None):
     t0w = time.time()
     parts = []
     for sec, fname in sorted(files):
@@ -217,10 +217,17 @@ def search_star(tic, files, cache_dir, keep=False):
         T.append(t); F.append(f); E.append(e); S.append(np.full(len(t), sec)); MAD.append(mad)
     t = np.concatenate(T); f = np.concatenate(F); e = np.concatenate(E); s = np.concatenate(S)
     o = np.argsort(t); t, f, e, s = t[o], f[o], e[o], s[o]
+    nmasked = 0
+    for (Pm, t0m, durm) in (masks or []):   # mask known transits (+-1 full duration around each transit)
+        phm = ((t - t0m + 0.5 * Pm) % Pm) - 0.5 * Pm
+        keepm = np.abs(phm) > 1.0 * durm
+        nmasked += int((~keepm).sum()); t, f, e, s = t[keepm], f[keepm], e[keepm], s[keepm]
+    if len(t) < 500:
+        return dict(tic=tic, status="nodata_after_mask")
     tb_all, fb_all, eb_all, sb = t, f, e, s
     blocks = blocks_from_sectors(tb_all, sb)
     out = dict(tic=tic, status="ok", nsec=len(np.unique(s)), npts=len(tb_all), baseline=round(tb_all[-1] - tb_all[0], 2),
-               rms10_ppm=round(1e6 * np.nanstd(fb_all), 1), mad2_ppm=round(1e6 * np.median(MAD), 1), nblocks=len(blocks))
+               rms10_ppm=round(1e6 * np.nanstd(fb_all), 1), mad2_ppm=round(1e6 * np.median(MAD), 1), nblocks=len(blocks), nmasked=nmasked)
     block_peaks = []
     for bi, bsecs in enumerate(blocks):
         m = np.isin(sb, bsecs)
@@ -260,23 +267,28 @@ def search_star(tic, files, cache_dir, keep=False):
 
 
 def _worker(args):
-    tic, files, cache, keep = args
+    tic, files, cache, keep, masks = args
     try:
-        return search_star(tic, files, cache, keep)
+        return search_star(tic, files, cache, keep, masks)
     except Exception as ex:
         return dict(tic=tic, status="error:" + repr(ex)[:300])
 
 
 COLS = ["tic", "status", "nsec", "npts", "baseline", "rms10_ppm", "mad2_ppm", "nblocks", "P", "t0", "dur_h", "depth_ppm",
-        "snr", "ntr", "oe_sig", "sec_sig", "block_snr", "block_sde", "from_block", "best_block_snr", "best_block_sde", "snr_comb", "chi2_depths", "snr_wo_max", "runtime_s", "peaks_json"]
+        "snr", "ntr", "oe_sig", "sec_sig", "block_snr", "block_sde", "from_block", "best_block_snr", "best_block_sde", "snr_comb", "chi2_depths", "snr_wo_max", "nmasked", "runtime_s", "peaks_json"]
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("data_dir"); ap.add_argument("targets"); ap.add_argument("out")
     ap.add_argument("--workers", type=int, default=4); ap.add_argument("--limit", type=int, default=None)
-    ap.add_argument("--keep", action="store_true")
+    ap.add_argument("--keep", action="store_true"); ap.add_argument("--mask-file", default=None, help="CSV with columns tic,P,t0,dur_d of known transits to mask")
     a = ap.parse_args()
+    maskmap = {}
+    if a.mask_file:
+        mdf = pd.read_csv(a.mask_file)
+        for r in mdf.itertuples():
+            maskmap.setdefault(int(r.tic), []).append((float(r.P), float(r.t0), float(r.dur_d)))
     fmap = build_filemap(a.data_dir)
     targets = pd.read_csv(a.targets)
     if a.limit:
@@ -286,7 +298,7 @@ def main():
         try: done = set(pd.read_csv(a.out, usecols=["tic"]).tic.astype(int))
         except Exception: pass
     cache = os.path.join(a.data_dir, "lc_cache"); os.makedirs(cache, exist_ok=True)
-    jobs = [(int(r.ID), fmap.get(int(r.ID), []), cache, a.keep) for r in targets.itertuples() if int(r.ID) not in done]
+    jobs = [(int(r.ID), fmap.get(int(r.ID), []), cache, a.keep, maskmap.get(int(r.ID), [])) for r in targets.itertuples() if int(r.ID) not in done]
     print(f"{len(jobs)} stars to search ({len(done)} already done)", flush=True)
     from multiprocessing import Pool
     first = len(done) == 0
