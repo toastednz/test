@@ -1,0 +1,246 @@
+In preparation for Gaia DR4, the Gaia archive is in evolution. Unfortunately, it may be unstable at times and particular types of queries may time out. Please consider registering for a user account (https://www.cosmos.esa.int/web/gaia-users/register). For questions or advice, please contact the Gaia helpdesk (https://www.cosmos.esa.int/web/gaia/gaia-helpdesk).
+{
+ "tic": {
+  "ra": 158.90065878422,
+  "dec": -5.1816838775604,
+  "pmRA": 9.84486,
+  "pmDEC": 72.0793,
+  "Tmag": 10.1755,
+  "Vmag": 10.606,
+  "Jmag": 9.557,
+  "Kmag": 9.134,
+  "GAIA": "3777506754255516800",
+  "Teff": 5624.98,
+  "logg": 4.44576,
+  "rad": 0.989198,
+  "mass": 0.996,
+  "rho": 1.02899,
+  "lum": 0.8825623,
+  "d": 142.867,
+  "plx": 6.97093,
+  "contratio": 0.00409474131,
+  "disposition": null,
+  "objType": "STAR",
+  "lumclass": "DWARF",
+  "numcont": 44.0,
+  "gaiabp": 11.0104,
+  "gaiarp": 10.1289
+ },
+ "gaia_neighbours_1arcmin": [
+  {
+   "source_id": 3777506754255516800,
+   "ra": 158.9007,
+   "dec": -5.1814,
+   "phot_g_mean_mag": 10.638500213623047,
+   "phot_bp_mean_mag": 10.991900444030762,
+   "phot_rp_mean_mag": 10.119099617004395,
+   "parallax": 7.018,
+   "pmra": 9.7233,
+   "pmdec": 72.1891,
+   "ruwe": 0.9337000250816345,
+   "non_single_star": 0,
+   "sep_arcsec": 1.1641
+  },
+  {
+   "source_id": 3777506754254942336,
+   "ra": 158.9028,
+   "dec": -5.1812,
+   "phot_g_mean_mag": 20.069599151611328,
+   "phot_bp_mean_mag": 20.048099517822266,
+   "phot_rp_mean_mag": 19.152700424194336,
+   "parallax": 0.2016,
+   "pmra": -0.9125,
+   "pmdec": -3.0728,
+   "ruwe": 1.0549999475479126,
+   "non_single_star": 0,
+   "sep_arcsec": 7.6937
+  },
+  {
+   "source_id": 3777506749960345728,
+   "ra": 158.9095,
+   "dec": -5.187,
+   "phot_g_mean_mag": 20.834699630737305,
+   "phot_bp_mean_mag": 20.909700393676758,
+   "phot_rp_mean_mag": 19.952899932861328,
+   "parallax": 0.948,
+   "pmra": -1.6916,
+   "pmdec": -4.142,
+   "ruwe": 1.0056999921798706,
+   "non_single_star": 0,
+   "sep_arcsec": 37.0819
+  },
+  {
+   "source_id": 3777506749960345856,
+   "ra": 158.912,
+   "dec": -5.1863,
+   "phot_g_mean_mag": 18.439599990844727,
+   "phot_bp_mean_mag": 19.752099990844727,
+   "phot_rp_mean_mag": 17.329200744628906,
+   "parallax": 2.0378,
+   "pmra": 15.2571,
+   "pmdec": -7.6698,
+   "ruwe": 0.9904999732971191,
+   "non_single_star": 0,
+   "sep_arcsec": 43.7179
+  },
+  {
+   "source_id": 3777506719895779200,
+   "ra": 158.8886,
+   "dec": -5.1792,
+   "phot_g_mean_mag": 16.715700149536133,
+   "phot_bp_mean_mag": 17.137300491333008,
+   "phot_rp_mean_mag": 16.142000198364258,
+   "parallax": 0.6178,
+   "pmra": -4.7849,
+   "pmdec": -1.9597,
+   "ruwe": 0.9506999850273132,
+   "non_single_star": 0,
+   "sep_arcsec": 44.2418
+  },
+  {
+   "source_id": 3777506548097130624,
+   "ra": 158.9158,
+   "dec": -5.1855,
+   "phot_g_mean_mag": 15.115400314331055,
+   "phot_bp_mean_mag": 15.666899681091309,
+   "phot_rp_mean_mag": 14.418800354003906,
+   "parallax": 1.796,
+   "pmra": 15.2642,
+   "pmdec": -7.7037,
+   "ruwe": 1.0343999862670898,
+   "non_single_star": 0,
+   "sep_arcsec": 56.154
+  },
+  {
+   "source_id": 3777506445017470464,
+   "ra": 158.9049,
+   "dec": -5.1978,
+   "phot_g_mean_mag": 20.672500610351562,
+   "phot_bp_mean_mag": 20.633800506591797,
+   "phot_rp_mean_mag": 19.915300369262695,
+   "parallax": 0.2218,
+   "pmra": -0.7831,
+   "pmdec": 1.6911,
+   "ruwe": 1.1325000524520874,
+   "non_single_star": 0,
+   "sep_arcsec": 59.8734
+  }
+ ],
+ "neighbour_flux_fraction_within_1arcmin": 0.021003808826208115,
+ "brightest_neighbour": {
+  "sep_arcsec": 7.693657444085071,
+  "dG": 4.476938247680664
+ },
+ "target_ruwe": 0.9337445497512817,
+ "target_non_single_star_flag": 0,
+ "simbad": [
+  {
+   "main_id": "TOI-669",
+   "otype": "MS*",
+   "sp_type": "G4",
+   "ids": "TIC 124573851|LAMOST J103536.27-051054.0|Gaia DR3 3777506754255516800|GSC 04918-00181|TOI-669|TYC 4918-181-1|2MASS J10353615-0510540|RAVE J103536.2-051054|Gaia DR1 3777506749959899264|Gaia DR2 3777506754255516800"
+  },
+  {
+   "main_id": "TOI-669b",
+   "otype": "Pl",
+   "sp_type": "",
+   "ids": "TOI-669b|TOI-669.01"
+  }
+ ],
+ "nearby_tois_3arcmin": [
+  {
+   "TIC ID": 124573851,
+   "TOI": 669.01,
+   "Period (days)": 3.9451,
+   "Depth (ppm)": 841.0,
+   "TFOPWG Disposition": "CP",
+   "sep_arcmin": 0.0189
+  }
+ ],
+ "spoc_tces_this_star": [
+  {
+   "tceid": "00124573851-01",
+   "sectors": "s0001-s0036",
+   "tce_period": 3.94513,
+   "tce_depth": 629.397,
+   "tce_model_snr": 12.80024,
+   "tce_num_transits": 11,
+   "tce_ntoi": 1
+  },
+  {
+   "tceid": "00124573851-01",
+   "sectors": "s0065",
+   "tce_period": 3.94515,
+   "tce_depth": 638.656,
+   "tce_model_snr": 16.16688,
+   "tce_num_transits": 16,
+   "tce_ntoi": 1
+  },
+  {
+   "tceid": "00124573851-01",
+   "sectors": "s0096",
+   "tce_period": 3.94514,
+   "tce_depth": 642.44,
+   "tce_model_snr": 19.50097,
+   "tce_num_transits": 23,
+   "tce_ntoi": 2
+  },
+  {
+   "tceid": "00124573851-02",
+   "sectors": "s0096",
+   "tce_period": 9.52925,
+   "tce_depth": 501.115,
+   "tce_model_snr": 9.01092,
+   "tce_num_transits": 9,
+   "tce_ntoi": 2
+  },
+  {
+   "tceid": "00124573851-01",
+   "sectors": "s0009",
+   "tce_period": 3.94658,
+   "tce_depth": 776.917,
+   "tce_model_snr": 10.54663,
+   "tce_num_transits": 5,
+   "tce_ntoi": 1
+  },
+  {
+   "tceid": "00124573851-01",
+   "sectors": "s0035",
+   "tce_period": 15.7849,
+   "tce_depth": 1003.13,
+   "tce_model_snr": 7.71832,
+   "tce_num_transits": 2,
+   "tce_ntoi": 1
+  },
+  {
+   "tceid": "00124573851-01",
+   "sectors": "s0062",
+   "tce_period": 3.94764,
+   "tce_depth": 602.158,
+   "tce_model_snr": 9.10559,
+   "tce_num_transits": 5,
+   "tce_ntoi": 1
+  },
+  {
+   "tceid": "00124573851-01",
+   "sectors": "s0089",
+   "tce_period": 3.94532,
+   "tce_depth": 718.043,
+   "tce_model_snr": 11.50186,
+   "tce_num_transits": 7,
+   "tce_ntoi": 1
+  }
+ ],
+ "tce_period_match": [
+  {
+   "tceid": "00124573851-02",
+   "sectors": "s0096",
+   "tce_period": 9.52925,
+   "tce_depth": 501.115,
+   "tce_model_snr": 9.01092,
+   "tce_num_transits": 9,
+   "tce_ntoi": 2
+  }
+ ],
+ "sectors_2min": null
+}

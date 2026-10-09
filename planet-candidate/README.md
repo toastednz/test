@@ -468,9 +468,49 @@ the literature as of 2026-10-09.** `results/candidate_HD32564/HD32564_candidate_
 contains the nightly velocities, all 205 spectra with both pipelines and indicators, the fits and tests, and
 a recipe for independent checking.
 
-**Revised bottom line for the whole project:** in the transit searches no previously unreported planet
-candidate was found (TOI-6284's 7.35-d Earth-sized candidate is real but was first reported by Tschudi 2026).
-The archival radial-velocity search (sections G–H) did find one: **HD 32564, four coherent low-amplitude
-signals at 1.635, 11.06, 23.6 and 49.0 d (7–12 M_⊕ minimum masses) in public HARPS data, unpublished in the
-refereed literature.** It remains a candidate system until confirmed with independent velocities; the data
-owners (HARPS GTO, PI Udry) have re-observed the star recently and may publish it first.
+### I. Masked residual search around 1,115 K/G/F TOI hosts  → **TOI-669 c, an unreported second transiting planet candidate**
+
+Track F (section above) searched the cool-dwarf TOI hosts; this run extends it to every non-M TOI host with
+2-min data (`targets_hosts_fgk.csv`, 1,115 stars, 1,858 known ephemerides masked). Triage needed two
+changes for host stars (`03_triage.py`, host mode): a nearby TOI only counts as "claiming" a signal if its
+period matches, and harmonic matching now covers ratios up to 6:1 and 3:2-type fractions, because the
+residuals of imperfectly masked deep eclipses (FP/APC eclipsing binaries with 5–20 mmag eclipses) leak into
+exactly those multiples. Stars carrying an FP/FA or > 3 mmag TOI were set aside. The survivors
+(`results/triage_hosts_fgk_clean*.csv`) were vetted with `05_vet_batch.py` (`results/vet_hosts_fgk/`).
+
+**TOI-669 (TIC 124573851)** — a G dwarf (T_eff 5600 K, 0.99 R_⊙, 0.90 M_⊙, T = 10.2) with the confirmed
+sub-Neptune TOI-669 b (3.945 d, 2.6 R_⊕, 9.8 M_⊕; Akana Murphy et al. 2023). With b masked, the four
+sectors (9, 35, 62, 89; 2019–2025) contain a second transit signal (`results/candidate_TOI669/`):
+
+| quantity | value |
+|---|---|
+| period / epoch | 9.52922 d / BTJD 1550.991 (SPOC: 9.52925 ± 0.00004) |
+| depth, duration | 414 ± 44 ppm, 2.4 h (SPOC 501 ± 59 ppm, 2.9 h, b = 0.90) |
+| radius | 2.2 R_⊕ (SPOC 2.59 ± 0.35) at a = 0.085 AU, T_eq ≈ 840 K |
+| transits | 10, all positive, χ²_red 1.6, combined SNR 12.1 (10.8 without the strongest) |
+| odd / even | 428 ± 68 / 405 ± 56 ppm |
+| secondary (phase 0.5) | 7 ± 53 ppm |
+| masked coherent periodogram | global maximum, SDE 10.3; the only competing peaks are P/2, 2P, 3P |
+| TLS | same period, SDE 12.7 |
+| sector-shuffle bootstrap | 0 of 8 trials reach the real SDE (trial maxima 4.3–5.5) |
+| SAP / PDC depth, background | 0.98, 1.00 |
+| centroids | within 0.4–0.8 pixel of the target in all four sectors (low SNR); SPOC joint offset 8.9″ (1.8σ) |
+
+SPOC's own s1–s96 data-validation run (Dec 2025) lists this as TCE 2 of 2 on the star: MES 7.6, odd/even
+0.14σ, weak-secondary MES 2.9, bootstrap false-alarm 6 × 10⁻¹⁵, ghost diagnostic clean, "No Ephemeris
+Match" — i.e. SPOC found it and nobody has yet turned it into a TOI (ExoFOP, live: TOI-669.01 only, no CTOI).
+Independently, the TESS-Keck Survey paper on this system (Akana Murphy et al. 2023) notes "a less significant
+peak near 9.6 d … in the periodogram of the RV residuals" and a two-planet fit giving m sin i = 5.0 ± 2.6 M_⊕
+at 9.61 ± 0.52 d, which they could not distinguish from the window function and did not claim. A transit
+ephemeris at 9.529 d fixes that period and makes the RV hint a plausible mass measurement in waiting.
+P_c/P_b = 2.415. Verification package: `results/candidate_TOI669/TOI669c_candidate_verification_package.zip`.
+
+The remaining vetted host signals are summarised in `results/vet_hosts_fgk/` and discussed below.
+
+**Revised bottom line for the whole project:** two previously unreported planet candidates came out of the
+"other avenues": (1) **HD 32564** — four coherent radial-velocity signals (1.635, 11.06, 23.6, 49.0 d; 7–12 M_⊕
+minimum masses) in public HARPS data (section H), unpublished, data owners presumably aware; (2) **TOI-669 c** —
+a 2.2–2.6 R_⊕ transit candidate at 9.529 d around the confirmed-planet host TOI-669 (section I), found
+independently by SPOC in Dec 2025 but never promoted to a TOI, and matching a weak RV hint in the published
+Keck data. In the earlier pure-transit searches nothing new survived (TOI-6284's 7.35-d candidate was first
+reported by Tschudi 2026).

@@ -1,0 +1,137 @@
+{
+ "target": {
+  "name": "TOI-669 (TIC 124573851)",
+  "tmag": 10.18,
+  "V": null,
+  "teff_K": 5600,
+  "radius_rsun": 0.99,
+  "mass_msun": 0.9,
+  "age_gyr": 8.6,
+  "metallicity": -0.06,
+  "source": "Akana Murphy et al. 2023 (TESS-Keck Survey XVI), Table 13",
+  "known_planet": "TOI-669 b: P=3.94515 d, Rp=2.60 Re, Mp=9.8\u00b11.5 Me (confirmed)"
+ },
+ "candidate": {
+  "label": "TOI-669 c (candidate)",
+  "P_d": 9.52921651897296,
+  "P_err_d": 4e-05,
+  "t0_btjd": 1550.9912200387964,
+  "t0_bjd": 2458550.991220039,
+  "duration_h": 2.3999999999999995,
+  "depth_ppm": 414.36228418809225,
+  "depth_err_ppm": 43.581382367658456,
+  "rp_rearth": 2.1986193933042877,
+  "rp_err_rearth": 0.20356687276773106,
+  "a_au": 0.08492954877049388,
+  "teq_K_A0p3": 843.2613679127622,
+  "insolation_earth": 120.39253917085192,
+  "period_ratio_to_b": 2.415425654024045,
+  "spoc_dv": {
+   "run": "s0001-s0096 (generated 2025-12-13)",
+   "tce": "TIC 124573851-02",
+   "P": 9.52925,
+   "epoch": 1550.9866,
+   "rp_rs": 0.024,
+   "rp_rearth": 2.59,
+   "rp_err": 0.35,
+   "b": 0.9,
+   "MES": 7.6,
+   "SNR": 9.0,
+   "depth_ppm": 501.1,
+   "transits": 9,
+   "odd_even_sigma": 0.14,
+   "weak_secondary_MES": 2.9,
+   "bootstrap_pfa": 5.61e-15,
+   "ghost_diagnostic_pct": 85.99,
+   "centroid_offset_arcsec_joint": 8.87,
+   "centroid_sigma_joint": 1.76,
+   "ephemeris_match": "No Ephemeris Match (not a known TOI)"
+  }
+ },
+ "our_tests": {
+  "masked_coherent_periodogram": {
+   "known_planet_masked": "3.9451 d",
+   "global_max_P": 9.529182935634282,
+   "sde": 10.328693963487591,
+   "rank": 1,
+   "competing_peaks": "only harmonics (P/2, 2P, 3P)"
+  },
+  "per_transit": {
+   "n": 10,
+   "n_positive": 10,
+   "chi2_red": 1.6203805926954877,
+   "snr_combined": 12.062061135427694,
+   "snr_without_strongest": 10.811510880791499,
+   "max_single_snr": 5.618473895582329
+  },
+  "odd_even": {
+   "odd": 428.17251304672067,
+   "even": 404.85424222358455,
+   "err": [
+    68.01960500086341,
+    56.49864966866988
+   ]
+  },
+  "secondary_phase0p5_ppm": [
+   6.911518421581775,
+   52.75924386569672
+  ],
+  "half_period_model_delta_lnL": -45.043007687410864,
+  "sap_over_pdc_depth": 0.9796496122774419,
+  "background_in_transit_over_median": 1.00318588317198,
+  "tls": {
+   "P": 9.529200654080425,
+   "SDE": 12.69169297537929,
+   "rp_rs": 0.019158126143969723,
+   "odd_even_mismatch": 0.10512774000461811
+  },
+  "sector_shuffle_bootstrap": {
+   "real_sde": 10.328693963487591,
+   "trials": 8,
+   "exceeding": 0,
+   "trial_max_sdes": null
+  },
+  "difference_image_centroids": {
+   "centroid_s62": {
+    "offset_from_target_pix": 0.46996256050740837,
+    "offset_arcsec": 6.887752693759935,
+    "max_diff_snr": 2.3387124673901805
+   },
+   "centroid_s35": {
+    "offset_from_target_pix": 0.8142282462866225,
+    "offset_arcsec": 10.307984672253284,
+    "max_diff_snr": 2.18003628618391
+   },
+   "centroid_s89": {
+    "offset_from_target_pix": 0.4579940960006161,
+    "offset_arcsec": 7.652156321044318,
+    "max_diff_snr": 2.430837688602999
+   },
+   "centroid_s9": {
+    "offset_from_target_pix": 0.3800331815077004,
+    "offset_arcsec": 6.013705183016262,
+    "max_diff_snr": 3.1963758229605967
+   }
+  }
+ },
+ "literature": {
+  "tks16": "Akana Murphy et al. 2023 (TKS XVI): 'A less significant peak near 9.6 d is visible in the periodogram of the RV residuals, but it is unclear whether the signal is planetary or related to the RV window function'; two-planet RadVel fit gives Mp sin i = 5.0 \u00b1 2.6 Me at P = 9.61 \u00b1 0.52 d, dAIC < 1, not claimed.",
+  "exofop": "TOI-669.01 only; no TOI-669.02 and no CTOI on TIC 124573851 as of 2026-10-09 (live tables)",
+  "arxiv": "no paper mentions a second transiting signal or TOI-669 c (arXiv API, SIMBAD)"
+ },
+ "next_transits_btjd": [
+  4343.0517,
+  4352.5809,
+  4362.1101,
+  4371.6393,
+  4381.1685,
+  4390.6977,
+  4400.227,
+  4409.7562,
+  4419.2854,
+  4428.8146,
+  4438.3438,
+  4447.873
+ ],
+ "verdict": "Unreported transiting planet candidate: 2.2-2.6 Earth-radius body on a 9.529-d orbit around the confirmed-planet host TOI-669, with 10 consistent transits over 2019-2025, SPOC's own clean TCE (Dec 2025, no TOI yet) and an independent weak RV hint at the same period. Period ratio to planet b is 2.415. Suitable for a CTOI submission under the published-candidate route once written up, or for direct contact with the TOI-669 RV team."
+}
