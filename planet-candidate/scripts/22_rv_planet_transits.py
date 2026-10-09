@@ -20,15 +20,19 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import tsearch2 as ts
 warnings.filterwarnings("ignore")
 ap = argparse.ArgumentParser(); ap.add_argument("data_dir"); ap.add_argument("planets"); ap.add_argument("out")
-ap.add_argument("--workers", type=int, default=3); ap.add_argument("--only", default=""); ap.add_argument("--max-sectors", type=int, default=40)
+ap.add_argument("--workers", type=int, default=3); ap.add_argument("--only", default=""); ap.add_argument("--max-sectors", type=int, default=40); ap.add_argument("--rerun-errors", default="", help="previous results CSV: rerun only planets whose status is not ok")
 a = ap.parse_args()
 D = a.data_dir; cache = os.path.join(D, "lc_cache"); os.makedirs(cache, exist_ok=True)
 pl = pd.read_csv(a.planets); pl = pl[pl.nsec_2min > 0].copy()
 if a.only: pl = pl[pl.pl_name.isin(a.only.split(","))]
+if a.rerun_errors:
+    prev = pd.read_csv(a.rerun_errors); pl = pl[pl.pl_name.isin(prev[prev.status != "ok"].pl_name)]
 try: sib = pd.read_csv(os.path.join(D, "catalogs", "rv_planets_transiting_siblings.csv"))
 except Exception: sib = pd.DataFrame(columns=["hostname", "pl_orbper", "pl_tranmid", "pl_trandur"])
 fmap = ts.build_filemap(D)
 
+def baseline_guard(t):
+    return (t.max() - t.min()) > 3.0
 def conj_time(P, Tp, om_deg, e):
     """time of inferior conjunction from periastron time, argument of periastron (star's orbit, deg) and e"""
     if not (np.isfinite(Tp) and np.isfinite(om_deg)): return np.nan
@@ -58,11 +62,12 @@ def one(row):
                 dur = (q.pl_trandur if np.isfinite(q.pl_trandur) else 3.0) / 24
                 ph = ((t - (q.pl_tranmid - 2457000) + 0.5 * q.pl_orbper) % q.pl_orbper) - 0.5 * q.pl_orbper
                 keep = np.abs(ph) > max(1.0 * dur, 0.06); t, f, e, s = t[keep], f[keep], e[keep], s[keep]
-        if len(t) < 500: return dict(pl_name=row["pl_name"], status="too_few_points")
+        if len(t) < 500 or not np.isfinite(t).any(): return dict(pl_name=row["pl_name"], status="too_few_points")
         Rs = float(row["st_rad"]); Ms = float(row["st_mass"]) if np.isfinite(row["st_mass"]) else 1.0
         a_rs = 215.03 * (Ms * (P / 365.25) ** 2) ** (1 / 3) / Rs
         tdur = P / np.pi / a_rs                      # central transit duration (days)
-        durs = np.clip(tdur * np.array([0.3, 0.5, 0.75, 1.0, 1.4]), 0.5 / 24, 12.0 / 24)
+        durs = np.clip(tdur * np.array([0.3, 0.5, 0.75, 1.0, 1.4]), 0.5 / 24, min(1.0, 0.25 * P)); durs = np.unique(durs)
+        if baseline_guard(t) is False: return dict(pl_name=row["pl_name"], status="short_baseline")
         baseline = t.max() - t.min()
         # period window: +-max(3 sigma_P, 0.2%) but at least a few grid steps; frequency step from duration/baseline
         dP = max(3 * eP, 0.002 * P); step = P * (durs.min() / 3) / baseline; nP = int(min(max(20, 2 * dP / step), 20000))
@@ -71,10 +76,11 @@ def one(row):
         res = bls.power(periods, durs, objective="snr", method="fast", oversample=3)
         i = int(np.nanargmax(res.power)); Pb, t0b, depb, durb, snrb = float(periods[i]), float(res.transit_time[i]), float(1e6 * res.depth[i]), float(24 * res.duration[i]), float(res.power[i])
         # reference: how does this SNR compare with the distribution over a wide period search (same durations)?
-        ref_periods = ts.period_grid(baseline, 0.5, min(100.0, baseline / 2), oversample=1.5)
+        pmin_ref = max(0.5, 1.5 * float(durs.max())); ref_periods = ts.period_grid(baseline, pmin_ref, max(min(100.0, baseline / 2), 2 * pmin_ref), oversample=1.5)
         rp = bls.power(ref_periods, durs, objective="snr", method="fast", oversample=2).power
         sde = float((snrb - np.nanmean(rp)) / np.nanstd(rp)); ref_max = float(np.nanmax(rp))
-        ntr = int(ts.count_transits(t, Pb, t0b, durb / 24))
+        try: ntr = int(ts.count_transits(t, Pb, t0b, durb / 24))
+        except Exception: ntr = -1
         # expected depth / SNR
         m = row["pl_bmasse"] if np.isfinite(row["pl_bmasse"]) else row["pl_msinie"]
         rpl = m ** 0.279 if m < 2.04 else (1.23 * m ** 0.589 if m < 131 else 11.1 * (m / 318) ** -0.044)
@@ -90,8 +96,10 @@ def one(row):
             eTp = np.nanmax([abs(float(row.get("pl_orbtpererr1", np.nan))), abs(float(row.get("pl_orbtpererr2", np.nan))), 0.0])
             ncyc = abs((t.mean() - Tc_b) / P); pred_sigma_phase = float(np.sqrt((ncyc * eP) ** 2 + eTp ** 2) / P)
             # depth at the predicted ephemeris (box of central duration)
-            st = bls.compute_stats(P, min(max(tdur, 0.5 / 24), 12 / 24), Tc_b)
-            depth_at_pred = float(1e6 * st["depth"][0])
+            try:
+                st = bls.compute_stats(P, min(max(tdur, 0.5 / 24), 12 / 24), Tc_b); depth_at_pred = float(1e6 * st["depth"][0])
+            except Exception:
+                depth_at_pred = np.nan
         return dict(pl_name=row["pl_name"], hostname=row["hostname"], tic=tic, status="ok", nsec=len(files), npts=len(t), baseline=round(baseline, 1), P_pub=P, eP_pub=eP, P_best=Pb, t0_best=round(t0b, 4), depth_ppm=round(depb, 1), dur_h=round(durb, 2), tdur_central_h=round(24 * tdur, 2),
                     snr=round(snrb, 2), sde_vs_wide=round(sde, 2), wide_max_snr=round(ref_max, 2), ntr=ntr, depth_est_ppm=round(depth_est, 1), rms_ppm=round(1e6 * rms, 0), snr_expected=round(snr_exp, 1), ptransit=round(1 / a_rs, 3),
                     Tc_pred_btjd=round(Tc - 2457000, 3) if np.isfinite(Tc) else np.nan, pred_phase_offset=round(pred_phase, 3) if np.isfinite(pred_phase) else np.nan, pred_sigma_phase=round(pred_sigma_phase, 3) if np.isfinite(pred_sigma_phase) else np.nan, depth_at_pred_ppm=round(depth_at_pred, 1) if np.isfinite(depth_at_pred) else np.nan,
