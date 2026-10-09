@@ -115,7 +115,7 @@ if a.tls:
     else:
         pmin_t, pmax_t = P * 0.99, P * 1.01
     model = transitleastsquares(tt_, ff_, ee_)
-    tlsr = model.power(period_min=pmin_t, period_max=pmax_t, R_star=R, M_star=M, R_star_min=0.1, R_star_max=1.0, M_star_min=0.1, M_star_max=1.0,
+    tlsr = model.power(period_min=pmin_t, period_max=pmax_t, R_star=R, M_star=M, R_star_min=0.1, R_star_max=max(3.0, 2.0 * R_star), M_star_min=0.1, M_star_max=max(3.0, 2.0 * M_star),
                        oversampling_factor=5, duration_grid_step=1.05, use_threads=4, show_progress_bar=False)
     summary["tls"] = dict(P=float(tlsr.period), t0=float(tlsr.T0), SDE=float(tlsr.SDE), snr=float(tlsr.snr), depth=float(tlsr.depth),
                           rp_rs=float(tlsr.rp_rs), duration_h=float(tlsr.duration) * 24, odd_even_mismatch=float(tlsr.odd_even_mismatch),

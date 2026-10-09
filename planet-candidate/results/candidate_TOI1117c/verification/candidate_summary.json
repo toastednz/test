@@ -1,0 +1,97 @@
+{
+ "target": {
+  "name": "TOI-1117 (TIC 295541511)",
+  "host": "Sun-like star, M=0.97 Msun, R=1.05 Rsun (Lockley et al. 2025)",
+  "known_planets": "b: transiting, P=2.22816 d, 2.46 Re, 8.90 Me; c: RV only, P=4.579\u00b10.004 d, K=3.45\u00b10.47 m/s, m sin i=8.78 Me; d: RV only, P=8.665 d, m sin i=10.71 Me (Lockley et al. 2025, arXiv:2506.05521, 'two non-transiting planets', TESS sectors 13 and 39 only)"
+ },
+ "result": "TOI-1117 c TRANSITS: a 4.5786-d transit signal in five TESS 2-min sectors (2019-2025) at the period of the RV planet c, and at the phase predicted by the published HARPS velocities",
+ "transit": {
+  "P_d": 4.578649389025934,
+  "t0_btjd": 2366.126127743605,
+  "t0_bjd": 2459366.1261277436,
+  "depth_ppm": 450.78102172250516,
+  "depth_err_ppm": 40.013892713831126,
+  "duration_h": 1.53,
+  "n_transits": 23,
+  "n_positive": 22,
+  "chi2_red": 1.6033328023970894,
+  "snr_combined": 11.864903451095431,
+  "snr_without_strongest": 10.974443621791005,
+  "odd_even_ppm": [
+   519.4565982352683,
+   377.95338023827173
+  ],
+  "odd_even_err": [
+   55.59496908859863,
+   57.23964035070238
+  ],
+  "secondary_phase0p5_ppm": [
+   -3.5676130425432717,
+   39.23989201546133
+  ],
+  "half_period_delta_lnL": -63.37855774025229,
+  "sap_over_pdc": 0.9463280034902644,
+  "background_ratio": 0.9998185076565874,
+  "masked_coherent_periodogram": {
+   "global_P": 4.578649389025934,
+   "sde": 9.930581952143951,
+   "rank": 1,
+   "competing": "only harmonics 2P, P/2, 3P"
+  },
+  "bootstrap": {
+   "trials": 6,
+   "exceeding": 0,
+   "max_trial_sde": 5.216013644698806,
+   "real_sde": 9.897034375940015
+  }
+ },
+ "rv_phase_test": {
+  "n_rv": 133,
+  "K_b": 4.420246382020547,
+  "K_c": -3.3996433684145817,
+  "K_d": 3.5382992016651262,
+  "rv_conjunction_c_btjd": 3050.7667575019636,
+  "transit_predicted_conjunction_btjd": 3052.92195,
+  "phase_offset": -0.4707048952728819,
+  "phase_offset_hours": -51.72461995287085,
+  "one_sigma_phase_interval": [
+   -0.5,
+   0.49444444444444435
+  ],
+  "dchi2_at_transit_phase": 0.8078584223448928,
+  "chi2_no_c": 117.4237532861173,
+  "chi2_c_at_transit_phase": 88.84270715793653,
+  "K_c_at_transit_phase": 3.342199105867142,
+  "conjunction_phase_offset_best": 0.02777777777777779,
+  "one_sigma_phase_interval_Kpositive": [
+   -0.002777777777777768,
+   0.05833333333333335
+  ],
+  "dchi2_antiphase": 29.240684390129815,
+  "note": "RV conjunction of c (K>=0) vs transit ephemeris T0=2366.1246 BTJD, P=4.578649 d, propagated 149 cycles; K_b recovered at the transit phase validates the time system"
+ },
+ "planet": {
+  "rp_rearth": 2.432186432126176,
+  "rp_err_rearth": 0.18091295794296378,
+  "mass_earth": 8.78,
+  "mass_err": 1.2,
+  "density_gcc": 3.362447641395206,
+  "a_au": 0.05341813083086401,
+  "teq_K_A0p3": 1095.0257235918045,
+  "P_ratio_c_b": 2.0549015281783776,
+  "P_ratio_d_c": 1.8924794767575335
+ },
+ "status": "Known planet (RV) now seen to transit: not a new planet, but a new transiting planet with a measured mass and radius. Not in the discovery paper, ExoFOP (no TOI-1117.02/CTOI) or the archive (tran_flag=0 for c) as of 2026-10-09.",
+ "next_transits_btjd": [
+  4348.6813,
+  4353.26,
+  4357.8386,
+  4362.4173,
+  4366.9959,
+  4371.5746,
+  4376.1532,
+  4380.7319,
+  4385.3105,
+  4389.8892
+ ]
+}

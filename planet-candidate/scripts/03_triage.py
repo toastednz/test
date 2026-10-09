@@ -63,6 +63,13 @@ try:
     km = pd.read_csv(MASKS); known = km.groupby("tic").P.apply(list).to_dict()
 except Exception:
     known = {}
+# NASA Exoplanet Archive planets (incl. RV-only) on the same TIC, for host-mode searches
+try:
+    arch = pd.read_csv(f"{DATA}/catalogs/pscomppars.csv", low_memory=False)
+    arch["tic"] = pd.to_numeric(arch.tic_id.astype(str).str.replace("TIC", "").str.strip(), errors="coerce")
+    arch_by_tic = {int(t): g for t, g in arch[np.isfinite(arch.tic)].groupby("tic")}
+except Exception:
+    arch_by_tic = {}
 rows = []
 for x in r.itertuples():
     if not np.isfinite(x.snr):
@@ -105,6 +112,8 @@ for x in r.itertuples():
         # TESS orbital systematics
         sysflag = any(abs(P / (13.7 / n) - 1) < 0.02 for n in (1, 2, 3, 4)) or any(abs(P / (13.7 * n) - 1) < 0.02 for n in (1, 2))
         known_match = [q for q in known.get(tic, []) if period_match(P, q, 0.02, NMAX)]
+        ga = arch_by_tic.get(tic)
+        arch_match = ";".join(f"{row.pl_name}(P={row.pl_orbper:.4g},{row.discoverymethod},{period_match(P, row.pl_orbper, 0.02, NMAX)})" for row in ga.itertuples() if np.isfinite(row.pl_orbper) and period_match(P, row.pl_orbper, 0.02, NMAX)) if ga is not None else ""
         ptd = ref.get("per_transit_ppm", {})
         dd = np.array(list(ptd.values()), float) if ptd else np.array([])
         med_d = float(np.median(dd)) if len(dd) else np.nan
@@ -116,7 +125,7 @@ for x in r.itertuples():
                          block_snr=round(ref["block_snr"], 1), block_sde=round(ref["block_sde"], 1), alias=ref["mult"],
                          n_tce_same_star=len(tm), tce_match=";".join(f"{a}({b},ntoi={c})" for a, b, c in tce_match),
                          has_tce_match=bool(tce_match), nearby_toi_match=";".join(f"{a}({b})" for a, b in near_match),
-                         n_nearby_toi=len(near), n_toi_ctoi_within_1arcmin=n_near_1arcmin, same_star_tois=same_info, deep_or_fp_toi_same_star=deep_or_fp, harmonic_of_same_star_toi=";".join(map(str, same_harm)), sys13_7=sysflag, rms10_ppm=x.rms10_ppm, matches_known_planet=bool(known_match),
+                         n_nearby_toi=len(near), n_toi_ctoi_within_1arcmin=n_near_1arcmin, same_star_tois=same_info, deep_or_fp_toi_same_star=deep_or_fp, harmonic_of_same_star_toi=";".join(map(str, same_harm)), archive_planet_match=arch_match, sys13_7=sysflag, rms10_ppm=x.rms10_ppm, matches_known_planet=bool(known_match),
                          n_pos_transits=sum(1 for v in ptd.values() if v > 0), n_transits_measured=len(ptd),
                          median_transit_ppm=round(med_d, 0) if np.isfinite(med_d) else np.nan, max_over_median=round(max_ratio, 2) if np.isfinite(max_ratio) else np.nan,
                          snr_comb=round(ref.get("snr_comb", np.nan), 1), chi2_depths=round(ref.get("chi2_depths", np.nan), 1), snr_wo_max=round(ref.get("snr_wo_max", np.nan), 1), n_transits_sig=ref.get("n_transits_sig", np.nan)))
@@ -150,4 +159,4 @@ print(c[c.pass_phys & c.consistent & ~c.claimed_nearby][cols].head(40).round(2).
 if HOSTMODE:
     clean = c[c.pass_phys & c.consistent & ~c.claimed_nearby & ~c.deep_or_fp_toi_same_star]
     print("\nhost mode: unclaimed, consistent, and no deep/FP/FA TOI on the star:", len(clean), "signals on", clean.tic.nunique(), "stars")
-    print(clean[["tic", "Tmag", "Teff", "rad", "nsec", "P", "dur_h", "depth_ppm", "rp_re", "snr", "ntr", "oe_sig", "sec_sig", "has_tce_match", "same_star_tois", "snr_wo_max", "chi2_depths"]].head(40).round(2).to_string(index=False))
+    print(clean[["tic", "Tmag", "Teff", "rad", "nsec", "P", "dur_h", "depth_ppm", "rp_re", "snr", "ntr", "oe_sig", "sec_sig", "has_tce_match", "same_star_tois", "archive_planet_match", "snr_wo_max", "chi2_depths"]].head(40).round(2).to_string(index=False))

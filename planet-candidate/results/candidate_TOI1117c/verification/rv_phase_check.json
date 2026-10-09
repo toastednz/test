@@ -1,0 +1,25 @@
+{
+ "n_rv": 133,
+ "K_b": 4.420246382020547,
+ "K_c": -3.3996433684145817,
+ "K_d": 3.5382992016651262,
+ "rv_conjunction_c_btjd": 3050.7667575019636,
+ "transit_predicted_conjunction_btjd": 3052.92195,
+ "phase_offset": -0.4707048952728819,
+ "phase_offset_hours": -51.72461995287085,
+ "one_sigma_phase_interval": [
+  -0.5,
+  0.49444444444444435
+ ],
+ "dchi2_at_transit_phase": 0.8078584223448928,
+ "chi2_no_c": 117.4237532861173,
+ "chi2_c_at_transit_phase": 88.84270715793653,
+ "K_c_at_transit_phase": 3.342199105867142,
+ "conjunction_phase_offset_best": 0.02777777777777779,
+ "one_sigma_phase_interval_Kpositive": [
+  -0.002777777777777768,
+  0.05833333333333335
+ ],
+ "dchi2_antiphase": 29.240684390129815,
+ "note": "RV conjunction of c (K>=0) vs transit ephemeris T0=2366.1246 BTJD, P=4.578649 d, propagated 149 cycles; K_b recovered at the transit phase validates the time system"
+}

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/user/test/planet-candidate/scripts/04_vet.py", line 118, in <module>
+    tlsr = model.power(period_min=pmin_t, period_max=pmax_t, R_star=R, M_star=M, R_star_min=0.1, R_star_max=1.0, M_star_min=0.1, M_star_max=1.0,
+                       oversampling_factor=5, duration_grid_step=1.05, use_threads=4, show_progress_bar=False)
+  File "/tmp/claude-0/-home-user-test/0266333c-f419-5c06-944f-5817f563bceb/scratchpad/venv/lib/python3.13/site-packages/transitleastsquares/main.py", line 214, in power
+    self, kwargs = validate_args(self, kwargs)
+                   ~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/tmp/claude-0/-home-user-test/0266333c-f419-5c06-944f-5817f563bceb/scratchpad/venv/lib/python3.13/site-packages/transitleastsquares/validate.py", line 147, in validate_args
+    raise ValueError("R_star_max >= R_star is required")
+ValueError: R_star_max >= R_star is required

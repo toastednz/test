@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/user/test/planet-candidate/scripts/04_vet.py", line 118, in <module>
+    tlsr = model.power(period_min=pmin_t, period_max=pmax_t, R_star=R, M_star=M, R_star_min=0.1, R_star_max=max(3.0, 2.0 * R_star), M_star_min=0.1, M_star_max=max(3.0, 2.0 * M_star),
+                                                                                                                           ^^^^^^
+NameError: name 'R_star' is not defined

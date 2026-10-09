@@ -507,10 +507,32 @@ P_c/P_b = 2.415. Verification package: `results/candidate_TOI669/TOI669c_candida
 
 The remaining vetted host signals are summarised in `results/vet_hosts_fgk/` and discussed below.
 
-**Revised bottom line for the whole project:** two previously unreported planet candidates came out of the
-"other avenues": (1) **HD 32564** — four coherent radial-velocity signals (1.635, 11.06, 23.6, 49.0 d; 7–12 M_⊕
-minimum masses) in public HARPS data (section H), unpublished, data owners presumably aware; (2) **TOI-669 c** —
-a 2.2–2.6 R_⊕ transit candidate at 9.529 d around the confirmed-planet host TOI-669 (section I), found
-independently by SPOC in Dec 2025 but never promoted to a TOI, and matching a weak RV hint in the published
-Keck data. In the earlier pure-transit searches nothing new survived (TOI-6284's 7.35-d candidate was first
-reported by Tschudi 2026).
+### J. TOI-1117 c: a published "non-transiting" RV planet that does transit
+
+The same host search flagged a 4.579-d signal on **TOI-1117** (TIC 295541511, Sun-like, 1.05 R_⊙). The
+NASA archive cross-match (now part of host-mode triage) showed why it looked unclaimed: Lockley et al.
+(2025, arXiv:2506.05521) published this system as transiting sub-Neptune b (2.228 d) plus **two
+non-transiting RV planets, c at 4.579 ± 0.004 d (m sin i = 8.78 M_⊕) and d at 8.665 d**, using only TESS
+sectors 13 and 39. With b masked, five 2-min sectors (2019–2025) show transits at exactly planet c's period
+(`results/candidate_TOI1117c/`): P = 4.57866 d, 451 ± 40 ppm, 1.5 h, 22 of 23 transits positive
+(χ²_red 1.6, combined SNR 11.9), odd/even 519 ± 56 / 378 ± 57 ppm, no secondary (−4 ± 39 ppm), SAP/PDC
+0.95, masked coherent periodogram global maximum (SDE 9.9, only harmonics compete), 0 of 6 sector-shuffle
+trials reach it. Radius ≈ 2.3 R_⊕; with the published mass this gives a density of ≈ 4 g cm⁻³.
+
+The decisive test used the paper's own HARPS table (133 velocities, extracted from the arXiv source):
+fitting b at its transit ephemeris (K_b = 4.4 m/s recovered) and c at the transit period, the RV-predicted
+inferior conjunction of c lands **+0.03 ± 0.03 in phase (+3 h) from the transit times**, 149 orbits away
+(Δχ² = 0.8 at the transit phase, 29 at anti-phase). So the 4.579-d signal is planet c, and planet c
+transits. This is not a new planet, but it is new: the paper, ExoFOP (no TOI-1117.02, no CTOI) and the
+archive (`tran_flag = 0`) all list c as non-transiting, and a transiting 8.8 M_⊕, 2.3 R_⊕ planet at 4.58 d
+next to a 2.46 R_⊕, 8.9 M_⊕ planet at 2.23 d (period ratio 2.055) is a measurable, dynamically interesting
+pair. Package: `results/candidate_TOI1117c/TOI1117c_transit_verification_package.zip`.
+
+**Revised bottom line for the whole project:** three results came out of the "other avenues": (1) **HD 32564**,
+four coherent radial-velocity signals (1.635, 11.06, 23.6, 49.0 d; 7–12 M_⊕ minimum masses) in public HARPS data
+(section H), unpublished; (2) **TOI-669 c**, a 2.2–2.6 R_⊕ transit candidate at 9.529 d around a confirmed-planet
+host (section I), found independently by SPOC in Dec 2025 but never promoted to a TOI, matching a weak RV hint in
+the published Keck data; (3) **TOI-1117 c transits** (section J): a published RV planet, listed everywhere as
+non-transiting, shows 22 transits at its RV period and phase, which turns it into a planet with both mass and
+radius. In the earlier pure-transit searches nothing new survived (TOI-6284's 7.35-d candidate was first reported
+by Tschudi 2026).

@@ -1,0 +1,214 @@
+{
+ "tic": 270619211,
+ "P": 6.527135596681536,
+ "t0": 1686.1861120563715,
+ "dur_h": 5.040000000000001,
+ "depth_ppm": 133.24993226767603,
+ "depth_err_ppm": 17.512817201790646,
+ "bls_snr": 7.608709137559634,
+ "depth_odd_ppm": 161.20654229268007,
+ "depth_odd_err": 23.840987553972457,
+ "depth_even_ppm": 101.60930300961991,
+ "depth_even_err": 25.33588614680726,
+ "depth_half_ppm": 48.709012699155174,
+ "depth_half_err": 12.843068532641592,
+ "depth_phased_ppm": -41.472410165832585,
+ "depth_phased_err": 18.220222276787087,
+ "harmonic_delta_log_likelihood": -28.141705681802705,
+ "npts": 84309,
+ "nsec": 5,
+ "baseline": 1849.6210351911516,
+ "sap_depth_ppm": 164.7514562850283,
+ "sap_depth_err_ppm": 23.24265227614506,
+ "sap_over_pdc_depth": 1.2364093060405552,
+ "bkg_in_transit_over_median": 0.786048541742837,
+ "per_transit": [
+  {
+   "epoch": 0,
+   "time": 1686.1861120563715,
+   "sector": 14,
+   "depth_ppm": -53.5,
+   "err_ppm": 76.1,
+   "snr": -0.7,
+   "nin": 152
+  },
+  {
+   "epoch": 1,
+   "time": 1692.713247653053,
+   "sector": 14,
+   "depth_ppm": 18.0,
+   "err_ppm": 81.0,
+   "snr": 0.22,
+   "nin": 147
+  },
+  {
+   "epoch": 2,
+   "time": 1699.2403832497346,
+   "sector": 14,
+   "depth_ppm": 206.4,
+   "err_ppm": 77.0,
+   "snr": 2.68,
+   "nin": 149
+  },
+  {
+   "epoch": 3,
+   "time": 1705.7675188464161,
+   "sector": 14,
+   "depth_ppm": 165.4,
+   "err_ppm": 79.4,
+   "snr": 2.08,
+   "nin": 151
+  },
+  {
+   "epoch": 4,
+   "time": 1712.2946544430977,
+   "sector": 15,
+   "depth_ppm": 64.6,
+   "err_ppm": 75.6,
+   "snr": 0.86,
+   "nin": 150
+  },
+  {
+   "epoch": 5,
+   "time": 1718.8217900397792,
+   "sector": 15,
+   "depth_ppm": 3.9,
+   "err_ppm": 78.0,
+   "snr": 0.05,
+   "nin": 150
+  },
+  {
+   "epoch": 6,
+   "time": 1725.3489256364608,
+   "sector": 15,
+   "depth_ppm": 229.7,
+   "err_ppm": 78.1,
+   "snr": 2.94,
+   "nin": 145
+  },
+  {
+   "epoch": 7,
+   "time": 1731.8760612331423,
+   "sector": 15,
+   "depth_ppm": 316.0,
+   "err_ppm": 75.2,
+   "snr": 4.2,
+   "nin": 152
+  },
+  {
+   "epoch": 250,
+   "time": 3317.9700112267556,
+   "sector": 74,
+   "depth_ppm": 106.9,
+   "err_ppm": 84.0,
+   "snr": 1.27,
+   "nin": 151
+  },
+  {
+   "epoch": 251,
+   "time": 3324.497146823437,
+   "sector": 74,
+   "depth_ppm": 382.1,
+   "err_ppm": 75.9,
+   "snr": 5.04,
+   "nin": 151
+  },
+  {
+   "epoch": 252,
+   "time": 3331.0242824201187,
+   "sector": 74,
+   "depth_ppm": -43.2,
+   "err_ppm": 77.2,
+   "snr": -0.56,
+   "nin": 150
+  },
+  {
+   "epoch": 253,
+   "time": 3337.5514180168,
+   "sector": 74,
+   "depth_ppm": 228.3,
+   "err_ppm": 75.7,
+   "snr": 3.02,
+   "nin": 150
+  },
+  {
+   "epoch": 254,
+   "time": 3344.0785536134817,
+   "sector": 75,
+   "depth_ppm": 247.4,
+   "err_ppm": 82.3,
+   "snr": 3.01,
+   "nin": 150
+  },
+  {
+   "epoch": 255,
+   "time": 3350.6056892101633,
+   "sector": 75,
+   "depth_ppm": 258.2,
+   "err_ppm": 73.0,
+   "snr": 3.54,
+   "nin": 152
+  },
+  {
+   "epoch": 257,
+   "time": 3363.6599604035264,
+   "sector": 75,
+   "depth_ppm": 245.5,
+   "err_ppm": 76.2,
+   "snr": 3.22,
+   "nin": 152
+  },
+  {
+   "epoch": 279,
+   "time": 3507.25694353052,
+   "sector": 81,
+   "depth_ppm": 108.1,
+   "err_ppm": 70.3,
+   "snr": 1.54,
+   "nin": 152
+  },
+  {
+   "epoch": 280,
+   "time": 3513.7840791272015,
+   "sector": 81,
+   "depth_ppm": -81.6,
+   "err_ppm": 75.1,
+   "snr": -1.09,
+   "nin": 150
+  },
+  {
+   "epoch": 281,
+   "time": 3520.311214723883,
+   "sector": 81,
+   "depth_ppm": 111.1,
+   "err_ppm": 72.6,
+   "snr": 1.53,
+   "nin": 152
+  },
+  {
+   "epoch": 282,
+   "time": 3526.8383503205646,
+   "sector": 81,
+   "depth_ppm": 216.7,
+   "err_ppm": 76.0,
+   "snr": 2.85,
+   "nin": 151
+  }
+ ],
+ "n_transits": 19,
+ "n_transits_positive": 16,
+ "depth_wmean_ppm": 144.24292713370966,
+ "depth_wmean_err_ppm": 17.567915880992615,
+ "chi2_red_depths": 3.0005802112439834,
+ "snr_combined": 8.210588444914599,
+ "snr_without_strongest": 7.242016342640335,
+ "n_transits_snr_gt2": 10,
+ "max_single_snr": 5.03425559947299,
+ "sectors_with_transits": [
+  14,
+  15,
+  74,
+  75,
+  81
+ ]
+}
