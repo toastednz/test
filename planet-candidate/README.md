@@ -505,7 +505,27 @@ at 9.61 ± 0.52 d, which they could not distinguish from the window function and
 ephemeris at 9.529 d fixes that period and makes the RV hint a plausible mass measurement in waiting.
 P_c/P_b = 2.415. Verification package: `results/candidate_TOI669/TOI669c_candidate_verification_package.zip`.
 
-The remaining vetted host signals are summarised in `results/vet_hosts_fgk/` and discussed below.
+**The other 24 vetted host signals** (`results/vet_hosts_fgk_summary.csv`, deep tests in `results/vet_hosts_fgk_deep/`):
+15 fail quick vetting (depth mismatch between raw and corrected flux, odd/even differences, inconsistent per-transit
+depths, negative transits, or a secondary eclipse: TOI-1824, 2080-like FPs, TOI-4299's 0.59-d signal with an 86 ± 24 ppm
+secondary, TOI-7060's 12.7-d signal with a 143 ± 34 ppm secondary, …). Nine went through the full deep vetting
+(masked coherent periodogram over all sectors, TLS, sector-shuffle bootstrap, per-sector difference-image centroids):
+
+| host | P (d) | depth (ppm) | transits | coherent-periodogram rank / SDE | bootstrap | verdict |
+|---|---|---|---|---|---|---|
+| TOI-4298 (TIC 146282666) | 9.995 | 180 ± 15 | 13/13 | 1 / 10.2 | 0/6 | **possible** 1.7 R_⊕ candidate; TLS odd/even 0.2σ but box-fit odd/even 139 vs 228 ppm (2.9σ), per-sector depths χ²_red 2.4; centroids on target (low SNR); SPOC has no TCE at this period |
+| TOI-6555 (TIC 259606227) | 1.0638 | 159 ± 12 | 56/61 | 1 / 10.7 | 0/6 | **possible** 2.6 R_⊕ ultra-short-period candidate around an evolved F star (R = 1.9 R_⊙); odd/even 164/154, no secondary, per-sector depths consistent, no sinusoidal variability at P; TLS prefers 2P |
+| TOI-2289 (TIC 82452140) | 14.678 | 346 ± 37 | 10/10 | 1 / 8.2 | 0/6 | **possible** 2.0 R_⊕ candidate; odd/even and secondary clean, TLS SDE 10.9, but SAP/PDC depth 1.31, background in transit 0.64 × median and one sector's difference image peaks 1 pixel off target |
+| TOI-1777 (TIC 29191624) | 6.410 | 215 ± 27 | 7/7 | 1 / 5.4 | 0/6 (max trial 4.9) | marginal; SAP/PDC 1.5 |
+| TOI-2427 (TIC 142937186) | 22.20 | 628 ± 61 | 4/4 | 9 / 5.0 | – | rejected: not significant once the whole light curve is searched coherently |
+| TOI-5392 (TIC 198512478) | 25.32 | 171 ± 21 | 7/7 | 4 / 4.9 | 6/6 | rejected |
+| TOI-2091 (TIC 219778329) | 54.8 | 133 ± 19 | 14/15 | 9 / 3.7 | 6/6 | rejected (0.6-h "transits" at 55 d are also physically implausible) |
+| TOI-6075 (TIC 424388628) | 14.73 | 153 ± 24 | 35/43 | 9 / 3.9 | 6/6 | rejected |
+| TOI-6729 (TIC 426032475) | 37.6 | 158 ± 22 | 6/6 | 8 / 4.5 | 4/6 | rejected |
+
+The three "possible" rows are weaker than TOI-669 c (no SPOC confirmation, no RV hint, one caveat each) and are listed
+for completeness; they would need pixel-level and ground-based checks before any claim. The final triage of all 1,115
+hosts (`results/triage_hosts_fgk_clean.csv`) produced no further clean signals beyond these 26 stars.
 
 ### J. TOI-1117 c: a published "non-transiting" RV planet that does transit
 

@@ -1,0 +1,34 @@
+{
+ "tic": 424388628,
+ "sector": 21,
+ "n_transits_used": 2,
+ "target_pix": [
+  4.022291874128551,
+  4.771915362437772
+ ],
+ "direct_centroid": [
+  4.105216974242393,
+  4.448797193292531
+ ],
+ "diff_centroid_in_aperture": [
+  3.9319859414141662,
+  4.174825893014543
+ ],
+ "diff_centroid_snr3": [
+  NaN,
+  NaN
+ ],
+ "offset_pix": 0.32414389414385936,
+ "offset_arcsec": 6.807021777021046,
+ "offset_from_target_pix": 0.6038799516290698,
+ "max_diff_snr": 1.8205167036948022,
+ "diff_peak_pix": [
+  3,
+  10
+ ],
+ "direct_peak_pix": [
+  4,
+  5
+ ],
+ "total_depth_in_aperture_ppm": 264.2250899087202
+}
