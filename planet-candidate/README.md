@@ -309,7 +309,9 @@ confirmation (the 3.45-d candidate TOI-6284.01 is itself still a PC).
   the depth in each 2-min sector (`results/candidate_TOI6284/ffi_extend.json`). Total: 26 transits in
   8 sectors from 2019 to 2026.
 * **Empirical false-alarm test** (`scripts/13_bootstrap_fap.py`, `results/candidate_TOI6284/bootstrap_fap.json`):
-  the fully coherent masked search repeated on sector-shifted light curves; result recorded in the JSON.
+  the fully coherent masked search (343,000 periods, 0.5–70 d) repeated on nine light curves whose sectors were
+  circularly shifted by random offsets (same noise, no coherent signal). The strongest peak anywhere in those
+  nine periodograms reached SDE 5.0–6.3; the real 7.349-d peak has SDE 11.1. Zero of nine trials come close.
 * **Numbers for follow-up** (`results/candidate_TOI6284/next_steps_numbers.json`): RV semi-amplitude
   ≈ 0.6 m/s for 1.1 M_⊕ (below current precision for an M3 dwarf, so a mass is not realistic);
   TSM ≈ 54 (J = 8.33), ESM ≈ 1.2 (K = 7.46); next transits every 7.3493 d with ±0.1 h ephemeris
