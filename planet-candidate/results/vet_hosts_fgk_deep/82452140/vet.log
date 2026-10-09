@@ -1,0 +1,63 @@
+Transit Least Squares TLS 2.0 (5 Oct 2026)
+Creating model cache for 60 durations
+Searching 87376 data points, 816 periods from 14.531 to 14.824 days
+Using all 4 CPU threads
+{
+ "tic": 82452140,
+ "P": 14.677893815023387,
+ "t0": 1970.5516546894557,
+ "dur_h": 3.1500000000000004,
+ "depth_ppm": 346.00824989938303,
+ "depth_err_ppm": 36.95260555464119,
+ "bls_snr": 9.363568406231774,
+ "depth_odd_ppm": 316.59936928296605,
+ "depth_odd_err": 63.2117553037459,
+ "depth_even_ppm": 354.8423941800438,
+ "depth_even_err": 45.55164272665224,
+ "depth_half_ppm": 197.00418399049013,
+ "depth_half_err": 27.438959118698918,
+ "depth_phased_ppm": 24.120747657008224,
+ "depth_phased_err": 40.414312952845606,
+ "harmonic_delta_log_likelihood": -42.54610179471638,
+ "npts": 87376,
+ "nsec": 6,
+ "baseline": 1523.6770969221548,
+ "sap_depth_ppm": 454.5890410114772,
+ "sap_depth_err_ppm": 46.84754650702255,
+ "sap_over_pdc_depth": 1.313809832984239,
+ "bkg_in_transit_over_median": 0.6431947372480662,
+ "n_transits": 10,
+ "n_transits_positive": 10,
+ "depth_wmean_ppm": 400.1497872709254,
+ "depth_wmean_err_ppm": 34.644834870460556,
+ "chi2_red_depths": 0.988289998294549,
+ "snr_combined": 11.55005612718644,
+ "snr_without_strongest": 10.417501196255948,
+ "n_transits_snr_gt2": 9,
+ "max_single_snr": 5.426880811496196,
+ "sectors_with_transits": [
+  24,
+  26,
+  51,
+  52,
+  78,
+  79
+ ],
+ "tls": {
+  "P": 14.678221238578729,
+  "t0": 1970.5370026896987,
+  "SDE": 10.942749995710155,
+  "snr": 2.6599083696346426,
+  "depth": 0.9996252140230376,
+  "rp_rs": 0.017410001690647006,
+  "duration_h": 0.29924086423192575,
+  "odd_even_mismatch": 1.0753516088162771,
+  "transit_count": 103,
+  "distinct_transit_count": 9,
+  "R_star": 1.01496,
+  "M_star": 1.02,
+  "npts_used": 87376,
+  "tls_matches_bls": true
+ }
+}
+per-transit (sector, depth, snr): [(24, 235, np.float64(1.4)), (24, 280, np.float64(2.7)), (26, 456, np.float64(4.2)), (26, 480, np.float64(4.6)), (51, 326, np.float64(3.0)), (52, 376, np.float64(3.5)), (52, 642, np.float64(5.4)), (78, 395, np.float64(4.0)), (79, 314, np.float64(3.1)), (79, 462, np.float64(4.2))]

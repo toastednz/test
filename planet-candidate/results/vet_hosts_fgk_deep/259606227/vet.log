@@ -1,0 +1,60 @@
+Transit Least Squares TLS 2.0 (5 Oct 2026)
+Creating model cache for 97 durations
+Searching 44462 data points, 8076 periods from 1.301 to 52.463 days
+Using all 4 CPU threads
+{
+ "tic": 259606227,
+ "P": 1.0637631650985664,
+ "t0": 4046.5532385932966,
+ "dur_h": 3.1500000000000004,
+ "depth_ppm": 158.90194297507543,
+ "depth_err_ppm": 11.955446731800565,
+ "bls_snr": 13.291175690859676,
+ "depth_odd_ppm": 163.84607238495443,
+ "depth_odd_err": 16.248953241054096,
+ "depth_even_ppm": 153.80065323977732,
+ "depth_even_err": 16.487857528997395,
+ "depth_half_ppm": 85.59584346501393,
+ "depth_half_err": 9.19927533849179,
+ "depth_phased_ppm": 8.056615006246659,
+ "depth_phased_err": 12.29043180345718,
+ "harmonic_delta_log_likelihood": -77.99535696686144,
+ "npts": 44462,
+ "nsec": 3,
+ "baseline": 104.92680232571229,
+ "sap_depth_ppm": 173.5736851775638,
+ "sap_depth_err_ppm": 14.215073362380156,
+ "sap_over_pdc_depth": 1.0923320503688851,
+ "bkg_in_transit_over_median": 1.0001728892558504,
+ "n_transits": 61,
+ "n_transits_positive": 56,
+ "depth_wmean_ppm": 163.18106798476057,
+ "depth_wmean_err_ppm": 11.025991269464644,
+ "chi2_red_depths": 1.869900827921608,
+ "snr_combined": 14.79967324449765,
+ "snr_without_strongest": 14.356957696529658,
+ "n_transits_snr_gt2": 30,
+ "max_single_snr": 4.4363636363636365,
+ "sectors_with_transits": [
+  99,
+  100,
+  102
+ ],
+ "tls": {
+  "P": 2.127890256790794,
+  "t0": 4047.618155735661,
+  "SDE": 14.714353371588416,
+  "snr": 7.996138785209001,
+  "depth": 0.9998400798808331,
+  "rp_rs": 0.011372572109079507,
+  "duration_h": 2.1181703846868425,
+  "odd_even_mismatch": 1.0433805491162735,
+  "transit_count": 49,
+  "distinct_transit_count": 30,
+  "R_star": 1.89746,
+  "M_star": 1.46,
+  "npts_used": 44462,
+  "tls_matches_bls": true
+ }
+}
+per-transit (sector, depth, snr): [(99, 121, np.float64(1.4)), (99, 257, np.float64(3.0)), (99, 229, np.float64(2.6)), (99, 246, np.float64(3.0)), (99, 57, np.float64(0.7)), (99, 46, np.float64(0.5)), (99, 206, np.float64(1.3)), (99, 244, np.float64(3.0)), (99, 134, np.float64(1.6)), (99, 246, np.float64(2.9)), (99, 149, np.float64(1.8)), (99, 155, np.float64(1.9)), (99, 266, np.float64(3.1)), (99, 267, np.float64(3.1)), (99, 58, np.float64(0.7)), (99, 195, np.float64(2.2)), (99, 307, np.float64(3.4)), (99, -72, np.float64(-0.8)), (100, 56, np.float64(0.7)), (100, 10, np.float64(0.1)), (100, 102, np.float64(1.2)), (100, 259, np.float64(3.0)), (100, 187, np.float64(2.3)), (100, 347, np.float64(4.0)), (100, 213, np.float64(2.6)), (100, 243, np.float64(2.9)), (100, 291, np.float64(3.3)), (100, 200, np.float64(2.6)), (100, -194, np.float64(-2.3)), (100, 63, np.float64(0.8)), (100, 207, np.float64(2.6)), (100, 321, np.float64(3.8)), (100, 140, np.float64(1.7)), (100, 227, np.float64(2.7)), (100, 266, np.float64(3.3)), (100, 138, np.float64(1.6)), (100, 86, np.float64(1.1)), (100, 287, np.float64(3.5)), (100, 241, np.float64(2.8)), (100, 64, np.float64(0.7)), (102, -68, np.float64(-0.8)), (102, 144, np.float64(1.7)), (102, 84, np.float64(1.0)), (102, 257, np.float64(3.0)), (102, 193, np.float64(2.2)), (102, 158, np.float64(1.8)), (102, 390, np.float64(4.4)), (102, 346, np.float64(4.0)), (102, 162, np.float64(1.9)), (102, 68, np.float64(0.8)), (102, -267, np.float64(-1.3)), (102, 92, np.float64(1.0)), (102, 246, np.float64(2.9)), (102, 91, np.float64(1.0)), (102, 241, np.float64(2.6)), (102, 68, np.float64(0.7)), (102, -88, np.float64(-1.1)), (102, 55, np.float64(0.6)), (102, 117, np.float64(1.4)), (102, 276, np.float64(3.1)), (102, 210, np.float64(2.4))]
