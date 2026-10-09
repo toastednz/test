@@ -558,6 +558,53 @@ archive (`tran_flag = 0`) all list c as non-transiting, and a transiting 8.8 M_�
 next to a 2.46 R_⊕, 8.9 M_⊕ planet at 2.23 d (period ratio 2.055) is a measurable, dynamically interesting
 pair. Package: `results/candidate_TOI1117c/TOI1117c_transit_verification_package.zip`.
 
+## Fourth round: where an automated search has an edge (2026-10-09, evening)
+
+Asked to pick fields where exhaustive cross-matching of public data could pay off, four were chosen: (1) transits of
+known *non-transiting* planets at their published periods, (2) Gaia DR3 astrometric substellar companions on near
+edge-on orbits, (3) companion masses from RV accelerations plus Hipparcos–Gaia proper-motion anomalies, and
+(4) transit-timing variations. The first two were run; (3) overlaps heavily with Feng et al. (2022) and (4) was
+not started.
+
+### K. Transits of known non-transiting planets at their published periods
+
+`scripts/22_rv_planet_transits.py` takes every planet in the NASA Exoplanet Archive flagged as non-transiting with
+P < 120 d (475 planets, 356 hosts; 450 from radial velocities), loads all 2-min TESS sectors of the host (up to 16),
+masks transiting siblings, and runs a box search confined to the published period (± max(3σ_P, 0.2 %)), all epochs
+and 0.3–1.4 × the central-transit duration. For each planet it also records the expected depth from a mass–radius
+relation, the SNR a central transit would have had, how the peak compares with a wide 0.5–100 d search of the same
+light curve, and (when T_peri and ω are published) the predicted conjunction time and the phase offset of the box.
+`23_rv_planet_transits_triage.py` applies the cuts. Numbers (`results/rv_planet_transits.csv`, `_triage.csv`):
+
+* 464 planets searched; for 455 of them a central transit would have been detected at SNR ≥ 7 (median expected
+  SNR ≈ 700), so the search is complete for essentially the whole sample. The sum of geometric transit
+  probabilities is 19.4, i.e. about 19 would transit if none had ever been checked; most of the older, bright ones
+  were checked by their discoverers.
+* **Three hits.** TOI-1117 c (section J) is recovered, which validates the method. HD 41004 B b (1.328 d, 179 ppm,
+  54 "transits", in phase with the 2003 RV ephemeris) is not a transit: the dip has a brightening of the same size
+  at the opposite phase, i.e. a sinusoid, and Ayres & Buzasi (2021) already reported a 31-h TESS modulation from the
+  M dwarf spun up to synchronous rotation by its brown-dwarf companion. KIC 5479689 b (1.70 d, Kepler
+  phase-curve planet, T = 13.2) shows a 1.6-ppt "transit" that four years of Kepler photometry would have seen
+  trivially; it is a blend in TESS's 21″ pixels.
+* **Weak signals, all explained.** The strongest, "L 98-59 f" at 23.08 d, turned out to be the 22nd harmonic of a
+  1.04918-d signal that dominates the masked L 98-59 light curve (SDE 41). SPOC lists that signal as TCE 4 and 5 on
+  TOI-175 (MES 26, 218 ppm, 531 events) but never promoted it, and its data-validation report shows why
+  (`results/candidate_L9859_1p049/spoc_dv_summary_tce04_s0001-s0096.pdf`): a 57 ± 7 ppm secondary eclipse and a
+  difference-image centroid 46.4″ (18σ) from the star, on a T = 16 neighbour, i.e. a background eclipsing binary.
+  HD 189567 c's 33.7-d signal is a single event coinciding with a 2.9× background excursion; Gl 725 B c, GJ 367 d
+  and HD 147379 b sit in light curves where stellar variability or residuals of the masked planets produce
+  stronger peaks at other periods; the rest have period mismatches, two transits, or phase offsets inconsistent
+  with the RV prediction.
+
+So after this complete pass, TOI-1117 c remains the only published non-transiting planet that TESS shows to
+transit. The method is cheap to rerun as new RV planets and TESS sectors appear, and that is where its value lies.
+
+### L. Gaia DR3 astrometric substellar companions on edge-on orbits
+
+Gaia DR3's two-body orbital solutions joined to its `binary_masses` table give only four systems with a companion
+upper mass below 80 M_J, P < 1200 d and G < 13, and none has an inclination within 1σ of the transiting geometry
+(`data/catalogs/gaia_nss_substellar.csv`). Nothing to test in TESS; this avenue waits for Gaia DR4.
+
 **Revised bottom line for the whole project:** three results came out of the "other avenues": (1) **HD 32564**,
 four coherent radial-velocity signals (2.557, 11.06, 23.6, 49.1 d; 8–13 M_⊕ minimum masses) in public HARPS data
 (section H), unpublished in the literature (a hobbyist posted the same solution in 2023); (2) **TOI-669 c**, a 2.2–2.6 R_⊕ transit candidate at 9.529 d around a confirmed-planet
