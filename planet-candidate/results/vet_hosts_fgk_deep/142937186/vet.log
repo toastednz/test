@@ -1,0 +1,60 @@
+Transit Least Squares TLS 2.0 (5 Oct 2026)
+Creating model cache for 93 durations
+Searching 37561 data points, 20385 periods from 0.5 to 41.666 days
+Using all 4 CPU threads
+{
+ "tic": 142937186,
+ "P": 22.198255104308686,
+ "t0": 2158.253602175565,
+ "dur_h": 0.8999999999999999,
+ "depth_ppm": 627.630085813062,
+ "depth_err_ppm": 60.70338537167024,
+ "bls_snr": 10.33929297304021,
+ "depth_odd_ppm": 613.5902953486872,
+ "depth_odd_err": 82.83199577725094,
+ "depth_even_ppm": 643.88749449662,
+ "depth_even_err": 89.12784173678332,
+ "depth_half_ppm": 316.4057520324004,
+ "depth_half_err": 42.16564534658992,
+ "depth_phased_ppm": 27.32761435575437,
+ "depth_phased_err": 58.5028881584682,
+ "harmonic_delta_log_likelihood": -53.42720530496808,
+ "npts": 52966,
+ "nsec": 4,
+ "baseline": 2146.055358805681,
+ "sap_depth_ppm": 759.8639833592547,
+ "sap_depth_err_ppm": 87.20089863345721,
+ "sap_over_pdc_depth": 1.2106876335841845,
+ "bkg_in_transit_over_median": 1.0100026919240972,
+ "n_transits": 4,
+ "n_transits_positive": 4,
+ "depth_wmean_ppm": 720.1238101684462,
+ "depth_wmean_err_ppm": 62.24539522414101,
+ "chi2_red_depths": 1.4977708109146823,
+ "snr_combined": 11.569109772302582,
+ "snr_without_strongest": 8.908963654783559,
+ "n_transits_snr_gt2": 4,
+ "max_single_snr": 7.537326388888888,
+ "sectors_with_transits": [
+  105,
+  106,
+  107
+ ],
+ "tls": {
+  "P": 1.3060020269145995,
+  "t0": 4208.3195236828415,
+  "SDE": 42.26882039975128,
+  "snr": 21.82140913515979,
+  "depth": 0.9994519334315064,
+  "rp_rs": 0.021053475657696007,
+  "duration_h": 0.5200981201410406,
+  "odd_even_mismatch": 0.3723685411510696,
+  "transit_count": 64,
+  "distinct_transit_count": 44,
+  "R_star": 0.678916,
+  "M_star": 0.64,
+  "npts_used": 37561,
+  "tls_matches_bls": false
+ }
+}
+per-transit (sector, depth, snr): [(105, 730, np.float64(5.6)), (106, 868, np.float64(7.5)), (107, 523, np.float64(4.4)), (107, 761, np.float64(5.6))]

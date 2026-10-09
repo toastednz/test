@@ -1,0 +1,64 @@
+Transit Least Squares TLS 2.0 (5 Oct 2026)
+Creating model cache for 60 durations
+Searching 111028 data points, 830 periods from 25.071 to 25.577 days
+Using all 4 CPU threads
+{
+ "tic": 198512478,
+ "P": 25.323931869375045,
+ "t0": 1689.4668871470562,
+ "dur_h": 1.7850000000000001,
+ "depth_ppm": 170.64975072784728,
+ "depth_err_ppm": 20.920902130756108,
+ "bls_snr": 8.156902109731336,
+ "depth_odd_ppm": 194.69149888806658,
+ "depth_odd_err": 31.635886556743515,
+ "depth_even_ppm": 152.02031092287348,
+ "depth_even_err": 27.85349868143086,
+ "depth_half_ppm": 73.73528279697172,
+ "depth_half_err": 14.783764796591345,
+ "depth_phased_ppm": -22.277188888253363,
+ "depth_phased_err": 20.830963957863293,
+ "harmonic_delta_log_likelihood": -33.100823076150846,
+ "npts": 123991,
+ "nsec": 8,
+ "baseline": 1711.2232725404003,
+ "sap_depth_ppm": 161.3588441158331,
+ "sap_depth_err_ppm": 35.923653371144816,
+ "sap_over_pdc_depth": 0.9455556977236297,
+ "bkg_in_transit_over_median": 1.003906800058211,
+ "n_transits": 7,
+ "n_transits_positive": 7,
+ "depth_wmean_ppm": 194.82731682739617,
+ "depth_wmean_err_ppm": 23.110735056303934,
+ "chi2_red_depths": 0.7816545452626852,
+ "snr_combined": 8.430165304251236,
+ "snr_without_strongest": 7.127120266653654,
+ "n_transits_snr_gt2": 7,
+ "max_single_snr": 4.777589134125637,
+ "sectors_with_transits": [
+  14,
+  15,
+  20,
+  21,
+  22,
+  60,
+  75
+ ],
+ "tls": {
+  "P": 25.2136020677438,
+  "t0": 1696.2524409445657,
+  "SDE": 5.900702889347689,
+  "snr": 3.444343285666,
+  "depth": 0.9998017187159555,
+  "rp_rs": 0.01266333243941008,
+  "duration_h": 0.16081117068077427,
+  "odd_even_mismatch": 0.5763791201540585,
+  "transit_count": 67,
+  "distinct_transit_count": 7,
+  "R_star": 0.901448,
+  "M_star": 0.96,
+  "npts_used": 111028,
+  "tls_matches_bls": true
+ }
+}
+per-transit (sector, depth, snr): [(14, 120, np.float64(2.1)), (15, 232, np.float64(3.8)), (20, 165, np.float64(2.7)), (21, 198, np.float64(3.1)), (22, 281, np.float64(4.8)), (60, 169, np.float64(2.3)), (75, 198, np.float64(3.3))]
