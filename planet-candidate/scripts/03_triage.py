@@ -7,6 +7,8 @@ import sys, json
 import numpy as np, pandas as pd
 
 DATA, RES, OUT = sys.argv[1:4]
+MASKS = sys.argv[4] if len(sys.argv) > 4 else f"{DATA}/catalogs/known_transit_masks.csv"   # optional: masks file used in the search
+EXTRA_STARS = sys.argv[5] if len(sys.argv) > 5 else ""                                       # optional: extra star table (ID, ra, dec, Tmag, Teff, rad)
 r = pd.read_csv(RES)
 r = r[r.status == "ok"].copy()
 print("stars searched:", len(r))
@@ -19,6 +21,21 @@ try:   # stars from the newly-observed dwarf list (run 2) are not in the cool-dw
     sample = pd.concat([sample, extra[~extra.ID.isin(sample.ID)]], ignore_index=True)
 except Exception:
     pass
+if EXTRA_STARS:
+    ex = pd.read_csv(EXTRA_STARS)
+    ex = ex.rename(columns={c: c.strip() for c in ex.columns})
+    if "ID" not in ex.columns and "tic" in ex.columns: ex = ex.rename(columns={"tic": "ID"})
+    ex = ex[[c for c in ["ID", "ra", "dec", "Tmag", "Teff", "rad"] if c in ex.columns]].copy()
+    def _ra(v):
+        if isinstance(v, str) and ":" in v:
+            h, m, sec = [float(x) for x in v.split(":")]; return 15 * (h + m / 60 + sec / 3600)
+        return float(v)
+    def _dec(v):
+        if isinstance(v, str) and ":" in v:
+            sign = -1 if v.strip().startswith("-") else 1; d, m, sec = [abs(float(x)) for x in v.split(":")]; return sign * (d + m / 60 + sec / 3600)
+        return float(v)
+    ex["ra"] = ex.ra.apply(_ra); ex["dec"] = ex.dec.apply(_dec)
+    sample = pd.concat([sample, ex[~ex.ID.isin(sample.ID)]], ignore_index=True)
 sample = sample.set_index("ID")
 
 def ra_deg(s):
@@ -30,15 +47,20 @@ toi["ra_deg"] = toi.RA.apply(ra_deg); toi["dec_deg"] = toi.Dec.apply(dec_deg)
 ctoi["ra_deg"] = pd.to_numeric(ctoi.RA, errors="coerce"); ctoi["dec_deg"] = pd.to_numeric(ctoi.Dec, errors="coerce")
 ctoi["Period (days)"] = pd.to_numeric(ctoi["Period (days)"], errors="coerce")
 
-def period_match(P, Q, tol=0.01):
-    for a, b in [(1, 1), (1, 2), (2, 1), (1, 3), (3, 1)]:
+def period_match(P, Q, tol=0.01, nmax=3):
+    """P ~ (b/a) Q for small integers a, b (harmonics and sub-harmonics; residuals of imperfectly masked
+    deep eclipses leak into 3:2, 5:2, 5:1 ... multiples, so host-mode searches use nmax=6)."""
+    pairs = [(a, b) for a in range(1, nmax + 1) for b in range(1, nmax + 1) if np.gcd(a, b) == 1]
+    pairs.sort(key=lambda ab: ab[0] + ab[1])
+    for a, b in pairs:
         if abs((P * a) / (Q * b) - 1) < tol:
             return f"{a}:{b}"
     return None
+NMAX = 6 if len(sys.argv) > 4 else 3
 
 # known-planet ephemerides (for masked searches): flag signals at a known period or its simple aliases
 try:
-    km = pd.read_csv(f"{DATA}/catalogs/known_transit_masks.csv"); known = km.groupby("tic").P.apply(list).to_dict()
+    km = pd.read_csv(MASKS); known = km.groupby("tic").P.apply(list).to_dict()
 except Exception:
     known = {}
 rows = []
@@ -58,6 +80,11 @@ for x in r.itertuples():
         # TCE match on same TIC
         tm = tce[tce.ticid == tic]
         tce_match = [(row.tceid, period_match(P, row.tce_period), row.tce_ntoi) for row in tm.itertuples() if period_match(P, row.tce_period)]
+        # TOIs on this same star: period/depth/disposition (an FP/FA/deep eclipsing binary on the star contaminates everything)
+        same = toi[toi["TIC ID"] == tic]
+        same_info = ";".join(f"TOI{row['TOI']}:P={pd.to_numeric(row['Period (days)'], errors='coerce'):.4g},d={pd.to_numeric(row['Depth (mmag)'], errors='coerce'):.3g}mmag,{row.get('TFOPWG Disposition', '')}" for _, row in same.iterrows())
+        deep_or_fp = any((pd.to_numeric(row["Depth (mmag)"], errors="coerce") > 3) or str(row.get("TFOPWG Disposition", "")) in ("FP", "FA") for _, row in same.iterrows())
+        same_harm = [row["TOI"] for _, row in same.iterrows() if np.isfinite(pd.to_numeric(row["Period (days)"], errors="coerce")) and pd.to_numeric(row["Period (days)"], errors="coerce") > 0 and period_match(P, float(row["Period (days)"]), 0.01, NMAX)]
         # nearby TOIs/CTOIs within 3 arcmin with matching period (contamination)
         st = sample.loc[tic]
         dra = (toi.ra_deg - st.ra) * np.cos(np.radians(st.dec)); ddec = toi.dec_deg - st.dec
@@ -65,19 +92,19 @@ for x in r.itertuples():
         near_match = []
         for _, row in near.iterrows():
             q = pd.to_numeric(row["Period (days)"], errors="coerce")
-            if np.isfinite(q) and q > 0 and period_match(P, q):
-                near_match.append((row["TOI"], period_match(P, q)))
+            if np.isfinite(q) and q > 0 and period_match(P, q, 0.01, NMAX):
+                near_match.append((row["TOI"], period_match(P, q, 0.01, NMAX)))
         # CTOIs within 3 arcmin (blended companions carry their own TIC IDs)
         dra_c = (ctoi.ra_deg - st.ra) * np.cos(np.radians(st.dec)); ddec_c = ctoi.dec_deg - st.dec
         near_c = ctoi[np.sqrt(dra_c ** 2 + ddec_c ** 2) * 60 < 3]
         for _, row in near_c.iterrows():
             q = pd.to_numeric(row["Period (days)"], errors="coerce")
-            if np.isfinite(q) and q > 0 and period_match(P, q):
-                near_match.append((f"CTOI{row['CTOI']}", period_match(P, q)))
+            if np.isfinite(q) and q > 0 and period_match(P, q, 0.01, NMAX):
+                near_match.append((f"CTOI{row['CTOI']}", period_match(P, q, 0.01, NMAX)))
         n_near_1arcmin = int((np.sqrt(dra ** 2 + ddec ** 2) * 60 < 1).sum() + (np.sqrt(dra_c ** 2 + ddec_c ** 2) * 60 < 1).sum())
         # TESS orbital systematics
         sysflag = any(abs(P / (13.7 / n) - 1) < 0.02 for n in (1, 2, 3, 4)) or any(abs(P / (13.7 * n) - 1) < 0.02 for n in (1, 2))
-        known_match = [q for q in known.get(tic, []) if period_match(P, q, 0.02)]
+        known_match = [q for q in known.get(tic, []) if period_match(P, q, 0.02, NMAX)]
         ptd = ref.get("per_transit_ppm", {})
         dd = np.array(list(ptd.values()), float) if ptd else np.array([])
         med_d = float(np.median(dd)) if len(dd) else np.nan
@@ -89,7 +116,7 @@ for x in r.itertuples():
                          block_snr=round(ref["block_snr"], 1), block_sde=round(ref["block_sde"], 1), alias=ref["mult"],
                          n_tce_same_star=len(tm), tce_match=";".join(f"{a}({b},ntoi={c})" for a, b, c in tce_match),
                          has_tce_match=bool(tce_match), nearby_toi_match=";".join(f"{a}({b})" for a, b in near_match),
-                         n_nearby_toi=len(near), n_toi_ctoi_within_1arcmin=n_near_1arcmin, sys13_7=sysflag, rms10_ppm=x.rms10_ppm, matches_known_planet=bool(known_match),
+                         n_nearby_toi=len(near), n_toi_ctoi_within_1arcmin=n_near_1arcmin, same_star_tois=same_info, deep_or_fp_toi_same_star=deep_or_fp, harmonic_of_same_star_toi=";".join(map(str, same_harm)), sys13_7=sysflag, rms10_ppm=x.rms10_ppm, matches_known_planet=bool(known_match),
                          n_pos_transits=sum(1 for v in ptd.values() if v > 0), n_transits_measured=len(ptd),
                          median_transit_ppm=round(med_d, 0) if np.isfinite(med_d) else np.nan, max_over_median=round(max_ratio, 2) if np.isfinite(max_ratio) else np.nan,
                          snr_comb=round(ref.get("snr_comb", np.nan), 1), chi2_depths=round(ref.get("chi2_depths", np.nan), 1), snr_wo_max=round(ref.get("snr_wo_max", np.nan), 1), n_transits_sig=ref.get("n_transits_sig", np.nan)))
@@ -101,7 +128,8 @@ def tmax_h(P, R, M):
     return 24 * P * R / (np.pi * a_rsun)
 c["tmax_h"] = [tmax_h(P, R if np.isfinite(R) else 0.5, 0.9 * (R if np.isfinite(R) else 0.5)) for P, R in zip(c.P, c.rad)]
 c["dur_ratio"] = c.dur_h / c.tmax_h
-c["claimed_nearby"] = (c.nearby_toi_match != "") | (c.n_toi_ctoi_within_1arcmin > 0) | c.matches_known_planet
+HOSTMODE = len(sys.argv) > 4   # masked search around known hosts: every star has a TOI within 1', so only a period match counts as "claimed"
+c["claimed_nearby"] = ((c.nearby_toi_match != "") | c.matches_known_planet) if HOSTMODE else ((c.nearby_toi_match != "") | (c.n_toi_ctoi_within_1arcmin > 0) | c.matches_known_planet)
 c["pass_phys"] = (c.dur_ratio < 2.5) & (c.oe_sig < 3) & (c.sec_sig.abs() < 4) & (c.depth_ppm > 150) & (c.depth_ppm < 150000) & (c.ntr >= 3)
 # per-transit consistency: not dominated by one event, most transits positive, >=4 transits measured
 c["consistent"] = (c.n_transits_measured >= 4) & (c.frac_pos >= 0.75) & (c.max_over_median < 3.0) & (c.median_transit_ppm > 0.4 * c.depth_ppm)
@@ -119,3 +147,7 @@ cols = ["tic", "Tmag", "Teff", "rad", "nsec", "P", "dur_h", "dur_ratio", "depth_
 pd.set_option("display.width", 250)
 cols += ["consistent", "max_over_median", "n_transits_measured", "snr_comb", "chi2_depths", "snr_wo_max"]
 print(c[c.pass_phys & c.consistent & ~c.claimed_nearby][cols].head(40).round(2).to_string(index=False))
+if HOSTMODE:
+    clean = c[c.pass_phys & c.consistent & ~c.claimed_nearby & ~c.deep_or_fp_toi_same_star]
+    print("\nhost mode: unclaimed, consistent, and no deep/FP/FA TOI on the star:", len(clean), "signals on", clean.tic.nunique(), "stars")
+    print(clean[["tic", "Tmag", "Teff", "rad", "nsec", "P", "dur_h", "depth_ppm", "rp_re", "snr", "ntr", "oe_sig", "sec_sig", "has_tce_match", "same_star_tois", "snr_wo_max", "chi2_depths"]].head(40).round(2).to_string(index=False))
