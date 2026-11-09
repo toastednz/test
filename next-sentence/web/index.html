@@ -1,0 +1,279 @@
+<title>Three Sentences On</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column, like a book page; controls above, the continuation set as prose below. */
+:root {
+  --paper: #f3f5f7;
+  --sheet: #ffffff;
+  --ink: #1b2430;
+  --muted: #5d6877;
+  --rule: #d9dee5;
+  --accent: #2f4b8f;
+  --accent-soft: #e4e9f5;
+  --o4: #1b2430;   /* word from a 3-word context */
+  --o3: #2f4b8f;   /* 2-word context */
+  --o2: #a2561c;   /* 1-word context */
+  --font-prose: "Literata", Georgia, "Times New Roman", serif;
+  --font-ui: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-data: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #12161c; --sheet: #1a2029; --ink: #e6e9ee; --muted: #9aa4b2; --rule: #2c3440;
+    --accent: #8fa8e8; --accent-soft: #232d42; --o4: #e6e9ee; --o3: #8fa8e8; --o2: #e3a06a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #12161c; --sheet: #1a2029; --ink: #e6e9ee; --muted: #9aa4b2; --rule: #2c3440;
+  --accent: #8fa8e8; --accent-soft: #232d42; --o4: #e6e9ee; --o3: #8fa8e8; --o2: #e3a06a;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--paper); color: var(--ink); font-family: var(--font-ui); font-size: 15px; line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 40px 56px;
+}
+.wrap { max-width: 720px; margin: 0 auto; display: grid; gap: 28px; }
+header { display: grid; gap: 6px; }
+h1 { font-family: var(--font-prose); font-weight: 600; font-size: clamp(28px, 6vw, 40px); line-height: 1.1; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+.lede { color: var(--muted); margin: 0; max-width: 60ch; }
+.eyebrow { font-family: var(--font-data); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+
+.composer { display: grid; gap: 12px; }
+label.field { font-size: 13px; font-weight: 500; color: var(--muted); }
+textarea {
+  width: 100%; min-height: 96px; resize: vertical; padding: 14px 16px; border-radius: 6px;
+  border: 1px solid var(--rule); background: var(--sheet); color: var(--ink);
+  font-family: var(--font-prose); font-size: 19px; line-height: 1.5;
+}
+textarea:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.suggest { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; min-height: 34px; }
+.suggest-label { font-size: 13px; color: var(--muted); margin-right: 2px; }
+.chip {
+  font-family: var(--font-data); font-size: 14px; padding: 4px 10px; border-radius: 999px;
+  border: 1px solid var(--rule); background: var(--sheet); color: var(--ink); cursor: pointer;
+  display: inline-flex; gap: 6px; align-items: baseline;
+}
+.chip small { color: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+.chip:hover { border-color: var(--accent); background: var(--accent-soft); }
+
+.controls { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; }
+.btn {
+  font-family: var(--font-ui); font-weight: 600; font-size: 15px; padding: 10px 20px; border-radius: 6px;
+  border: 1px solid var(--accent); background: var(--accent); color: var(--sheet); cursor: pointer;
+}
+.btn:disabled { opacity: 0.5; cursor: progress; }
+.btn.ghost { background: transparent; color: var(--accent); }
+.temp { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--muted); }
+.temp input { width: 130px; accent-color: var(--accent); }
+.temp output { font-family: var(--font-data); color: var(--ink); min-width: 3ch; font-variant-numeric: tabular-nums; }
+
+.page {
+  background: var(--sheet); border: 1px solid var(--rule); border-radius: 6px;
+  padding: 28px clamp(18px, 5vw, 40px) 24px; display: grid; gap: 18px; min-width: 0;
+}
+.status { font-family: var(--font-data); font-size: 12px; color: var(--muted); letter-spacing: 0.04em; text-transform: uppercase; }
+.yours { font-family: var(--font-prose); font-size: 19px; line-height: 1.6; margin: 0; color: var(--muted); }
+.yours .fin { color: var(--ink); }
+ol.out { margin: 0; padding: 0; list-style: none; display: grid; gap: 14px; counter-reset: s; }
+ol.out li {
+  counter-increment: s; display: grid; grid-template-columns: 2.2em 1fr; gap: 4px;
+  font-family: var(--font-prose); font-size: 19px; line-height: 1.6; min-width: 0;
+}
+ol.out li::before { content: counter(s); font-family: var(--font-data); font-size: 13px; color: var(--accent); padding-top: 0.35em; }
+ol.out li p { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+.w { transition: opacity .25s; }
+.w.o4 { color: var(--o4); }
+.w.o3 { color: var(--o3); }
+.w.o2, .w.o1 { color: var(--o2); }
+.w.new { opacity: 0; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 14px; }
+.legend span::before { content: ""; display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 6px; vertical-align: 0; background: currentColor; }
+.legend .k4 { color: var(--o4); } .legend .k3 { color: var(--o3); } .legend .k2 { color: var(--o2); }
+.legend em { font-style: normal; color: var(--muted); }
+
+.about { color: var(--muted); font-size: 14px; max-width: 65ch; display: grid; gap: 8px; }
+.about p { margin: 0; }
+.about b { color: var(--ink); font-weight: 600; }
+@media (prefers-reduced-motion: reduce) { .w { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">4-gram word predictor · 36 novels · 7M words</div>
+    <h1>Three Sentences On</h1>
+    <p class="lede">Write the start of a story. The model reads your last few words, guesses the next one from what followed them in classic novels, and keeps going for three sentences.</p>
+  </header>
+
+  <section class="composer">
+    <label class="field" for="prompt">Your sentence</label>
+    <textarea id="prompt" spellcheck="true">It was a dark and stormy night.</textarea>
+    <div class="suggest" id="suggest" aria-live="polite"><span class="suggest-label">Loading the model…</span></div>
+    <div class="controls">
+      <button class="btn" id="go" disabled>Write three sentences</button>
+      <button class="btn ghost" id="again" disabled>Try another</button>
+      <label class="temp" for="temp">Wildness <input id="temp" type="range" min="0.4" max="1.6" step="0.1" value="1"><output id="tempv">1.0</output></label>
+    </div>
+  </section>
+
+  <section class="page" aria-live="polite">
+    <div class="status" id="status">Example output · loading model</div>
+    <p class="yours" id="yours">It was a dark and stormy night.</p>
+    <ol class="out" id="out">
+      <li><p>I will.</p></li>
+      <li><p>They sought the ex Minister of War but it will be the death of Count Adelon.</p></li>
+      <li><p>I know.</p></li>
+    </ol>
+    <div class="legend">
+      <span class="k4">guessed from the last 3 words</span>
+      <span class="k3">last 2 words</span>
+      <span class="k2">last word only</span>
+    </div>
+  </section>
+
+  <section class="about">
+    <p><b>How it works.</b> For every one-, two- and three-word phrase in the books, the model counted which word came next. To predict, it looks up your last three words. If that phrase never appeared, it falls back to the last two, then the last one, and picks among the ten most common next words. The colours above show which it used.</p>
+    <p><b>The chips</b> under the text box are the model's top guesses for your very next word, with how often each followed in the books. Tap one to add it.</p>
+    <p><b>Wildness</b> below 1 picks common words more often; above 1 takes more chances. Expect short stretches that read well and a meaning that drifts, which is what a word-counting model can do without real understanding.</p>
+    <p>Trained on Austen, Dickens, the Brontës, Tolstoy, Melville, Twain, Doyle, Shelley, Stoker, Wells, Hugo, Dumas and more, from Project Gutenberg.</p>
+  </section>
+</div>
+
+<script>
+(() => {
+  const SENT_END = new Set([".", "!", "?"]);
+  const NO_SPACE = new Set([".", ",", "!", "?", ";", ":"]);
+  const TOKEN_RE = /(?:Mr|Mrs|Dr|St|Messrs|Mme|Mlle)\.|[A-Za-z]+(?:'[A-Za-z]+)*|[0-9]+|[.,!?;:]/g;
+  const $ = (id) => document.getElementById(id);
+  let vocab = null, idOf = null, tables = null;
+
+  function tokenize(text) {
+    text = text.replace(/[‘’]/g, "'");
+    return (text.match(TOKEN_RE) || []).filter((t) => t !== "CHAPTER" && t !== "Chapter");
+  }
+
+  // Longest matching context wins; back off when it's unseen or has a single continuation.
+  function distribution(hist) {
+    for (let n = 3; n >= 0; n--) {
+      if (n > hist.length) continue;
+      const ctx = hist.slice(hist.length - n);
+      if (ctx.some((i) => i < 0)) continue;
+      const arr = tables[n][ctx.join(" ")];
+      if (arr && (arr.length >= 4 || n <= 1)) return { arr, order: n + 1 };
+    }
+    return { arr: tables[0][""], order: 1 };
+  }
+
+  function sample(hist, temp) {
+    const { arr, order } = distribution(hist);
+    const k = Math.min(arr.length / 2, 10);
+    let total = 0; const w = [];
+    for (let i = 0; i < k; i++) { const x = Math.pow(arr[2 * i + 1], 1 / temp); w.push(x); total += x; }
+    let r = Math.random() * total, pick = 0;
+    for (; pick < k - 1; pick++) { r -= w[pick]; if (r <= 0) break; }
+    return { id: arr[2 * pick], order };
+  }
+
+  function render(words, capFirst) {
+    // words: [{t, order}] -> DocumentFragment of spans, capitalising sentence starts
+    const frag = document.createDocumentFragment();
+    let cap = capFirst, first = true;
+    for (const { t, order } of words) {
+      let s = cap && /^[a-z]/.test(t) ? t[0].toUpperCase() + t.slice(1) : t;
+      if (!first && !NO_SPACE.has(t)) frag.appendChild(document.createTextNode(" "));
+      const span = document.createElement("span");
+      span.className = "w o" + order + " new";
+      span.textContent = s;
+      frag.appendChild(span);
+      cap = SENT_END.has(t); first = false;
+    }
+    return frag;
+  }
+
+  function generate() {
+    const prompt = $("prompt").value.trim();
+    if (!prompt) { $("prompt").focus(); return; }
+    const temp = parseFloat($("temp").value);
+    const hist = tokenize(prompt).map((t) => idOf.get(t) ?? idOf.get(t.toLowerCase()) ?? -1);
+    const finish = [], sentences = [[]];
+    let guard = 0;
+    if (hist.length && !SENT_END.has(vocab[hist[hist.length - 1]])) {
+      while (guard++ < 120) {
+        const { id, order } = sample(hist, temp); hist.push(id); finish.push({ t: vocab[id], order });
+        if (SENT_END.has(vocab[id])) break;
+      }
+    }
+    guard = 0;
+    while (sentences.length <= 3 && guard++ < 220) {
+      const { id, order } = sample(hist, temp); hist.push(id);
+      const cur = sentences[sentences.length - 1];
+      cur.push({ t: vocab[id], order });
+      if (SENT_END.has(vocab[id])) { if (sentences.length === 3) break; sentences.push([]); }
+    }
+    const last = sentences[sentences.length - 1];
+    if (!last.length) sentences.pop(); else if (!SENT_END.has(last[last.length - 1].t)) last.push({ t: ".", order: 1 });
+
+    const yours = $("yours"); yours.textContent = prompt;
+    if (finish.length) {
+      const fin = document.createElement("span"); fin.className = "fin";
+      if (!NO_SPACE.has(finish[0].t)) yours.appendChild(document.createTextNode(" "));
+      fin.appendChild(render(finish, false)); yours.appendChild(fin);
+    }
+    const out = $("out"); out.textContent = "";
+    for (const s of sentences) { const li = document.createElement("li"); const p = document.createElement("p"); p.appendChild(render(s, true)); li.appendChild(p); out.appendChild(li); }
+    $("status").textContent = finish.length ? "Your sentence, finished · then three more" : "Three more sentences";
+    const fresh = document.querySelectorAll(".w.new");
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    fresh.forEach((el, i) => reduce ? el.classList.remove("new") : setTimeout(() => el.classList.remove("new"), i * 35));
+  }
+
+  function updateSuggestions() {
+    if (!tables) return;
+    const box = $("suggest"); box.textContent = "";
+    const text = $("prompt").value;
+    const hist = tokenize(text).map((t) => idOf.get(t) ?? idOf.get(t.toLowerCase()) ?? -1);
+    const { arr } = distribution(hist);
+    const lab = document.createElement("span"); lab.className = "suggest-label"; lab.textContent = "Next word:";
+    box.appendChild(lab);
+    let total = 0; for (let i = 1; i < arr.length; i += 2) total += arr[i];
+    for (let i = 0; i < Math.min(arr.length / 2, 6); i++) {
+      const word = vocab[arr[2 * i]];
+      const b = document.createElement("button"); b.type = "button"; b.className = "chip";
+      b.innerHTML = ""; b.append(word);
+      const sm = document.createElement("small"); sm.textContent = Math.round(100 * arr[2 * i + 1] / total) + "%"; b.append(sm);
+      b.addEventListener("click", () => {
+        const ta = $("prompt"); const v = ta.value.replace(/\s+$/, "");
+        ta.value = v + (NO_SPACE.has(word) || !v ? "" : " ") + word;
+        ta.focus(); updateSuggestions();
+      });
+      box.appendChild(b);
+    }
+  }
+
+  async function load() {
+    try {
+      const [a, b] = await Promise.all([fetch("model-a.json").then((r) => r.json()), fetch("model-b.json").then((r) => r.json())]);
+      vocab = a.vocab; tables = [...a.tables, ...b.tables];
+      idOf = new Map(vocab.map((w, i) => [w, i]));
+      $("go").disabled = false; $("again").disabled = false;
+      updateSuggestions(); generate();
+    } catch (e) {
+      $("status").textContent = "Couldn't load the model. Reload the page to try again.";
+      $("suggest").textContent = "";
+    }
+  }
+
+  $("go").addEventListener("click", generate);
+  $("again").addEventListener("click", generate);
+  $("temp").addEventListener("input", (e) => { $("tempv").textContent = Number(e.target.value).toFixed(1); });
+  let t; $("prompt").addEventListener("input", () => { clearTimeout(t); t = setTimeout(updateSuggestions, 120); });
+  $("prompt").addEventListener("keydown", (e) => { if (e.key === "Enter" && !e.shiftKey && !$("go").disabled) { e.preventDefault(); generate(); } });
+  load();
+})();
+</script>

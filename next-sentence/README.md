@@ -25,3 +25,16 @@ from the books, `--order 3` is more random.
 The output is grammatical in short stretches but drifts in meaning—that's the
 limit of n-gram models. For coherent multi-sentence output you'd train a small
 neural language model (e.g. a GPT-style transformer) on the same `data/` corpus.
+
+## Web version
+
+`web/index.html` runs the same predictor in the browser, with no server needed.
+Build its model files (pruned to ~18 MB, split in two) with:
+
+```bash
+python export_web_model.py      # writes web/model-a.json and web/model-b.json
+cd web && python -m http.server # then open http://localhost:8000
+```
+
+The page also shows the model's top guesses for your very next word and colours
+each generated word by how much context it used (3, 2 or 1 previous words).

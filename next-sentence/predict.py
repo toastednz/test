@@ -115,8 +115,11 @@ class NGramModel:
 def load_or_train(order: int) -> NGramModel:
     cache = os.path.join(HERE, f"model_{order}gram.pkl")
     if os.path.exists(cache):
+        class _Unpickler(pickle.Unpickler):  # works whether saved from __main__ or an import
+            def find_class(self, module, name):
+                return NGramModel if name == "NGramModel" else super().find_class(module, name)
         with open(cache, "rb") as f:
-            return pickle.load(f)
+            return _Unpickler(f).load()
     files = sorted(glob.glob(os.path.join(DATA_DIR, "*.txt")))
     if not files:
         sys.exit("No corpus found. Run:  python download_corpus.py")
